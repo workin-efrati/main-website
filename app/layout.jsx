@@ -1,7 +1,19 @@
-import { Heebo } from "next/font/google";
+import { Heebo, Bona_Nova } from "next/font/google";
 import "./globals.scss";
 
-const heebo = Heebo({ subsets: ["hebrew", "latin"], weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"] });
+const heebo = Heebo(
+  {
+    subsets: ["hebrew", "latin"],
+    weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
+    variable: '--font-heebo'
+  }
+);
+const bonaNova = Bona_Nova(
+  {
+    subsets: ["hebrew", "latin"],
+    weight: ["400", "700"],
+    variable: '--font-bona'
+  });
 
 export const metadata = {
   title: "למדני חוקך",
@@ -17,7 +29,7 @@ icons: {
 export default function RootLayout({ children }) {
   return (
     <html lang="he">
-      <body className={heebo.className}>{children}</body>
+      <body className={`${heebo.variable } ${bonaNova.variable}`}>{children}</body>
     </html>
   );
 }
