@@ -1,9 +1,8 @@
+import Text from "@/components/TextComponent";
 import styles from "./page.module.scss";
 
 export default function Home() {
     return (
-        <main className={styles.element}>
-            עמנואל טירן הכי גבר בעולם!!!
-        </main>
+       <Text as='h1' fontStyle={'b'} >עמנואל טירן</Text>
     );
 }
