@@ -5,9 +5,16 @@ import styles from './styles.module.scss'
 // fontStyle - > Default is HEBBO unless you want BONA then enter 'b'
 // newClass - > You need to create your own class and send PROP example: 'styles.blabla'
 
-const Text = ({ as: Component = 'p', newClass, fontStyle, children, ...props }) => {
+const Text = ({ as: Component = 'p', newClass, fontStyle, textColor, children, ...props }) => {
   return (
-    <Component className={`${styles[Component]} ${newClass} ${fontStyle === 'b' ? styles.noba : ''} `} {...props}>
+    <Component
+      className={`${styles[Component]} ${newClass} ${fontStyle === 'b' ? styles.noba : ''}
+        ${textColor === 'blue' ? styles.blue : ''} 
+        ${textColor === 'white' ? styles.white : ''} 
+        ${textColor === 'gray' ? styles.gray : ''} 
+        ${textColor === 'lightBlue' ? styles.lightBlue : ''}`}
+      {...props}
+    >
       {children}
     </Component>
   );
