@@ -1,0 +1,47 @@
+.h1 {
+  font-size: 80px;
+  font-weight: 700;
+}
+
+.h2 {
+  font-weight: 700;
+  font-size: 36px;
+}
+
+.h3 {
+  font-size: 32px;
+}
+
+.h4 {
+  font-size: 23px;
+}
+
+.h5 {
+  font-size: 16px;
+}
+
+.p {
+  font-size: 18px;
+}
+
+.noba{
+  font-family: var(--font-bona);
+}
+.blue{
+  color: var(--primary-blue);
+}
+.white{
+  color: var(--white);
+}
+.gray{
+  color: var(--gray);
+}
+.lightBlue{
+  color: var(--light-blue);
+}
+
+
+// --primary-blue: #002651;
+// --light-blue: #034077;
+// --white: #FFFFFF;
+// --gray: #DFDFDF;
