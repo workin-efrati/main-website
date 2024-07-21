@@ -8,10 +8,10 @@ const videos = ["https://transform.nws.ai/https%3A//delivery.gettyimages.com/dow
         <div className={style.page}>
             <div className={style.relative}>
                 <div className={style.holdVideos}>
-                {videos.map(i =>
+                {videos.map((i,n) =>
                 <Image
-                    key={i}
-                    alt="asd"
+                    key={n}
+                    alt="image"
                     width={400}
                     height={300}
                     className={style.image}
