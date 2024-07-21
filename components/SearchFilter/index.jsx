@@ -4,7 +4,7 @@ import { FaSearch } from "react-icons/fa";
 import { useState, useEffect } from 'react';
 import { useRouter } from 'next/navigation';
 import SearchResults from '../SearchResults';
-
+// import jsonTest from '../jsonTest/js'
 export default function SearchFilter({ type }) {
 
   const router = useRouter()
@@ -12,20 +12,22 @@ export default function SearchFilter({ type }) {
   const [isSearch, setIsSearch] = useState('')
   const [isSearchSubject, setIsSearchSubject] = useState(false)
 
-  useEffect(() =>{
-    if(typeInput==='נושאים'){
+  useEffect(() => {
+    if (typeInput === 'נושאים') {
       setIsSearchSubject(true)
     }
-    else{
+    else {
       setIsSearchSubject(false)
 
     }
-  },[typeInput]);
+  }, [typeInput]);
 
   let classNameIcon = !isSearch ? 'searchIcon' : 'searchButton';
   const handleSearch = e => {
-    console.log(e.target.value)
-    setIsSearch(e.target.value)
+    console.log(typeInput);
+    if (typeInput === "חיפוש") {
+      setIsSearch(e.target.value)
+    }
     if (!isSearch) {
       // router.push(`/result?search=${e.target.value}`)
     }
@@ -44,7 +46,7 @@ export default function SearchFilter({ type }) {
             <div className={`${styles.line} ${type == "dark" ? styles.dark : ""}`}>
 
             </div>
-            <button className={styles.freeSearch} onClick={() => setTypeInput("חיפוש ")}>
+            <button className={styles.freeSearch} onClick={() => setTypeInput("חיפוש")}>
               טקסט חופשי
             </button>
           </div> :
