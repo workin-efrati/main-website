@@ -10,17 +10,17 @@ export default function SearchFilter({ type }) {
   const router = useRouter()
   const [typeInput, setTypeInput] = useState(false)
   const [isSearch, setIsSearch] = useState('')
-  const [isSearchSubject, setIsSearchSubject] = useState(true)
+  const [isSearchSubject, setIsSearchSubject] = useState(false)
 
-  // useEffect(() =>{
-  //   if(typeInput==='נושאים'){
-  //     setIsSearchSubject(true)
-  //   }
-  //   else{
-  //     setIsSearchSubject(false)
+  useEffect(() =>{
+    if(typeInput==='נושאים'){
+      setIsSearchSubject(true)
+    }
+    else{
+      setIsSearchSubject(false)
 
-  //   }
-  // },[typeInput]);
+    }
+  },[typeInput]);
 
   let classNameIcon = !isSearch ? 'searchIcon' : 'searchButton';
   const handleSearch = e => {
@@ -62,7 +62,7 @@ export default function SearchFilter({ type }) {
               autoFocus
               autoComplete="off"
               onChange={handleSearch}
-              onBlur={() => { setTypeInput('') }}
+              // onBlur={() => { setTypeInput('') }}
               defaultValue={isSearch}
             ></input>
           </div>
