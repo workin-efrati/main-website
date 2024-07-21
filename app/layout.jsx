@@ -1,5 +1,7 @@
 import { Heebo } from "next/font/google";
 import "./globals.scss";
+import Footer from "@/components/Footer";
+import { ShareLinks } from "@/components/ShereLinks";
 
 const heebo = Heebo({ subsets: ["hebrew", "latin"], weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"] });
 
@@ -11,7 +13,10 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="he">
-      <body className={heebo.className}>{children}</body>
+      <body className={heebo.className}>
+        {children}
+        <Footer />
+      </body>
     </html>
   );
 }
