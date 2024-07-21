@@ -1,15 +1,18 @@
+@import "../../app/vars.scss";
+
 .container {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   padding: 10px;
+  font-family: var(--font-bona);
 
-  @media screen and (min-width: 768px) {
+  @media (width > $md) {
     flex-direction: row;
     padding: 50px;
   }
   .containerList {
-    @media screen and (min-width: 768px) {
+    @media (width > $md) {
       order: -1;
     }
   }
@@ -18,11 +21,10 @@
 .renderList {
   li,
   h3 {
-    padding: 0 10px; 
+    padding: 0 10px;
     list-style-type: none;
   }
 }
-
 
 .title {
   font-family: 700;
@@ -39,11 +41,11 @@
 .containerList {
   display: flex;
   justify-content: space-around;
-  align-items: start;
+  align-items: flex-start;
   gap: 10px;
 }
 
-.logo{
+.logo {
   display: flex;
   flex-direction: column;
   align-items: center;
