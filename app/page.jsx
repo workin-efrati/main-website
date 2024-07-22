@@ -1,3 +1,4 @@
+import Tag from "@/components/Tag";
 import styles from "./page.module.scss";
 import QuestionNav from "@/components/QuestionNav";
 import { FaWhatsapp } from "react-icons/fa";
