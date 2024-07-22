@@ -1,0 +1,36 @@
+
+
+.textContainer {
+    font-size: var(--font-size);
+  }
+
+.icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    font-size: 20px;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    background-color:#F5F5F5;
+    color: var(--light-blue);
+    cursor: pointer;
+    margin: 0 10px;
+    top: 10px; /* Adjust as needed */
+  }
+  
+  .icon.plus {
+    left: 60px;
+    top: 50px; /* Adjust as needed */
+}
+
+.icon.minus {
+    left: 10px; /* Adjust as needed */
+    top: 50px; /* Adjust as needed */
+  }
+  
+  .container {
+    position: relative;
+    padding-top: 40px; /* Adjust as needed to avoid overlap with icons */
+  }
