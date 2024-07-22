@@ -1,0 +1,35 @@
+.tag{
+    display: flex;
+    padding: 4px 11px;
+     width: fit-content;
+     border-radius: 25px;
+     gap: 3px;
+     font-size: 12px;
+}
+
+
+.link{
+   text-decoration: none;
+   background: linear-gradient(white, white) padding-box,
+   linear-gradient(to right, rgba(6, 119, 221, 0.8), rgba(4, 81, 151, 0.8), rgba(3, 64, 119, 0.8)) border-box;
+border-radius: 50em;
+border: 1px solid transparent;
+}
+.addTag{ 
+    background: var(--blue-gradient);
+    color: white; 
+    display: flex;
+    align-items: center;
+    
+    
+
+    .button{
+        display: flex;
+        border: none;
+        color: white;
+        background: transparent;
+        align-items: center;
+    }
+   
+
+}
