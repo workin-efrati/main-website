@@ -1,0 +1,30 @@
+    .container {
+        // display: flex;
+        background-color: var(--gray);
+        // color: var(--primary-blue);
+        border-radius: 40px;
+        justify-content: space-around;
+        border-radius: 0 0 50px 50px;
+        height: fit-content;
+        padding: 10px;
+        align-items: center;
+        position: absolute;
+        z-index: 1;
+        width: 100%;
+        top: 2rem;
+        height: 60vh;
+        padding: 30px;
+        summary{
+            list-style: none; 
+    
+        }
+        li {
+            list-style-type: none
+        }
+    }
+    .title{
+        display: flex;
+        gap: 4px;
+        align-items: center;
+    }
+  
