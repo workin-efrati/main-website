@@ -3,6 +3,7 @@ import "./globals.scss";
 import Footer from "@/components/Footer";
 import { ShareLinks } from "@/components/ShereLinks";
 
+import Header from "@/components/Header";
 const heebo = Heebo(
   {
     subsets: ["hebrew", "latin"],
@@ -22,16 +23,18 @@ export const metadata = {
   description: `אתר "למדני חוקך" הוא שו"ת מקוון המציע תשובות לשאלות הלכתיות מגוונות.
 האתר מנוהל על ידי הרב אפרתי, והוא פתוח לכל מי שמחפש הבהרה
 בנושאים הלכתיים.`,
-icons: {
-  icon: '/metaDataIcon.svg',
-},
-  
+  icons: {
+    icon: '/metaDataIcon.svg',
+  },
+
 };
 
 export default function RootLayout({ children }) {
+
   return (
     <html lang="he">
-      <body className={`${heebo.variable } ${bonaNova.variable}`}>
+      <body className={`${heebo.variable} ${bonaNova.variable}`}>
+        <Header />
         {children}
         <Footer />
       </body>
