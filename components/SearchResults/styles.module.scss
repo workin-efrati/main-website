@@ -1,5 +1,5 @@
     .container {
-        display: flex;
+        // display: flex;
         background-color: var(--gray);
         color: var(--primary-blue);
         border-radius: 40px;
@@ -13,6 +13,12 @@
         width: 100%;
         top: 2rem;
         height: 60vh;
+        padding: 30px;
 
-
+        li {
+            list-style-type: none
+        }
+    }
+    .title{
+        font-weight: 600;
     }
