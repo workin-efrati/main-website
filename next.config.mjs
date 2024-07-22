@@ -3,7 +3,7 @@ const nextConfig = {
     images:{
         remotePatterns:[
             {
-                hostname:"transform.nws.ai"
+                hostname:"i.ytimg.com"
             }
         ]
     }
