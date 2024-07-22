@@ -2,7 +2,7 @@
 import React from 'react'
 import styles from './style.module.scss'
 import Link from 'next/link';
-import { ButtonClick } from '../ButtonClick';
+import { ButtonClick } from '../ButtonClient';
 
 
 
