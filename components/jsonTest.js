@@ -1,20 +1,16 @@
 export default function getData() {
   const jsonString = [{
-    name: "שבת ומועדים", id: "@drfgr54g12g3",
+    name: "שבת ומועדים", id: "ht5@drfgr54g12g3",
     childrens: [{
-      name: "הדלקת נרות", id: "@drfgr54g12g3",
-      childrens: [{}]
+      name: "חגים וזמנים", id: "fg@drfgr54g12g3",
+      childrens: [{name: "שבת", id:"fkj", childrens:[]}]
   
     }]
 
   },
   {
-    name: "בשר וחלב", id: "@drfgr54g12g3",
-    childrens: [{
-      name: "תערובת", id: "@drfgr54g12g3",
-      childrens: [{}]
-  
-    }]
+    name: "בשר וחלב", id: "djdj@drfgr54g12g3",
+    childrens: []
 
   }
 ]
