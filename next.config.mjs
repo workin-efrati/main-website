@@ -7,6 +7,9 @@ const nextConfig = {
             {
               hostname: 's3-alpha-sig.figma.com',
             },
+            {
+              hostname: '"www.kipa.co.il',
+            },
           ],
       }
 

@@ -1,21 +1,24 @@
-import { Heebo, Bona_Nova } from "next/font/google";
-import "./globals.scss";
 import Footer from "@/components/Footer";
-import { ShareLinks } from "@/components/ShereLinks";
+import { Bona_Nova, Heebo } from "next/font/google";
+import "./globals.scss";
 
 import Header from "@/components/Header";
 const heebo = Heebo(
   {
     subsets: ["hebrew", "latin"],
     weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
-    variable: '--font-heebo'
+    variable: '--font-heebo',
+    display: 'swap',
+
   }
 );
 const bonaNova = Bona_Nova(
   {
     subsets: ["hebrew", "latin"],
     weight: ["400", "700"],
-    variable: '--font-bona'
+    variable: '--font-bona',
+    display: 'swap',
+
   });
 
 export const metadata = {
@@ -32,8 +35,8 @@ export const metadata = {
 export default function RootLayout({ children }) {
 
   return (
-    <html lang="he">
-      <body className={`${heebo.variable} ${bonaNova.variable}`}>
+    <html className={`${heebo.variable} ${bonaNova.variable} `} lang="he">
+      <body >
         <Header />
         {children}
         <Footer />
