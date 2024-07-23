@@ -74,7 +74,7 @@ export default function SearchFilter({ type }) {
         <div className={`${styles[classNameIcon]}`} >
           <FaSearch />
         </div>
-      </div>
+      </div> 
       {(isSearchSubject && valueSearch !=='') ? <SearchResults /> :
         isSearchSubject && <SearchResults valueSearch={valueSearch} />
       }
