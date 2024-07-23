@@ -11,6 +11,7 @@ export default function SearchFilter({ type }) {
   const [typeInput, setTypeInput] = useState(false)
   const [isSearch, setIsSearch] = useState('')
   const [isSearchSubject, setIsSearchSubject] = useState(false)
+  const [valueSearch, setValueSearch] = useState('')
 
   useEffect(() => {
     if (typeInput === 'נושאים') {
@@ -24,12 +25,13 @@ export default function SearchFilter({ type }) {
 
   let classNameIcon = !isSearch ? 'searchIcon' : 'searchButton';
   const handleSearch = e => {
-    console.log(typeInput);
     if (typeInput === "חיפוש") {
       setIsSearch(e.target.value)
-    }
-    if (!isSearch) {
       // router.push(`/result?search=${e.target.value}`)
+    }
+    else if (typeInput === 'נושאים') {
+      setValueSearch(e.target.value)
+      // console.log(valueSearch);
     }
   }
   return (<>
@@ -73,8 +75,8 @@ export default function SearchFilter({ type }) {
           <FaSearch />
         </div>
       </div>
-      {isSearchSubject &&
-        <SearchResults />
+      {(isSearchSubject && valueSearch !=='') ? <SearchResults /> :
+        isSearchSubject && <SearchResults valueSearch={valueSearch} />
       }
 
     </div>

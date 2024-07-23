@@ -6,19 +6,24 @@ import { FaPlus } from "react-icons/fa";
 import Text from '../TextComponent';
 import ChildrensTitles from './ChildrensTitles';
 
-export default function SearchResults() {
+export default function SearchResults({ valueSearch }) {
   const [titles, setTitles] = useState([])
-  const [isOpen, setIsOpen] = useState(false);
 
   const getSubject = async () => {
     const res = await getData();
-    // console.log(res);
     setTitles(res)
+    // if (valueSearch !== '') {
+    //   const filteredTitles = titles.filter(item => item.name.includes(valueSearch));
+    //   console.log(filteredTitles);
+    //   setTitles(filteredTitles);
+    // }
+
+
   }
 
   useEffect(() => {
     getSubject();
-  }, [])
+  }, [valueSearch])
 
   return (
     <>

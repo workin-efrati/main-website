@@ -1,12 +1,15 @@
-import SearchFilter from "@/components/SearchFilter";
-import styles from "./style.module.scss";
+import Header from "@/components/Header";
 
+import styles from "./style.module.scss";
 export default function Try() {
+
+
   return (
+    <>
+      <Header/>
     <main className={styles.main}>
       שאלות ותשובות
-      <SearchFilter />
-
     </main>
+    </>
   );
 }

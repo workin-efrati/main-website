@@ -5,7 +5,6 @@ import styles from './styles.module.scss'
 import Link from "next/link";
 
 export default function ChildrensTitles({ childrensData }) {
-    // const dataFromChildrens = childrensData[0]
 
     return (
         <div>
