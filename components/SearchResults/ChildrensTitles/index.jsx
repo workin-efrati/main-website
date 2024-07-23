@@ -7,7 +7,7 @@ import Link from "next/link";
 export default function ChildrensTitles({ childrensData }) {
 
     return (
-        <div>
+        <div className={styles.container}>
             {
                 <ul>
                     {childrensData.map((child, index) => {

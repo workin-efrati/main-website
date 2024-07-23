@@ -1,5 +1,11 @@
+.container{
+    margin-right: 20px;
+}
 .title{
     display: flex;
     gap: 4px;
     align-items: center;
 }
+.title:hover{
+    background-color: #a89494;
+  }
