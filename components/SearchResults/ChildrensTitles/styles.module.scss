@@ -1,11 +1,16 @@
 .container{
     margin-right: 20px;
+    a{
+        text-decoration: none;
+        color: inherit;
+    }
 }
 .title{
     display: flex;
-    gap: 4px;
+    gap: 6px;
     align-items: center;
 }
 .title:hover{
-    background-color: #a89494;
-  }
+background-color: #a89494a9;
+cursor: pointer;
+}

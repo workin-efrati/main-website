@@ -5,6 +5,7 @@ import { FaMinus } from "react-icons/fa6";
 import { FaPlus } from "react-icons/fa";
 import Text from '../TextComponent';
 import ChildrensTitles from './ChildrensTitles';
+import Link from "next/link";
 
 export default function SearchResults({ valueSearch }) {
   const [titles, setTitles] = useState([])
@@ -44,16 +45,29 @@ export default function SearchResults({ valueSearch }) {
               return <li key={item.id || index}>
                 <div className={styles.title}>
                   {item.childrens.length > 0 ? (
-                    <FaPlus
-                      style={{ width: '15px', height: '15px', cursor: 'pointer' }}
-                      onClick={() => handleToggle(item.id || index)}
-                    />
+                    !openDetails[item.id || index] ?
+                      <Text textColor={'blue'}>
+                        <FaPlus
+                          style={{ width: '15px', height: '15px', cursor: 'pointer' }}
+                          onClick={() => handleToggle(item.id || index)}
+                        />
+                      </Text> :
+                      <Text textColor={'blue'}>
+
+                        <FaMinus
+                          style={{ width: '15px', height: '15px', cursor: 'pointer' }}
+                          onClick={() => handleToggle(item.id || index)}
+                        />
+                      </Text>
                   ) : (
                     <div style={{ width: '15px', height: '15px' }} />
                   )}
                   <span>
                     <Text as="h4" textColor="blue">
-                      {item.name}
+                      <Link href={''}>
+                        {item.name}
+                      </Link>
+
                     </Text>
                   </span>
                 </div>

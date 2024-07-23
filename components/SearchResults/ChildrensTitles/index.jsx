@@ -20,46 +20,48 @@ export default function ChildrensTitles({ childrensData }) {
                 <ul>
                     {childrensData.map((child, index) => {
                         return <li key={child.id || index}>
-                            <details >
-                                <summary>
-                                    <Text as="h5" textColor="blue">
-                                        <div className={styles.title}>
-                                            {/* <FaMinus style={{ "width": "15px", "height": "15px" }}/> */}
-                                            {
-                                                child.childrens.length > 0 ? <FaPlus style={{ width: "10px", height: "10px" }} /> :
-                                                    <div style={{ width: "10px", height: "10px" }} />}
-                                            {child.childrens.length > 0 ? child.name : <a>{child.name}</a>}
-                                        </div>
-                                    </Text>
-                                </summary>
-                                {
-                                    <div>
-                                        {
-                                            child?.childrens.length > 0 && <ChildrensTitles childrensData={child.childrens} />
-                                        }
+                            <div className={styles.title}>
+                                {child.childrens.length > 0 ? (
+                                    !openDetails[child.id || index] ?
+                                        <Text textColor={'blue'}>
+                                            <FaPlus
+                                                style={{ width: '10px', height: '10px', cursor: 'pointer' }}
+                                                onClick={() => handleToggle(child.id || index)}
+                                            />
+                                        </Text> :
+                                        <Text textColor={'blue'}>
 
+                                            <FaMinus
+                                                style={{ width: '10px', height: '10px', cursor: 'pointer' }}
+                                                onClick={() => handleToggle(child.id || index)}
+                                            />
+                                        </Text>
+                                ) : (
+                                    <div style={{ width: '10px', height: '10px' }} />
+                                )}
+                                <span>
+                                    <Text as="h5" textColor="blue">
+                                        <Link href={""}>
+                                            {child.name}
+                                        </Link>
+                                    </Text>
+                                </span>
+                            </div>
+                            {openDetails[child.id || index] && (
+                                <details open>
+                                    <summary style={{ display: 'none' }}>Details</summary>
+                                    <div>
+                                        {child.childrens.length > 0 && (
+                                            <ChildrensTitles childrensData={child.childrens} />
+                                        )}
                                     </div>
-                                }
-                            </details>
+                                </details>
+                            )}
                         </li>
+
                     })}
                 </ul>
             }
-
-            {/* {
-                <details >
-                    <summary>
-                        <Text as="h5" textColor="blue">
-                            {dataFromChildrens && dataFromChildrens.name}
-                        </Text>
-                    </summary>
-                    {
-                        dataFromChildrens?.childrens?.length > 0 && < ChildrensTitles childrensData={dataFromChildrens.childrens} />
-                    }
-
-                </details>
-
-            } */}
 
         </div>
     )
