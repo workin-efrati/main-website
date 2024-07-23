@@ -1,0 +1,46 @@
+.DailyHalacha{
+    padding: 3rem 0;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: .4rem;
+    h2 , h3 , h4 , p{
+        width: 100%;
+        font-family: var(--font-bona);
+        color: #034077;
+    }
+    h2{
+        text-align: center;
+        font-size: 1.5em;
+        
+    }
+    h3{
+        text-align: center;
+        font-size: 1.4em;
+
+    }
+    .containerQAndA{
+        width: 100%;
+        display: flex;
+        justify-content: space-evenly;
+        flex-wrap: wrap;
+        padding: .6rem;
+        h4{
+            padding: 6px 0;
+            font-size: 1.2em;
+        }
+        .sectionContainer{
+            width: 100%;
+            max-width: 500px;
+            padding: .6rem;
+            p{
+                white-space: pre-line; 
+                font-size: 1rem;
+                line-height: 1.5;
+                font-family: var(--font-bona);
+                color: #034077;
+                
+            }
+        }
+    }
+}
