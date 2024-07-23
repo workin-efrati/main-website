@@ -11,14 +11,13 @@ export default function SearchResults({ valueSearch }) {
 
   const getSubject = async () => {
     const res = await getData();
-    setTitles(res)
-    // if (valueSearch !== '') {
-    //   const filteredTitles = titles.filter(item => item.name.includes(valueSearch));
-    //   console.log(filteredTitles);
-    //   setTitles(filteredTitles);
-    // }
-
-
+    if(valueSearch ===''){
+      setTitles(res)
+    }
+    else{
+        const filteredTitles = titles.filter(item => item.name.includes(valueSearch));
+          setTitles(filteredTitles);
+    }
   }
 
   useEffect(() => {

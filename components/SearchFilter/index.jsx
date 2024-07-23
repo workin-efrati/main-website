@@ -19,21 +19,25 @@ export default function SearchFilter({ type }) {
     }
     else {
       setIsSearchSubject(false)
-
+      
     }
   }, [typeInput]);
 
   let classNameIcon = !isSearch ? 'searchIcon' : 'searchButton';
+
   const handleSearch = e => {
     if (typeInput === "חיפוש") {
       setIsSearch(e.target.value)
-      // router.push(`/result?search=${e.target.value}`)
     }
     else if (typeInput === 'נושאים') {
       setValueSearch(e.target.value)
-      // console.log(valueSearch);
     }
   }
+  const handleClick = ()=>{
+    if(typeInput === 'חיפוש'){
+    // router.push(`/result?search=${isSearch}`)
+  }
+}
   return (<>
     <div className={styles.searchAndResultContainer}>
 
@@ -71,12 +75,11 @@ export default function SearchFilter({ type }) {
             ></input>
           </div>
         }
-        <div className={`${styles[classNameIcon]}`} >
+        <div className={`${styles[classNameIcon]}`} onClick={handleClick}>
           <FaSearch />
         </div>
       </div> 
-      {(isSearchSubject && valueSearch !=='') ? <SearchResults /> :
-        isSearchSubject && <SearchResults valueSearch={valueSearch} />
+      {isSearchSubject && <SearchResults valueSearch={valueSearch}/>
       }
 
     </div>
