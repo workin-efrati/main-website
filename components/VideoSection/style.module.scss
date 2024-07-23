@@ -1,6 +1,6 @@
 @import "../../app/vars.scss";
-
 .VideoSection {
+    --imgWidth:110%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -137,6 +137,7 @@
 
 @media (width < $sm) {
     .VideoSection {
+        --imgWidth:103%;
         .videoContainer {
             .videoSliderContainer {
                 max-width: 240px;

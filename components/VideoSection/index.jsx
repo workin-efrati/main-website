@@ -18,9 +18,8 @@ export default function VideoSection() {
     setSliderPosition(sliderPosition + num)
   }
   const style = {
-    transform: `translateX(${sliderPosition * sliderRatio}%)`
+    transform: `translateX(calc(${sliderPosition} * var(--imgWidth)))`
   }
-  console.log(style);
   return (
     <div className={styles.VideoSection}>
       <h2>שיעורי וידיאו</h2>
