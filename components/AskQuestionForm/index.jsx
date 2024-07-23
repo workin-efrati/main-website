@@ -49,14 +49,14 @@ export default function AskActionForm() {
     <div className={style.container}>
 
       <Text as="h3" textColor="white" fontStyle="b">
-      <SiTheconversation size={48} style={{paddingLeft: "4px"}}/>
+      <SiTheconversation size={40} style={{paddingLeft: "4px"}}/>
       {`  כתיבת שאלה לרב   `}
       </Text>
 
       <form ref={formRef} action={formAction} className={style.form}>  
         <div className={style.formGroup}>
         <label className={style.label}>
-          <Text as="h4" textColor="white" fontStyle="b">כותרת</Text>
+          <Text as="h5" textColor="white" fontStyle="b">כותרת</Text>
           </label>
         <input
             type="text"
@@ -71,7 +71,7 @@ export default function AskActionForm() {
           </div>
           <div className={style.formGroup}>
           <label className={style.label}>
-          <Text as="h4" textColor="white" fontStyle="b">*תוכן השאלה</Text>
+          <Text as="h5" textColor="white" fontStyle="b">*תוכן השאלה</Text>
           </label>
           <textarea
             name='question'
@@ -83,7 +83,7 @@ export default function AskActionForm() {
         </div>
         <div className={style.formGroup}>
         <label className={style.label}>
-          <Text as="h4" textColor="white" fontStyle="b">
+          <Text as="h5" textColor="white" fontStyle="b">
 
             * בחר את אופן קבלת המענה 
           </Text>
@@ -123,7 +123,7 @@ export default function AskActionForm() {
                 onChange={handleContactMethodChange}
               />
             
-          <Text as="h4" textColor="white" fontStyle="b">
+          <Text as="h5" textColor="white" fontStyle="b">
                Email
           </Text>
             </label>
@@ -137,7 +137,7 @@ export default function AskActionForm() {
                 onChange={handleContactMethodChange}
                 className={style.radio}
               />
-          <Text as="h4" textColor="white" fontStyle="b">
+          <Text as="h5" textColor="white" fontStyle="b">
                SMS
           </Text>
             </label>
@@ -150,7 +150,7 @@ export default function AskActionForm() {
                 checked={contactMethod === 'whatsapp'}
                 onChange={handleContactMethodChange}
               />
-            <Text as="h4" textColor="white" fontStyle="b">
+            <Text as="h5" textColor="white" fontStyle="b">
               WhatsApp
             </Text>
             </label>
@@ -158,7 +158,7 @@ export default function AskActionForm() {
           </div>
 
         <div>
-        {message ? <Text as="h4" textColor="white" fontStyle="b">{message}</Text>:
+        {message ? <span className={style.message}><Text as="h4" textColor="white" fontStyle="b">{message}</Text></span>:
         <SubmitButton text={"שלח"} 
         // onPendingText={"שולח..."}
         />}
