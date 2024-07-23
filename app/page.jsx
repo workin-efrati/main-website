@@ -3,6 +3,8 @@ import { FaWhatsapp } from "react-icons/fa";
 import EventNav from "@/components/EventNav";
 import VideoSection from "@/components/VideoSection";
 import DailyHalacha from "@/components/DailyHalacha";
+import styles from "./page.module.scss"
+import Link from "next/link";
 export default function Home() {
 
   const homeNav = [
@@ -27,7 +29,7 @@ export default function Home() {
           <div className={styles.input}></div>
         </div>
         <div className={styles.homeNavContainer}>
-          {homeNav.map(nav => <a className={styles.nav} href={nav.herf}>{nav.text} </a>)}
+          {homeNav.map(nav => <Link className={styles.nav} href={nav.herf}>{nav.text} </Link>)}
         </div>
         <div className={styles.bgCover}></div>
         <a className={styles.goToWhatsApp} href="">הצטרף אלינו לקבוצת הוואצפ <FaWhatsapp /></a>

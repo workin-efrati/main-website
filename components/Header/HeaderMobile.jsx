@@ -10,6 +10,7 @@ import { FaTorah } from "react-icons/fa";
 import logo from "./logo.svg"
 import Image from 'next/image';
 import { navData } from './mobileNavData';
+import Link from 'next/link';
 export default function HeaderMobile() {
     const [menu, setMenu] = useState(false)
 
@@ -27,9 +28,9 @@ export default function HeaderMobile() {
                     <div className={styles.inputContainer}></div>
                     <div className={styles.navsContainer}>
                         {navData.qaNav.map((nav, index) => (
-                            <a key={"a" + index} href={nav.href}>
+                            <Link key={"a" + index} href={nav.href}>
                                 <p className={styles.bigIcon}> {nav.icon()}</p>
-                                <p className={styles.textOfIcon}> {nav.text}</p> </a>
+                                <p className={styles.textOfIcon}> {nav.text}</p> </Link>
                         ))}
                     </div>
                     <div className={styles.navsContainer}>
@@ -37,27 +38,27 @@ export default function HeaderMobile() {
                             <p className={styles.iconTorah}><FaChildren /></p>
                             <h4>פרשת לילדים</h4>
                             {navData.torahNav.map((p, index) => (
-                                <a key={"children" + index} href={p.href}>
+                                <Link key={"children" + index} href={p.href}>
                                     <p>{p.text}</p>
-                                </a>
+                                </Link>
                             ))}
                         </div>
                         <div className={styles.torahContainer}>
                             <p className={styles.iconTorah}><FaTorah /></p>
                             <h4>פרשת השבוע</h4>
                             {navData.torahNav.map((p, index) => (
-                                <a key={"adult" + index} href={p.href}>
+                                <Link key={"adult" + index} href={p.href}>
                                     <p>{p.text}</p>
-                                </a>
+                                </Link>
                             ))}
                         </div>
 
                     </div>
                     <div className={styles.mainNavsContainer}>
                         {navData.pageNav.map((p, index) => (
-                            <a key={"mainNavs" + index} href={p.href}>
+                            <Link key={"mainNavs" + index} href={p.href}>
                                 <p>{p.text}</p>
-                            </a>
+                            </Link>
                         ))}
                     </div>
                     <button className={styles.whatsappBtn}><SiWhatsapp /></button>

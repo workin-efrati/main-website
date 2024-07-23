@@ -1,13 +1,14 @@
 import styles from './style.module.scss'
 import { data } from './data';
+import Link from 'next/link';
 export default function EventNav({ }) {
   function ArticleContainer({ _id, title, content , href}) {
     return (
       <>
-        <a href={href} key={_id} className={styles.article}>
+        <Link href={href} key={_id} className={styles.article}>
           <h3>{title}</h3>
           {content && <p>{content}</p>}
-        </a>
+        </Link>
       </>
     )
   }

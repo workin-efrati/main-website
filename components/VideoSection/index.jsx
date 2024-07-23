@@ -6,6 +6,7 @@ import { MdArrowForwardIos } from "react-icons/md";
 import { data } from './data';
 import Image from 'next/image';
 import { useState } from "react";
+import Link from "next/link";
 export default function VideoSection() {
   const [sliderPosition, setSliderPosition] = useState(0)
   const sliderRatio = window.innerWidth > 568 ? 110 : 103
@@ -27,15 +28,15 @@ export default function VideoSection() {
         <button disabled={cantMoveRight} onClick={() => { clickSliderHandler(-1) }}><MdArrowForwardIos /></button>
         <div className={styles.videoSliderContainer} >
           {data().map(v => (
-            <a href={v.href} className={styles.video} style={style}>
+            <Link href={v.href} className={styles.video} style={style}>
               <Image width={100} height={100} src={v.img} />
               <p>{v.title}</p>
-            </a>
+            </Link>
           ))}
         </div>
         <button disabled={cantMoveLeft} onClick={() => { clickSliderHandler(1) }}><MdArrowBackIosNew /></button>
       </div>
-      <div className={styles.toAllVideo}><a href="">לכל השיעורים</a> </div>
+      <div className={styles.toAllVideo}><Link href="">לכל השיעורים</Link> </div>
       <Image width={100} height={100} src={bgImage} className={styles.bgImg} />
     </div>
   )
