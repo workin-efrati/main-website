@@ -1,8 +1,19 @@
-//revisar
-//agregar navlink a el logo 
-//agregar aqui props para segun la entrada dar una animacion distinta en el logo
-//revisar si compatibilidad con todo los logos de el figma
-//crear un repositorio mio de lo que estoy haciendo
+{/*
+  Examples of using the Logo component:
+  <Logo logoType="derechEmuna" firstLine={"הנבל ,14 אפרת | טל: 0504723445 "}/>
+<Logo logoType="onlyText" firstLine='שו"ת הרב אפרתי'/>
+<Logo logoType="bookLogo" />
+<Logo logoType="bookLogo"  firstLine='שו"ת הרב אפרתי'  secondLine={true}/>
+<Logo logoType="bookLogo" firstLine="שו'ת הרב אפרתי"  secondLine={true} thirdLine={true}/> 
+
+Component Props
+logoType: Defines the type of logo to display. This can be "rightEmuna", "onlyText", or "bookLogo".
+imgHeight: Defines the height of the logo image.
+firstLine: First line of text (default: 'לַמְּדֵנִי חֻקֶּיךָ' ,to appear it is passed as props true).
+secondLine: Second line of text.
+thirdLine: Third line of text.
+*/}
+
 
 import React from "react";
 import Image from 'next/image';
@@ -13,7 +24,7 @@ import derechEmuna from "../../public/derechEmuna.svg";
 export default function Logo(props) {
   const {
     logoType,
-    imgHeight = 60,
+    imgHeight,
     firstLine = 'לַמְּדֵנִי חֻקֶּיךָ',
     secondLine,
     thirdLine,
