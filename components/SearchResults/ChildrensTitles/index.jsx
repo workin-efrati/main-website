@@ -1,11 +1,19 @@
 import { FaMinus } from "react-icons/fa6";
 import { FaPlus } from "react-icons/fa";
+import { useState } from "react";
 import Text from '@/components/TextComponent'
 import styles from './styles.module.scss'
 import Link from "next/link";
 
 export default function ChildrensTitles({ childrensData }) {
+    const [openDetails, setOpenDetails] = useState({});
 
+    const handleToggle = (id) => {
+        setOpenDetails((prev) => ({
+            ...prev,
+            [id]: !prev[id],
+        }));
+    };
     return (
         <div className={styles.container}>
             {
@@ -16,11 +24,11 @@ export default function ChildrensTitles({ childrensData }) {
                                 <summary>
                                     <Text as="h5" textColor="blue">
                                         <div className={styles.title}>
-                                            {/* <FaMinus style={{ "width": "15px", "height": "15px" }}/> */ }
+                                            {/* <FaMinus style={{ "width": "15px", "height": "15px" }}/> */}
                                             {
                                                 child.childrens.length > 0 ? <FaPlus style={{ width: "10px", height: "10px" }} /> :
                                                     <div style={{ width: "10px", height: "10px" }} />}
-                                            {child.childrens.length > 0 ? child.name: <a>{child.name}</a>}
+                                            {child.childrens.length > 0 ? child.name : <a>{child.name}</a>}
                                         </div>
                                     </Text>
                                 </summary>
