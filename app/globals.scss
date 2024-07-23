@@ -12,11 +12,16 @@
    --white: #FFFFFF;
    --gray: #DFDFDF;
    --blue-gradient: linear-gradient(to right, rgba(6, 119, 221, 0.8), rgba(4, 81, 151, 0.8), rgba(3, 64, 119, 0.8));
+  
+
 }
 
 body {
    direction: rtl;
    font-family: var(--font-heebo);
+}
 
+label, input, select, button{
+   font: inherit;
 }
 
