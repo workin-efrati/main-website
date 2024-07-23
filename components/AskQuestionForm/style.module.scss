@@ -1,0 +1,117 @@
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 600px;
+    flex-shrink: 0;
+    padding: 1rem;
+    box-shadow: 1px 10px 24px 12px var(--primary-blue);
+    // border: 1px solid #660649;
+    border-radius: 14px;
+    background: var(--blue-gradient);
+}
+
+
+.form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 1rem;
+    gap: 1.5rem;
+}
+
+.label {
+    display: flex;
+    margin-bottom: 0.5rem;
+    gap: 1rem;
+}
+
+.contactOptions {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding-top: 1rem;
+
+}
+
+.radio {
+    //     appearance: none;
+    //   -webkit-appearance: none;
+    //   margin: 0;
+    width: 1.5rem;
+    height: 1.5rem;
+    // outline: none;
+    cursor: pointer;
+
+    // Style for the checked state
+    &:checked {
+        // background-color: red;
+        // border: 2px solid #3b82f6;
+        // box-shadow: inset 0 0 0 4px #fff;
+        width: 1.3rem;
+    height: 1.3rem;
+    }
+
+
+}
+
+
+.input,
+.textarea {
+    display: block;
+    width: 100%;
+    padding: 0.7rem;
+    border-radius: 0.375rem;
+    border: 0.3rem solid #d1d5db;
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+    font-size: 1.2rem;
+    letter-spacing: 0.01rem;
+    word-spacing: 0.001rem;
+    color: #111827;
+    background-color: #f9fafb;
+    direction: rtl;
+
+    
+
+    &:focus {
+        outline: none;
+        ring: 2px solid #3b82f6;
+        border-color: #3b82f6;
+        box-shadow: 1px 1px 15px 2px #fff;
+
+    }
+}
+
+.input::placeholder{
+    direction: rtl;
+}
+
+
+.textarea {
+    // מגביל רוחב
+    resize: vertical;
+    min-height: 160px;
+}
+
+// Dark mode styles
+@media (prefers-color-scheme: dark) {
+    .label {
+        color: #ffffff;
+    }
+
+    .textarea {
+        color: #ffffff;
+        background-color: #374151;
+        border-color: #4b5563;
+
+        &::placeholder {
+            color: #9ca3af;
+        }
+
+        &:focus {
+            ring: 2px solid #3b82f6;
+            border-color: #3b82f6;
+        }
+    }
+}
