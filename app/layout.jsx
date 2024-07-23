@@ -1,5 +1,8 @@
 import { Heebo, Bona_Nova } from "next/font/google";
 import "./globals.scss";
+import Footer from "@/components/Footer";
+import { ShareLinks } from "@/components/ShereLinks";
+
 import Header from "@/components/Header";
 const heebo = Heebo(
   {
@@ -30,10 +33,10 @@ export default function RootLayout({ children }) {
 
   return (
     <html lang="he">
-      <body  className={`${heebo.variable} ${bonaNova.variable}`}>
+      <body className={`${heebo.variable} ${bonaNova.variable}`}>
         <Header />
         {children}
-      
+        <Footer />
       </body>
     </html>
   );
