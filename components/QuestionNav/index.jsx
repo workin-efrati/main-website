@@ -6,7 +6,9 @@ export default function QuestionNav({ arr }) {
     console.log(data);
     arr = data || arr || []
     return (
-        <div className={styles.QuestionNav}>
+    <div className={styles.QuestionNav}>
+        <h2>שאלות פופולריות</h2>
+        <div className={styles.QuestionNavContainer}>
             {arr?.map(q => (
                 <a key={"a" + q._id} href={q.href} className={styles.questionRow}>
                     <div className={styles.imgContainer}>
@@ -20,6 +22,8 @@ export default function QuestionNav({ arr }) {
                     </div>
                 </a>
             ))}
+            <div className={styles.toAllQuestion}><a href="">לשאלות פופלריות נוספות</a> </div>
         </div>
+    </div>
     )
 }

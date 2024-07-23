@@ -33,6 +33,7 @@ export default function RootLayout({ children }) {
       <body  className={`${heebo.variable} ${bonaNova.variable}`}>
         <Header />
         {children}
+      
       </body>
     </html>
   );

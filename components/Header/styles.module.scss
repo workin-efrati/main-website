@@ -48,6 +48,9 @@ header.headerMobile {
         display: none;
     }
 
+    br.WWWWWWWWWWWWWWWWREMOVETHISWWWWWWWWWWWWWWWWWWW{
+        height: 12vh;
+    }
     .headerMobile {
         display: flex !important;
         width: 100%;
@@ -59,7 +62,6 @@ header.headerMobile {
         background-color: #ffffff;
         box-shadow: 0 0 4px 0 #000000;
         justify-content: space-between;
-
         .imgAndTitleContainer {
             display: flex;
             align-items: center;
