@@ -9,7 +9,8 @@ const Text = ({ as: Component = 'p', newClass, fontStyle, textColor, children, .
   return (
     <Component
       className={`${styles[Component]} ${newClass} 
-      ${fontStyle === 'b' ? styles.noba : ''}
+      ${fontStyle === 'b' ? styles.bona : (fontStyle === 'h' ? styles.heebo : '')}
+     
       ${styles[textColor]}`}
       {...props}
     >
