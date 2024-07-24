@@ -1,8 +1,17 @@
+'use client'
 import Text from "@/components/TextComponent";
 import styles from "./page.module.scss";
+import { Button } from "@/components/Button";
 
-export default function Home() {
+export default function Page() {
+
+    const anyFunction = () => {
+        console.log("This is a function click");
+    }
+
     return (
-       <Text as='h1' fontStyle={'b'} >עמנואל טירן</Text>
+        <Button onClick={anyFunction} >
+            <Text as={'span'} textColor={'blue'} fontStyle={'b'}>שאלה אחרת</Text>
+        </Button>
     );
 }

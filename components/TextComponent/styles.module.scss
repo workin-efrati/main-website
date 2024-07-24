@@ -23,7 +23,34 @@
 .p {
   font-size: 18px;
 }
+.span {
+  font-size: 23px;
+  font-weight: 700;
+}
 
-.noba{
+.bona{
   font-family: var(--font-bona);
 }
+
+.heebo{
+  font-family: var(--font-heebo);
+}
+
+.blue{
+  color: var(--primary-blue);
+}
+.white{
+  color: var(--white);
+}
+.gray{
+  color: var(--gray);
+}
+.lightBlue{
+  color: var(--light-blue);
+}
+
+
+// --primary-blue: #002651;
+// --light-blue: #034077;
+// --white: #FFFFFF;
+// --gray: #DFDFDF;

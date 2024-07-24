@@ -1,4 +1,5 @@
 import Logo from "@/components/Logo";
+import SearchFilter from "@/components/SearchFilter";
 import React from "react";
 
 export default function page() {
