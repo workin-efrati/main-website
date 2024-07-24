@@ -6,14 +6,7 @@ import styles from './styles.module.scss'
 import Link from "next/link";
 
 export default function ChildrensTitles({ childrensData }) {
-    const [openDetails, setOpenDetails] = useState({});
 
-    const handleToggle = (id) => {
-        setOpenDetails((prev) => ({
-            ...prev,
-            [id]: !prev[id],
-        }));
-    };
     return (
         <div className={styles.container}>
             {

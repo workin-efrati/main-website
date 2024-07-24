@@ -9,14 +9,7 @@ import Link from "next/link";
 
 export default function SearchResults({ valueSearch }) {
   const [titles, setTitles] = useState([])
-  const [openDetails, setOpenDetails] = useState({});
 
-  const handleToggle = (id) => {
-    setOpenDetails((prev) => ({
-      ...prev,
-      [id]: !prev[id],
-    }));
-  };
 
 
   const getSubject = async () => {
