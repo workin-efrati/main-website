@@ -4,15 +4,28 @@ import ButtonFullScreen from './ButtonFullScreen'
 import { videos } from './data'
 import Image from 'next/image';
 import Text from '@/components/TextComponent';
-export const metadata = {
+import { ResolvingMetadata } from 'next';
 
-    title: "שיעור פרשת קורח",
-    description: videos[0],
-    icons: {
-        icon: '/metaDataIcon.svg',
+async function generateMetadata({ params, searchParams }, parent) {
+  // read route params
+  const id = params.id;
+ 
+  // fetch data
+  const product = await fetch(`https://.../${id}`).then((res) => res.json());
+ 
+  // optionally access and extend (rather than replace) parent metadata
+  const previousImages = (await parent).openGraph?.images || [];
+ 
+  return {
+    title: product.title,
+    openGraph: {
+      images: ['/some-specific-page-image.jpg', ...previousImages],
     },
+  };
+}
+ 
+export default function Page({ params, searchParams }) {}
 
-};
 
 const Video = ({params:{id}}) => {
     const { title, description, link } = videos[0]
