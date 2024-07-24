@@ -5,20 +5,27 @@ import { FaMinus } from "react-icons/fa6";
 import { FaPlus } from "react-icons/fa";
 import Text from '../TextComponent';
 import ChildrensTitles from './ChildrensTitles';
+import Link from "next/link";
 
-export default function SearchResults() {
+export default function SearchResults({ valueSearch }) {
   const [titles, setTitles] = useState([])
-  const [isOpen, setIsOpen] = useState(false);
+
+
 
   const getSubject = async () => {
     const res = await getData();
-    // console.log(res);
-    setTitles(res)
+    if (valueSearch === '') {
+      setTitles(res)
+    }
+    else {
+      const filteredTitles = titles.filter(item => item.name.includes(valueSearch));
+      setTitles(filteredTitles);
+    }
   }
 
   useEffect(() => {
     getSubject();
-  }, [])
+  }, [valueSearch])
 
   return (
     <>
@@ -33,9 +40,13 @@ export default function SearchResults() {
                   <summary>
                     <Text as="h4" textColor="blue">
                       <div className={styles.title}>
-                        {/* <FaMinus style={{ "width": "15px", "height": "15px" }}/> */}
+
                         {
-                          item.childrens.length > 0 ? <FaPlus style={{ width: "15px", height: "15px" }} /> :
+                          item.childrens.length > 0 ?
+                            <>
+                              <FaMinus className={styles.minus} style={{ "width": "15px", "height": "15px" }} />
+                              <FaPlus className={styles.plus} style={{ width: "15px", height: "15px" }} />
+                            </> :
                             <div style={{ width: "15px", height: "15px" }} />}
                         {item.name}
                       </div>
