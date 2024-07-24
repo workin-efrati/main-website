@@ -1,13 +1,14 @@
 import styles from './styles.module.scss'
 import HeaderMobile from './HeaderMobile';
+import Link from 'next/link';
 
 export default function Header() {
     const navs = [  
-        { text: "שאל את הרב", herf: "", },
-        { text: "שאלות ותשובות", herf: "", },
-        { text: "דרשות ומאמרים", herf: "", },
-        { text: "שיעורי וידאו", herf: "", },
-        { text: "ילדים ונוער", herf: "", },
+        { text: "שאל את הרב", href: "", },
+        { text: "שאלות ותשובות", href: "", },
+        { text: "דרשות ומאמרים", href: "", },
+        { text: "שיעורי וידאו", href: "", },
+        { text: "ילדים ונוער", href: "", },
     ]
     return (
         <>
@@ -15,7 +16,7 @@ export default function Header() {
             <header className={styles.header}>
                 <h1>לַמְּדֵנִי חֻקֶּךָ</h1>
                 <nav className={styles.navInHeader}>
-                    {navs.map((link, i) => (<a key={i + 1 + "a"} href={link.href}>{link.text}</a>))}
+                    {navs.map((link, i) => (<Link key={i + 1 + "a"} href={link.href}>{link.text}</Link>))}
                 </nav>
 
             </header>
