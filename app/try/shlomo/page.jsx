@@ -1,4 +1,5 @@
 import Logo from "@/components/Logo";
+import SearchFilter from "@/components/SearchFilter";
 import React from "react";
 
 export default function page() {
@@ -9,6 +10,7 @@ export default function page() {
       <Logo logoType="bookLogo" />
       <Logo logoType="bookLogo"  firstLine='שו"ת הרב אפרתי'  secondLine={true}/>
       <Logo logoType="bookLogo" firstLine="שו'ת הרב אפרתי"  secondLine={true} thirdLine={true}/>
+      <SearchFilter />
 
     </div>
   );

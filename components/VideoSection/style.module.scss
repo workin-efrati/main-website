@@ -1,0 +1,153 @@
+@import "../../app/vars.scss";
+.VideoSection {
+    --imgWidth:110%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    width: 100%;
+    // height: 40vh;
+    background: -moz-linear-gradient(left, #0677DD 0%, #045197 51%, #034077 80%);
+    background: -webkit-linear-gradient(left, #0677DD 0%, #045197 51%, #034077 80%);
+    background: linear-gradient(to right, #0677ddeb 0%, #045197d6 51%, #034077d9 80%);
+
+    h2 {
+        padding: 2rem;
+        text-align: center;
+        width: 100%;
+        background-color: transparent;
+        font-family: var(--font-bona);
+        color: #fff;
+        font-size: 2rem;
+    }
+
+    .videoContainer {
+        width: 95%;
+        max-width: 1200px;
+        display: flex;
+        flex-direction: row;
+        gap: 8%;
+        display: flex;
+        justify-content: center;
+        height: 220px;
+        transition: .6s;
+        align-items: center;
+        padding: 1rem 0;
+
+        button {
+            color: #fff;
+            font-size: 2rem;
+            background-color: transparent;
+            border: none;
+            cursor: pointer;
+            height: 50%;
+
+            &:hover {
+                transform: scale(1.1);
+            }
+
+            &:active {
+                transform: scale(1.1);
+            }
+            &:disabled{
+                cursor: default;
+                color: #a8a8a8a8;
+                opacity: 0.5;
+                &:hover{
+                    transform: scale(1);
+                }
+            }
+        }
+
+        .videoSliderContainer {
+            width: 100%;
+            gap: 3.3%;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            overflow: hidden;
+            flex-direction: row-reverse;
+            padding: 1rem 0.2rem;
+
+
+            .video {
+                display: flex;
+                width: 31%;
+                flex-grow: 0;
+                flex-shrink: 0;
+                height: 150px;
+                border-radius: 20px;
+                position: relative;
+                transition: .6s;
+                
+                img {
+                    border-radius: 20px;
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                }
+                
+                
+                p {
+                    font-size: .65rem;
+                    color: #fff;
+                    text-decoration: none;
+                    position: absolute;
+                    bottom: 5%;
+                    font-weight: 700;
+                    right: 5%;
+                    
+                }
+            }
+            .video:hover {
+               box-shadow: 0 0 12px 0 #000;
+            }
+        }
+    }
+    
+    .toAllVideo{
+        width: 100%;
+        max-width: 1200px;
+        padding: .6rem;
+        display: flex;
+        justify-content: flex-end;
+        a{
+            text-decoration: none;
+            color: #fff;
+            font-size: 1rem;
+            font-family: var(--font-bona);
+            font-weight: 800;
+            text-decoration: underline;
+            &:hover{
+                transform: scale(1.1);
+            }
+        }
+    }
+    .bgImg {
+        width: 100%;
+        height: 100%;
+        background-image: url(../../public//images/backgrounds/torahBg.png);
+        opacity: .8;
+        object-fit: cover;
+        position: absolute;
+        top: 0;
+        z-index: -1;
+    }
+}
+
+@media (width < $sm) {
+    .VideoSection {
+        --imgWidth:103%;
+        .videoContainer {
+            .videoSliderContainer {
+                max-width: 240px;
+                .video {
+                    width: 100%;
+                }
+                .video:hover {
+                    box-shadow: 0 0 6px 0 #000;
+                 }
+            }
+        }
+    }
+}

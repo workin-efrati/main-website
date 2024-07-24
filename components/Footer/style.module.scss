@@ -1,61 +1,103 @@
 @import "../../app/vars.scss";
-
-.container {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  padding: 10px;
-  font-family: var(--font-bona);
-
-  @media (width > $md) {
-    flex-direction: row;
-    padding: 50px;
-  }
-  .containerList {
+.Footer{
+ background-color: 
+ rgba(239, 239, 239, 0.59); 
+}
+  .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: .6rem;
+    align-items: center;
+    font-family: var(--font-bona);
+    
     @media (width > $md) {
-      order: -1;
+      flex-direction: row;
+      padding: 2rem;
+    }
+    .containerList {
+      padding: 1rem;
+      @media (width > $md) {
+        order: -1;
+      }
     }
   }
-}
-
-.renderList {
-  li,
-  h3 {
-    padding: 0 10px;
-    list-style-type: none;
+  
+  .renderList {
+    ul{
+      padding: .8rem 0;
+      li,
+      h3 {
+        padding: .2rem 0;
+        list-style-type: none;
+        &:hover{
+          text-decoration: underline;
+        }
+      }
+    }
   }
-}
-
-.title {
-  font-family: 700;
-  font-size: 32px;
-  color: #034077;
-}
-.link {
-  text-decoration: none;
-  font-family: 700;
-  font-size: 24px;
-  color: #002651;
-}
-
-.containerList {
-  display: flex;
-  justify-content: space-around;
+  
+  .title {
+    font-family: 700;
+    font-size: 1.1rem;
+    color: #034077;
+  }
+  .link {
+    text-decoration: none;
+    font-family: 700;
+    font-size: 1rem;
+    color: #002651;
+  }
+  
+  .containerList {
+    display: flex;
+    justify-content: space-around;
   align-items: flex-start;
+  width: 100%;
+  max-width: 500px;
   gap: 10px;
 }
 
 .logo {
+  width: 100%;
+  max-width: 500px;
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 5px;
+  .logoAndTitleContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row-reverse;
+    gap: 5px;
+    .titleContainer{
+      display: flex;
+      flex-direction: column;
+      h3{
+        font-family: var(--font-bona);
+        color: #002651;
+        font-size: 1.4rem;
+        text-align: right;
+      }
+      p{
+        font-size: 1.2rem;
+        color: #002651;
+        text-align: center;
+      }
+    }
+    img{
+      width: 100px;
+      height: 100px;
+    }
+  }
 }
 
-.p {
+.rightsToUs {
   text-align: center;
   color: #ffffff;
-  font-size: 24px;
+  font-family: 400;
+  font-size: .8rem;
   background: var(--blue-gradient);
   padding: 1rem 0;
 }

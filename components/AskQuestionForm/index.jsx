@@ -78,7 +78,7 @@ export default function AskActionForm() {
           </label>
           <input
             type="text"
-            name='header'
+            name='title'
             placeholder="נסה לנסח את השאלה במשפט אחד"
             className={styles.input}
             minLength={10}
