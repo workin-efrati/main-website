@@ -12,30 +12,29 @@ import Text from '../TextComponent'
 
 export default function AskActionForm() {
   const [state, formAction] = useFormState(createQuestionAction)
-  const { pending } = useFormStatus()
   const formRef = useRef(null)
   const [contactMethod, setContactMethod] = useState('email')
   const [contactDetails, setContactDetails] = useState('')
   const [message, setMessage] = useState(null)
 
 
-
   useEffect(() => {
     if (state?.success) {
       console.log(state.question)
-      setMessage(state.message);
       if (formRef.current) {
         formRef.current.reset()
         setContactDetails("")
         setContactMethod("email")
       }
+    }
+    setMessage(state?.message || "");
       setTimeout(()=>{
         setMessage(null);
-      }, 3000)
-    }
+      }, 4000)
+    
   }, [state])
 
-
+//    מאפס נתונים בין מעבר בין סוגי קלטים ומעדכן סוג התקשרות
   const handleContactMethodChange = (e) => {
     setContactMethod(prev=>{
       if(prev==="email" &&  e.target.value ===("sms"||"whatsapp")||
@@ -47,35 +46,38 @@ export default function AskActionForm() {
 
   return (
     <div className={style.container}>
-
-      <Text as="h3" textColor="white" fontStyle="b">
-      <SiTheconversation size={40} style={{paddingLeft: "4px"}}/>
-      {`  כתיבת שאלה לרב   `}
+      {/* כותרת */}
+      <Text as="h3" fontStyle="b">
+      <span className={style.header}>
+      <SiTheconversation size={30} />
+      {`  כתיבת שאלה לרב  `}
+      </span>
       </Text>
 
+    {/* טופס */}
       <form ref={formRef} action={formAction} className={style.form}>  
         <div className={style.formGroup}>
         <label className={style.label}>
-          <Text as="h5" textColor="white" fontStyle="b">כותרת</Text>
+          <Text as="h5"  fontStyle="b">כותרת</Text>
           </label>
-        <input
+           <input
             type="text"
             name='header'
             placeholder="נסה לנסח את השאלה במשפט אחד"
             className={style.input}
             minLength={10}
             pattern="^[\u0590-\u05FF\s]*$"
-            title="אנא הכנס כותרת בעברית בלבד"
-            
+            title="אנא הכנס כותרת בעברית בלבד"  
             />
           </div>
           <div className={style.formGroup}>
           <label className={style.label}>
-          <Text as="h5" textColor="white" fontStyle="b">*תוכן השאלה</Text>
+          <Text as="h5"  fontStyle="b">*תוכן השאלה</Text>
           </label>
           <textarea
             name='question'
-            placeholder="הכנס שאלה באורך של 20 תווים ומעלה"
+            placeholder="הכנס שאלה בעברית באורך של 20 תווים ומעלה"
+            title="הכנס שאלה בעברית באורך של 20 תווים ומעלה"
             className={style.textarea}
             minLength={20}
             required
@@ -83,9 +85,9 @@ export default function AskActionForm() {
         </div>
         <div className={style.formGroup}>
         <label className={style.label}>
-          <Text as="h5" textColor="white" fontStyle="b">
+          <Text as="h5"  fontStyle="b">
 
-            * בחר את אופן קבלת המענה 
+            *בחר את אופן קבלת המענה 
           </Text>
           </label>
 
@@ -113,7 +115,7 @@ export default function AskActionForm() {
         </div>
 
          <div className={style.contactOptions}>
-           <label className={style.label}>
+           <label className={style.radioLabel}>
             <input
                 type="radio"
                 name="contactOption"
@@ -123,12 +125,12 @@ export default function AskActionForm() {
                 onChange={handleContactMethodChange}
               />
             
-          <Text as="h5" textColor="white" fontStyle="b">
+          <Text as="h5"  fontStyle="h">
                Email
           </Text>
             </label>
 
-            <label className={style.label}>
+            <label className={style.radioLabel}>
               <input
                 type="radio"
                 name="contactOption"
@@ -137,11 +139,11 @@ export default function AskActionForm() {
                 onChange={handleContactMethodChange}
                 className={style.radio}
               />
-          <Text as="h5" textColor="white" fontStyle="b">
+          <Text as="h5"  fontStyle="h">
                SMS
           </Text>
             </label>
-            <label className={style.label}>
+            <label className={style.radioLabel}>
               <input
                 type="radio"
                 name="contactOption"
@@ -150,7 +152,7 @@ export default function AskActionForm() {
                 checked={contactMethod === 'whatsapp'}
                 onChange={handleContactMethodChange}
               />
-            <Text as="h5" textColor="white" fontStyle="b">
+            <Text as="h5"  fontStyle="h">
               WhatsApp
             </Text>
             </label>
@@ -158,9 +160,10 @@ export default function AskActionForm() {
           </div>
 
         <div>
-        {message ? <span className={style.message}><Text as="h4" textColor="white" fontStyle="b">{message}</Text></span>:
+        {message ? <span className={style.message}><Text as="h4" textColor="black" fontStyle="b">{message}</Text></span>:
         <SubmitButton text={"שלח"} 
-        // onPendingText={"שולח..."}
+        width={"100%"}
+        onPendingText={"שולח..."}
         />}
           
         </div>

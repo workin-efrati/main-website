@@ -1,19 +1,20 @@
 'use client'
+import { Button } from '../Button';
 import Text from '../TextComponent'
 import styles from './style.module.scss'
 import { useFormStatus } from 'react-dom'
 
-export function SubmitButton({ text, onPendingText = null }) {
+export function SubmitButton({ text, onPendingText = null, width }) {
   const { pending } = useFormStatus();
   return (
     <>
-      <button className={`${pending ? styles.disabledButton : styles.allowedButton} ${styles.button}`} type="submit" disabled={pending}>
-
-        {pending && !onPendingText ? <div className={styles.loading}> <div className={styles.spinner}></div></div> :
-
-          <Text as="h4" textColor="white" fontStyle="b">{pending ? onPendingText : text}</Text>
-        }
-      </button>
+      <Button type="submit"  disabled={pending} style={{ width: width, background: pending? "var(--light-blue)": "var(--blue-gradient)", color: "black" }} >     
+        {pending && !onPendingText ?
+         <div className={styles.loading}><div className={styles.spinner}></div></div>
+          :
+          <Text as="h4" textColor="black" fontStyle="b">{pending ? onPendingText : text}</Text>
+          }
+      </Button>
     </>
   )
 }
