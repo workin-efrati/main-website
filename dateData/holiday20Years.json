@@ -36,10 +36,10 @@
   },
   "2024-08-19": {
     "inEnglish": "Tu B’Av",
-    "inHebrew": "טו באב",
+    "inHebrew": "ט״ו באב",
     "hDate": "15 Av 5784",
     "hDateInHebrew": "טו-אב-תשפ״ד",
-    "mainTag": "טו באב"
+    "mainTag": "ט״ו באב"
   },
   "2024-09-28": {
     "inEnglish": "Leil Selichot",
@@ -155,18 +155,12 @@
   },
   "2024-10-24": {
     "inEnglish": "Shmini Atzeret",
-    "inHebrew": "שמיני עצרת",
+    "inHebrew": "שמחת תורה",
     "hDate": "22 Tishrei 5785",
     "hDateInHebrew": "כב-תשרי-תשפ״ה",
-    "mainTag": "שמיני עצרת"
-  },
-  "2024-10-25": {
-    "inEnglish": "Simchat Torah",
-    "inHebrew": "שמחת תורה",
-    "hDate": "23 Tishrei 5785",
-    "hDateInHebrew": "כג-תשרי-תשפ״ה",
     "mainTag": "שמחת תורה"
   },
+
   "2024-12-25": {
     "inEnglish": "Chanukah: 1 Candle",
     "inHebrew": "נר ראשון של חנוכה",
@@ -246,10 +240,10 @@
   },
   "2025-02-13": {
     "inEnglish": "Tu BiShvat",
-    "inHebrew": "טו בשבט",
+    "inHebrew": "ט״ו בשבט",
     "hDate": "15 Sh'vat 5785",
     "hDateInHebrew": "טו-שבט-תשפ״ה",
-    "mainTag": "טו בשבט"
+    "mainTag": "ט״ו בשבט"
   },
   "2025-03-01": {
     "inEnglish": "Shabbat Shekalim",
@@ -306,13 +300,6 @@
     "hDate": "29 Adar 5785",
     "hDateInHebrew": "כט-אדר-תשפ״ה",
     "mainTag": null
-  },
-  "2025-04-10": {
-    "inEnglish": "Ta’anit Bechorot",
-    "inHebrew": "תענית בכורות",
-    "hDate": "12 Nisan 5785",
-    "hDateInHebrew": "יב-ניסן-תשפ״ה",
-    "mainTag": "תענית בכורות"
   },
   "2025-04-12": {
     "inEnglish": "Erev Pesach",
@@ -372,7 +359,7 @@
   },
   "2025-04-20": {
     "inEnglish": "Pesach VIII",
-    "inHebrew": "פסח ח׳",
+    "inHebrew": "אסרו חג פסח",
     "hDate": "22 Nisan 5785",
     "hDateInHebrew": "כב-ניסן-תשפ״ה",
     "mainTag": "פסח"
@@ -428,7 +415,7 @@
   },
   "2025-06-02": {
     "inEnglish": "Shavuot I",
-    "inHebrew": "שבועות א׳",
+    "inHebrew": "שבועות",
     "hDate": "6 Sivan 5785",
     "hDateInHebrew": "ו-סיוון-תשפ״ה",
     "mainTag": "שבועות"
@@ -576,18 +563,12 @@
   },
   "2025-10-14": {
     "inEnglish": "Shmini Atzeret",
-    "inHebrew": "שמיני עצרת",
+    "inHebrew": "שמחת תורה",
     "hDate": "22 Tishrei 5786",
     "hDateInHebrew": "כב-תשרי-תשפ״ו",
-    "mainTag": "שמיני עצרת"
-  },
-  "2025-10-15": {
-    "inEnglish": "Simchat Torah",
-    "inHebrew": "שמחת תורה",
-    "hDate": "23 Tishrei 5786",
-    "hDateInHebrew": "כג-תשרי-תשפ״ו",
     "mainTag": "שמחת תורה"
   },
+
   "2025-12-14": {
     "inEnglish": "Chanukah: 1 Candle",
     "inHebrew": "נר ראשון של חנוכה",
@@ -667,10 +648,10 @@
   },
   "2026-02-02": {
     "inEnglish": "Tu BiShvat",
-    "inHebrew": "טו בשבט",
+    "inHebrew": "ט״ו בשבט",
     "hDate": "15 Sh'vat 5786",
     "hDateInHebrew": "טו-שבט-תשפ״ו",
-    "mainTag": "טו בשבט"
+    "mainTag": "ט״ו בשבט"
   },
   "2026-02-14": {
     "inEnglish": "Shabbat Shekalim",
@@ -779,7 +760,7 @@
   },
   "2026-04-09": {
     "inEnglish": "Pesach VIII",
-    "inHebrew": "פסח ח׳",
+    "inHebrew": "אסרו חג פסח",
     "hDate": "22 Nisan 5786",
     "hDateInHebrew": "כב-ניסן-תשפ״ו",
     "mainTag": "פסח"
@@ -835,7 +816,7 @@
   },
   "2026-05-22": {
     "inEnglish": "Shavuot I",
-    "inHebrew": "שבועות א׳",
+    "inHebrew": "שבועות",
     "hDate": "6 Sivan 5786",
     "hDateInHebrew": "ו-סיוון-תשפ״ו",
     "mainTag": "שבועות"
@@ -878,10 +859,10 @@
   },
   "2026-07-29": {
     "inEnglish": "Tu B’Av",
-    "inHebrew": "טו באב",
+    "inHebrew": "ט״ו באב",
     "hDate": "15 Av 5786",
     "hDateInHebrew": "טו-אב-תשפ״ו",
-    "mainTag": "טו באב"
+    "mainTag": "ט״ו באב"
   },
   "2026-09-05": {
     "inEnglish": "Leil Selichot",
@@ -997,18 +978,12 @@
   },
   "2026-10-03": {
     "inEnglish": "Shmini Atzeret",
-    "inHebrew": "שמיני עצרת",
+    "inHebrew": "שמחת תורה",
     "hDate": "22 Tishrei 5787",
     "hDateInHebrew": "כב-תשרי-תשפ״ז",
-    "mainTag": "שמיני עצרת"
-  },
-  "2026-10-04": {
-    "inEnglish": "Simchat Torah",
-    "inHebrew": "שמחת תורה",
-    "hDate": "23 Tishrei 5787",
-    "hDateInHebrew": "כג-תשרי-תשפ״ז",
     "mainTag": "שמחת תורה"
   },
+
   "2026-12-04": {
     "inEnglish": "Chanukah: 1 Candle",
     "inHebrew": "נר ראשון של חנוכה",
@@ -1080,73 +1055,73 @@
     "mainTag": "עשרה בטבת"
   },
   "2027-01-23": {
-    "inEnglish": "Shabbat Shirah",
-    "inHebrew": "שבת שירה",
+    "inEnglish": "Tu BiShvat",
+    "inHebrew": "ט״ו בשבט",
     "hDate": "15 Sh'vat 5787",
     "hDateInHebrew": "טו-שבט-תשפ״ז",
-    "mainTag": null
+     "mainTag": "ט״ו בשבט"
   },
   "2027-02-21": {
     "inEnglish": "Purim Katan",
     "inHebrew": "פורים קטן",
     "hDate": "14 Adar I 5787",
-    "hDateInHebrew": "יד-אדר-undefined",
+    "hDateInHebrew": "יד-אדר-תשפ״ז",
     "mainTag": "פורים"
   },
   "2027-02-22": {
     "inEnglish": "Shushan Purim Katan",
     "inHebrew": "שושן פורים קטן",
     "hDate": "15 Adar I 5787",
-    "hDateInHebrew": "טו-אדר-undefined",
+    "hDateInHebrew": "טו-אדר-תשפ״ז",
     "mainTag": "פורים"
   },
   "2027-03-06": {
     "inEnglish": "Shabbat Shekalim",
     "inHebrew": "שבת שקלים",
     "hDate": "27 Adar I 5787",
-    "hDateInHebrew": "כז-אדר-undefined",
+    "hDateInHebrew": "כז-אדר-תשפ״ז",
     "mainTag": null
   },
   "2027-03-20": {
     "inEnglish": "Shabbat Zachor",
     "inHebrew": "שבת זכור",
     "hDate": "11 Adar II 5787",
-    "hDateInHebrew": "יא-אדר-undefined",
+    "hDateInHebrew": "יא-אדר-תשפ״ז",
     "mainTag": null
   },
   "2027-03-22": {
     "inEnglish": "Erev Purim",
     "inHebrew": "ערב פורים",
     "hDate": "13 Adar II 5787",
-    "hDateInHebrew": "יג-אדר-undefined",
+    "hDateInHebrew": "יג-אדר-תשפ״ז",
     "mainTag": null
   },
   "2027-03-23": {
     "inEnglish": "Purim",
     "inHebrew": "פורים",
     "hDate": "14 Adar II 5787",
-    "hDateInHebrew": "יד-אדר-undefined",
+    "hDateInHebrew": "יד-אדר-תשפ״ז",
     "mainTag": "פורים"
   },
   "2027-03-24": {
     "inEnglish": "Shushan Purim",
     "inHebrew": "שושן פורים",
     "hDate": "15 Adar II 5787",
-    "hDateInHebrew": "טו-אדר-undefined",
+    "hDateInHebrew": "טו-אדר-תשפ״ז",
     "mainTag": "פורים"
   },
   "2027-03-27": {
     "inEnglish": "Shabbat Parah",
     "inHebrew": "שבת פרה",
     "hDate": "18 Adar II 5787",
-    "hDateInHebrew": "יח-אדר-undefined",
+    "hDateInHebrew": "יח-אדר-תשפ״ז",
     "mainTag": null
   },
   "2027-04-03": {
     "inEnglish": "Shabbat HaChodesh",
     "inHebrew": "שבת החדש",
     "hDate": "25 Adar II 5787",
-    "hDateInHebrew": "כה-אדר-undefined",
+    "hDateInHebrew": "כה-אדר-תשפ״ז",
     "mainTag": null
   },
   "2027-04-21": {
@@ -1207,7 +1182,7 @@
   },
   "2027-04-29": {
     "inEnglish": "Pesach VIII",
-    "inHebrew": "פסח ח׳",
+    "inHebrew": "אסרו חג פסח",
     "hDate": "22 Nisan 5787",
     "hDateInHebrew": "כב-ניסן-תשפ״ז",
     "mainTag": "פסח"
@@ -1263,7 +1238,7 @@
   },
   "2027-06-11": {
     "inEnglish": "Shavuot I",
-    "inHebrew": "שבועות א׳",
+    "inHebrew": "שבועות",
     "hDate": "6 Sivan 5787",
     "hDateInHebrew": "ו-סיוון-תשפ״ז",
     "mainTag": "שבועות"
@@ -1306,10 +1281,10 @@
   },
   "2027-08-18": {
     "inEnglish": "Tu B’Av",
-    "inHebrew": "טו באב",
+    "inHebrew": "ט״ו באב",
     "hDate": "15 Av 5787",
     "hDateInHebrew": "טו-אב-תשפ״ז",
-    "mainTag": "טו באב"
+    "mainTag": "ט״ו באב"
   },
   "2027-09-25": {
     "inEnglish": "Leil Selichot",
@@ -1425,18 +1400,12 @@
   },
   "2027-10-23": {
     "inEnglish": "Shmini Atzeret",
-    "inHebrew": "שמיני עצרת",
+    "inHebrew": "שמחת תורה",
     "hDate": "22 Tishrei 5788",
     "hDateInHebrew": "כב-תשרי-תשפ״ח",
-    "mainTag": "שמיני עצרת"
-  },
-  "2027-10-24": {
-    "inEnglish": "Simchat Torah",
-    "inHebrew": "שמחת תורה",
-    "hDate": "23 Tishrei 5788",
-    "hDateInHebrew": "כג-תשרי-תשפ״ח",
     "mainTag": "שמחת תורה"
   },
+
   "2027-12-24": {
     "inEnglish": "Chanukah: 1 Candle",
     "inHebrew": "נר ראשון של חנוכה",
@@ -1508,11 +1477,11 @@
     "mainTag": "עשרה בטבת"
   },
   "2028-02-12": {
-    "inEnglish": "Shabbat Shirah",
-    "inHebrew": "שבת שירה",
+    "inEnglish": "Tu BiShvat",
+    "inHebrew": "ט״ו בשבט",
     "hDate": "15 Sh'vat 5788",
     "hDateInHebrew": "טו-שבט-תשפ״ח",
-    "mainTag": null
+     "mainTag": "ט״ו בשבט"
   },
   "2028-02-26": {
     "inEnglish": "Shabbat Shekalim",
@@ -1628,7 +1597,7 @@
   },
   "2028-04-18": {
     "inEnglish": "Pesach VIII",
-    "inHebrew": "פסח ח׳",
+    "inHebrew": "אסרו חג פסח",
     "hDate": "22 Nisan 5788",
     "hDateInHebrew": "כב-ניסן-תשפ״ח",
     "mainTag": "פסח"
@@ -1684,7 +1653,7 @@
   },
   "2028-05-31": {
     "inEnglish": "Shavuot I",
-    "inHebrew": "שבועות א׳",
+    "inHebrew": "שבועות",
     "hDate": "6 Sivan 5788",
     "hDateInHebrew": "ו-סיוון-תשפ״ח",
     "mainTag": "שבועות"
@@ -1727,10 +1696,10 @@
   },
   "2028-08-07": {
     "inEnglish": "Tu B’Av",
-    "inHebrew": "טו באב",
+    "inHebrew": "ט״ו באב",
     "hDate": "15 Av 5788",
     "hDateInHebrew": "טו-אב-תשפ״ח",
-    "mainTag": "טו באב"
+    "mainTag": "ט״ו באב"
   },
   "2028-09-16": {
     "inEnglish": "Leil Selichot",
@@ -1846,18 +1815,12 @@
   },
   "2028-10-12": {
     "inEnglish": "Shmini Atzeret",
-    "inHebrew": "שמיני עצרת",
+    "inHebrew": "שמחת תורה",
     "hDate": "22 Tishrei 5789",
     "hDateInHebrew": "כב-תשרי-תשפ״ט",
-    "mainTag": "שמיני עצרת"
-  },
-  "2028-10-13": {
-    "inEnglish": "Simchat Torah",
-    "inHebrew": "שמחת תורה",
-    "hDate": "23 Tishrei 5789",
-    "hDateInHebrew": "כג-תשרי-תשפ״ט",
     "mainTag": "שמחת תורה"
   },
+
   "2028-12-12": {
     "inEnglish": "Chanukah: 1 Candle",
     "inHebrew": "נר ראשון של חנוכה",
@@ -1937,10 +1900,10 @@
   },
   "2029-01-31": {
     "inEnglish": "Tu BiShvat",
-    "inHebrew": "טו בשבט",
+    "inHebrew": "ט״ו בשבט",
     "hDate": "15 Sh'vat 5789",
     "hDateInHebrew": "טו-שבט-תשפ״ט",
-    "mainTag": "טו בשבט"
+    "mainTag": "ט״ו בשבט"
   },
   "2029-02-10": {
     "inEnglish": "Shabbat Shekalim",
@@ -2056,7 +2019,7 @@
   },
   "2029-04-07": {
     "inEnglish": "Pesach VIII",
-    "inHebrew": "פסח ח׳",
+    "inHebrew": "אסרו חג פסח",
     "hDate": "22 Nisan 5789",
     "hDateInHebrew": "כב-ניסן-תשפ״ט",
     "mainTag": "פסח"
@@ -2112,7 +2075,7 @@
   },
   "2029-05-20": {
     "inEnglish": "Shavuot I",
-    "inHebrew": "שבועות א׳",
+    "inHebrew": "שבועות",
     "hDate": "6 Sivan 5789",
     "hDateInHebrew": "ו-סיוון-תשפ״ט",
     "mainTag": "שבועות"
@@ -2134,17 +2097,17 @@
   },
   "2029-07-22": {
     "inEnglish": "Tish’a B’Av (observed)",
-    "inHebrew": "צום תשעה באב נדחה",
+    "inHebrew": "צום תשעה באב",
     "hDate": "10 Av 5789",
     "hDateInHebrew": "י-אב-תשפ״ט",
-    "mainTag": "צום תשעה באב נדחה"
+    "mainTag": "צום תשעה באב"
   },
   "2029-07-27": {
     "inEnglish": "Tu B’Av",
-    "inHebrew": "טו באב",
+    "inHebrew": "ט״ו באב",
     "hDate": "15 Av 5789",
     "hDateInHebrew": "טו-אב-תשפ״ט",
-    "mainTag": "טו באב"
+    "mainTag": "ט״ו באב"
   },
   "2029-07-28": {
     "inEnglish": "Shabbat Nachamu",
@@ -2267,18 +2230,12 @@
   },
   "2029-10-01": {
     "inEnglish": "Shmini Atzeret",
-    "inHebrew": "שמיני עצרת",
+    "inHebrew": "שמחת תורה",
     "hDate": "22 Tishrei 5790",
     "hDateInHebrew": "כב-תשרי-תש״צ",
-    "mainTag": "שמיני עצרת"
-  },
-  "2029-10-02": {
-    "inEnglish": "Simchat Torah",
-    "inHebrew": "שמחת תורה",
-    "hDate": "23 Tishrei 5790",
-    "hDateInHebrew": "כג-תשרי-תש״צ",
     "mainTag": "שמחת תורה"
   },
+
   "2029-12-01": {
     "inEnglish": "Chanukah: 1 Candle",
     "inHebrew": "נר ראשון של חנוכה",
@@ -2350,73 +2307,74 @@
     "mainTag": "עשרה בטבת"
   },
   "2030-01-19": {
-    "inEnglish": "Shabbat Shirah",
-    "inHebrew": "שבת שירה",
+    "inEnglish": "Tu BiShvat",
+    "inHebrew": "ט״ו בשבט",
     "hDate": "15 Sh'vat 5790",
     "hDateInHebrew": "טו-שבט-תש״צ",
-    "mainTag": null
+     "mainTag": "ט״ו בשבט"
   },
+  
   "2030-02-17": {
     "inEnglish": "Purim Katan",
     "inHebrew": "פורים קטן",
     "hDate": "14 Adar I 5790",
-    "hDateInHebrew": "יד-אדר-undefined",
+    "hDateInHebrew": "יד-אדר-תש״צ",
     "mainTag": "פורים"
   },
   "2030-02-18": {
     "inEnglish": "Shushan Purim Katan",
     "inHebrew": "שושן פורים קטן",
     "hDate": "15 Adar I 5790",
-    "hDateInHebrew": "טו-אדר-undefined",
+    "hDateInHebrew": "טו-אדר-תש״צ",
     "mainTag": "פורים"
   },
   "2030-03-02": {
     "inEnglish": "Shabbat Shekalim",
     "inHebrew": "שבת שקלים",
     "hDate": "27 Adar I 5790",
-    "hDateInHebrew": "כז-אדר-undefined",
+    "hDateInHebrew": "כז-אדר-תש״צ",
     "mainTag": null
   },
   "2030-03-16": {
     "inEnglish": "Shabbat Zachor",
     "inHebrew": "שבת זכור",
     "hDate": "11 Adar II 5790",
-    "hDateInHebrew": "יא-אדר-undefined",
+    "hDateInHebrew": "יא-אדר-תש״צ",
     "mainTag": null
   },
   "2030-03-18": {
     "inEnglish": "Erev Purim",
     "inHebrew": "ערב פורים",
     "hDate": "13 Adar II 5790",
-    "hDateInHebrew": "יג-אדר-undefined",
+    "hDateInHebrew": "יג-אדר-תש״צ",
     "mainTag": null
   },
   "2030-03-19": {
     "inEnglish": "Purim",
     "inHebrew": "פורים",
     "hDate": "14 Adar II 5790",
-    "hDateInHebrew": "יד-אדר-undefined",
+    "hDateInHebrew": "יד-אדר-תש״צ",
     "mainTag": "פורים"
   },
   "2030-03-20": {
     "inEnglish": "Shushan Purim",
     "inHebrew": "שושן פורים",
     "hDate": "15 Adar II 5790",
-    "hDateInHebrew": "טו-אדר-undefined",
+    "hDateInHebrew": "טו-אדר-תש״צ",
     "mainTag": "פורים"
   },
   "2030-03-23": {
     "inEnglish": "Shabbat Parah",
     "inHebrew": "שבת פרה",
     "hDate": "18 Adar II 5790",
-    "hDateInHebrew": "יח-אדר-undefined",
+    "hDateInHebrew": "יח-אדר-תש״צ",
     "mainTag": null
   },
   "2030-03-30": {
     "inEnglish": "Shabbat HaChodesh",
     "inHebrew": "שבת החדש",
     "hDate": "25 Adar II 5790",
-    "hDateInHebrew": "כה-אדר-undefined",
+    "hDateInHebrew": "כה-אדר-תש״צ",
     "mainTag": null
   },
   "2030-04-17": {
@@ -2477,7 +2435,7 @@
   },
   "2030-04-25": {
     "inEnglish": "Pesach VIII",
-    "inHebrew": "פסח ח׳",
+    "inHebrew": "אסרו חג פסח",
     "hDate": "22 Nisan 5790",
     "hDateInHebrew": "כב-ניסן-תש״צ",
     "mainTag": "פסח"
@@ -2533,7 +2491,7 @@
   },
   "2030-06-07": {
     "inEnglish": "Shavuot I",
-    "inHebrew": "שבועות א׳",
+    "inHebrew": "שבועות",
     "hDate": "6 Sivan 5790",
     "hDateInHebrew": "ו-סיוון-תש״צ",
     "mainTag": "שבועות"
@@ -2576,10 +2534,10 @@
   },
   "2030-08-14": {
     "inEnglish": "Tu B’Av",
-    "inHebrew": "טו באב",
+    "inHebrew": "ט״ו באב",
     "hDate": "15 Av 5790",
     "hDateInHebrew": "טו-אב-תש״צ",
-    "mainTag": "טו באב"
+    "mainTag": "ט״ו באב"
   },
   "2030-09-21": {
     "inEnglish": "Leil Selichot",
@@ -2695,18 +2653,12 @@
   },
   "2030-10-19": {
     "inEnglish": "Shmini Atzeret",
-    "inHebrew": "שמיני עצרת",
+    "inHebrew": "שמחת תורה",
     "hDate": "22 Tishrei 5791",
     "hDateInHebrew": "כב-תשרי-תשצ״א",
-    "mainTag": "שמיני עצרת"
-  },
-  "2030-10-20": {
-    "inEnglish": "Simchat Torah",
-    "inHebrew": "שמחת תורה",
-    "hDate": "23 Tishrei 5791",
-    "hDateInHebrew": "כג-תשרי-תשצ״א",
     "mainTag": "שמחת תורה"
   },
+
   "2030-12-20": {
     "inEnglish": "Chanukah: 1 Candle",
     "inHebrew": "נר ראשון של חנוכה",
@@ -2778,11 +2730,11 @@
     "mainTag": "עשרה בטבת"
   },
   "2031-02-08": {
-    "inEnglish": "Shabbat Shirah",
-    "inHebrew": "שבת שירה",
+    "inEnglish": "Tu BiShvat",
+    "inHebrew": "ט״ו בשבט",
     "hDate": "15 Sh'vat 5791",
     "hDateInHebrew": "טו-שבט-תשצ״א",
-    "mainTag": null
+     "mainTag": "ט״ו בשבט"
   },
   "2031-02-22": {
     "inEnglish": "Shabbat Shekalim",
@@ -2898,7 +2850,7 @@
   },
   "2031-04-15": {
     "inEnglish": "Pesach VIII",
-    "inHebrew": "פסח ח׳",
+    "inHebrew": "אסרו חג פסח",
     "hDate": "22 Nisan 5791",
     "hDateInHebrew": "כב-ניסן-תשצ״א",
     "mainTag": "פסח"
@@ -2954,7 +2906,7 @@
   },
   "2031-05-28": {
     "inEnglish": "Shavuot I",
-    "inHebrew": "שבועות א׳",
+    "inHebrew": "שבועות",
     "hDate": "6 Sivan 5791",
     "hDateInHebrew": "ו-סיוון-תשצ״א",
     "mainTag": "שבועות"
@@ -2997,10 +2949,10 @@
   },
   "2031-08-04": {
     "inEnglish": "Tu B’Av",
-    "inHebrew": "טו באב",
+    "inHebrew": "ט״ו באב",
     "hDate": "15 Av 5791",
     "hDateInHebrew": "טו-אב-תשצ״א",
-    "mainTag": "טו באב"
+    "mainTag": "ט״ו באב"
   },
   "2031-09-13": {
     "inEnglish": "Leil Selichot",
@@ -3116,16 +3068,9 @@
   },
   "2031-10-09": {
     "inEnglish": "Shmini Atzeret",
-    "inHebrew": "שמיני עצרת",
+    "inHebrew": "שמחת תורה",
     "hDate": "22 Tishrei 5792",
     "hDateInHebrew": "כב-תשרי-תשצ״ב",
-    "mainTag": "שמיני עצרת"
-  },
-  "2031-10-10": {
-    "inEnglish": "Simchat Torah",
-    "inHebrew": "שמחת תורה",
-    "hDate": "23 Tishrei 5792",
-    "hDateInHebrew": "כג-תשרי-תשצ״ב",
     "mainTag": "שמחת תורה"
   },
   "2031-12-09": {
@@ -3207,10 +3152,10 @@
   },
   "2032-01-28": {
     "inEnglish": "Tu BiShvat",
-    "inHebrew": "טו בשבט",
+    "inHebrew": "ט״ו בשבט",
     "hDate": "15 Sh'vat 5792",
     "hDateInHebrew": "טו-שבט-תשצ״ב",
-    "mainTag": "טו בשבט"
+    "mainTag": "ט״ו בשבט"
   },
   "2032-02-07": {
     "inEnglish": "Shabbat Shekalim",
@@ -3326,7 +3271,7 @@
   },
   "2032-04-03": {
     "inEnglish": "Pesach VIII",
-    "inHebrew": "פסח ח׳",
+    "inHebrew": "אסרו חג פסח",
     "hDate": "22 Nisan 5792",
     "hDateInHebrew": "כב-ניסן-תשצ״ב",
     "mainTag": "פסח"
@@ -3382,7 +3327,7 @@
   },
   "2032-05-16": {
     "inEnglish": "Shavuot I",
-    "inHebrew": "שבועות א׳",
+    "inHebrew": "שבועות",
     "hDate": "6 Sivan 5792",
     "hDateInHebrew": "ו-סיוון-תשצ״ב",
     "mainTag": "שבועות"
@@ -3404,17 +3349,17 @@
   },
   "2032-07-18": {
     "inEnglish": "Tish’a B’Av (observed)",
-    "inHebrew": "צום תשעה באב נדחה",
+    "inHebrew": "צום תשעה באב",
     "hDate": "10 Av 5792",
     "hDateInHebrew": "י-אב-תשצ״ב",
-    "mainTag": "צום תשעה באב נדחה"
+    "mainTag": "צום תשעה באב"
   },
   "2032-07-23": {
     "inEnglish": "Tu B’Av",
-    "inHebrew": "טו באב",
+    "inHebrew": "ט״ו באב",
     "hDate": "15 Av 5792",
     "hDateInHebrew": "טו-אב-תשצ״ב",
-    "mainTag": "טו באב"
+    "mainTag": "ט״ו באב"
   },
   "2032-07-24": {
     "inEnglish": "Shabbat Nachamu",
@@ -3537,18 +3482,12 @@
   },
   "2032-09-27": {
     "inEnglish": "Shmini Atzeret",
-    "inHebrew": "שמיני עצרת",
+    "inHebrew": "שמחת תורה",
     "hDate": "22 Tishrei 5793",
     "hDateInHebrew": "כב-תשרי-תשצ״ג",
-    "mainTag": "שמיני עצרת"
-  },
-  "2032-09-28": {
-    "inEnglish": "Simchat Torah",
-    "inHebrew": "שמחת תורה",
-    "hDate": "23 Tishrei 5793",
-    "hDateInHebrew": "כג-תשרי-תשצ״ג",
     "mainTag": "שמחת תורה"
   },
+ 
   "2032-11-27": {
     "inEnglish": "Chanukah: 1 Candle",
     "inHebrew": "נר ראשון של חנוכה",
@@ -3620,73 +3559,73 @@
     "mainTag": "עשרה בטבת"
   },
   "2033-01-15": {
-    "inEnglish": "Shabbat Shirah",
-    "inHebrew": "שבת שירה",
+    "inEnglish": "Tu BiShvat",
+    "inHebrew": "ט״ו בשבט",
     "hDate": "15 Sh'vat 5793",
     "hDateInHebrew": "טו-שבט-תשצ״ג",
-    "mainTag": null
+     "mainTag": "ט״ו בשבט"
   },
   "2033-02-13": {
     "inEnglish": "Purim Katan",
     "inHebrew": "פורים קטן",
     "hDate": "14 Adar I 5793",
-    "hDateInHebrew": "יד-אדר-undefined",
+    "hDateInHebrew": "יד-אדר-תשצ״ג",
     "mainTag": "פורים"
   },
   "2033-02-14": {
     "inEnglish": "Shushan Purim Katan",
     "inHebrew": "שושן פורים קטן",
     "hDate": "15 Adar I 5793",
-    "hDateInHebrew": "טו-אדר-undefined",
+    "hDateInHebrew": "טו-אדר-תשצ״ג",
     "mainTag": "פורים"
   },
   "2033-02-26": {
     "inEnglish": "Shabbat Shekalim",
     "inHebrew": "שבת שקלים",
     "hDate": "27 Adar I 5793",
-    "hDateInHebrew": "כז-אדר-undefined",
+    "hDateInHebrew": "כז-אדר-תשצ״ג",
     "mainTag": null
   },
   "2033-03-12": {
     "inEnglish": "Shabbat Zachor",
     "inHebrew": "שבת זכור",
     "hDate": "11 Adar II 5793",
-    "hDateInHebrew": "יא-אדר-undefined",
+    "hDateInHebrew": "יא-אדר-תשצ״ג",
     "mainTag": null
   },
   "2033-03-14": {
     "inEnglish": "Erev Purim",
     "inHebrew": "ערב פורים",
     "hDate": "13 Adar II 5793",
-    "hDateInHebrew": "יג-אדר-undefined",
+    "hDateInHebrew": "יג-אדר-תשצ״ג",
     "mainTag": null
   },
   "2033-03-15": {
     "inEnglish": "Purim",
     "inHebrew": "פורים",
     "hDate": "14 Adar II 5793",
-    "hDateInHebrew": "יד-אדר-undefined",
+    "hDateInHebrew": "יד-אדר-תשצ״ג",
     "mainTag": "פורים"
   },
   "2033-03-16": {
     "inEnglish": "Shushan Purim",
     "inHebrew": "שושן פורים",
     "hDate": "15 Adar II 5793",
-    "hDateInHebrew": "טו-אדר-undefined",
+    "hDateInHebrew": "טו-אדר-תשצ״ג",
     "mainTag": "פורים"
   },
   "2033-03-19": {
     "inEnglish": "Shabbat Parah",
     "inHebrew": "שבת פרה",
     "hDate": "18 Adar II 5793",
-    "hDateInHebrew": "יח-אדר-undefined",
+    "hDateInHebrew": "יח-אדר-תשצ״ג",
     "mainTag": null
   },
   "2033-03-26": {
     "inEnglish": "Shabbat HaChodesh",
     "inHebrew": "שבת החדש",
     "hDate": "25 Adar II 5793",
-    "hDateInHebrew": "כה-אדר-undefined",
+    "hDateInHebrew": "כה-אדר-תשצ״ג",
     "mainTag": null
   },
   "2033-04-13": {
@@ -3747,7 +3686,7 @@
   },
   "2033-04-21": {
     "inEnglish": "Pesach VIII",
-    "inHebrew": "פסח ח׳",
+    "inHebrew": "אסרו חג פסח",
     "hDate": "22 Nisan 5793",
     "hDateInHebrew": "כב-ניסן-תשצ״ג",
     "mainTag": "פסח"
@@ -3803,7 +3742,7 @@
   },
   "2033-06-03": {
     "inEnglish": "Shavuot I",
-    "inHebrew": "שבועות א׳",
+    "inHebrew": "שבועות",
     "hDate": "6 Sivan 5793",
     "hDateInHebrew": "ו-סיוון-תשצ״ג",
     "mainTag": "שבועות"
@@ -3846,10 +3785,10 @@
   },
   "2033-08-10": {
     "inEnglish": "Tu B’Av",
-    "inHebrew": "טו באב",
+    "inHebrew": "ט״ו באב",
     "hDate": "15 Av 5793",
     "hDateInHebrew": "טו-אב-תשצ״ג",
-    "mainTag": "טו באב"
+    "mainTag": "ט״ו באב"
   },
   "2033-09-17": {
     "inEnglish": "Leil Selichot",
@@ -3965,18 +3904,12 @@
   },
   "2033-10-15": {
     "inEnglish": "Shmini Atzeret",
-    "inHebrew": "שמיני עצרת",
+    "inHebrew": "שמחת תורה",
     "hDate": "22 Tishrei 5794",
     "hDateInHebrew": "כב-תשרי-תשצ״ד",
-    "mainTag": "שמיני עצרת"
-  },
-  "2033-10-16": {
-    "inEnglish": "Simchat Torah",
-    "inHebrew": "שמחת תורה",
-    "hDate": "23 Tishrei 5794",
-    "hDateInHebrew": "כג-תשרי-תשצ״ד",
     "mainTag": "שמחת תורה"
   },
+
   "2033-12-16": {
     "inEnglish": "Chanukah: 1 Candle",
     "inHebrew": "נר ראשון של חנוכה",
@@ -4048,11 +3981,11 @@
     "mainTag": "עשרה בטבת"
   },
   "2034-02-04": {
-    "inEnglish": "Shabbat Shirah",
-    "inHebrew": "שבת שירה",
+    "inEnglish": "Tu BiShvat",
+    "inHebrew": "ט״ו בשבט",
     "hDate": "15 Sh'vat 5794",
     "hDateInHebrew": "טו-שבט-תשצ״ד",
-    "mainTag": null
+     "mainTag": "ט״ו בשבט"
   },
   "2034-02-18": {
     "inEnglish": "Shabbat Shekalim",
@@ -4168,7 +4101,7 @@
   },
   "2034-04-11": {
     "inEnglish": "Pesach VIII",
-    "inHebrew": "פסח ח׳",
+    "inHebrew": "אסרו חג פסח",
     "hDate": "22 Nisan 5794",
     "hDateInHebrew": "כב-ניסן-תשצ״ד",
     "mainTag": "פסח"
@@ -4224,7 +4157,7 @@
   },
   "2034-05-24": {
     "inEnglish": "Shavuot I",
-    "inHebrew": "שבועות א׳",
+    "inHebrew": "שבועות",
     "hDate": "6 Sivan 5794",
     "hDateInHebrew": "ו-סיוון-תשצ״ד",
     "mainTag": "שבועות"
@@ -4267,10 +4200,10 @@
   },
   "2034-07-31": {
     "inEnglish": "Tu B’Av",
-    "inHebrew": "טו באב",
+    "inHebrew": "ט״ו באב",
     "hDate": "15 Av 5794",
     "hDateInHebrew": "טו-אב-תשצ״ד",
-    "mainTag": "טו באב"
+    "mainTag": "ט״ו באב"
   },
   "2034-09-13": {
     "inEnglish": "Erev Rosh Hashana",
@@ -4379,18 +4312,12 @@
   },
   "2034-10-05": {
     "inEnglish": "Shmini Atzeret",
-    "inHebrew": "שמיני עצרת",
+    "inHebrew": "שמחת תורה",
     "hDate": "22 Tishrei 5795",
     "hDateInHebrew": "כב-תשרי-תשצ״ה",
-    "mainTag": "שמיני עצרת"
-  },
-  "2034-10-06": {
-    "inEnglish": "Simchat Torah",
-    "inHebrew": "שמחת תורה",
-    "hDate": "23 Tishrei 5795",
-    "hDateInHebrew": "כג-תשרי-תשצ״ה",
     "mainTag": "שמחת תורה"
   },
+
   "2034-12-06": {
     "inEnglish": "Chanukah: 1 Candle",
     "inHebrew": "נר ראשון של חנוכה",
@@ -4470,72 +4397,72 @@
   },
   "2035-01-25": {
     "inEnglish": "Tu BiShvat",
-    "inHebrew": "טו בשבט",
+    "inHebrew": "ט״ו בשבט",
     "hDate": "15 Sh'vat 5795",
     "hDateInHebrew": "טו-שבט-תשצ״ה",
-    "mainTag": "טו בשבט"
+    "mainTag": "ט״ו בשבט"
   },
   "2035-02-23": {
     "inEnglish": "Purim Katan",
     "inHebrew": "פורים קטן",
     "hDate": "14 Adar I 5795",
-    "hDateInHebrew": "יד-אדר-undefined",
+    "hDateInHebrew": "יד-אדר-תשצ״ה",
     "mainTag": "פורים"
   },
   "2035-02-24": {
     "inEnglish": "Shushan Purim Katan",
     "inHebrew": "שושן פורים קטן",
     "hDate": "15 Adar I 5795",
-    "hDateInHebrew": "טו-אדר-undefined",
+    "hDateInHebrew": "טו-אדר-תשצ״ה",
     "mainTag": "פורים"
   },
   "2035-03-10": {
     "inEnglish": "Shabbat Shekalim",
     "inHebrew": "שבת שקלים",
     "hDate": "29 Adar I 5795",
-    "hDateInHebrew": "כט-אדר-undefined",
+    "hDateInHebrew": "כט-אדר-תשצ״ה",
     "mainTag": null
   },
   "2035-03-22": {
     "inEnglish": "Ta’anit Esther",
     "inHebrew": "תענית אסתר",
     "hDate": "11 Adar II 5795",
-    "hDateInHebrew": "יא-אדר-undefined",
+    "hDateInHebrew": "יא-אדר-תשצ״ה",
     "mainTag": "פורים"
   },
   "2035-03-24": {
     "inEnglish": "Erev Purim",
     "inHebrew": "ערב פורים",
     "hDate": "13 Adar II 5795",
-    "hDateInHebrew": "יג-אדר-undefined",
+    "hDateInHebrew": "יג-אדר-תשצ״ה",
     "mainTag": null
   },
   "2035-03-25": {
     "inEnglish": "Purim",
     "inHebrew": "פורים",
     "hDate": "14 Adar II 5795",
-    "hDateInHebrew": "יד-אדר-undefined",
+    "hDateInHebrew": "יד-אדר-תשצ״ה",
     "mainTag": "פורים"
   },
   "2035-03-26": {
     "inEnglish": "Shushan Purim",
     "inHebrew": "שושן פורים",
     "hDate": "15 Adar II 5795",
-    "hDateInHebrew": "טו-אדר-undefined",
+    "hDateInHebrew": "טו-אדר-תשצ״ה",
     "mainTag": "פורים"
   },
   "2035-03-31": {
     "inEnglish": "Shabbat Parah",
     "inHebrew": "שבת פרה",
     "hDate": "20 Adar II 5795",
-    "hDateInHebrew": "כ-אדר-undefined",
+    "hDateInHebrew": "כ-אדר-תשצ״ה",
     "mainTag": null
   },
   "2035-04-07": {
     "inEnglish": "Shabbat HaChodesh",
     "inHebrew": "שבת החדש",
     "hDate": "27 Adar II 5795",
-    "hDateInHebrew": "כז-אדר-undefined",
+    "hDateInHebrew": "כז-אדר-תשצ״ה",
     "mainTag": null
   },
   "2035-04-21": {
@@ -4603,7 +4530,7 @@
   },
   "2035-05-01": {
     "inEnglish": "Pesach VIII",
-    "inHebrew": "פסח ח׳",
+    "inHebrew": "אסרו חג פסח",
     "hDate": "22 Nisan 5795",
     "hDateInHebrew": "כב-ניסן-תשצ״ה",
     "mainTag": "פסח"
@@ -4659,7 +4586,7 @@
   },
   "2035-06-13": {
     "inEnglish": "Shavuot I",
-    "inHebrew": "שבועות א׳",
+    "inHebrew": "שבועות",
     "hDate": "6 Sivan 5795",
     "hDateInHebrew": "ו-סיוון-תשצ״ה",
     "mainTag": "שבועות"
@@ -4702,10 +4629,10 @@
   },
   "2035-08-20": {
     "inEnglish": "Tu B’Av",
-    "inHebrew": "טו באב",
+    "inHebrew": "ט״ו באב",
     "hDate": "15 Av 5795",
     "hDateInHebrew": "טו-אב-תשצ״ה",
-    "mainTag": "טו באב"
+    "mainTag": "ט״ו באב"
   },
   "2035-09-29": {
     "inEnglish": "Leil Selichot",
@@ -4821,18 +4748,12 @@
   },
   "2035-10-25": {
     "inEnglish": "Shmini Atzeret",
-    "inHebrew": "שמיני עצרת",
+    "inHebrew": "שמחת תורה",
     "hDate": "22 Tishrei 5796",
     "hDateInHebrew": "כב-תשרי-תשצ״ו",
-    "mainTag": "שמיני עצרת"
-  },
-  "2035-10-26": {
-    "inEnglish": "Simchat Torah",
-    "inHebrew": "שמחת תורה",
-    "hDate": "23 Tishrei 5796",
-    "hDateInHebrew": "כג-תשרי-תשצ״ו",
     "mainTag": "שמחת תורה"
   },
+
   "2035-12-25": {
     "inEnglish": "Chanukah: 1 Candle",
     "inHebrew": "נר ראשון של חנוכה",
@@ -4912,10 +4833,10 @@
   },
   "2036-02-13": {
     "inEnglish": "Tu BiShvat",
-    "inHebrew": "טו בשבט",
+    "inHebrew": "ט״ו בשבט",
     "hDate": "15 Sh'vat 5796",
     "hDateInHebrew": "טו-שבט-תשצ״ו",
-    "mainTag": "טו בשבט"
+    "mainTag": "ט״ו בשבט"
   },
   "2036-02-23": {
     "inEnglish": "Shabbat Shekalim",
@@ -5031,7 +4952,7 @@
   },
   "2036-04-19": {
     "inEnglish": "Pesach VIII",
-    "inHebrew": "פסח ח׳",
+    "inHebrew": "אסרו חג פסח",
     "hDate": "22 Nisan 5796",
     "hDateInHebrew": "כב-ניסן-תשצ״ו",
     "mainTag": "פסח"
@@ -5087,7 +5008,7 @@
   },
   "2036-06-01": {
     "inEnglish": "Shavuot I",
-    "inHebrew": "שבועות א׳",
+    "inHebrew": "שבועות",
     "hDate": "6 Sivan 5796",
     "hDateInHebrew": "ו-סיוון-תשצ״ו",
     "mainTag": "שבועות"
@@ -5109,17 +5030,17 @@
   },
   "2036-08-03": {
     "inEnglish": "Tish’a B’Av (observed)",
-    "inHebrew": "צום תשעה באב נדחה",
+    "inHebrew": "צום תשעה באב",
     "hDate": "10 Av 5796",
     "hDateInHebrew": "י-אב-תשצ״ו",
-    "mainTag": "צום תשעה באב נדחה"
+    "mainTag": "צום תשעה באב"
   },
   "2036-08-08": {
     "inEnglish": "Tu B’Av",
-    "inHebrew": "טו באב",
+    "inHebrew": "ט״ו באב",
     "hDate": "15 Av 5796",
     "hDateInHebrew": "טו-אב-תשצ״ו",
-    "mainTag": "טו באב"
+    "mainTag": "ט״ו באב"
   },
   "2036-08-09": {
     "inEnglish": "Shabbat Nachamu",
@@ -5242,18 +5163,12 @@
   },
   "2036-10-13": {
     "inEnglish": "Shmini Atzeret",
-    "inHebrew": "שמיני עצרת",
+    "inHebrew": "שמחת תורה",
     "hDate": "22 Tishrei 5797",
     "hDateInHebrew": "כב-תשרי-תשצ״ז",
-    "mainTag": "שמיני עצרת"
-  },
-  "2036-10-14": {
-    "inEnglish": "Simchat Torah",
-    "inHebrew": "שמחת תורה",
-    "hDate": "23 Tishrei 5797",
-    "hDateInHebrew": "כג-תשרי-תשצ״ז",
     "mainTag": "שמחת תורה"
   },
+ 
   "2036-12-13": {
     "inEnglish": "Chanukah: 1 Candle",
     "inHebrew": "נר ראשון של חנוכה",
@@ -5325,11 +5240,11 @@
     "mainTag": "עשרה בטבת"
   },
   "2037-01-31": {
-    "inEnglish": "Shabbat Shirah",
-    "inHebrew": "שבת שירה",
+    "inEnglish": "Tu BiShvat",
+    "inHebrew": "ט״ו בשבט",
     "hDate": "15 Sh'vat 5797",
     "hDateInHebrew": "טו-שבט-תשצ״ז",
-    "mainTag": null
+     "mainTag": "ט״ו בשבט"
   },
   "2037-02-14": {
     "inEnglish": "Shabbat Shekalim",
@@ -5445,7 +5360,7 @@
   },
   "2037-04-07": {
     "inEnglish": "Pesach VIII",
-    "inHebrew": "פסח ח׳",
+    "inHebrew": "אסרו חג פסח",
     "hDate": "22 Nisan 5797",
     "hDateInHebrew": "כב-ניסן-תשצ״ז",
     "mainTag": "פסח"
@@ -5455,7 +5370,7 @@
     "inHebrew": "ברכת החמה",
     "hDate": "23 Nisan 5797",
     "hDateInHebrew": "כג-ניסן-תשצ״ז",
-    "mainTag": "ברכת החמה"
+    "mainTag": null
   },
   "2037-04-13": {
     "inEnglish": "Yom HaShoah",
@@ -5508,7 +5423,7 @@
   },
   "2037-05-20": {
     "inEnglish": "Shavuot I",
-    "inHebrew": "שבועות א׳",
+    "inHebrew": "שבועות",
     "hDate": "6 Sivan 5797",
     "hDateInHebrew": "ו-סיוון-תשצ״ז",
     "mainTag": "שבועות"
@@ -5551,10 +5466,10 @@
   },
   "2037-07-27": {
     "inEnglish": "Tu B’Av",
-    "inHebrew": "טו באב",
+    "inHebrew": "ט״ו באב",
     "hDate": "15 Av 5797",
     "hDateInHebrew": "טו-אב-תשצ״ז",
-    "mainTag": "טו באב"
+    "mainTag": "ט״ו באב"
   },
   "2037-09-05": {
     "inEnglish": "Leil Selichot",
@@ -5670,18 +5585,12 @@
   },
   "2037-10-01": {
     "inEnglish": "Shmini Atzeret",
-    "inHebrew": "שמיני עצרת",
+    "inHebrew": "שמחת תורה",
     "hDate": "22 Tishrei 5798",
     "hDateInHebrew": "כב-תשרי-תשצ״ח",
-    "mainTag": "שמיני עצרת"
-  },
-  "2037-10-02": {
-    "inEnglish": "Simchat Torah",
-    "inHebrew": "שמחת תורה",
-    "hDate": "23 Tishrei 5798",
-    "hDateInHebrew": "כג-תשרי-תשצ״ח",
     "mainTag": "שמחת תורה"
   },
+
   "2037-12-02": {
     "inEnglish": "Chanukah: 1 Candle",
     "inHebrew": "נר ראשון של חנוכה",
@@ -5761,72 +5670,72 @@
   },
   "2038-01-21": {
     "inEnglish": "Tu BiShvat",
-    "inHebrew": "טו בשבט",
+    "inHebrew": "ט״ו בשבט",
     "hDate": "15 Sh'vat 5798",
     "hDateInHebrew": "טו-שבט-תשצ״ח",
-    "mainTag": "טו בשבט"
+    "mainTag": "ט״ו בשבט"
   },
   "2038-02-19": {
     "inEnglish": "Purim Katan",
     "inHebrew": "פורים קטן",
     "hDate": "14 Adar I 5798",
-    "hDateInHebrew": "יד-אדר-undefined",
+    "hDateInHebrew": "יד-אדר-תשצ״ח",
     "mainTag": "פורים"
   },
   "2038-02-20": {
     "inEnglish": "Shushan Purim Katan",
     "inHebrew": "שושן פורים קטן",
     "hDate": "15 Adar I 5798",
-    "hDateInHebrew": "טו-אדר-undefined",
+    "hDateInHebrew": "טו-אדר-תשצ״ח",
     "mainTag": "פורים"
   },
   "2038-03-06": {
     "inEnglish": "Shabbat Shekalim",
     "inHebrew": "שבת שקלים",
     "hDate": "29 Adar I 5798",
-    "hDateInHebrew": "כט-אדר-undefined",
+    "hDateInHebrew": "כט-אדר-תשצ״ח",
     "mainTag": null
   },
   "2038-03-18": {
     "inEnglish": "Ta’anit Esther",
     "inHebrew": "תענית אסתר",
     "hDate": "11 Adar II 5798",
-    "hDateInHebrew": "יא-אדר-undefined",
+    "hDateInHebrew": "יא-אדר-תשצ״ח",
     "mainTag": "פורים"
   },
   "2038-03-20": {
     "inEnglish": "Erev Purim",
     "inHebrew": "ערב פורים",
     "hDate": "13 Adar II 5798",
-    "hDateInHebrew": "יג-אדר-undefined",
+    "hDateInHebrew": "יג-אדר-תשצ״ח",
     "mainTag": null
   },
   "2038-03-21": {
     "inEnglish": "Purim",
     "inHebrew": "פורים",
     "hDate": "14 Adar II 5798",
-    "hDateInHebrew": "יד-אדר-undefined",
+    "hDateInHebrew": "יד-אדר-תשצ״ח",
     "mainTag": "פורים"
   },
   "2038-03-22": {
     "inEnglish": "Shushan Purim",
     "inHebrew": "שושן פורים",
     "hDate": "15 Adar II 5798",
-    "hDateInHebrew": "טו-אדר-undefined",
+    "hDateInHebrew": "טו-אדר-תשצ״ח",
     "mainTag": "פורים"
   },
   "2038-03-27": {
     "inEnglish": "Shabbat Parah",
     "inHebrew": "שבת פרה",
     "hDate": "20 Adar II 5798",
-    "hDateInHebrew": "כ-אדר-undefined",
+    "hDateInHebrew": "כ-אדר-תשצ״ח",
     "mainTag": null
   },
   "2038-04-03": {
     "inEnglish": "Shabbat HaChodesh",
     "inHebrew": "שבת החדש",
     "hDate": "27 Adar II 5798",
-    "hDateInHebrew": "כז-אדר-undefined",
+    "hDateInHebrew": "כז-אדר-תשצ״ח",
     "mainTag": null
   },
   "2038-04-17": {
@@ -5894,7 +5803,7 @@
   },
   "2038-04-27": {
     "inEnglish": "Pesach VIII",
-    "inHebrew": "פסח ח׳",
+    "inHebrew": "אסרו חג פסח",
     "hDate": "22 Nisan 5798",
     "hDateInHebrew": "כב-ניסן-תשצ״ח",
     "mainTag": "פסח"
@@ -5950,7 +5859,7 @@
   },
   "2038-06-09": {
     "inEnglish": "Shavuot I",
-    "inHebrew": "שבועות א׳",
+    "inHebrew": "שבועות",
     "hDate": "6 Sivan 5798",
     "hDateInHebrew": "ו-סיוון-תשצ״ח",
     "mainTag": "שבועות"
@@ -5993,10 +5902,10 @@
   },
   "2038-08-16": {
     "inEnglish": "Tu B’Av",
-    "inHebrew": "טו באב",
+    "inHebrew": "ט״ו באב",
     "hDate": "15 Av 5798",
     "hDateInHebrew": "טו-אב-תשצ״ח",
-    "mainTag": "טו באב"
+    "mainTag": "ט״ו באב"
   },
   "2038-09-25": {
     "inEnglish": "Leil Selichot",
@@ -6112,18 +6021,12 @@
   },
   "2038-10-21": {
     "inEnglish": "Shmini Atzeret",
-    "inHebrew": "שמיני עצרת",
+    "inHebrew": "שמחת תורה",
     "hDate": "22 Tishrei 5799",
     "hDateInHebrew": "כב-תשרי-תשצ״ט",
-    "mainTag": "שמיני עצרת"
-  },
-  "2038-10-22": {
-    "inEnglish": "Simchat Torah",
-    "inHebrew": "שמחת תורה",
-    "hDate": "23 Tishrei 5799",
-    "hDateInHebrew": "כג-תשרי-תשצ״ט",
     "mainTag": "שמחת תורה"
   },
+
   "2038-12-21": {
     "inEnglish": "Chanukah: 1 Candle",
     "inHebrew": "נר ראשון של חנוכה",
@@ -6203,10 +6106,10 @@
   },
   "2039-02-09": {
     "inEnglish": "Tu BiShvat",
-    "inHebrew": "טו בשבט",
+    "inHebrew": "ט״ו בשבט",
     "hDate": "15 Sh'vat 5799",
     "hDateInHebrew": "טו-שבט-תשצ״ט",
-    "mainTag": "טו בשבט"
+    "mainTag": "ט״ו בשבט"
   },
   "2039-02-19": {
     "inEnglish": "Shabbat Shekalim",
@@ -6322,7 +6225,7 @@
   },
   "2039-04-16": {
     "inEnglish": "Pesach VIII",
-    "inHebrew": "פסח ח׳",
+    "inHebrew": "אסרו חג פסח",
     "hDate": "22 Nisan 5799",
     "hDateInHebrew": "כב-ניסן-תשצ״ט",
     "mainTag": "פסח"
@@ -6378,7 +6281,7 @@
   },
   "2039-05-29": {
     "inEnglish": "Shavuot I",
-    "inHebrew": "שבועות א׳",
+    "inHebrew": "שבועות",
     "hDate": "6 Sivan 5799",
     "hDateInHebrew": "ו-סיוון-תשצ״ט",
     "mainTag": "שבועות"
@@ -6400,17 +6303,17 @@
   },
   "2039-07-31": {
     "inEnglish": "Tish’a B’Av (observed)",
-    "inHebrew": "צום תשעה באב נדחה",
+    "inHebrew": "צום תשעה באב",
     "hDate": "10 Av 5799",
     "hDateInHebrew": "י-אב-תשצ״ט",
-    "mainTag": "צום תשעה באב נדחה"
+    "mainTag": "צום תשעה באב"
   },
   "2039-08-05": {
     "inEnglish": "Tu B’Av",
-    "inHebrew": "טו באב",
+    "inHebrew": "ט״ו באב",
     "hDate": "15 Av 5799",
     "hDateInHebrew": "טו-אב-תשצ״ט",
-    "mainTag": "טו באב"
+    "mainTag": "ט״ו באב"
   },
   "2039-08-06": {
     "inEnglish": "Shabbat Nachamu",
@@ -6533,18 +6436,12 @@
   },
   "2039-10-10": {
     "inEnglish": "Shmini Atzeret",
-    "inHebrew": "שמיני עצרת",
+    "inHebrew": "שמחת תורה",
     "hDate": "22 Tishrei 5800",
     "hDateInHebrew": "כב-תשרי-ת״ת",
-    "mainTag": "שמיני עצרת"
-  },
-  "2039-10-11": {
-    "inEnglish": "Simchat Torah",
-    "inHebrew": "שמחת תורה",
-    "hDate": "23 Tishrei 5800",
-    "hDateInHebrew": "כג-תשרי-ת״ת",
     "mainTag": "שמחת תורה"
   },
+
   "2039-12-11": {
     "inEnglish": "Chanukah: 1 Candle",
     "inHebrew": "נר ראשון של חנוכה",
@@ -6624,10 +6521,10 @@
   },
   "2040-01-30": {
     "inEnglish": "Tu BiShvat",
-    "inHebrew": "טו בשבט",
+    "inHebrew": "ט״ו בשבט",
     "hDate": "15 Sh'vat 5800",
     "hDateInHebrew": "טו-שבט-ת״ת",
-    "mainTag": "טו בשבט"
+    "mainTag": "ט״ו בשבט"
   },
   "2040-02-11": {
     "inEnglish": "Shabbat Shekalim",
@@ -6736,7 +6633,7 @@
   },
   "2040-04-05": {
     "inEnglish": "Pesach VIII",
-    "inHebrew": "פסח ח׳",
+    "inHebrew": "אסרו חג פסח",
     "hDate": "22 Nisan 5800",
     "hDateInHebrew": "כב-ניסן-ת״ת",
     "mainTag": "פסח"
@@ -6792,7 +6689,7 @@
   },
   "2040-05-18": {
     "inEnglish": "Shavuot I",
-    "inHebrew": "שבועות א׳",
+    "inHebrew": "שבועות",
     "hDate": "6 Sivan 5800",
     "hDateInHebrew": "ו-סיוון-ת״ת",
     "mainTag": "שבועות"
@@ -6835,10 +6732,10 @@
   },
   "2040-07-25": {
     "inEnglish": "Tu B’Av",
-    "inHebrew": "טו באב",
+    "inHebrew": "ט״ו באב",
     "hDate": "15 Av 5800",
     "hDateInHebrew": "טו-אב-ת״ת",
-    "mainTag": "טו באב"
+    "mainTag": "ט״ו באב"
   },
   "2040-09-01": {
     "inEnglish": "Leil Selichot",
@@ -6954,18 +6851,12 @@
   },
   "2040-09-29": {
     "inEnglish": "Shmini Atzeret",
-    "inHebrew": "שמיני עצרת",
+    "inHebrew": "שמחת תורה",
     "hDate": "22 Tishrei 5801",
     "hDateInHebrew": "כב-תשרי-תת״א",
-    "mainTag": "שמיני עצרת"
-  },
-  "2040-09-30": {
-    "inEnglish": "Simchat Torah",
-    "inHebrew": "שמחת תורה",
-    "hDate": "23 Tishrei 5801",
-    "hDateInHebrew": "כג-תשרי-תת״א",
     "mainTag": "שמחת תורה"
   },
+
   "2040-11-29": {
     "inEnglish": "Chanukah: 1 Candle",
     "inHebrew": "נר ראשון של חנוכה",
@@ -7038,10 +6929,10 @@
   },
   "2041-01-17": {
     "inEnglish": "Tu BiShvat",
-    "inHebrew": "טו בשבט",
+    "inHebrew": "ט״ו בשבט",
     "hDate": "15 Sh'vat 5801",
     "hDateInHebrew": "טו-שבט-תת״א",
-    "mainTag": "טו בשבט"
+    "mainTag": "ט״ו בשבט"
   },
   "2041-01-19": {
     "inEnglish": "Shabbat Shirah",
@@ -7054,63 +6945,63 @@
     "inEnglish": "Purim Katan",
     "inHebrew": "פורים קטן",
     "hDate": "14 Adar I 5801",
-    "hDateInHebrew": "יד-אדר-undefined",
+    "hDateInHebrew": "יד-אדר-תת״א",
     "mainTag": "פורים"
   },
   "2041-02-16": {
     "inEnglish": "Shushan Purim Katan",
     "inHebrew": "שושן פורים קטן",
     "hDate": "15 Adar I 5801",
-    "hDateInHebrew": "טו-אדר-undefined",
+    "hDateInHebrew": "טו-אדר-תת״א",
     "mainTag": "פורים"
   },
   "2041-03-02": {
     "inEnglish": "Shabbat Shekalim",
     "inHebrew": "שבת שקלים",
     "hDate": "29 Adar I 5801",
-    "hDateInHebrew": "כט-אדר-undefined",
+    "hDateInHebrew": "כט-אדר-תת״א",
     "mainTag": null
   },
   "2041-03-14": {
     "inEnglish": "Ta’anit Esther",
     "inHebrew": "תענית אסתר",
     "hDate": "11 Adar II 5801",
-    "hDateInHebrew": "יא-אדר-undefined",
+    "hDateInHebrew": "יא-אדר-תת״א",
     "mainTag": "פורים"
   },
   "2041-03-16": {
     "inEnglish": "Erev Purim",
     "inHebrew": "ערב פורים",
     "hDate": "13 Adar II 5801",
-    "hDateInHebrew": "יג-אדר-undefined",
+    "hDateInHebrew": "יג-אדר-תת״א",
     "mainTag": null
   },
   "2041-03-17": {
     "inEnglish": "Purim",
     "inHebrew": "פורים",
     "hDate": "14 Adar II 5801",
-    "hDateInHebrew": "יד-אדר-undefined",
+    "hDateInHebrew": "יד-אדר-תת״א",
     "mainTag": "פורים"
   },
   "2041-03-18": {
     "inEnglish": "Shushan Purim",
     "inHebrew": "שושן פורים",
     "hDate": "15 Adar II 5801",
-    "hDateInHebrew": "טו-אדר-undefined",
+    "hDateInHebrew": "טו-אדר-תת״א",
     "mainTag": "פורים"
   },
   "2041-03-23": {
     "inEnglish": "Shabbat Parah",
     "inHebrew": "שבת פרה",
     "hDate": "20 Adar II 5801",
-    "hDateInHebrew": "כ-אדר-undefined",
+    "hDateInHebrew": "כ-אדר-תת״א",
     "mainTag": null
   },
   "2041-03-30": {
     "inEnglish": "Shabbat HaChodesh",
     "inHebrew": "שבת החדש",
     "hDate": "27 Adar II 5801",
-    "hDateInHebrew": "כז-אדר-undefined",
+    "hDateInHebrew": "כז-אדר-תת״א",
     "mainTag": null
   },
   "2041-04-13": {
@@ -7178,7 +7069,7 @@
   },
   "2041-04-23": {
     "inEnglish": "Pesach VIII",
-    "inHebrew": "פסח ח׳",
+    "inHebrew": "אסרו חג פסח",
     "hDate": "22 Nisan 5801",
     "hDateInHebrew": "כב-ניסן-תת״א",
     "mainTag": "פסח"
@@ -7234,7 +7125,7 @@
   },
   "2041-06-05": {
     "inEnglish": "Shavuot I",
-    "inHebrew": "שבועות א׳",
+    "inHebrew": "שבועות",
     "hDate": "6 Sivan 5801",
     "hDateInHebrew": "ו-סיוון-תת״א",
     "mainTag": "שבועות"
@@ -7277,10 +7168,10 @@
   },
   "2041-08-12": {
     "inEnglish": "Tu B’Av",
-    "inHebrew": "טו באב",
+    "inHebrew": "ט״ו באב",
     "hDate": "15 Av 5801",
     "hDateInHebrew": "טו-אב-תת״א",
-    "mainTag": "טו באב"
+    "mainTag": "ט״ו באב"
   },
   "2041-09-21": {
     "inEnglish": "Leil Selichot",
@@ -7396,18 +7287,12 @@
   },
   "2041-10-17": {
     "inEnglish": "Shmini Atzeret",
-    "inHebrew": "שמיני עצרת",
+    "inHebrew": "שמחת תורה",
     "hDate": "22 Tishrei 5802",
     "hDateInHebrew": "כב-תשרי-תת״ב",
-    "mainTag": "שמיני עצרת"
-  },
-  "2041-10-18": {
-    "inEnglish": "Simchat Torah",
-    "inHebrew": "שמחת תורה",
-    "hDate": "23 Tishrei 5802",
-    "hDateInHebrew": "כג-תשרי-תת״ב",
     "mainTag": "שמחת תורה"
   },
+ 
   "2041-12-17": {
     "inEnglish": "Chanukah: 1 Candle",
     "inHebrew": "נר ראשון של חנוכה",
@@ -7487,10 +7372,10 @@
   },
   "2042-02-05": {
     "inEnglish": "Tu BiShvat",
-    "inHebrew": "טו בשבט",
+    "inHebrew": "ט״ו בשבט",
     "hDate": "15 Sh'vat 5802",
     "hDateInHebrew": "טו-שבט-תת״ב",
-    "mainTag": "טו בשבט"
+    "mainTag": "ט״ו בשבט"
   },
   "2042-02-15": {
     "inEnglish": "Shabbat Shekalim",
@@ -7606,7 +7491,7 @@
   },
   "2042-04-12": {
     "inEnglish": "Pesach VIII",
-    "inHebrew": "פסח ח׳",
+    "inHebrew": "אסרו חג פסח",
     "hDate": "22 Nisan 5802",
     "hDateInHebrew": "כב-ניסן-תת״ב",
     "mainTag": "פסח"
@@ -7662,7 +7547,7 @@
   },
   "2042-05-25": {
     "inEnglish": "Shavuot I",
-    "inHebrew": "שבועות א׳",
+    "inHebrew": "שבועות",
     "hDate": "6 Sivan 5802",
     "hDateInHebrew": "ו-סיוון-תת״ב",
     "mainTag": "שבועות"
@@ -7684,17 +7569,17 @@
   },
   "2042-07-27": {
     "inEnglish": "Tish’a B’Av (observed)",
-    "inHebrew": "צום תשעה באב נדחה",
+    "inHebrew": "צום תשעה באב",
     "hDate": "10 Av 5802",
     "hDateInHebrew": "י-אב-תת״ב",
-    "mainTag": "צום תשעה באב נדחה"
+    "mainTag": "צום תשעה באב"
   },
   "2042-08-01": {
     "inEnglish": "Tu B’Av",
-    "inHebrew": "טו באב",
+    "inHebrew": "ט״ו באב",
     "hDate": "15 Av 5802",
     "hDateInHebrew": "טו-אב-תת״ב",
-    "mainTag": "טו באב"
+    "mainTag": "ט״ו באב"
   },
   "2042-08-02": {
     "inEnglish": "Shabbat Nachamu",
@@ -7817,18 +7702,12 @@
   },
   "2042-10-06": {
     "inEnglish": "Shmini Atzeret",
-    "inHebrew": "שמיני עצרת",
+    "inHebrew": "שמחת תורה",
     "hDate": "22 Tishrei 5803",
     "hDateInHebrew": "כב-תשרי-תת״ג",
-    "mainTag": "שמיני עצרת"
-  },
-  "2042-10-07": {
-    "inEnglish": "Simchat Torah",
-    "inHebrew": "שמחת תורה",
-    "hDate": "23 Tishrei 5803",
-    "hDateInHebrew": "כג-תשרי-תת״ג",
     "mainTag": "שמחת תורה"
   },
+
   "2042-12-07": {
     "inEnglish": "Chanukah: 1 Candle",
     "inHebrew": "נר ראשון של חנוכה",
@@ -7908,65 +7787,65 @@
   },
   "2043-01-26": {
     "inEnglish": "Tu BiShvat",
-    "inHebrew": "טו בשבט",
+    "inHebrew": "ט״ו בשבט",
     "hDate": "15 Sh'vat 5803",
     "hDateInHebrew": "טו-שבט-תת״ג",
-    "mainTag": "טו בשבט"
+    "mainTag": "ט״ו בשבט"
   },
   "2043-02-24": {
     "inEnglish": "Purim Katan",
     "inHebrew": "פורים קטן",
     "hDate": "14 Adar I 5803",
-    "hDateInHebrew": "יד-אדר-undefined",
+    "hDateInHebrew": "יד-אדר-תת״ג",
     "mainTag": "פורים"
   },
   "2043-02-25": {
     "inEnglish": "Shushan Purim Katan",
     "inHebrew": "שושן פורים קטן",
     "hDate": "15 Adar I 5803",
-    "hDateInHebrew": "טו-אדר-undefined",
+    "hDateInHebrew": "טו-אדר-תת״ג",
     "mainTag": "פורים"
   },
   "2043-03-07": {
     "inEnglish": "Shabbat Shekalim",
     "inHebrew": "שבת שקלים",
     "hDate": "25 Adar I 5803",
-    "hDateInHebrew": "כה-אדר-undefined",
+    "hDateInHebrew": "כה-אדר-תת״ג",
     "mainTag": null
   },
   "2043-03-21": {
     "inEnglish": "Shabbat Zachor",
     "inHebrew": "שבת זכור",
     "hDate": "9 Adar II 5803",
-    "hDateInHebrew": "ט-אדר-undefined",
+    "hDateInHebrew": "ט-אדר-תת״ג",
     "mainTag": null
   },
   "2043-03-25": {
     "inEnglish": "Erev Purim",
     "inHebrew": "ערב פורים",
     "hDate": "13 Adar II 5803",
-    "hDateInHebrew": "יג-אדר-undefined",
+    "hDateInHebrew": "יג-אדר-תת״ג",
     "mainTag": null
   },
   "2043-03-26": {
     "inEnglish": "Purim",
     "inHebrew": "פורים",
     "hDate": "14 Adar II 5803",
-    "hDateInHebrew": "יד-אדר-undefined",
+    "hDateInHebrew": "יד-אדר-תת״ג",
     "mainTag": "פורים"
   },
   "2043-03-27": {
     "inEnglish": "Shushan Purim",
     "inHebrew": "שושן פורים",
     "hDate": "15 Adar II 5803",
-    "hDateInHebrew": "טו-אדר-undefined",
+    "hDateInHebrew": "טו-אדר-תת״ג",
     "mainTag": "פורים"
   },
   "2043-04-04": {
     "inEnglish": "Shabbat Parah",
     "inHebrew": "שבת פרה",
     "hDate": "23 Adar II 5803",
-    "hDateInHebrew": "כג-אדר-undefined",
+    "hDateInHebrew": "כג-אדר-תת״ג",
     "mainTag": null
   },
   "2043-04-11": {
@@ -8041,7 +7920,7 @@
   },
   "2043-05-02": {
     "inEnglish": "Pesach VIII",
-    "inHebrew": "פסח ח׳",
+    "inHebrew": "אסרו חג פסח",
     "hDate": "22 Nisan 5803",
     "hDateInHebrew": "כב-ניסן-תת״ג",
     "mainTag": "פסח"
@@ -8097,7 +7976,7 @@
   },
   "2043-06-14": {
     "inEnglish": "Shavuot I",
-    "inHebrew": "שבועות א׳",
+    "inHebrew": "שבועות",
     "hDate": "6 Sivan 5803",
     "hDateInHebrew": "ו-סיוון-תת״ג",
     "mainTag": "שבועות"
@@ -8119,17 +7998,17 @@
   },
   "2043-08-16": {
     "inEnglish": "Tish’a B’Av (observed)",
-    "inHebrew": "צום תשעה באב נדחה",
+    "inHebrew": "צום תשעה באב",
     "hDate": "10 Av 5803",
     "hDateInHebrew": "י-אב-תת״ג",
-    "mainTag": "צום תשעה באב נדחה"
+    "mainTag": "צום תשעה באב"
   },
   "2043-08-21": {
     "inEnglish": "Tu B’Av",
-    "inHebrew": "טו באב",
+    "inHebrew": "ט״ו באב",
     "hDate": "15 Av 5803",
     "hDateInHebrew": "טו-אב-תת״ג",
-    "mainTag": "טו באב"
+    "mainTag": "ט״ו באב"
   },
   "2043-08-22": {
     "inEnglish": "Shabbat Nachamu",
@@ -8252,18 +8131,12 @@
   },
   "2043-10-26": {
     "inEnglish": "Shmini Atzeret",
-    "inHebrew": "שמיני עצרת",
+    "inHebrew": "שמחת תורה",
     "hDate": "22 Tishrei 5804",
     "hDateInHebrew": "כב-תשרי-תת״ד",
-    "mainTag": "שמיני עצרת"
-  },
-  "2043-10-27": {
-    "inEnglish": "Simchat Torah",
-    "inHebrew": "שמחת תורה",
-    "hDate": "23 Tishrei 5804",
-    "hDateInHebrew": "כג-תשרי-תת״ד",
     "mainTag": "שמחת תורה"
   },
+
   "2043-12-26": {
     "inEnglish": "Chanukah: 1 Candle",
     "inHebrew": "נר ראשון של חנוכה",
@@ -8335,11 +8208,11 @@
     "mainTag": "עשרה בטבת"
   },
   "2044-02-13": {
-    "inEnglish": "Shabbat Shirah",
-    "inHebrew": "שבת שירה",
+    "inEnglish": "Tu BiShvat",
+    "inHebrew": "ט״ו בשבט",
     "hDate": "15 Sh'vat 5804",
     "hDateInHebrew": "טו-שבט-תת״ד",
-    "mainTag": null
+     "mainTag": "ט״ו בשבט"
   },
   "2044-02-27": {
     "inEnglish": "Shabbat Shekalim",
@@ -8455,7 +8328,7 @@
   },
   "2044-04-19": {
     "inEnglish": "Pesach VIII",
-    "inHebrew": "פסח ח׳",
+    "inHebrew": "אסרו חג פסח",
     "hDate": "22 Nisan 5804",
     "hDateInHebrew": "כב-ניסן-תת״ד",
     "mainTag": "פסח"
@@ -8511,7 +8384,7 @@
   },
   "2044-06-01": {
     "inEnglish": "Shavuot I",
-    "inHebrew": "שבועות א׳",
+    "inHebrew": "שבועות",
     "hDate": "6 Sivan 5804",
     "hDateInHebrew": "ו-סיוון-תת״ד",
     "mainTag": "שבועות"

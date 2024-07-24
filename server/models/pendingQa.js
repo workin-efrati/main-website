@@ -27,6 +27,7 @@ const PendingQASchema = new mongoose.Schema(
       enum: ['pending', 'answered', 'rejected'],
       default: 'pending'
     },
+    isActive: {type: Boolean, default: true},
     contactDetails: {
       contactBy: { 
         type: String, 
