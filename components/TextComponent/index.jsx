@@ -8,11 +8,12 @@ import styles from './styles.module.scss'
 const Text = ({ as: Component = 'p', newClass, fontStyle, textColor, children, ...props }) => {
   return (
     <Component
-      className={`${styles[Component]} ${newClass} ${fontStyle === 'b' ? styles.noba : ''}
+      className={`${styles[Component]}  ${fontStyle === 'b' ? styles.noba : ''}
         ${textColor === 'blue' ? styles.blue : ''} 
         ${textColor === 'white' ? styles.white : ''} 
         ${textColor === 'gray' ? styles.gray : ''} 
-        ${textColor === 'lightBlue' ? styles.lightBlue : ''}`}
+        ${textColor === 'lightBlue' ? styles.lightBlue : ''}  ${newClass}`}
+      
       {...props}
     >
       {children}
