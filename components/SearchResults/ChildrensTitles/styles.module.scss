@@ -4,6 +4,13 @@
         text-decoration: none;
         color: inherit;
     }
+    details:not([open]) summary .minus {
+        display: none;
+      }
+      
+      details[open] summary .plus {
+        display: none;
+      }
 }
 .title{
     display: flex;

@@ -43,44 +43,31 @@ export default function SearchResults({ valueSearch }) {
           <ul>
             {titles.map((item, index) => {
               return <li key={item.id || index}>
-                <div className={styles.title}>
-                  {item.childrens.length > 0 ? (
-                    !openDetails[item.id || index] ?
-                      <Text textColor={'blue'}>
-                        <FaPlus
-                          style={{ width: '15px', height: '15px', cursor: 'pointer' }}
-                          onClick={() => handleToggle(item.id || index)}
-                        />
-                      </Text> :
-                      <Text textColor={'blue'}>
-
-                        <FaMinus
-                          style={{ width: '15px', height: '15px', cursor: 'pointer' }}
-                          onClick={() => handleToggle(item.id || index)}
-                        />
-                      </Text>
-                  ) : (
-                    <div style={{ width: '15px', height: '15px' }} />
-                  )}
-                  <span>
+                <details >
+                  <summary>
                     <Text as="h4" textColor="blue">
-                      <Link href={''}>
-                        {item.name}
-                      </Link>
+                      <div className={styles.title}>
 
+                        {
+                          item.childrens.length > 0 ?
+                            <>
+                              <FaMinus className={styles.minus} style={{ "width": "15px", "height": "15px" }} />
+                              <FaPlus className={styles.plus} style={{ width: "15px", height: "15px" }} />
+                            </> :
+                            <div style={{ width: "15px", height: "15px" }} />}
+                        {item.name}
+                      </div>
                     </Text>
-                  </span>
-                </div>
-                {openDetails[item.id || index] && (
-                  <details open>
-                    <summary style={{ display: 'none' }}>Details</summary>
+                  </summary>
+                  {
                     <div>
-                      {item.childrens.length > 0 && (
-                        <ChildrensTitles childrensData={item.childrens} />
-                      )}
+                      {
+                        item?.childrens.length > 0 && <ChildrensTitles childrensData={item.childrens} />
+                      }
+
                     </div>
-                  </details>
-                )}
+                  }
+                </details>
               </li>
             })}
           </ul>
