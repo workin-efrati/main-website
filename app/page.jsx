@@ -8,7 +8,6 @@ import Link from "next/link";
 import SearchFilter from "@/components/SearchFilter";
 import { connect } from "@/server/connect";
 export default function Home() {
-
   const homeNav = [
     { text: "שו”ת בהלכה", herf: "", },
     { text: "שו”ת אמונה", herf: "", },
