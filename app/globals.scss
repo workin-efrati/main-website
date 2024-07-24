@@ -12,9 +12,37 @@
    --white: #FFFFFF;
    --gray: #DFDFDF;
    --blue-gradient: linear-gradient(to right, rgba(6, 119, 221, 0.8), rgba(4, 81, 151, 0.8), rgba(3, 64, 119, 0.8));
+  
+
 }
 
 body {
    direction: rtl;
    font-family: var(--font-heebo);
+}
+
+label, input, select, button{
+   font: inherit;
+}
+
+
+/* width */
+::-webkit-scrollbar {
+   height: 7px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+   background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+   background: var(--light-blue);
+   border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+   background: var(--primary-blue);
 }
