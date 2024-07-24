@@ -16,16 +16,14 @@ const page = () => {
         <div className={styles.container}>
             <div className={styles.title}>
                 <Image src={"https://www.kipa.co.il/userFiles/8abc8a31b441a9113106e6e26c79727e.jpg"} alt=""
-                    width={0}
-                    height={0}
-                    sizes="100vw"
+                    fill
+                    
                     className={styles.backImg}
                 />
                 <Text as="h1" textColor="white" fontStyle="b">שאל את הרב</Text>
             </div>
 
-
-            <div className={styles.iframe}>
+            <div className={styles.form}>
                 <AskQuestionForm />
             </div>
        

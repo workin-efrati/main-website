@@ -9,8 +9,8 @@ export default function page() {
       <Logo logoType="onlyText" firstLine='שו"ת הרב אפרתי'/>
       <Logo logoType="bookLogo" />
       <Logo logoType="bookLogo"  firstLine='שו"ת הרב אפרתי'  secondLine={true}/>
-      <Logo logoType="bookLogo" firstLine="שו'ת הרב אפרתי"  secondLine={true} thirdLine={true}/>
-      <SearchFilter />
+      <Logo logoType="bookLogo" firstLine='שו"ת הרב אפרתי'   secondLine={true} thirdLine={true}/>
+
 
     </div>
   );

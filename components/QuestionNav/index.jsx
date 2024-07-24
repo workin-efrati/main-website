@@ -4,7 +4,6 @@ import data from "./qData.json"
 import Image from 'next/image';
 import Link from 'next/link';
 export default function QuestionNav({ arr }) {
-    console.log(data);
     arr = data || arr || []
     return (
     <div className={styles.QuestionNav}>

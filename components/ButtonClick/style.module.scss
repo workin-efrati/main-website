@@ -10,8 +10,18 @@
     cursor: pointer;
     transition: all 0.3s ease;
     text-align: center;
-    width: 200px;
+    border-radius: 11px;
 
+}
+
+.gradientBorder:active::before {
+    background: linear-gradient(45deg, #0077CC, #003C66);
+}
+
+.gradientBorder:disabled {
+    opacity: 0.4;
+    cursor: not-allowed;
+    pointer-events: none;
 }
 
 .gradientBorder::before {
