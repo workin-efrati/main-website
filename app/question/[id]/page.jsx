@@ -62,7 +62,7 @@ export default async function Question({ params: { id } }) {
                     </div>
                     <div className={styles.tags}>
                         <BsTags className={styles.tagIcon} />
-                        {question.tags.map(tag => <Tag name={tag} path={tag} />)}
+                        {question.tags.map(tag => <Tag key={tag} name={tag} path={tag} />)}
                         <div className={styles.line}></div>
                     </div>
                     <div className={styles.answer}>

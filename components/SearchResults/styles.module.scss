@@ -14,17 +14,40 @@
         top: 2rem;
         height: 60vh;
         padding: 30px;
-        summary{
-            list-style: none; 
-    
+
+        a {
+            text-decoration: none;
+            color: inherit;
         }
+
+     
+        details:not([open]) summary .minus {
+            display: none;
+          }
+          
+          details[open] summary .plus {
+            display: none;
+          }
+        // details[open] summary .plus{
+        //     display: none;
+        // }
+
+        summary {
+            list-style: none;
+        }
+
         li {
             list-style-type: none
         }
     }
-    .title{
+
+    .title {
         display: flex;
-        gap: 4px;
+        gap: 6px;
         align-items: center;
     }
-  
+
+    .title:hover {
+        background-color: #a89494a9;
+        cursor: pointer;
+    }

@@ -1,78 +1,64 @@
 import Text from "@/components/TextComponent";
 import styles from "./page.module.scss";
 import Image from "next/image";
-// import { usePathname } from 'next/navigation'
+import { connect } from "@/server/connect";
+import { familyOfCategoryService, readOneService } from "@/server/service/tag.service";
+import { formatParams } from "@/helpers/formatParams";
+import TagCategory from "@/components/TagCategory";
 
-async function getDataCategory(category) {
-    // await connectToMongo();
-    // const categor = await getCategoriesfromServices(category);
-    const categor = {
-        description: category
+
+async function getDataCategory(categoryId) {
+    await connect();
+    // let category = await readOneService({ _id: categoryId });
+    let category = await familyOfCategoryService({ _id: categoryId });
+    if (category) {
+        console.log({ category });
     }
-    return categor;
+    else {
+        console.log({ categorylll: category });
+        category = {
+            name: category,
+            description: categoryId
+        };
+    }
+
+    return category;
 }
 
+
 export async function generateMetadata({ params: { category } }) {
-    const categoryData = await getDataCategory(category);
+
+    let categoryData = await getDataCategory(category);
+    categoryData = categoryData.categoryObject
     return {
-        title: categoryData.title,
-        description: categoryData.description,
+        title: categoryData.name || category,
+        description: categoryData.description || categoryData.name,
     };
 }
 
 export default async function Page({ params: { category } }) {
-    const categoryData = await getDataCategory(category);
+    category = formatParams(category)
+    let categoryData = await getDataCategory(category);
+    const parents = categoryData.parents
+    const children = categoryData.children
+    categoryData = categoryData.categoryObject;
     const categoryFake = {
-        title: categoryData.title || "הלכות שבת",
-        body: categoryData.body || `דף "שאלות ותשובות בהלכות שבת" מספק מענה מקיף לכל השאלות הנפוצות בנושאים מגוונים כמו שנים מקרא ואחד תרגום, צאת שבת והבדלה, קידוש, שימוש בפלטה, קריאת התורה בשבת, תחבורה בשבת, מכשירי חשמל ועוד. בעזרת הדף הזה, תוכלו להבין את הלכות השבת בצורה ברורה ומפורטת, ולשמור על קדושת השבת בצורה הטובה ביותר`,
+        title: categoryData.name || "הלכות שבת",
+        body: categoryData.description || `דף "שאלות ותשובות בהלכות שבת" מספק מענה מקיף לכל השאלות הנפוצות בנושאים מגוונים כמו שנים מקרא ואחד תרגום, צאת שבת והבדלה, קידוש, שימוש בפלטה, קריאת התורה בשבת, תחבורה בשבת, מכשירי חשמל ועוד. בעזרת הדף הזה, תוכלו להבין את הלכות השבת בצורה ברורה ומפורטת, ולשמור על קדושת השבת בצורה הטובה ביותר`,
         image: categoryData.img || '/images/image.png' // Replace with your actual image path
     };
     return (
-        <div className={`${styles.linear}`}>
+        (categoryData && <div className={`${styles.linear}`}>
             <div className={`${styles.container}`}>
-                <div className={styles.text}>
-                    <Text>נושא</Text>
-                    <Text as="h2" fontStyle={'b'}>{categoryFake.title}</Text><br />
-                    <Text>{categoryFake.body}</Text>
+                <div className={styles.text}> 
+                    {parents.map(parent => <div >{parent}</div>)}
+                    <Text as="h1" newClass={styles.font} fontStyle={'b'}>{categoryData?.name}</Text>
+                    {children.map(child => < TagCategory  name={child} />)}
                 </div>
                 <div className={`${styles.colorOpacity}`} />
                 <Image src={categoryFake.image} fill className={`${styles.image}`} />
             </div>
-        </div>
+        </div>)
     );
 }
 
-
-
-
-// import Text from "@/components/TextComponent";
-// import styles from "./page.module.scss";
-
-
-// async function getDataCategory() {
-//     await connectToMongo();
-//     const categor = await getCategoriesfromServices(category)
-//     return categor;
-// }
-
-// export const metadata = {
-//     title: getDataCategory().title,
-//     description: getDataCategory().description,
-// };
-// export default async function Page({ params: { category } }) {
-//     // await connectToMongo();
-//     // const category =  await getCategoriesfromServices(category)
-//     const categoryFake = {
-//         title: "הלכות שבת",
-//         body: `דף "שאלות ותשובות בהלכות שבת" מספק מענה מקיף לכל השאלות הנפוצות בנושאים מגוונים כמו שנים מקרא ואחד תרגום, צאת שבת והבדלה, קידוש, שימוש בפלטה, קריאת התורה בשבת, תחבורה בשבת, מכשירי חשמל ועוד. בעזרת הדף הזה, תוכלו להבין את הלכות השבת בצורה ברורה ומפורטת, ולשמור על קדושת השבת בצורה הטובה ביותר`
-//     };
-//     return (
-//         <div className={`${styles.linear} `}>
-//             <div className={`${styles.container}`} >
-//                 <Text>נושא</Text>
-//                 <Text as="h2" fontStyle={'b'}>{categoryFake.title}</Text><br />
-//                 <Text>{categoryFake.body}</Text>
-//             </div>
-//         </div>
-//     );
-// }
