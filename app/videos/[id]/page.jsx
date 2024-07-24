@@ -4,17 +4,17 @@ import ButtonFullScreen from './ButtonFullScreen'
 import { videos } from './data'
 import Image from 'next/image';
 import Text from '@/components/TextComponent';
-export const metadata = {
 
-    title: "שיעור פרשת קורח",
-    description: videos[0],
-    icons: {
-        icon: '/metaDataIcon.svg',
-    },
+// video/1
+// video/2
+// video/3
 
-};
+// TODO - generate static params
+// TODO - generate metadata
 
-const Video = ({params:{id}}) => {
+
+const Video = ({ params: { id } }) => {
+    
     const { title, description, link } = videos[0]
     return (
         <div className={styles.container}>
