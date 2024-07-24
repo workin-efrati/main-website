@@ -6,6 +6,7 @@ import DailyHalacha from "@/components/DailyHalacha";
 import styles from "./page.module.scss"
 import Link from "next/link";
 import SearchFilter from "@/components/SearchFilter";
+import { connect } from "@/server/connect";
 export default function Home() {
 
   const homeNav = [
