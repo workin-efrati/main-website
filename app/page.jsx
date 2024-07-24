@@ -5,6 +5,7 @@ import VideoSection from "@/components/VideoSection";
 import DailyHalacha from "@/components/DailyHalacha";
 import styles from "./page.module.scss"
 import Link from "next/link";
+import SearchFilter from "@/components/SearchFilter";
 export default function Home() {
 
   const homeNav = [
@@ -26,7 +27,7 @@ export default function Home() {
           <h1 id="section1">לַמְּדֵנִי חֻקֶּךָ</h1>
         </div>
         <div className={styles.inputContainer}>
-          <div className={styles.input}></div>
+          <div className={styles.input}><SearchFilter/></div>
         </div>
         <div className={styles.homeNavContainer}>
           {homeNav.map(nav => <Link className={styles.nav} href={nav.herf}>{nav.text} </Link>)}

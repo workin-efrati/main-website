@@ -11,6 +11,7 @@ import logo from "./logo.svg"
 import Image from 'next/image';
 import { navData } from './mobileNavData';
 import Link from 'next/link';
+import SearchFilter from '../SearchFilter';
 export default function HeaderMobile() {
     const [menu, setMenu] = useState(false)
 
@@ -25,7 +26,7 @@ export default function HeaderMobile() {
                 <button className={styles.openMenu} onClick={() => { setMenu(true) }}><MdMenu /></button>
                 <div className={menu ? styles.menuCoverOpen : styles.menuCoverClose}>
                     <button className={styles.btnCloseMenu} onClick={() => { setMenu(false) }}><IoClose /></button>
-                    <div className={styles.inputContainer}></div>
+                    <div className={styles.inputContainer}><SearchFilter type={"dark"}/></div>
                     <div className={styles.navsContainer}>
                         {navData.qaNav.map((nav, index) => (
                             <Link key={"a" + index} href={nav.href}>
