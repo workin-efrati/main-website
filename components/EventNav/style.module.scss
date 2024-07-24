@@ -1,0 +1,64 @@
+.EventNav {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 1rem 0;
+
+    h2 {
+        text-align: center;
+        width: 100%;
+        font-family: var(--font-bona);
+        color: #034077;
+    }
+
+    .container {
+        width: 50%;
+        height: 100%;
+        padding: 1%;
+        display: flex;
+        gap: 1rem;
+        flex-direction: column;
+        
+
+        .article {
+            height: 140px;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            gap: .4rem;
+            text-decoration: none;
+            padding: 1rem;
+            border-radius: 10px;
+            transition: .6s;
+
+            h3 {
+                font-size: 1.1rem;
+                color: #034077;
+                font-family: var(--font-bona);
+
+            }
+
+            p {
+                color: #333333;
+                overflow: hidden;
+                width: 100%;
+                height: 40px;
+                text-overflow: ellipsis;
+                flex-grow: 1;
+                font-size: .8rem;
+                display: flex;
+                -webkit-box-orient: vertical;
+                overflow: hidden;
+                text-overflow: ellipsis;
+            }
+       &:hover{
+        cursor: pointer;
+        box-shadow: 0 0 4px 0 #333;
+        h3{
+            text-decoration: underline;
+        }
+       }
+        }
+
+
+    }
+}
