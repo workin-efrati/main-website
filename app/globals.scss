@@ -20,6 +20,10 @@ body {
    direction: rtl;
    font-family: var(--font-heebo);
 }
+a{
+   text-decoration: none;
+   color: inherit;
+}
 
 label, input, select, button{
    font: inherit;
