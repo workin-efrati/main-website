@@ -1,0 +1,82 @@
+.tel{
+  text-decoration: underline;
+}
+.derechEmunaContainer {
+    background-color: var(--primary-blue);
+    color: var(--primary-blue);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .logo{
+      width: 186px;
+      height: 69px;
+    } 
+.textContainer{
+  font-family: var(--font-bona);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color:var(--white)
+}    
+   .firstLine{
+    font-weight: 400;
+    font-size: 12px;
+    letter-spacing: -0.32px;
+   }
+.secondLine{
+  font-size: 20px;
+
+}
+.thirdLine{
+  font-size: 10px;
+}
+  }
+
+
+  .onlyTextContainer {
+    font-family: var(--font-bona);
+    color: var(--primary-blue);
+    font-weight: 700;
+    font-size: 50px;
+      text-align: center;
+  }
+
+
+  .bookLogoContainer {
+    color:var(--white);
+    display: flex;
+flex-direction: row;
+align-items: center;
+font-weight: 600;
+.logo{
+  margin-right: 10px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  color: var(--primary-blue);
+}
+.textContainer{
+  font-family: var(--font-bona);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: var(--primary-blue);
+}    
+   .firstLine{
+    font-size: 22px;
+    font-weight: 700;
+   }
+.secondLine{
+  font-size: 11px;
+  font-weight: 400;
+  letter-spacing: -0.32;
+}
+.thirdLine{
+  font-size: 12px;
+  font-weight: 400;
+  letter-spacing: -0.32;
+}
+}
+  
