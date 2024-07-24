@@ -1,5 +1,5 @@
 .container{
-    margin-right: 20px;
+    padding-right: 20px;
     a{
         text-decoration: none;
         color: inherit;
@@ -16,8 +16,17 @@
     display: flex;
     gap: 6px;
     align-items: center;
+    color: var(--primary-blue);
+    font-size: 10px;
+
 }
-.title:hover{
-background-color: #a89494a9;
+.container:hover{
+background-color: #a8949456;
 cursor: pointer;
+}
+.minus,
+.plus, 
+.placeHolderIcon {
+    width: 8px;
+    height: 8px;
 }

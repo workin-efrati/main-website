@@ -1,53 +1,67 @@
-    .container {
-        // display: flex;
-        background-color: var(--gray);
-        // color: var(--primary-blue);
-        border-radius: 40px;
-        justify-content: space-around;
-        border-radius: 0 0 50px 50px;
-        height: fit-content;
-        padding: 10px;
-        align-items: center;
-        position: absolute;
-        z-index: 1;
-        width: 100%;
-        top: 2rem;
-        height: 60vh;
-        padding: 30px;
-
-        a {
-            text-decoration: none;
-            color: inherit;
-        }
-
-     
-        details:not([open]) summary .minus {
-            display: none;
-          }
-          
-          details[open] summary .plus {
-            display: none;
-          }
-        // details[open] summary .plus{
-        //     display: none;
-        // }
-
-        summary {
-            list-style: none;
-        }
-
-        li {
-            list-style-type: none
-        }
+.container {
+    // display: flex;
+    background-color: var(--gray);
+    // color: var(--primary-blue);
+    border-radius: 40px;
+    justify-content: space-around;
+    border-radius: 0 0 50px 50px;
+    height: fit-content;
+    padding: 10px;
+    align-items: center;
+    position: absolute;
+    z-index: 1;
+    width: 100%;
+    top: 2rem;
+    height: 60vh;
+    padding-top: 30px;
+    
+    a {
+        text-decoration: none;
+        color: inherit;
     }
 
-    .title {
-        display: flex;
-        gap: 6px;
-        align-items: center;
+
+    details:not([open]) summary .minus {
+        display: none;
     }
 
-    .title:hover {
-        background-color: #a89494a9;
-        cursor: pointer;
+    details[open] summary .plus {
+        display: none;
     }
+
+
+    summary {
+        list-style: none;
+    }
+
+    li {
+        list-style-type: none
+    }
+}
+
+.title {
+    display: flex;
+    gap: 6px;
+    align-items: center;
+    color: var(--primary-blue);
+    font-size: 12px;
+}
+
+.title:hover {
+    background-color: #a89494a9;
+    cursor: pointer;
+}
+
+.parents {
+    margin-right: 6px;
+    display: flex;
+    align-items: center;
+    gap: 2px;
+}
+
+.minus,
+.plus, 
+.placeHolderIcon {
+    width: 10px;
+    height: 10px;
+}
