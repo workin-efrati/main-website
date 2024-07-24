@@ -9,9 +9,9 @@ import { useState } from "react";
 import Link from "next/link";
 export default function VideoSection() {
   const [sliderPosition, setSliderPosition] = useState(0)
-  const sliderRatio = window.innerWidth > 568 ? 110 : 103
-  const cantMoveRight = (window.innerWidth > 568 && (-1 * data().length) >= sliderPosition - 3) || (window.innerWidth < 568 && (-1 * data().length) >= sliderPosition - 1)
-  const cantMoveLeft = sliderPosition == 0
+  // const sliderRatio = typeof(window !== "undefined") ? (window.innerWidth > 568 ? 110 : 103) : 110
+  let cantMoveRight = typeof window !== "undefined" && (window.innerWidth > 568 && (-1 * data().length) >= sliderPosition - 3) || (window.innerWidth < 568 && (-1 * data().length) >= sliderPosition - 1)
+  let cantMoveLeft = sliderPosition == 0
   function clickSliderHandler(num) {
     if (cantMoveRight && num == -1) return
     if (num == 1 && cantMoveLeft) return
