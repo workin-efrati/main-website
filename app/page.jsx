@@ -30,7 +30,7 @@ export default function Home() {
           <div className={styles.input}><SearchFilter/></div>
         </div>
         <div className={styles.homeNavContainer}>
-          {homeNav.map(nav => <Link className={styles.nav} href={nav.herf}>{nav.text} </Link>)}
+          {homeNav.map(nav => <Link key={nav.text} className={styles.nav} href={nav.herf}>{nav.text} </Link>)}
         </div>
         <div className={styles.bgCover}></div>
         <a className={styles.goToWhatsApp} href="">הצטרף אלינו לקבוצת הוואצפ <FaWhatsapp /></a>
