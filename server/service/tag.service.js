@@ -1,20 +1,37 @@
 import tagsModel from "../models/tags.model.js";
-const { readOne } = require("../controller/tags.controller");
+const { readOne, read } = require("../controller/tags.controller");
+
+const populateChildren = async (tag, depth = 0, maxDepth = 4) => {
+    if (depth > maxDepth) return tag;
+  
+    const populatedTag = await tag.populate('children', 'name children');
+    if (populatedTag.children && populatedTag.children.length > 0) {
+      for (let child of populatedTag.children) {
+        child = await populateChildren(child, depth + 1, maxDepth);
+      }
+    }
+    return populatedTag;
+  };
+
+  export const getAllTagsService = async (maxDepth = 4) => {
+    try {
+      const tags = await read({}, '_id name children');
+      const populatedTagsPromises = tags.map(tag => populateChildren(tag, 0, maxDepth));
+      const populatedTags = await Promise.all(populatedTagsPromises);
+      return populatedTags;
+    } catch (error) {
+      console.error("Error fetching tags:", error);
+      throw error;
+    }
+  };
+
 
 export const readOneService = (filter) => {
     const categoryObject = readOne(filter);
     return categoryObject;
 }
 
-export const getAllTagsService = async () => {
-    try {
-        // const allTags = await tagsModel.find();
-        console.log('allTags');
-    }
-    catch (err) {
-        console.log(err);
-    }
-}
+
 export const familyOfCategoryService = async (filter) => {
     try {
         const categoryObject = await tagsModel.findOne(filter);
