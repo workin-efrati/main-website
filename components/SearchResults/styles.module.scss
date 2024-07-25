@@ -1,25 +1,16 @@
 .container {
-    // display: flex;
     background-color: var(--gray);
-    // color: var(--primary-blue);
-    border-radius: 40px;
-    justify-content: space-around;
     border-radius: 0 0 50px 50px;
     height: fit-content;
-    padding: 10px;
-    align-items: center;
+    height: 60vh;
     position: absolute;
     z-index: 1;
     width: 100%;
     top: 2rem;
-    height: 60vh;
-    padding-top: 30px;
-    
-    a {
-        text-decoration: none;
-        color: inherit;
-    }
-
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 2rem 0;
 
     details:not([open]) summary .minus {
         display: none;
@@ -33,10 +24,37 @@
     summary {
         list-style: none;
     }
-
+ul{
+    width: 100%;
+    display: flex;
+    justify-content: left;
+    flex-direction: column;
+    align-items: end;
     li {
-        list-style-type: none
+        width: 100%;
+        list-style-type: none;
+        display: flex;
+        flex-direction: column;
+        a {
+            text-decoration: none;
+            color: inherit;
+            user-select: none;
+            padding: .4rem .2rem;
+        }
+    
+        details{
+            width: 100%;
+        }
+        summary{
+            width: 100%;
+        }
     }
+    svg {
+    font-size: .8rem;
+
+    margin: 0 .2rem ;
+    }
+}
 }
 
 .title {
@@ -44,7 +62,7 @@
     gap: 6px;
     align-items: center;
     color: var(--primary-blue);
-    font-size: 12px;
+    font-size: 1.15rem;
 }
 
 .title:hover {
@@ -58,10 +76,6 @@
     align-items: center;
     gap: 2px;
 }
-
-.minus,
-.plus, 
-.placeHolderIcon {
-    width: 10px;
-    height: 10px;
+.placeHolderIcon{
+    width: 20px;
 }

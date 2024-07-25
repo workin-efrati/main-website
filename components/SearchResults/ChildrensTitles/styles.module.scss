@@ -1,32 +1,33 @@
-.container{
-    padding-right: 20px;
-    a{
+.container {
+    a {
+        user-select: none;
         text-decoration: none;
         color: inherit;
     }
+
     details:not([open]) summary .minus {
         display: none;
-      }
-      
-      details[open] summary .plus {
+    }
+
+    details[open] summary .plus {
         display: none;
-      }
+    }
 }
-.title{
+
+.title {
     display: flex;
     gap: 6px;
     align-items: center;
     color: var(--primary-blue);
-    font-size: 10px;
+    font-size: 1.1rem;
+    padding: .4rem 0;
+}
 
+.title:hover {
+    background-color: #a8949456;
+    cursor: pointer;
 }
-.container:hover{
-background-color: #a8949456;
-cursor: pointer;
-}
-.minus,
-.plus, 
-.placeHolderIcon {
-    width: 8px;
-    height: 8px;
+
+.placeHolderIcon{
+    width: 22px;
 }
