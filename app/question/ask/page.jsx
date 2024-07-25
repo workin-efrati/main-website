@@ -15,7 +15,7 @@ const page = () => {
     return (
         <div className={styles.container}>
             <div className={styles.title}>
-                <Image src={"https://www.kipa.co.il/userFiles/8abc8a31b441a9113106e6e26c79727e.jpg"} alt=""
+                <Image src={"https://www.kipa.co.il/userFiles/8abc8a31b441a9113106e6e26c79727e.jpg"} alt="ask the rabbi"
                     fill
                     
                     className={styles.backImg}
