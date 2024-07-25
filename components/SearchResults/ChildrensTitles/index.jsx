@@ -18,7 +18,7 @@ export default function ChildrensTitles({ childrensData , margin = 4 }) {
                                         <div className={styles.title} >
                                             <div style={{marginRight:`${margin}%`}}>
 
-                                            {child.childrens.length > 0 ?<IconsPM />:
+                                            {child.childrens.length  ?<IconsPM />:
                                                 <div className={styles.placeHolderIcon} />}
                                             {
                                                 <Link  href={''}>

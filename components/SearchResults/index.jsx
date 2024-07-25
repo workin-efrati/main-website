@@ -5,6 +5,7 @@ import { FaMinus } from "react-icons/fa6";
 import getData from '../jsonTest';
 import ChildrensTitles from './ChildrensTitles';
 import styles from './styles.module.scss';
+import  useAxiosReq  from '@/hooks/useAxiosReq'
 
 export const IconsPM = () => (<>
   <FaMinus className={styles.minus} />
@@ -21,6 +22,8 @@ const Parent = ({ item }) => (<div className={styles.parents} >
 
 
 export default function SearchResults({ valueSearch }) {
+  const { data, loading, error } = useAxiosReq({ url:  'api/category' })
+
   const [titles, setTitles] = useState([])
 
   const filterTitles = (res) => {
@@ -39,7 +42,8 @@ export default function SearchResults({ valueSearch }) {
     return filteredTitles;
   }
 
-  const getSubject = async () => {
+  const getTags = async () => {
+    const tags = data;
     const res = await getData();
     if (valueSearch === '') {
       setTitles(res)
@@ -52,15 +56,15 @@ export default function SearchResults({ valueSearch }) {
   }
 
   useEffect(() => {
-    getSubject();
+    getTags();
   }, [valueSearch])
 
-  
+
 
   return (
     <div className={styles.container}>
       <ul>
-        { titles.map((item, index) => {
+        {titles.map((item, index) => {
           return <li key={item.id || index}>
             <details >
 

@@ -11,6 +11,7 @@
     align-items: center;
     flex-direction: column;
     padding: 2rem 0;
+    font-weight: 600;
 
     details:not([open]) summary .minus {
         display: none;
@@ -71,10 +72,11 @@ ul{
 }
 
 .parents {
-    margin-right: 6px;
+    margin-right: 2px;
     display: flex;
     align-items: center;
     gap: 2px;
+    font-size: .7rem;
 }
 .placeHolderIcon{
     width: 20px;

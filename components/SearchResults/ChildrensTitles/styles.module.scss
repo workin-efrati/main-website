@@ -3,13 +3,14 @@
         user-select: none;
         text-decoration: none;
         color: inherit;
+        font-weight: 300;
     }
 
-    details:not([open]) summary .minus {
+    details:not([open])>summary>.title>div>.minus {
         display: none;
     }
 
-    details[open] summary .plus {
+    details[open]>summary>.title>div>.plus {
         display: none;
     }
 }
@@ -28,6 +29,6 @@
     cursor: pointer;
 }
 
-.placeHolderIcon{
+.placeHolderIcon {
     width: 22px;
 }
