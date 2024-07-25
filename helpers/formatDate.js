@@ -3,26 +3,6 @@ import axios from 'axios'
 import parshiyotObject from "@/dateData/parashot20Years.json"
 import holidaysObject from "@/dateData/holiday20Years.json"
 
-// בקשת שרת גנרית
-export const axiosReq = async ({ method = 'POST', body, url, isLocalServer = true }) => {
-   try {
-      const { data: result } = await axios({
-         baseURL: isLocalServer ? process.env.NEXT_PUBLIC_LOCAL_SERVER : process.env.NEXT_PUBLIC_SERVER,
-         method,
-         data: body || {},
-         url,
-         headers: {
-            Authorization: localStorage.token || ''
-         }
-      })
-      console.log('api req result 🐱 \n', { result })
-      return result;
-
-   } catch (error) {
-      console.log('api error 🤢 \n', { error });
-      throw error.response?.data?.my ? error.response?.data?.message || 'something went wrong' : 'something went wrong'
-   }
-}
 
 // API
 // קבלת פרשת השבוע הקרוב
@@ -161,9 +141,9 @@ export const getCurrentParashaFromJSON = () => {
  };
 
 //  קבלת החג/אירוע המשמעותי הקרוב
- export function getUpcomingHoliday() {
+ export const getUpcomingHolidayFromJSON = () => {
   const today = new Date();
-  const twoWeeksFromNow = new Date(today.getTime() + 14 * 24 * 60 * 60 * 1000);
+  const twoWeeksFromNow = new Date(today.getTime() + 34 * 24 * 60 * 60 * 1000);
   let upcomingHolidayWithTag = null;
 
   for (const [dateStr, holiday] of Object.entries(holidaysObject)) {
@@ -185,6 +165,21 @@ export const getCurrentParashaFromJSON = () => {
   console.log('אין חגים עם תג בשבועיים הקרובים');
   return null;
 }
+
+
+export const getDateInfo = ()=>{
+  const data = {
+    currentDate: getCurrentDateInHe(),
+    currentParasha: getCurrentParashaFromJSON(),
+    upcomingHoliday: getUpcomingHolidayFromJSON(),
+  }
+  return data;
+
+}
+
+
+
+
 
 // API
 // // קבלת תאריך עברי

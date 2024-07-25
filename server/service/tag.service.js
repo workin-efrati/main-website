@@ -6,7 +6,6 @@ export const readOneService = (filter) => {
     return categoryObject;
 }
 
-
 export const familyOfCategoryService = async (filter) => {
     try {
         const categoryObject = await tagsModel.findOne(filter);
