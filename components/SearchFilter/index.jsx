@@ -6,8 +6,9 @@ import SearchResults from '../SearchResults';
 import styles from './styles.module.scss';
 import useAxiosReq from '@/hooks/useAxiosReq'
 
-
+export const dynanic = 'force-static';
 export default function SearchFilter({ type }) {
+
   const { data, loading, error } = useAxiosReq({ url: '/category' })
 
   const router = useRouter()

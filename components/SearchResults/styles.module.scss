@@ -14,7 +14,6 @@
     font-weight: 600;
     overflow: auto;
     margin-bottom: 35px;
-padding-right: 10px;
 
     details:not([open]) summary .minus {
         display: none;
@@ -28,44 +27,50 @@ padding-right: 10px;
     summary {
         list-style: none;
     }
-ul{
-    width: 100%;
-    display: flex;
-    justify-content: left;
-    flex-direction: column;
-    align-items: end;
-    li {
-        width: 100%;
-        list-style-type: none;
-        display: flex;
-        flex-direction: column;
-        a {
-            text-decoration: none;
-            color: inherit;
-            user-select: none;
-            padding: .4rem .2rem;
-        }
-    
-        details{
-            width: 100%;
-        }
-        summary{
-            width: 100%;
-        }
-    }
-    svg {
-    font-size: .8rem;
 
-    margin: 0 .2rem ;
+    ul {
+        width: 100%;
+        display: flex;
+        justify-content: left;
+        flex-direction: column;
+        align-items: end;
+
+        li {
+            width: 100%;
+            list-style-type: none;
+            display: flex;
+            flex-direction: column;
+
+            a {
+                text-decoration: none;
+                color: inherit;
+                user-select: none;
+                padding: .4rem .2rem;
+            }
+
+            details {
+                width: 100%;
+            }
+
+            summary {
+                width: 100%;
+            }
+        }
+
+        svg {
+            font-size: .8rem;
+
+            margin: 0 .2rem;
+        }
     }
-}
 }
 
 .title {
     display: flex;
+    padding-right: 10px;
     gap: 6px;
     align-items: center;
-    color: var(--primary-blue);
+    color: var(eprimary-blue);
     font-size: 1.15rem;
 }
 
@@ -83,17 +88,18 @@ ul{
     text-overflow: ellipsis;
     white-space: nowrap;
 }
-.placeHolderIcon{
+
+.placeHolderIcon {
     width: 20px;
 }
 
 
-  .container::-webkit-scrollbar-track {
-    margin-bottom: 35px;
-    border-radius: 10px;
-  }
-  
+.container::-webkit-scrollbar-track {
+    margin: 35px 0;
+     border-radius: 10px; 
+}
+
   .container::-webkit-scrollbar-thumb {
-    background: #a8949456;
+    // background: #a8949456;
     border-radius: 10px; 
 }
