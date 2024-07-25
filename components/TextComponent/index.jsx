@@ -11,7 +11,7 @@ const Text = ({ as: Component = 'p', newClass, fontStyle, textColor, children, .
       className={`${styles[Component]} ${newClass} 
       ${fontStyle === 'b' ? styles.bona : (fontStyle === 'h' ? styles.heebo : '')}
      
-      ${styles[textColor]}`}
+      ${styles[textColor || '']}`}
       {...props}
     >
       {children}
