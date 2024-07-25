@@ -7,7 +7,7 @@ const TagsSchema = new mongoose.Schema(
     coverImage: { type: String },
     parent: { type: mongoose.Schema.Types.ObjectId, ref: "tag" },
     topicImages: [String],
-    popular: Boolean,
+    popular: { type: Boolean },
     children: [{ type: mongoose.Schema.Types.ObjectId, ref: "tag" }],
     isActive: { type: Boolean, default: true },
   },
