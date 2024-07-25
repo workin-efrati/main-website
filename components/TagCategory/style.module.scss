@@ -13,15 +13,17 @@
     align-items: center;
     padding: 0.5rem 1rem;
     background-color:var(--white);
-    border-radius: 20px;
+    border-radius: 5px;
     text-decoration: none;
     color: var(--light-blue);
     transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+    opacity: 0.8;
   }
   
   .tagCategoryLink:hover {
-    background-color: #007bff;
-    color: #ffffff;
+    background-color: var(--light-blue);
+    color:var(--white);
+    opacity: 0.8;
   }
   
   .tagCategoryName {
