@@ -62,18 +62,13 @@ import HolidaysModel from "@/server/models/holidays.model"
 export const createQuestionAction = async (prevState, fd) => {
   async function insertHolidays(holidays) {
     try {
-      // התחברות למסד הנתונים
-      // await mongoose.connect('mongodb+srv://efratishot:EfRaTi123@cluster0.vxi1h6a.mongodb.net/dev?retryWrites=true&w=majority&appName=Cluster0', {
-      //   useNewUrlParser: true,
-      //   useUnifiedTopology: true,
-      // });
-  
       await connect()
   
       for (const holiday of holidays) {
         const newHoliday = new HolidaysModel({
           name: holiday.hebrewName,
           englishName: holiday.englishName,
+          
           type: 'holiday', // או 'parasha' לפי הצורך
           // type: 'parasha', // או 'holiday' לפי הצורך
         });

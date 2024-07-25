@@ -1,3 +1,5 @@
+import tagsModel from "../models/tags.model";
+
 const { readOne ,findById} = require("../controller/tags.controller");
 
 export const readOneService = (filter) => {
@@ -8,8 +10,9 @@ export const readOneService = (filter) => {
 
 export const getAllTagsService = async () => {
     try {
-        // const allTags = await tagsModel.find();
-        console.log('allTags');
+        const allTags = await tagsModel.find();
+        console.log(allTags);
+        return allTags;
     }
     catch (err) {
         console.log(err);
