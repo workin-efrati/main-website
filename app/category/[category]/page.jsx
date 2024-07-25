@@ -5,6 +5,7 @@ import { connect } from "@/server/connect";
 import { familyOfCategoryService, readOneService } from "@/server/service/tag.service";
 import { formatParams } from "@/helpers/formatParams";
 import TagCategory from "@/components/TagCategory";
+import Link from "next/link";
 
 
 async function getDataCategory(categoryId) {
@@ -51,12 +52,12 @@ export default async function Page({ params: { category } }) {
         (categoryData && <div className={`${styles.linear}`}>
             <div className={`${styles.container}`}>
                 <div className={styles.text}> 
-                    {parents.map(parent => <div >{parent}</div>)}
-                    <Text as="h1" newClass={styles.font} fontStyle={'b'}>{categoryData?.name}</Text>
-                    {children.map(child => < TagCategory  name={child} />)}
+                    {parents.reverse().map(parent => <Link href={parent._id} className={`${styles.LinkParent}`} > {parent.name} <span> {`>`} </span> </Link>)}
+                    <Text as="h1" newClass={styles.font} fontStyle={'b'}>{categoryData.name}</Text>
+                    {children.map(child => < TagCategory  name={child.name} _id={child._id} />)}
                 </div>
                 <div className={`${styles.colorOpacity}`} />
-                <Image src={categoryFake.image} fill className={`${styles.image}`} />
+                <Image alt="cat" src={categoryFake.image} fill className={`${styles.image}`} />
             </div>
         </div>)
     );

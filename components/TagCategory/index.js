@@ -3,13 +3,15 @@ import styles from './style.module.scss'
 import Link from 'next/link';
 
 
-const TagCategory = ({ name }) => {
+const TagCategory = ({ name ,_id }) => {
     return (
-        <div className="tagCategoryContainer">
-            <Link className="tagCategoryLink" href={`/category/${name.toLowerCase()}`}>
-                <span className="tagCategoryName">{name}</span>
-            </Link>
+        <div className={`${styles.tagCategoryContainer}`}>
+      <Link className={`${styles.tagCategoryLink}`} href={`/${_id}`}>
+        <div >
+          <span className={`${styles.tagCategoryName}`}>{name}</span>
         </div>
+      </Link>
+    </div>
 
     );
 };

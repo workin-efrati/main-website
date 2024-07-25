@@ -35,7 +35,7 @@ export default function VideoSection() {
         <div className={styles.videoSliderContainer} >
           {data().map((v, i) => (
             <Link key={`${v.href} ${i}`} href={v.href} className={styles.video} style={style}>
-              <Image width={100} height={100} src={v.img} />
+              <Image width={100} height={100} src={v.img}  alt={v.title || 'img'}/>
               <p>{v.title}</p>
             </Link>
           ))}

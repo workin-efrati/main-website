@@ -4,6 +4,8 @@ import ButtonFullScreen from './ButtonFullScreen'
 import { videos } from './data'
 import Image from 'next/image';
 import Text from '@/components/TextComponent';
+import { connect } from '@/server/connect';
+import { readOneVideo, readVideos } from '@/server/services/vod.service';
 
 // video/1
 // video/2
@@ -11,15 +13,31 @@ import Text from '@/components/TextComponent';
 
 // TODO - generate static params
 // TODO - generate metadata
+export async function generateStaticParams() {
+    await connect()
+    const all = await readVideos()
+    return all.map((vid) => ({ id: String(vid._id) }))
+}
 
+export async function generateMetadata({ params : {id} }) {
+    await connect()
+    const data = await readOneVideo({ _id: id })
+    const { title } = data
+    return {
+      title,
+      description : "שיעורי וידאו הרב אפרתי"
+    }
+  }
 
-const Video = ({ params: { id } }) => {
-    
-    const { title, description, link } = videos[0]
+const Video = async ({ params: { id } }) => {
+    await connect()
+    const data = await readOneVideo({ _id: id })
+    const { title, description, link, img } = data
+
     return (
         <div className={styles.container}>
             <div className={styles.title}>
-                <Image src={"https://www.kipa.co.il/userFiles/8abc8a31b441a9113106e6e26c79727e.jpg"} alt="dssdf"
+                <Image src={img} alt="dssdf"
                     fill
                     sizes="100vw"
                     className={styles.backImg}
@@ -29,7 +47,7 @@ const Video = ({ params: { id } }) => {
             <div className={styles.iframe}>
                 <iframe width="100%"
                     height="100%"
-                    src={link}
+                    src={`https://www.youtube.com/embed/${link.replace("/watch?v=", '')}`}
                     title={description}
                     frameBorder="0"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"

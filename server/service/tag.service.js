@@ -1,14 +1,23 @@
-import tagsModel from "../models/tags.model.js";
-const { readOne } = require("../controller/tags.controller");
+const { readOne ,findById} = require("../controller/tags.controller");
 
 export const readOneService = (filter) => {
     const categoryObject = readOne(filter);
     return categoryObject;
 }
 
+
+export const getAllTagsService = async () => {
+    try {
+        // const allTags = await tagsModel.find();
+        console.log('allTags');
+    }
+    catch (err) {
+        console.log(err);
+    }
+}
 export const familyOfCategoryService = async (filter) => {
     try {
-        const categoryObject = await tagsModel.findOne(filter);
+        const categoryObject = await readOne(filter);
         if (!categoryObject) throw new Error("Category not found");
 
         // Function to get all parents
@@ -17,9 +26,9 @@ export const familyOfCategoryService = async (filter) => {
             let currentParent = tag.parent;
 
             while (currentParent) {
-                const parentObject = await tagsModel.findById(currentParent);
+                const parentObject = await findById(currentParent);
                 if (!parentObject) break;
-                parents.push(parentObject.name);
+                parents.push({name:parentObject.name,_id:parentObject._id});
                 currentParent = parentObject.parent;
             }
 
@@ -33,9 +42,9 @@ export const familyOfCategoryService = async (filter) => {
 
             while (stack.length) {
                 const childId = stack.pop();
-                const childObject = await tagsModel.findById(childId);
+                const childObject = await findById(childId);
                 if (childObject) {
-                    children.push(childObject.name);
+                    children.push({name:childObject.name,_id:childObject._id});
                     stack.push(...childObject.children);
                 }
             }
@@ -57,4 +66,5 @@ export const familyOfCategoryService = async (filter) => {
         throw new Error("Error fetching category family");
     }
 };
+
 
