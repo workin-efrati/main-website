@@ -13,7 +13,7 @@ const HolidaysSchema = new mongoose.Schema(
       required: true, 
       enum: ['holiday', 'parasha'],
     },
-    questions:[{ type: mongoose.Schema.Types.ObjectId, ref: "qa" }],
+    questions:[{ type: mongoose.Schema.Types.ObjectId, ref: "pending-qa" }],
 
   },
   { timestamps: true }

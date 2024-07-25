@@ -1,7 +1,7 @@
 [
   {
     "hebrewName": "ראש השנה",
-    "englishName": "Rosh Hashana 5785"
+    "englishName": "Rosh Hashana"
   },
   {
     "hebrewName": "צום גדליה",
@@ -13,22 +13,26 @@
   },
   {
     "hebrewName": "סוכות",
-    "englishName": "Sukkot I"
+    "englishName": "Sukkot"
+  },
+  {
+    "hebrewName": "הושענה רבא",
+    "englishName": "Hoshana Raba"
   },
   {
     "hebrewName": "שמחת תורה",
-    "englishName": "Shmini Atzeret"
+    "englishName": "Simchat Torah"
   },
   {
     "hebrewName": "חנוכה",
-    "englishName": "Chanukah: 1 Candle"
+    "englishName": "Chanukah"
   },
   {
     "hebrewName": "עשרה בטבת",
     "englishName": "Asara B’Tevet"
   },
   {
-    "hebrewName": "ט״ו בשבט",
+    "hebrewName": "טו בשבט",
     "englishName": "Tu BiShvat"
   },
   {
@@ -37,8 +41,13 @@
   },
   {
     "hebrewName": "פסח",
-    "englishName": "Pesach I"
+    "englishName": "Pesach"
   },
+  {
+    "hebrewName": "שביעי של פסח",
+    "englishName": "Pesach VII"
+  }
+  ,
   {
     "hebrewName": "יום השואה",
     "englishName": "Yom HaShoah"
@@ -52,7 +61,7 @@
     "englishName": "Yom HaAtzma’ut"
   },
   {
-    "hebrewName": "ל״ג בעומר",
+    "hebrewName": "לג בעומר",
     "englishName": "Lag BaOmer"
   },
   {
@@ -61,18 +70,18 @@
   },
   {
     "hebrewName": "שבועות",
-    "englishName": "Shavuot I"
+    "englishName": "Shavuot"
   },
   {
-    "hebrewName": "צום י״ז בתמוז",
+    "hebrewName": "שבעה עשר בתמוז",
     "englishName": "Tzom Tammuz"
   },
   {
-    "hebrewName": "צום תשעה באב",
+    "hebrewName": "תשעה באב",
     "englishName": "Tish’a B’Av"
   },
   {
-    "hebrewName": "ט״ו באב",
+    "hebrewName": "טו באב",
     "englishName": "Tu B’Av"
   }
 ]

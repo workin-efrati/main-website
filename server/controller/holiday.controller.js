@@ -1,9 +1,12 @@
-import HolidaysModel from "../models/holidays.modell.js";
+import HolidaysModel from "../models/holidays.model.js";
 
 // CRUD
 export const create = (data) => HolidaysModel.create(data);
 
-export const read = (filter) => HolidaysModel.find(filter);
+export const read = async(filter) =>{
+    return await HolidaysModel.find(filter)
+    // .populate('questions.pending-qa');
+}
 
 export const readOne = (filter) => HolidaysModel.findOne(filter);
 

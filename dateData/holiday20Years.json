@@ -4,7 +4,7 @@
     "inHebrew": "צום י״ז בתמוז",
     "hDate": "17 Tamuz 5784",
     "hDateInHebrew": "יז-תמוז-תשפ״ד",
-    "mainTag": "צום י״ז בתמוז"
+    "mainTag": "שבעה עשר בתמוז"
   },
   "2024-08-10": {
     "inEnglish": "Shabbat Chazon",
@@ -25,7 +25,7 @@
     "inHebrew": "צום תשעה באב",
     "hDate": "9 Av 5784",
     "hDateInHebrew": "ט-אב-תשפ״ד",
-    "mainTag": "צום תשעה באב"
+    "mainTag": "תשעה באב"
   },
   "2024-08-17": {
     "inEnglish": "Shabbat Nachamu",
@@ -39,7 +39,7 @@
     "inHebrew": "ט״ו באב",
     "hDate": "15 Av 5784",
     "hDateInHebrew": "טו-אב-תשפ״ד",
-    "mainTag": "ט״ו באב"
+    "mainTag": "טו באב"
   },
   "2024-09-28": {
     "inEnglish": "Leil Selichot",
@@ -243,7 +243,7 @@
     "inHebrew": "ט״ו בשבט",
     "hDate": "15 Sh'vat 5785",
     "hDateInHebrew": "טו-שבט-תשפ״ה",
-    "mainTag": "ט״ו בשבט"
+    "mainTag": "טו בשבט"
   },
   "2025-03-01": {
     "inEnglish": "Shabbat Shekalim",
@@ -352,7 +352,7 @@
   },
   "2025-04-19": {
     "inEnglish": "Pesach VII",
-    "inHebrew": "פסח ז׳",
+    "inHebrew": "שביעי של פסח",
     "hDate": "21 Nisan 5785",
     "hDateInHebrew": "כא-ניסן-תשפ״ה",
     "mainTag": "פסח"
@@ -397,7 +397,7 @@
     "inHebrew": "ל״ג בעומר",
     "hDate": "18 Iyyar 5785",
     "hDateInHebrew": "יח-אייר-תשפ״ה",
-    "mainTag": "ל״ג בעומר"
+    "mainTag": "לג בעומר"
   },
   "2025-05-26": {
     "inEnglish": "Yom Yerushalayim",
@@ -426,7 +426,7 @@
     "inHebrew": "צום י״ז בתמוז",
     "hDate": "17 Tamuz 5785",
     "hDateInHebrew": "יז-תמוז-תשפ״ה",
-    "mainTag": "צום י״ז בתמוז"
+    "mainTag": "שבעה עשר בתמוז"
   },
   "2025-08-02": {
     "inEnglish": "Erev Tish’a B’Av",
@@ -440,7 +440,7 @@
     "inHebrew": "צום תשעה באב",
     "hDate": "9 Av 5785",
     "hDateInHebrew": "ט-אב-תשפ״ה",
-    "mainTag": "צום תשעה באב"
+    "mainTag": "תשעה באב"
   },
   "2025-08-09": {
     "inEnglish": "Shabbat Nachamu",
@@ -651,7 +651,7 @@
     "inHebrew": "ט״ו בשבט",
     "hDate": "15 Sh'vat 5786",
     "hDateInHebrew": "טו-שבט-תשפ״ו",
-    "mainTag": "ט״ו בשבט"
+    "mainTag": "טו בשבט"
   },
   "2026-02-14": {
     "inEnglish": "Shabbat Shekalim",
@@ -753,7 +753,7 @@
   },
   "2026-04-08": {
     "inEnglish": "Pesach VII",
-    "inHebrew": "פסח ז׳",
+    "inHebrew": "שביעי של פסח",
     "hDate": "21 Nisan 5786",
     "hDateInHebrew": "כא-ניסן-תשפ״ו",
     "mainTag": "פסח"
@@ -798,7 +798,7 @@
     "inHebrew": "ל״ג בעומר",
     "hDate": "18 Iyyar 5786",
     "hDateInHebrew": "יח-אייר-תשפ״ו",
-    "mainTag": "ל״ג בעומר"
+    "mainTag": "לג בעומר"
   },
   "2026-05-15": {
     "inEnglish": "Yom Yerushalayim",
@@ -827,7 +827,7 @@
     "inHebrew": "צום י״ז בתמוז",
     "hDate": "17 Tamuz 5786",
     "hDateInHebrew": "יז-תמוז-תשפ״ו",
-    "mainTag": "צום י״ז בתמוז"
+    "mainTag": "שבעה עשר בתמוז"
   },
   "2026-07-18": {
     "inEnglish": "Shabbat Chazon",
@@ -848,7 +848,7 @@
     "inHebrew": "צום תשעה באב",
     "hDate": "9 Av 5786",
     "hDateInHebrew": "ט-אב-תשפ״ו",
-    "mainTag": "צום תשעה באב"
+    "mainTag": "תשעה באב"
   },
   "2026-07-25": {
     "inEnglish": "Shabbat Nachamu",
@@ -862,7 +862,7 @@
     "inHebrew": "ט״ו באב",
     "hDate": "15 Av 5786",
     "hDateInHebrew": "טו-אב-תשפ״ו",
-    "mainTag": "ט״ו באב"
+    "mainTag": "טו באב"
   },
   "2026-09-05": {
     "inEnglish": "Leil Selichot",
@@ -1059,7 +1059,7 @@
     "inHebrew": "ט״ו בשבט",
     "hDate": "15 Sh'vat 5787",
     "hDateInHebrew": "טו-שבט-תשפ״ז",
-     "mainTag": "ט״ו בשבט"
+     "mainTag": "טו בשבט"
   },
   "2027-02-21": {
     "inEnglish": "Purim Katan",
@@ -1175,7 +1175,7 @@
   },
   "2027-04-28": {
     "inEnglish": "Pesach VII",
-    "inHebrew": "פסח ז׳",
+    "inHebrew": "שביעי של פסח",
     "hDate": "21 Nisan 5787",
     "hDateInHebrew": "כא-ניסן-תשפ״ז",
     "mainTag": "פסח"
@@ -1220,7 +1220,7 @@
     "inHebrew": "ל״ג בעומר",
     "hDate": "18 Iyyar 5787",
     "hDateInHebrew": "יח-אייר-תשפ״ז",
-    "mainTag": "ל״ג בעומר"
+    "mainTag": "לג בעומר"
   },
   "2027-06-04": {
     "inEnglish": "Yom Yerushalayim",
@@ -1249,7 +1249,7 @@
     "inHebrew": "צום י״ז בתמוז",
     "hDate": "17 Tamuz 5787",
     "hDateInHebrew": "יז-תמוז-תשפ״ז",
-    "mainTag": "צום י״ז בתמוז"
+    "mainTag": "שבעה עשר בתמוז"
   },
   "2027-08-07": {
     "inEnglish": "Shabbat Chazon",
@@ -1270,7 +1270,7 @@
     "inHebrew": "צום תשעה באב",
     "hDate": "9 Av 5787",
     "hDateInHebrew": "ט-אב-תשפ״ז",
-    "mainTag": "צום תשעה באב"
+    "mainTag": "תשעה באב"
   },
   "2027-08-14": {
     "inEnglish": "Shabbat Nachamu",
@@ -1284,7 +1284,7 @@
     "inHebrew": "ט״ו באב",
     "hDate": "15 Av 5787",
     "hDateInHebrew": "טו-אב-תשפ״ז",
-    "mainTag": "ט״ו באב"
+    "mainTag": "טו באב"
   },
   "2027-09-25": {
     "inEnglish": "Leil Selichot",
@@ -1481,7 +1481,7 @@
     "inHebrew": "ט״ו בשבט",
     "hDate": "15 Sh'vat 5788",
     "hDateInHebrew": "טו-שבט-תשפ״ח",
-     "mainTag": "ט״ו בשבט"
+     "mainTag": "טו בשבט"
   },
   "2028-02-26": {
     "inEnglish": "Shabbat Shekalim",
@@ -1590,7 +1590,7 @@
   },
   "2028-04-17": {
     "inEnglish": "Pesach VII",
-    "inHebrew": "פסח ז׳",
+    "inHebrew": "שביעי של פסח",
     "hDate": "21 Nisan 5788",
     "hDateInHebrew": "כא-ניסן-תשפ״ח",
     "mainTag": "פסח"
@@ -1635,7 +1635,7 @@
     "inHebrew": "ל״ג בעומר",
     "hDate": "18 Iyyar 5788",
     "hDateInHebrew": "יח-אייר-תשפ״ח",
-    "mainTag": "ל״ג בעומר"
+    "mainTag": "לג בעומר"
   },
   "2028-05-24": {
     "inEnglish": "Yom Yerushalayim",
@@ -1664,7 +1664,7 @@
     "inHebrew": "צום י״ז בתמוז",
     "hDate": "17 Tamuz 5788",
     "hDateInHebrew": "יז-תמוז-תשפ״ח",
-    "mainTag": "צום י״ז בתמוז"
+    "mainTag": "שבעה עשר בתמוז"
   },
   "2028-07-29": {
     "inEnglish": "Shabbat Chazon",
@@ -1685,7 +1685,7 @@
     "inHebrew": "צום תשעה באב",
     "hDate": "9 Av 5788",
     "hDateInHebrew": "ט-אב-תשפ״ח",
-    "mainTag": "צום תשעה באב"
+    "mainTag": "תשעה באב"
   },
   "2028-08-05": {
     "inEnglish": "Shabbat Nachamu",
@@ -1699,7 +1699,7 @@
     "inHebrew": "ט״ו באב",
     "hDate": "15 Av 5788",
     "hDateInHebrew": "טו-אב-תשפ״ח",
-    "mainTag": "ט״ו באב"
+    "mainTag": "טו באב"
   },
   "2028-09-16": {
     "inEnglish": "Leil Selichot",
@@ -1903,7 +1903,7 @@
     "inHebrew": "ט״ו בשבט",
     "hDate": "15 Sh'vat 5789",
     "hDateInHebrew": "טו-שבט-תשפ״ט",
-    "mainTag": "ט״ו בשבט"
+    "mainTag": "טו בשבט"
   },
   "2029-02-10": {
     "inEnglish": "Shabbat Shekalim",
@@ -2012,7 +2012,7 @@
   },
   "2029-04-06": {
     "inEnglish": "Pesach VII",
-    "inHebrew": "פסח ז׳",
+    "inHebrew": "שביעי של פסח",
     "hDate": "21 Nisan 5789",
     "hDateInHebrew": "כא-ניסן-תשפ״ט",
     "mainTag": "פסח"
@@ -2057,7 +2057,7 @@
     "inHebrew": "ל״ג בעומר",
     "hDate": "18 Iyyar 5789",
     "hDateInHebrew": "יח-אייר-תשפ״ט",
-    "mainTag": "ל״ג בעומר"
+    "mainTag": "לג בעומר"
   },
   "2029-05-13": {
     "inEnglish": "Yom Yerushalayim",
@@ -2086,7 +2086,7 @@
     "inHebrew": "צום י״ז בתמוז",
     "hDate": "18 Tamuz 5789",
     "hDateInHebrew": "יח-תמוז-תשפ״ט",
-    "mainTag": "צום י״ז בתמוז"
+    "mainTag": "שבעה עשר בתמוז"
   },
   "2029-07-21": {
     "inEnglish": "Erev Tish’a B’Av",
@@ -2100,14 +2100,14 @@
     "inHebrew": "צום תשעה באב",
     "hDate": "10 Av 5789",
     "hDateInHebrew": "י-אב-תשפ״ט",
-    "mainTag": "צום תשעה באב"
+    "mainTag": "תשעה באב"
   },
   "2029-07-27": {
     "inEnglish": "Tu B’Av",
     "inHebrew": "ט״ו באב",
     "hDate": "15 Av 5789",
     "hDateInHebrew": "טו-אב-תשפ״ט",
-    "mainTag": "ט״ו באב"
+    "mainTag": "טו באב"
   },
   "2029-07-28": {
     "inEnglish": "Shabbat Nachamu",
@@ -2311,7 +2311,7 @@
     "inHebrew": "ט״ו בשבט",
     "hDate": "15 Sh'vat 5790",
     "hDateInHebrew": "טו-שבט-תש״צ",
-     "mainTag": "ט״ו בשבט"
+     "mainTag": "טו בשבט"
   },
   
   "2030-02-17": {
@@ -2428,7 +2428,7 @@
   },
   "2030-04-24": {
     "inEnglish": "Pesach VII",
-    "inHebrew": "פסח ז׳",
+    "inHebrew": "שביעי של פסח",
     "hDate": "21 Nisan 5790",
     "hDateInHebrew": "כא-ניסן-תש״צ",
     "mainTag": "פסח"
@@ -2473,7 +2473,7 @@
     "inHebrew": "ל״ג בעומר",
     "hDate": "18 Iyyar 5790",
     "hDateInHebrew": "יח-אייר-תש״צ",
-    "mainTag": "ל״ג בעומר"
+    "mainTag": "לג בעומר"
   },
   "2030-05-31": {
     "inEnglish": "Yom Yerushalayim",
@@ -2502,7 +2502,7 @@
     "inHebrew": "צום י״ז בתמוז",
     "hDate": "17 Tamuz 5790",
     "hDateInHebrew": "יז-תמוז-תש״צ",
-    "mainTag": "צום י״ז בתמוז"
+    "mainTag": "שבעה עשר בתמוז"
   },
   "2030-08-03": {
     "inEnglish": "Shabbat Chazon",
@@ -2523,7 +2523,7 @@
     "inHebrew": "צום תשעה באב",
     "hDate": "9 Av 5790",
     "hDateInHebrew": "ט-אב-תש״צ",
-    "mainTag": "צום תשעה באב"
+    "mainTag": "תשעה באב"
   },
   "2030-08-10": {
     "inEnglish": "Shabbat Nachamu",
@@ -2537,7 +2537,7 @@
     "inHebrew": "ט״ו באב",
     "hDate": "15 Av 5790",
     "hDateInHebrew": "טו-אב-תש״צ",
-    "mainTag": "ט״ו באב"
+    "mainTag": "טו באב"
   },
   "2030-09-21": {
     "inEnglish": "Leil Selichot",
@@ -2734,7 +2734,7 @@
     "inHebrew": "ט״ו בשבט",
     "hDate": "15 Sh'vat 5791",
     "hDateInHebrew": "טו-שבט-תשצ״א",
-     "mainTag": "ט״ו בשבט"
+     "mainTag": "טו בשבט"
   },
   "2031-02-22": {
     "inEnglish": "Shabbat Shekalim",
@@ -2843,7 +2843,7 @@
   },
   "2031-04-14": {
     "inEnglish": "Pesach VII",
-    "inHebrew": "פסח ז׳",
+    "inHebrew": "שביעי של פסח",
     "hDate": "21 Nisan 5791",
     "hDateInHebrew": "כא-ניסן-תשצ״א",
     "mainTag": "פסח"
@@ -2888,7 +2888,7 @@
     "inHebrew": "ל״ג בעומר",
     "hDate": "18 Iyyar 5791",
     "hDateInHebrew": "יח-אייר-תשצ״א",
-    "mainTag": "ל״ג בעומר"
+    "mainTag": "לג בעומר"
   },
   "2031-05-21": {
     "inEnglish": "Yom Yerushalayim",
@@ -2917,7 +2917,7 @@
     "inHebrew": "צום י״ז בתמוז",
     "hDate": "17 Tamuz 5791",
     "hDateInHebrew": "יז-תמוז-תשצ״א",
-    "mainTag": "צום י״ז בתמוז"
+    "mainTag": "שבעה עשר בתמוז"
   },
   "2031-07-26": {
     "inEnglish": "Shabbat Chazon",
@@ -2938,7 +2938,7 @@
     "inHebrew": "צום תשעה באב",
     "hDate": "9 Av 5791",
     "hDateInHebrew": "ט-אב-תשצ״א",
-    "mainTag": "צום תשעה באב"
+    "mainTag": "תשעה באב"
   },
   "2031-08-02": {
     "inEnglish": "Shabbat Nachamu",
@@ -2952,7 +2952,7 @@
     "inHebrew": "ט״ו באב",
     "hDate": "15 Av 5791",
     "hDateInHebrew": "טו-אב-תשצ״א",
-    "mainTag": "ט״ו באב"
+    "mainTag": "טו באב"
   },
   "2031-09-13": {
     "inEnglish": "Leil Selichot",
@@ -3155,7 +3155,7 @@
     "inHebrew": "ט״ו בשבט",
     "hDate": "15 Sh'vat 5792",
     "hDateInHebrew": "טו-שבט-תשצ״ב",
-    "mainTag": "ט״ו בשבט"
+    "mainTag": "טו בשבט"
   },
   "2032-02-07": {
     "inEnglish": "Shabbat Shekalim",
@@ -3264,7 +3264,7 @@
   },
   "2032-04-02": {
     "inEnglish": "Pesach VII",
-    "inHebrew": "פסח ז׳",
+    "inHebrew": "שביעי של פסח",
     "hDate": "21 Nisan 5792",
     "hDateInHebrew": "כא-ניסן-תשצ״ב",
     "mainTag": "פסח"
@@ -3309,7 +3309,7 @@
     "inHebrew": "ל״ג בעומר",
     "hDate": "18 Iyyar 5792",
     "hDateInHebrew": "יח-אייר-תשצ״ב",
-    "mainTag": "ל״ג בעומר"
+    "mainTag": "לג בעומר"
   },
   "2032-05-09": {
     "inEnglish": "Yom Yerushalayim",
@@ -3338,7 +3338,7 @@
     "inHebrew": "צום י״ז בתמוז",
     "hDate": "18 Tamuz 5792",
     "hDateInHebrew": "יח-תמוז-תשצ״ב",
-    "mainTag": "צום י״ז בתמוז"
+    "mainTag": "שבעה עשר בתמוז"
   },
   "2032-07-17": {
     "inEnglish": "Erev Tish’a B’Av",
@@ -3352,14 +3352,14 @@
     "inHebrew": "צום תשעה באב",
     "hDate": "10 Av 5792",
     "hDateInHebrew": "י-אב-תשצ״ב",
-    "mainTag": "צום תשעה באב"
+    "mainTag": "תשעה באב"
   },
   "2032-07-23": {
     "inEnglish": "Tu B’Av",
     "inHebrew": "ט״ו באב",
     "hDate": "15 Av 5792",
     "hDateInHebrew": "טו-אב-תשצ״ב",
-    "mainTag": "ט״ו באב"
+    "mainTag": "טו באב"
   },
   "2032-07-24": {
     "inEnglish": "Shabbat Nachamu",
@@ -3563,7 +3563,7 @@
     "inHebrew": "ט״ו בשבט",
     "hDate": "15 Sh'vat 5793",
     "hDateInHebrew": "טו-שבט-תשצ״ג",
-     "mainTag": "ט״ו בשבט"
+     "mainTag": "טו בשבט"
   },
   "2033-02-13": {
     "inEnglish": "Purim Katan",
@@ -3679,7 +3679,7 @@
   },
   "2033-04-20": {
     "inEnglish": "Pesach VII",
-    "inHebrew": "פסח ז׳",
+    "inHebrew": "שביעי של פסח",
     "hDate": "21 Nisan 5793",
     "hDateInHebrew": "כא-ניסן-תשצ״ג",
     "mainTag": "פסח"
@@ -3724,7 +3724,7 @@
     "inHebrew": "ל״ג בעומר",
     "hDate": "18 Iyyar 5793",
     "hDateInHebrew": "יח-אייר-תשצ״ג",
-    "mainTag": "ל״ג בעומר"
+    "mainTag": "לג בעומר"
   },
   "2033-05-27": {
     "inEnglish": "Yom Yerushalayim",
@@ -3753,7 +3753,7 @@
     "inHebrew": "צום י״ז בתמוז",
     "hDate": "17 Tamuz 5793",
     "hDateInHebrew": "יז-תמוז-תשצ״ג",
-    "mainTag": "צום י״ז בתמוז"
+    "mainTag": "שבעה עשר בתמוז"
   },
   "2033-07-30": {
     "inEnglish": "Shabbat Chazon",
@@ -3774,7 +3774,7 @@
     "inHebrew": "צום תשעה באב",
     "hDate": "9 Av 5793",
     "hDateInHebrew": "ט-אב-תשצ״ג",
-    "mainTag": "צום תשעה באב"
+    "mainTag": "תשעה באב"
   },
   "2033-08-06": {
     "inEnglish": "Shabbat Nachamu",
@@ -3788,7 +3788,7 @@
     "inHebrew": "ט״ו באב",
     "hDate": "15 Av 5793",
     "hDateInHebrew": "טו-אב-תשצ״ג",
-    "mainTag": "ט״ו באב"
+    "mainTag": "טו באב"
   },
   "2033-09-17": {
     "inEnglish": "Leil Selichot",
@@ -3985,7 +3985,7 @@
     "inHebrew": "ט״ו בשבט",
     "hDate": "15 Sh'vat 5794",
     "hDateInHebrew": "טו-שבט-תשצ״ד",
-     "mainTag": "ט״ו בשבט"
+     "mainTag": "טו בשבט"
   },
   "2034-02-18": {
     "inEnglish": "Shabbat Shekalim",
@@ -4094,7 +4094,7 @@
   },
   "2034-04-10": {
     "inEnglish": "Pesach VII",
-    "inHebrew": "פסח ז׳",
+    "inHebrew": "שביעי של פסח",
     "hDate": "21 Nisan 5794",
     "hDateInHebrew": "כא-ניסן-תשצ״ד",
     "mainTag": "פסח"
@@ -4139,7 +4139,7 @@
     "inHebrew": "ל״ג בעומר",
     "hDate": "18 Iyyar 5794",
     "hDateInHebrew": "יח-אייר-תשצ״ד",
-    "mainTag": "ל״ג בעומר"
+    "mainTag": "לג בעומר"
   },
   "2034-05-17": {
     "inEnglish": "Yom Yerushalayim",
@@ -4168,7 +4168,7 @@
     "inHebrew": "צום י״ז בתמוז",
     "hDate": "17 Tamuz 5794",
     "hDateInHebrew": "יז-תמוז-תשצ״ד",
-    "mainTag": "צום י״ז בתמוז"
+    "mainTag": "שבעה עשר בתמוז"
   },
   "2034-07-22": {
     "inEnglish": "Shabbat Chazon",
@@ -4189,7 +4189,7 @@
     "inHebrew": "צום תשעה באב",
     "hDate": "9 Av 5794",
     "hDateInHebrew": "ט-אב-תשצ״ד",
-    "mainTag": "צום תשעה באב"
+    "mainTag": "תשעה באב"
   },
   "2034-07-29": {
     "inEnglish": "Shabbat Nachamu",
@@ -4203,7 +4203,7 @@
     "inHebrew": "ט״ו באב",
     "hDate": "15 Av 5794",
     "hDateInHebrew": "טו-אב-תשצ״ד",
-    "mainTag": "ט״ו באב"
+    "mainTag": "טו באב"
   },
   "2034-09-13": {
     "inEnglish": "Erev Rosh Hashana",
@@ -4400,7 +4400,7 @@
     "inHebrew": "ט״ו בשבט",
     "hDate": "15 Sh'vat 5795",
     "hDateInHebrew": "טו-שבט-תשצ״ה",
-    "mainTag": "ט״ו בשבט"
+    "mainTag": "טו בשבט"
   },
   "2035-02-23": {
     "inEnglish": "Purim Katan",
@@ -4523,7 +4523,7 @@
   },
   "2035-04-30": {
     "inEnglish": "Pesach VII",
-    "inHebrew": "פסח ז׳",
+    "inHebrew": "שביעי של פסח",
     "hDate": "21 Nisan 5795",
     "hDateInHebrew": "כא-ניסן-תשצ״ה",
     "mainTag": "פסח"
@@ -4568,7 +4568,7 @@
     "inHebrew": "ל״ג בעומר",
     "hDate": "18 Iyyar 5795",
     "hDateInHebrew": "יח-אייר-תשצ״ה",
-    "mainTag": "ל״ג בעומר"
+    "mainTag": "לג בעומר"
   },
   "2035-06-06": {
     "inEnglish": "Yom Yerushalayim",
@@ -4597,7 +4597,7 @@
     "inHebrew": "צום י״ז בתמוז",
     "hDate": "17 Tamuz 5795",
     "hDateInHebrew": "יז-תמוז-תשצ״ה",
-    "mainTag": "צום י״ז בתמוז"
+    "mainTag": "שבעה עשר בתמוז"
   },
   "2035-08-11": {
     "inEnglish": "Shabbat Chazon",
@@ -4618,7 +4618,7 @@
     "inHebrew": "צום תשעה באב",
     "hDate": "9 Av 5795",
     "hDateInHebrew": "ט-אב-תשצ״ה",
-    "mainTag": "צום תשעה באב"
+    "mainTag": "תשעה באב"
   },
   "2035-08-18": {
     "inEnglish": "Shabbat Nachamu",
@@ -4632,7 +4632,7 @@
     "inHebrew": "ט״ו באב",
     "hDate": "15 Av 5795",
     "hDateInHebrew": "טו-אב-תשצ״ה",
-    "mainTag": "ט״ו באב"
+    "mainTag": "טו באב"
   },
   "2035-09-29": {
     "inEnglish": "Leil Selichot",
@@ -4836,7 +4836,7 @@
     "inHebrew": "ט״ו בשבט",
     "hDate": "15 Sh'vat 5796",
     "hDateInHebrew": "טו-שבט-תשצ״ו",
-    "mainTag": "ט״ו בשבט"
+    "mainTag": "טו בשבט"
   },
   "2036-02-23": {
     "inEnglish": "Shabbat Shekalim",
@@ -4945,7 +4945,7 @@
   },
   "2036-04-18": {
     "inEnglish": "Pesach VII",
-    "inHebrew": "פסח ז׳",
+    "inHebrew": "שביעי של פסח",
     "hDate": "21 Nisan 5796",
     "hDateInHebrew": "כא-ניסן-תשצ״ו",
     "mainTag": "פסח"
@@ -4990,7 +4990,7 @@
     "inHebrew": "ל״ג בעומר",
     "hDate": "18 Iyyar 5796",
     "hDateInHebrew": "יח-אייר-תשצ״ו",
-    "mainTag": "ל״ג בעומר"
+    "mainTag": "לג בעומר"
   },
   "2036-05-25": {
     "inEnglish": "Yom Yerushalayim",
@@ -5019,7 +5019,7 @@
     "inHebrew": "צום י״ז בתמוז",
     "hDate": "18 Tamuz 5796",
     "hDateInHebrew": "יח-תמוז-תשצ״ו",
-    "mainTag": "צום י״ז בתמוז"
+    "mainTag": "שבעה עשר בתמוז"
   },
   "2036-08-02": {
     "inEnglish": "Erev Tish’a B’Av",
@@ -5033,14 +5033,14 @@
     "inHebrew": "צום תשעה באב",
     "hDate": "10 Av 5796",
     "hDateInHebrew": "י-אב-תשצ״ו",
-    "mainTag": "צום תשעה באב"
+    "mainTag": "תשעה באב"
   },
   "2036-08-08": {
     "inEnglish": "Tu B’Av",
     "inHebrew": "ט״ו באב",
     "hDate": "15 Av 5796",
     "hDateInHebrew": "טו-אב-תשצ״ו",
-    "mainTag": "ט״ו באב"
+    "mainTag": "טו באב"
   },
   "2036-08-09": {
     "inEnglish": "Shabbat Nachamu",
@@ -5244,7 +5244,7 @@
     "inHebrew": "ט״ו בשבט",
     "hDate": "15 Sh'vat 5797",
     "hDateInHebrew": "טו-שבט-תשצ״ז",
-     "mainTag": "ט״ו בשבט"
+     "mainTag": "טו בשבט"
   },
   "2037-02-14": {
     "inEnglish": "Shabbat Shekalim",
@@ -5353,7 +5353,7 @@
   },
   "2037-04-06": {
     "inEnglish": "Pesach VII",
-    "inHebrew": "פסח ז׳",
+    "inHebrew": "שביעי של פסח",
     "hDate": "21 Nisan 5797",
     "hDateInHebrew": "כא-ניסן-תשצ״ז",
     "mainTag": "פסח"
@@ -5405,7 +5405,7 @@
     "inHebrew": "ל״ג בעומר",
     "hDate": "18 Iyyar 5797",
     "hDateInHebrew": "יח-אייר-תשצ״ז",
-    "mainTag": "ל״ג בעומר"
+    "mainTag": "לג בעומר"
   },
   "2037-05-13": {
     "inEnglish": "Yom Yerushalayim",
@@ -5434,7 +5434,7 @@
     "inHebrew": "צום י״ז בתמוז",
     "hDate": "17 Tamuz 5797",
     "hDateInHebrew": "יז-תמוז-תשצ״ז",
-    "mainTag": "צום י״ז בתמוז"
+    "mainTag": "שבעה עשר בתמוז"
   },
   "2037-07-18": {
     "inEnglish": "Shabbat Chazon",
@@ -5455,7 +5455,7 @@
     "inHebrew": "צום תשעה באב",
     "hDate": "9 Av 5797",
     "hDateInHebrew": "ט-אב-תשצ״ז",
-    "mainTag": "צום תשעה באב"
+    "mainTag": "תשעה באב"
   },
   "2037-07-25": {
     "inEnglish": "Shabbat Nachamu",
@@ -5469,7 +5469,7 @@
     "inHebrew": "ט״ו באב",
     "hDate": "15 Av 5797",
     "hDateInHebrew": "טו-אב-תשצ״ז",
-    "mainTag": "ט״ו באב"
+    "mainTag": "טו באב"
   },
   "2037-09-05": {
     "inEnglish": "Leil Selichot",
@@ -5673,7 +5673,7 @@
     "inHebrew": "ט״ו בשבט",
     "hDate": "15 Sh'vat 5798",
     "hDateInHebrew": "טו-שבט-תשצ״ח",
-    "mainTag": "ט״ו בשבט"
+    "mainTag": "טו בשבט"
   },
   "2038-02-19": {
     "inEnglish": "Purim Katan",
@@ -5796,7 +5796,7 @@
   },
   "2038-04-26": {
     "inEnglish": "Pesach VII",
-    "inHebrew": "פסח ז׳",
+    "inHebrew": "שביעי של פסח",
     "hDate": "21 Nisan 5798",
     "hDateInHebrew": "כא-ניסן-תשצ״ח",
     "mainTag": "פסח"
@@ -5841,7 +5841,7 @@
     "inHebrew": "ל״ג בעומר",
     "hDate": "18 Iyyar 5798",
     "hDateInHebrew": "יח-אייר-תשצ״ח",
-    "mainTag": "ל״ג בעומר"
+    "mainTag": "לג בעומר"
   },
   "2038-06-02": {
     "inEnglish": "Yom Yerushalayim",
@@ -5870,7 +5870,7 @@
     "inHebrew": "צום י״ז בתמוז",
     "hDate": "17 Tamuz 5798",
     "hDateInHebrew": "יז-תמוז-תשצ״ח",
-    "mainTag": "צום י״ז בתמוז"
+    "mainTag": "שבעה עשר בתמוז"
   },
   "2038-08-07": {
     "inEnglish": "Shabbat Chazon",
@@ -5891,7 +5891,7 @@
     "inHebrew": "צום תשעה באב",
     "hDate": "9 Av 5798",
     "hDateInHebrew": "ט-אב-תשצ״ח",
-    "mainTag": "צום תשעה באב"
+    "mainTag": "תשעה באב"
   },
   "2038-08-14": {
     "inEnglish": "Shabbat Nachamu",
@@ -5905,7 +5905,7 @@
     "inHebrew": "ט״ו באב",
     "hDate": "15 Av 5798",
     "hDateInHebrew": "טו-אב-תשצ״ח",
-    "mainTag": "ט״ו באב"
+    "mainTag": "טו באב"
   },
   "2038-09-25": {
     "inEnglish": "Leil Selichot",
@@ -6109,7 +6109,7 @@
     "inHebrew": "ט״ו בשבט",
     "hDate": "15 Sh'vat 5799",
     "hDateInHebrew": "טו-שבט-תשצ״ט",
-    "mainTag": "ט״ו בשבט"
+    "mainTag": "טו בשבט"
   },
   "2039-02-19": {
     "inEnglish": "Shabbat Shekalim",
@@ -6218,7 +6218,7 @@
   },
   "2039-04-15": {
     "inEnglish": "Pesach VII",
-    "inHebrew": "פסח ז׳",
+    "inHebrew": "שביעי של פסח",
     "hDate": "21 Nisan 5799",
     "hDateInHebrew": "כא-ניסן-תשצ״ט",
     "mainTag": "פסח"
@@ -6263,7 +6263,7 @@
     "inHebrew": "ל״ג בעומר",
     "hDate": "18 Iyyar 5799",
     "hDateInHebrew": "יח-אייר-תשצ״ט",
-    "mainTag": "ל״ג בעומר"
+    "mainTag": "לג בעומר"
   },
   "2039-05-22": {
     "inEnglish": "Yom Yerushalayim",
@@ -6292,7 +6292,7 @@
     "inHebrew": "צום י״ז בתמוז",
     "hDate": "18 Tamuz 5799",
     "hDateInHebrew": "יח-תמוז-תשצ״ט",
-    "mainTag": "צום י״ז בתמוז"
+    "mainTag": "שבעה עשר בתמוז"
   },
   "2039-07-30": {
     "inEnglish": "Erev Tish’a B’Av",
@@ -6306,14 +6306,14 @@
     "inHebrew": "צום תשעה באב",
     "hDate": "10 Av 5799",
     "hDateInHebrew": "י-אב-תשצ״ט",
-    "mainTag": "צום תשעה באב"
+    "mainTag": "תשעה באב"
   },
   "2039-08-05": {
     "inEnglish": "Tu B’Av",
     "inHebrew": "ט״ו באב",
     "hDate": "15 Av 5799",
     "hDateInHebrew": "טו-אב-תשצ״ט",
-    "mainTag": "ט״ו באב"
+    "mainTag": "טו באב"
   },
   "2039-08-06": {
     "inEnglish": "Shabbat Nachamu",
@@ -6524,7 +6524,7 @@
     "inHebrew": "ט״ו בשבט",
     "hDate": "15 Sh'vat 5800",
     "hDateInHebrew": "טו-שבט-ת״ת",
-    "mainTag": "ט״ו בשבט"
+    "mainTag": "טו בשבט"
   },
   "2040-02-11": {
     "inEnglish": "Shabbat Shekalim",
@@ -6626,7 +6626,7 @@
   },
   "2040-04-04": {
     "inEnglish": "Pesach VII",
-    "inHebrew": "פסח ז׳",
+    "inHebrew": "שביעי של פסח",
     "hDate": "21 Nisan 5800",
     "hDateInHebrew": "כא-ניסן-ת״ת",
     "mainTag": "פסח"
@@ -6671,7 +6671,7 @@
     "inHebrew": "ל״ג בעומר",
     "hDate": "18 Iyyar 5800",
     "hDateInHebrew": "יח-אייר-ת״ת",
-    "mainTag": "ל״ג בעומר"
+    "mainTag": "לג בעומר"
   },
   "2040-05-11": {
     "inEnglish": "Yom Yerushalayim",
@@ -6700,7 +6700,7 @@
     "inHebrew": "צום י״ז בתמוז",
     "hDate": "17 Tamuz 5800",
     "hDateInHebrew": "יז-תמוז-ת״ת",
-    "mainTag": "צום י״ז בתמוז"
+    "mainTag": "שבעה עשר בתמוז"
   },
   "2040-07-14": {
     "inEnglish": "Shabbat Chazon",
@@ -6721,7 +6721,7 @@
     "inHebrew": "צום תשעה באב",
     "hDate": "9 Av 5800",
     "hDateInHebrew": "ט-אב-ת״ת",
-    "mainTag": "צום תשעה באב"
+    "mainTag": "תשעה באב"
   },
   "2040-07-21": {
     "inEnglish": "Shabbat Nachamu",
@@ -6735,7 +6735,7 @@
     "inHebrew": "ט״ו באב",
     "hDate": "15 Av 5800",
     "hDateInHebrew": "טו-אב-ת״ת",
-    "mainTag": "ט״ו באב"
+    "mainTag": "טו באב"
   },
   "2040-09-01": {
     "inEnglish": "Leil Selichot",
@@ -6932,7 +6932,7 @@
     "inHebrew": "ט״ו בשבט",
     "hDate": "15 Sh'vat 5801",
     "hDateInHebrew": "טו-שבט-תת״א",
-    "mainTag": "ט״ו בשבט"
+    "mainTag": "טו בשבט"
   },
   "2041-01-19": {
     "inEnglish": "Shabbat Shirah",
@@ -7062,7 +7062,7 @@
   },
   "2041-04-22": {
     "inEnglish": "Pesach VII",
-    "inHebrew": "פסח ז׳",
+    "inHebrew": "שביעי של פסח",
     "hDate": "21 Nisan 5801",
     "hDateInHebrew": "כא-ניסן-תת״א",
     "mainTag": "פסח"
@@ -7107,7 +7107,7 @@
     "inHebrew": "ל״ג בעומר",
     "hDate": "18 Iyyar 5801",
     "hDateInHebrew": "יח-אייר-תת״א",
-    "mainTag": "ל״ג בעומר"
+    "mainTag": "לג בעומר"
   },
   "2041-05-29": {
     "inEnglish": "Yom Yerushalayim",
@@ -7136,7 +7136,7 @@
     "inHebrew": "צום י״ז בתמוז",
     "hDate": "17 Tamuz 5801",
     "hDateInHebrew": "יז-תמוז-תת״א",
-    "mainTag": "צום י״ז בתמוז"
+    "mainTag": "שבעה עשר בתמוז"
   },
   "2041-08-03": {
     "inEnglish": "Shabbat Chazon",
@@ -7157,7 +7157,7 @@
     "inHebrew": "צום תשעה באב",
     "hDate": "9 Av 5801",
     "hDateInHebrew": "ט-אב-תת״א",
-    "mainTag": "צום תשעה באב"
+    "mainTag": "תשעה באב"
   },
   "2041-08-10": {
     "inEnglish": "Shabbat Nachamu",
@@ -7171,7 +7171,7 @@
     "inHebrew": "ט״ו באב",
     "hDate": "15 Av 5801",
     "hDateInHebrew": "טו-אב-תת״א",
-    "mainTag": "ט״ו באב"
+    "mainTag": "טו באב"
   },
   "2041-09-21": {
     "inEnglish": "Leil Selichot",
@@ -7375,7 +7375,7 @@
     "inHebrew": "ט״ו בשבט",
     "hDate": "15 Sh'vat 5802",
     "hDateInHebrew": "טו-שבט-תת״ב",
-    "mainTag": "ט״ו בשבט"
+    "mainTag": "טו בשבט"
   },
   "2042-02-15": {
     "inEnglish": "Shabbat Shekalim",
@@ -7484,7 +7484,7 @@
   },
   "2042-04-11": {
     "inEnglish": "Pesach VII",
-    "inHebrew": "פסח ז׳",
+    "inHebrew": "שביעי של פסח",
     "hDate": "21 Nisan 5802",
     "hDateInHebrew": "כא-ניסן-תת״ב",
     "mainTag": "פסח"
@@ -7529,7 +7529,7 @@
     "inHebrew": "ל״ג בעומר",
     "hDate": "18 Iyyar 5802",
     "hDateInHebrew": "יח-אייר-תת״ב",
-    "mainTag": "ל״ג בעומר"
+    "mainTag": "לג בעומר"
   },
   "2042-05-18": {
     "inEnglish": "Yom Yerushalayim",
@@ -7558,7 +7558,7 @@
     "inHebrew": "צום י״ז בתמוז",
     "hDate": "18 Tamuz 5802",
     "hDateInHebrew": "יח-תמוז-תת״ב",
-    "mainTag": "צום י״ז בתמוז"
+    "mainTag": "שבעה עשר בתמוז"
   },
   "2042-07-26": {
     "inEnglish": "Erev Tish’a B’Av",
@@ -7572,14 +7572,14 @@
     "inHebrew": "צום תשעה באב",
     "hDate": "10 Av 5802",
     "hDateInHebrew": "י-אב-תת״ב",
-    "mainTag": "צום תשעה באב"
+    "mainTag": "תשעה באב"
   },
   "2042-08-01": {
     "inEnglish": "Tu B’Av",
     "inHebrew": "ט״ו באב",
     "hDate": "15 Av 5802",
     "hDateInHebrew": "טו-אב-תת״ב",
-    "mainTag": "ט״ו באב"
+    "mainTag": "טו באב"
   },
   "2042-08-02": {
     "inEnglish": "Shabbat Nachamu",
@@ -7790,7 +7790,7 @@
     "inHebrew": "ט״ו בשבט",
     "hDate": "15 Sh'vat 5803",
     "hDateInHebrew": "טו-שבט-תת״ג",
-    "mainTag": "ט״ו בשבט"
+    "mainTag": "טו בשבט"
   },
   "2043-02-24": {
     "inEnglish": "Purim Katan",
@@ -7913,7 +7913,7 @@
   },
   "2043-05-01": {
     "inEnglish": "Pesach VII",
-    "inHebrew": "פסח ז׳",
+    "inHebrew": "שביעי של פסח",
     "hDate": "21 Nisan 5803",
     "hDateInHebrew": "כא-ניסן-תת״ג",
     "mainTag": "פסח"
@@ -7958,7 +7958,7 @@
     "inHebrew": "ל״ג בעומר",
     "hDate": "18 Iyyar 5803",
     "hDateInHebrew": "יח-אייר-תת״ג",
-    "mainTag": "ל״ג בעומר"
+    "mainTag": "לג בעומר"
   },
   "2043-06-07": {
     "inEnglish": "Yom Yerushalayim",
@@ -7987,7 +7987,7 @@
     "inHebrew": "צום י״ז בתמוז",
     "hDate": "18 Tamuz 5803",
     "hDateInHebrew": "יח-תמוז-תת״ג",
-    "mainTag": "צום י״ז בתמוז"
+    "mainTag": "שבעה עשר בתמוז"
   },
   "2043-08-15": {
     "inEnglish": "Erev Tish’a B’Av",
@@ -8001,14 +8001,14 @@
     "inHebrew": "צום תשעה באב",
     "hDate": "10 Av 5803",
     "hDateInHebrew": "י-אב-תת״ג",
-    "mainTag": "צום תשעה באב"
+    "mainTag": "תשעה באב"
   },
   "2043-08-21": {
     "inEnglish": "Tu B’Av",
     "inHebrew": "ט״ו באב",
     "hDate": "15 Av 5803",
     "hDateInHebrew": "טו-אב-תת״ג",
-    "mainTag": "ט״ו באב"
+    "mainTag": "טו באב"
   },
   "2043-08-22": {
     "inEnglish": "Shabbat Nachamu",
@@ -8212,7 +8212,7 @@
     "inHebrew": "ט״ו בשבט",
     "hDate": "15 Sh'vat 5804",
     "hDateInHebrew": "טו-שבט-תת״ד",
-     "mainTag": "ט״ו בשבט"
+     "mainTag": "טו בשבט"
   },
   "2044-02-27": {
     "inEnglish": "Shabbat Shekalim",
@@ -8321,7 +8321,7 @@
   },
   "2044-04-18": {
     "inEnglish": "Pesach VII",
-    "inHebrew": "פסח ז׳",
+    "inHebrew": "שביעי של פסח",
     "hDate": "21 Nisan 5804",
     "hDateInHebrew": "כא-ניסן-תת״ד",
     "mainTag": "פסח"
@@ -8366,7 +8366,7 @@
     "inHebrew": "ל״ג בעומר",
     "hDate": "18 Iyyar 5804",
     "hDateInHebrew": "יח-אייר-תת״ד",
-    "mainTag": "ל״ג בעומר"
+    "mainTag": "לג בעומר"
   },
   "2044-05-25": {
     "inEnglish": "Yom Yerushalayim",
@@ -8395,6 +8395,6 @@
     "inHebrew": "צום י״ז בתמוז",
     "hDate": "17 Tamuz 5804",
     "hDateInHebrew": "יז-תמוז-תת״ד",
-    "mainTag": "צום י״ז בתמוז"
+    "mainTag": "שבעה עשר בתמוז"
   }
 }

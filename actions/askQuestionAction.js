@@ -3,8 +3,7 @@ import { connect } from "@/server/connect"
 import { create } from "@/server/controller/pendingQa.controller"
 import { revalidatePath } from "next/cache"
 import { redirect } from "next/navigation"
-// import { cookies } from "next/headers";
-// import { createQuestionService } from "../services/question.service"
+
 
 export const createQuestionAction = async (prevState, fd) => {
     await new Promise((resolve, reject) => { setTimeout(resolve, 1000 * 3) })
@@ -43,3 +42,4 @@ export const createQuestionAction = async (prevState, fd) => {
     }
     redirect('/')
 }
+
