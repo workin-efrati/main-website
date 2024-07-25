@@ -1,0 +1,39 @@
+.tagCategoryContainer {
+    display: inline-block;
+    margin: 0.5rem;
+    transition: transform 0.2s ease-in-out;
+  }
+  
+  .tagCategoryContainer:hover {
+    transform: translateY(-2px);
+  }
+  
+  .tagCategoryLink {
+    display: flex;
+    align-items: center;
+    padding: 0.5rem 1rem;
+    background-color:var(--white);
+    border-radius: 20px;
+    text-decoration: none;
+    color: var(--light-blue);
+    transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+  }
+  
+  .tagCategoryLink:hover {
+    background-color: #007bff;
+    color: #ffffff;
+  }
+  
+  .tagCategoryName {
+    margin-right: 0.5rem;
+  }
+  
+  .tagCategoryArrow {
+    font-size: 1.2rem;
+    transition: transform 0.2s ease-in-out;
+  }
+  
+  .tagCategoryLink:hover .tagCategoryArrow {
+    transform: translateX(3px);
+  }
+  
