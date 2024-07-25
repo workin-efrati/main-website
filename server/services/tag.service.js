@@ -5,7 +5,15 @@ export const readOneService = (filter) => {
     return categoryObject;
 }
 
-
+export const getAllTagsService = async () => {
+    try {
+        // const allTags = await tagsModel.find();
+        console.log('allTags');
+    }
+    catch (err) {
+        console.log(err);
+    }
+}
 export const familyOfCategoryService = async (filter) => {
     try {
         const categoryObject = await readOne(filter);
@@ -57,4 +65,5 @@ export const familyOfCategoryService = async (filter) => {
         throw new Error("Error fetching category family");
     }
 };
+
 
