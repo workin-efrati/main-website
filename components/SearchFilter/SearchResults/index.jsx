@@ -5,6 +5,8 @@ import { FaMinus } from "react-icons/fa6";
 import ChildrensTitles from './ChildrensTitles';
 import styles from './styles.module.scss';
 import useAxiosReq from '@/hooks/useAxiosReq'
+import { MdLocalDining } from "react-icons/md";
+import Loading from "./Loading";
 
 export const IconsPM = () => (<>
   <FaMinus className={styles.minus} />
@@ -21,9 +23,6 @@ const Parent = ({ item }) => (<div className={styles.parents} >
 
 
 export default function SearchResults({ valueSearch, data, loading }) {
-  // const { data, loading, error } = useAxiosReq({ url: '/category' })
-  console.log('load: ', loading);
-
   const [titles, setTitles] = useState([])
 
   const filterTitles = (res) => {
@@ -44,7 +43,6 @@ export default function SearchResults({ valueSearch, data, loading }) {
 
   const getTags = () => {
     const tags = data;
-    console.log('shaullll ',data);
     if (valueSearch === '') {
       setTitles(tags)
     }
@@ -62,7 +60,7 @@ export default function SearchResults({ valueSearch, data, loading }) {
 
   return (
     <div className={styles.container}>
-      {console.log('shua bloch is de best',titles)}
+      {loading? <Loading />:
       <ul>
         {titles && titles.map((item, index) => {
           return <li key={item.id || index}>
@@ -85,7 +83,7 @@ export default function SearchResults({ valueSearch, data, loading }) {
             </details>
           </li>
         })}
-      </ul>
+      </ul>}
     </div>
   )
 }

@@ -2,7 +2,7 @@
 import { useRouter } from 'next/navigation';
 import { useEffect, useState } from 'react';
 import { FaSearch } from "react-icons/fa";
-import SearchResults from '../SearchResults';
+import SearchResults from './SearchResults';
 import styles from './styles.module.scss';
 import useAxiosReq from '@/hooks/useAxiosReq'
 
