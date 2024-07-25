@@ -1,32 +1,31 @@
 "use client"
-import React from 'react';
 import styles from './style.module.scss';
 import { FaWhatsapp, FaRegStar } from 'react-icons/fa';
 import { FiLink } from 'react-icons/fi';
 
-export const ShareLinks = ({ message, url, name , _id }) => {
+export const ShareLinks = ({ message = 'מצאתי חידוש מגניב!!!!', url, name, _id }) => {
+
+  let currentUrl = url || (typeof window !== 'undefined' ? window.location.href : '');
 
   const saveToLocalStorage = () => {
     const favorites = JSON.parse(localStorage.getItem(name)) || [];
-    console.log(favorites)
     if (!favorites.includes(_id)) {
       favorites.push(_id);
       localStorage.setItem(name, JSON.stringify(favorites));
     }
   };
-  
 
   const shareToWhatsApp = () => {
-    const url = `https://wa.me/?text= ${message} ${encodeURIComponent(message)}`;
-    window.open(url, '_blank');
+    const shareUrl = `https://wa.me/?text=${encodeURIComponent(message)} ${encodeURIComponent(currentUrl)}`;
+    window.open(shareUrl, '_blank');
   };
-  
+
   const shareContent = () => {
     if (navigator.share) {
       navigator.share({
         title: message,
         text: message,
-        url: url,
+        url: currentUrl,
       })
         .then(() => console.log('Successful share'))
         .catch((error) => console.log('Error sharing:', error));
@@ -49,7 +48,7 @@ export const ShareLinks = ({ message, url, name , _id }) => {
         <FiLink />
       </div>
       <div className={styles.icon}
-      onClick={saveToLocalStorage}
+        onClick={saveToLocalStorage}
       >
         <FaRegStar />
       </div>

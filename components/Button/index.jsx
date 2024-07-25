@@ -2,7 +2,7 @@
 import React from 'react'
 import styles from './style.module.scss'
 import Link from 'next/link';
-import { ButtonClick } from '../ButtonClick';
+import { ButtonClick } from '../ButtonClient';
 
 
 
@@ -11,7 +11,7 @@ export const Button = ({ href, children, ...props }) => {
         {children}
     </ButtonClick>
     return (
-        <Link
+        <Link  
             href={`${href}`}
             className={`${styles.gradientBorder}`}
         >
