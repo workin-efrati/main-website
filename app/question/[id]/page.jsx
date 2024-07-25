@@ -6,6 +6,7 @@ import { BsTags } from "react-icons/bs";
 import Tag from '@/components/Tag';
 import { FontSizeAdjuster } from '@/components/FontSizeAdjuster';
 import { unstable_noStore } from 'next/cache';
+import RelatedQuestions from '@/components/RelatedQuestions';
 // export const generateStaticParams = async () => {
 //   await connectToMongo();
 //   const res = await readQuestionsService();
@@ -75,6 +76,7 @@ export default async function Question({ params: { id } }) {
 
                 </div>
             </FontSizeAdjuster>
+            <RelatedQuestions id={id}/>
         </>
     );
 }
