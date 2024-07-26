@@ -1,4 +1,5 @@
 import { findById, read, readOne } from '@/server/controller/tags.controller.js';
+import tagsModel from "../models/tags.model";
 
 const populateChildren = async (tag, depth = 0, maxDepth = 4) => {
     if (depth > maxDepth) return tag;
@@ -25,12 +26,23 @@ const populateChildren = async (tag, depth = 0, maxDepth = 4) => {
   };
 
 
+
 export const readOneService = (filter) => {
     const categoryObject = readOne(filter);
     return categoryObject;
 }
 
 
+export const getAllTagsService2 = async () => {
+    try {
+        const allTags = await tagsModel.find();
+        console.log(allTags);
+        return allTags;
+    }
+    catch (err) {
+        console.log(err);
+    }
+}
 export const familyOfCategoryService = async (filter) => {
     try {
         const categoryObject = await readOne(filter);
