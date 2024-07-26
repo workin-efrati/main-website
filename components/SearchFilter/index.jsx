@@ -37,7 +37,7 @@ export default function SearchFilter({ type }) {
 
 
   return (<>
-    <div className={styles.preventInput} onClick={() => setTypeInput(false)} />
+   {typeInput && <div className={styles.preventInput} onClick={() => setTypeInput(false)} />}
     <div className={styles.searchAndResultContainer} onClick={(e) => e.preventDefault}>
       <div className={`${styles.container} ${type === "dark" ? styles.containerDark : ""}`}>
         {(!typeInput) ?

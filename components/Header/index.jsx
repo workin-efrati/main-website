@@ -18,8 +18,9 @@ export default function Header() {
                 <nav className={styles.navInHeader}>
                     {navs.map((link, i) => (<Link key={i + 1 + "a"} href={link.href}>{link.text}</Link>))}
                 </nav>
-
             </header>
+            <div className={styles.placeholder}/>
+
         </>
     )
 }
