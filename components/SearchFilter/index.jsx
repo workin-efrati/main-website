@@ -2,12 +2,14 @@
 import { useRouter } from 'next/navigation';
 import { useEffect, useState } from 'react';
 import { FaSearch } from "react-icons/fa";
-import SearchResults from '../SearchResults';
+import SearchResults from './SearchResults';
 import styles from './styles.module.scss';
+import useAxiosReq from '@/hooks/useAxiosReq'
 
-// import jsonTest from '../jsonTest/js'
-
+export const dynanic = 'force-static';
 export default function SearchFilter({ type }) {
+
+  const { data, loading, error } = useAxiosReq({ url: '/category' })
 
   const router = useRouter()
   const [typeInput, setTypeInput] = useState(false)
@@ -71,7 +73,7 @@ export default function SearchFilter({ type }) {
         </div>
 
       </div>
-      {isSearchSubject && <SearchResults valueSearch={valueSearch} />}
+      {isSearchSubject && <SearchResults data={data} loading={loading} valueSearch={valueSearch} />}
     </div>
   </>
   )
