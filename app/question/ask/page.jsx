@@ -10,8 +10,6 @@ export const metadata = {
 
 const img = 'https://www.kipa.co.il/userFiles/8abc8a31b441a9113106e6e26c79727e.jpg'
 
-
-
 const page = async () => {
     // let q = await getRelevantQuestions()
     // console.log(q)
