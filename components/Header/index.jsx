@@ -14,7 +14,7 @@ export default function Header() {
         <>
             <HeaderMobile />
             <header className={styles.header}>
-                <h1>לַמְּדֵנִי חֻקֶּךָ</h1>
+                <Link href={"/"}>לַמְּדֵנִי חֻקֶּךָ</Link>
                 <nav className={styles.navInHeader}>
                     {navs.map((link, i) => (<Link key={i + 1 + "a"} href={link.href}>{link.text}</Link>))}
                 </nav>

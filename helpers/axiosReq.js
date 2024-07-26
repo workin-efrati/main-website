@@ -1,3 +1,5 @@
+import axios from "axios";
+
 // בקשת שרת גנרית
 export const axiosReq = async ({ method = 'POST', body, url, isLocalServer = true }) => {
     try {

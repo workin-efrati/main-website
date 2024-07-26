@@ -1,7 +1,7 @@
 "use client"
 
 import { useEffect, useState } from 'react'
-import {axiosReq} from "@/helpers/axiosReq.js"
+import { axiosReq } from "@/helpers/axiosReq.js"
 
 export default function useAxiosReq({ method = "GET", url, body, isLocalServer }) {
     const [data, setData] = useState()
