@@ -1,0 +1,60 @@
+@import '@/app/vars.scss';
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+}
+
+
+.backImg {
+    z-index: -2;
+    object-fit: cover;
+}
+
+.title {
+    display: flex;
+    background: var(--blue-gradient);
+    // height: clamp(100px , 150px , 600px);
+    padding: 2rem 1rem;
+    width: 100%;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+
+    .j {
+        position: relative;
+        z-index: 3;
+
+        @media (width < $md) {
+            font-size: 3rem;
+        }
+    }
+}
+
+
+.iframe {
+    padding: 10px;
+    height: 400px;
+    width: min(600px, 100%);
+    margin: auto;
+
+}
+
+.button {
+    width: fit-content;
+    color: white;
+    background: var(--blue-gradient);
+    padding: 8px 16px;
+    border-radius: 25px;
+    margin-top: 10px;
+    cursor: pointer;
+    font-size: 16pt;
+
+    &:hover {
+        background: var(--primary-blue);
+    }
+}

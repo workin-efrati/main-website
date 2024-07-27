@@ -1,0 +1,34 @@
+.container {
+    a {
+        user-select: none;
+        text-decoration: none;
+        color: inherit;
+        font-weight: 300;
+    }
+
+    details:not([open])>summary>.title>div>.minus {
+        display: none;
+    }
+
+    details[open]>summary>.title>div>.plus {
+        display: none;
+    }
+}
+
+.title {
+    display: flex;
+    gap: 6px;
+    align-items: center;
+    color: var(--primary-blue);
+    font-size: 1.1rem;
+    padding: .4rem 0;
+}
+
+.title:hover {
+    background-color: #a8949456;
+    cursor: pointer;
+}
+
+.placeHolderIcon {
+    width: 22px;
+}

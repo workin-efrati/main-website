@@ -1,0 +1,247 @@
+@import "../../app/vars.scss";
+
+
+.header {
+    width: 100%;
+    padding: 0 1rem;
+    height: 10vh;
+    position: fixed;
+    top: 0;
+    display: flex;
+    background-color: #002c5b;
+    align-items: center;
+    gap: 3.5rem;
+    z-index: 10;
+
+    &>a {
+        color: #ffffff;
+        user-select: none;
+        font-family: var(--font-bona);
+        font-size: 1.8rem;
+        font-weight: 700;
+    }
+
+    .navInHeader {
+        display: flex;
+        gap: 3.2rem;
+        font-family: var(--font-bona);
+        font-weight: 700;
+        font-size: 1.3rem;
+
+        a {
+            color: #ffffff;
+            padding: 2px;
+            cursor: pointer;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+    }
+
+}
+
+header.headerMobile {
+    display: none;
+}
+
+div.placeholder{
+    height: 12vh;
+
+    @media (width > $lg) {
+        height: 10vh;
+    }
+}
+
+@media (width < $lg) {
+
+    .header {
+        display: none;
+    }
+
+
+    .headerMobile {
+        display: flex !important;
+        width: 100%;
+        position: fixed;
+        top: 0;
+        padding: 0 0.6rem;
+        align-items: center ;
+        height: 12vh;
+        display: flex;
+        z-index: 10;
+        background-color: #ffffff;
+        box-shadow: 0 0 4px 0 #000000;
+        justify-content: space-between;
+        
+        .imgAndTitleContainer {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            h1 {
+                user-select: none;
+                color: #034077;
+                font-family: var(--font-bona);
+            }
+
+            img {
+                width: 4rem;
+                height: 4rem;
+            }
+        }
+
+        button {
+            cursor: pointer;
+        }
+
+        button.openMenu {
+            background: none;
+            font-size: 1.8rem;
+            color: #333;
+            border: none;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .menuCoverOpen {
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            overflow: hidden;
+            transform: translate(-50%, -50%) scale(0);
+            animation: popup .2s ease 0s 1 alternate forwards;
+            background-color: rgb(20 20 20 / 98%);
+            padding: 1rem;
+            padding-top: 5rem;
+            align-items: center;
+            flex-direction: column;
+            gap: 2rem;
+
+            .btnCloseMenu {
+                font-size: 2rem;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                border: none;
+                background: none;
+                color: #fff;
+                position: absolute;
+                top: 1.4rem;
+                left: 0.4rem;
+            }
+
+            .inputContainer {
+                width: 96%;
+                height: 50px;
+                min-width: 300px;
+                max-width: 500px;
+            }
+
+            .navsContainer {
+                width: 96%;
+                display: flex;
+                justify-content: space-around;
+                flex-direction: row-reverse;
+
+                a {
+                    text-decoration: none;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    gap: .4rem;
+                    color: #fff;
+                   
+
+                    .bigIcon {
+                        font-size: 2rem;
+                    }
+
+                    .textOfIcon {
+                        text-align: center;
+                        font-size: .9rem;
+                    }
+
+                    &:hover {
+                        scale: 1.1;
+                        filter: drop-shadow(0 0 4px 0 #fff);
+                    }
+                }
+
+                .torahContainer {
+                    display: flex;
+                    align-items: center;
+                    flex-direction: column;
+
+                    .iconTorah {
+                        font-size: 2.6rem;
+                        color: #fff;
+                    }
+
+                    h4 {
+                        color: #fff;
+                        font-size: 1rem;
+                    }
+
+                    a {
+                        margin: .2rem;
+                        font-size: .8rem;
+                    }
+                }
+            }
+            .mainNavsContainer{
+                width: 100%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+                gap: .2rem;
+                font-size: .8rem;
+                a{
+                    text-decoration: none;  
+                    color: #fff;
+                }
+            }
+        }
+
+        .menuCoverClose {
+            display: none;
+        }
+
+        .whatsappBtn {
+            font-size: 1.8rem;
+            background: none;
+            color: #fff;
+            position: absolute;
+            bottom: .8rem;
+            right: 0.8rem;
+            border: none;
+        }
+
+        .changeLangBtn {
+            font-size: 1.8rem;
+            background: none;
+            color: #fff;
+            position: absolute;
+            bottom: .8rem;
+            left: 0.8rem;
+            border: none;
+        }
+    }
+
+}
+
+@keyframes popup {
+    0% {
+        transform: translate(-50%, -50%) scale(0);
+    }
+
+    100% {
+        transform: translate(-50%, -50%) scale(1);
+    }
+}
