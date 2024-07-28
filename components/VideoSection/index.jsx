@@ -5,13 +5,20 @@ import { MdArrowBackIosNew } from "react-icons/md";
 import { MdArrowForwardIos } from "react-icons/md";
 import { data } from './data';
 import Image from 'next/image';
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Link from "next/link";
 export default function VideoSection() {
   const [sliderPosition, setSliderPosition] = useState(0)
-  const sliderRatio = window.innerWidth > 568 ? 110 : 103
-  const cantMoveRight = (window.innerWidth > 568 && (-1 * data().length) >= sliderPosition - 3) || (window.innerWidth < 568 && (-1 * data().length) >= sliderPosition - 1)
-  const cantMoveLeft = sliderPosition == 0
+  const [cantMoveRight, setCantMoveRight] = useState(false)
+
+
+  useEffect(() => {
+    let isLast = (window.innerWidth > 568 && (-1 * data().length) >= sliderPosition - 3) || (window.innerWidth < 568 && (-1 * data().length) >= sliderPosition - 1)
+    setCantMoveRight(isLast)
+  }, [sliderPosition])
+
+  // const sliderRatio = typeof(window !== "undefined") ? (window.innerWidth > 568 ? 110 : 103) : 110
+  let cantMoveLeft = sliderPosition == 0
   function clickSliderHandler(num) {
     if (cantMoveRight && num == -1) return
     if (num == 1 && cantMoveLeft) return
@@ -26,8 +33,8 @@ export default function VideoSection() {
       <div className={styles.videoContainer}>
         <button disabled={cantMoveRight} onClick={() => { clickSliderHandler(-1) }}><MdArrowForwardIos /></button>
         <div className={styles.videoSliderContainer} >
-          {data().map(v => (
-            <Link href={v.href} className={styles.video} style={style}>
+          {data().map((v, i) => (
+            <Link key={`${v.href} ${i}`} href={v.href} className={styles.video} style={style}>
               <Image width={100} height={100} src={v.img} />
               <p>{v.title}</p>
             </Link>

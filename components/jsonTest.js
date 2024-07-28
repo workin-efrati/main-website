@@ -3,7 +3,7 @@ export default function getData() {
     name: "שבת ומועדים", id: "ht5@drfgr54g12g3",
     childrens: [{
       name: "חגים וזמנים", id: "fg@drfgr54g12g3",
-      childrens: [{name: "שבת", id:"fkj", childrens:[]}]
+      childrens: [{name: "שבת", id:"fkj", childrens:[{name: "הדלקת נרות", id: "rr", childrens:[]}]}]
   
     }]
 

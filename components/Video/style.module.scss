@@ -1,0 +1,50 @@
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+}
+
+
+.backImg {
+    overflow: hidden;
+    position: absolute;
+    z-index: -2;
+    height:100px;
+    width: 100%;
+
+}
+
+.title {
+    display: flex;
+    background: var(--blue-gradient);
+    height: 100px;
+    width: 100%;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.iframe {
+    padding: 10px;
+    height: 400px;
+    width: min(600px, 100%);
+    margin: auto;
+
+}
+
+.button {
+    width: fit-content;
+    color: white;
+    background: var(--blue-gradient);
+    padding: 8px 16px;
+    border-radius: 25px;
+    margin-top: 10px;
+    cursor: pointer;
+    font-size: 16pt;
+
+    &:hover {
+        background: var(--primary-blue);
+    }
+}

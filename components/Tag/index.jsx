@@ -2,6 +2,7 @@ import React from 'react'
 import styles from './style.module.scss'
 import Link from 'next/link'
 import Close from './Close'
+import Text from '../TextComponent'
 
 
 
@@ -15,7 +16,7 @@ const Tag = ({ name, action, path }) => {
     )
   else
     return (<Link className={`${styles.tag} ${styles.link}`} href={path}>
-      {name}
+      <Text fontStyle='b' textColor="blue" >{name}</Text>
     </Link>)
 }
 
