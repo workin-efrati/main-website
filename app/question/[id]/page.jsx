@@ -5,12 +5,13 @@ import { BsTags } from "react-icons/bs";
 import Tag from '@/components/Tag';
 import { FontSizeAdjuster } from '@/components/FontSizeAdjuster';
 import { connect } from '@/server/connect';
-import { readOneQaService, readQaService  } from '@/server/services/qa.service';
+import { readOneQaService, readQaService } from '@/server/services/qa.service';
+import RelatedQuestions from '@/components/RelatedQuestions';
 
 export const generateStaticParams = async () => {
-  await connect();
-  const res = await readQaService();
-  return res.map((question) => ({ question: question }));
+    await connect();
+    const res = await readQaService();
+    return res.map((question) => ({ params: { id: question._id } }));
 };
 
 const question = {
@@ -23,7 +24,7 @@ const question = {
 export default async function Question({ params: { id } }) {
     await connect();
     const result = await readOneQaService({ _id: id });
-    console.log(result)
+
     return (
         <>
             <div className={styles.header}>
@@ -39,7 +40,7 @@ export default async function Question({ params: { id } }) {
                     </div>
                     <div className={styles.tags}>
                         <BsTags className={styles.tagIcon} />
-                        {question.tags.map(tag => <Tag key={tag} name={tag} path={tag} />)}
+                        {result?.tags.map(tag => <Tag key={tag._id} name={tag.name} path={`/category/${tag._id}`} />)}
                         <div className={styles.line}></div>
                     </div>
                     <div className={styles.answer}>
@@ -52,7 +53,7 @@ export default async function Question({ params: { id } }) {
 
                 </div>
             </FontSizeAdjuster>
-            <RelatedQuestions id={id}/>
+            <RelatedQuestions q={result} />
         </>
     );
 }

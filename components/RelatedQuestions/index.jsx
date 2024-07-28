@@ -4,14 +4,9 @@ import style from './style.module.scss'
 import { connect } from '@/server/connect'
 import { relatedQues } from '@/server/services/qa.service'
 export default async function RelatedQuestions({ q }) {
-    const c = {
-        _id: "66a11951fa2e12e9e83cce9a",
-        title: "היה לנו ויכוח בכיתה האם מותר לשמוע את השיר צעדים של הזמר עקיבא תורג'מן ? כי בקליפ רואים אישה לא דתיה וגם אם בכללי מותר לשמוע שירים שלו כי הקליפים אומרים משהו עליו . .",
-        tags: ["66a0bfa67076bd7d8303600c"]
-    }
     await connect()
-    const questions = await relatedQues(c)
-    // console.log(questions);
+    const questions = await relatedQues(q)
+
     return (<>
         <div>
             <div className={style.title}>
