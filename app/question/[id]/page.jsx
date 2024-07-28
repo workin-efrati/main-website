@@ -27,7 +27,7 @@ export default async function Question({ params: { id } }) {
     return (
         <>
             <div className={styles.header}>
-                <Text as={'h2'} fontStyle={'b'}> {question.title} </Text>
+                <Text as={'h2'} fontStyle={'b'}> {result.title || 'שאלו את הרב'} </Text>
             </div>
             <FontSizeAdjuster>
                 <div className={styles.container}>
