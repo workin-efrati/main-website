@@ -15,9 +15,9 @@ export const navData = {
         { text: "דברים", href: "" }
     ],
     pageNav: [
-        { text: "ראשי", href: "" },
+        { text: "ראשי", href: "/" },
         { text: "תרומות", href: "" },
         { text: "צור קשר", href: "" },
-        { text: "אודות", href: "" },
+        { text: "אודות", href: "/question/ask" },
     ]
 }

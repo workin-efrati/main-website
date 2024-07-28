@@ -10,7 +10,11 @@ export default function page() {
       {/* <Logo logoType="bookLogo" /> */}
       <Logo logoType="bookLogo"  firstLine='שו"ת הרב אפרתי'  secondLine={true}/>
       <Logo logoType="bookLogo" firstLine="שו'ת הרב אפרתי"  secondLine={true} thirdLine={true}/>
+      <div style={{width: '300px'}}>
+
+
       <SearchFilter />
+      </div>
 
     </div>
   );

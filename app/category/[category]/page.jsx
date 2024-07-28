@@ -57,7 +57,7 @@ export default async function Page({ params: { category } }) {
                     {children.map(child => < TagCategory name={child.name} _id={child._id} />)}
                 </div>
                 <div className={`${styles.colorOpacity}`} />
-                <Image alt="" src={categoryFake.image} fill className={`${styles.image}`} />
+                <Image alt="cat" src={categoryFake.image} fill className={`${styles.image}`} />
             </div>
         </div>)
     );

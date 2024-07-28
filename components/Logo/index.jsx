@@ -3,8 +3,8 @@
   <Logo logoType="derechEmuna" firstLine={"הנבל ,14 אפרת | טל: 0504723445 "}/>
 <Logo logoType="onlyText" firstLine='שו"ת הרב אפרתי'/>
 <Logo logoType="bookLogo" />
-<Logo logoType="bookLogo"  firstLine='שו"ת הרב אפרתי'  secondLine={true}/>
-<Logo logoType="bookLogo" firstLine="שו'ת הרב אפרתי"  secondLine={true} thirdLine={true}/> 
+<Logo logoType="bookLogo"  firstLine='שו"ת הרב אפרתי' secondLine={true}/>
+<Logo logoType="bookLogo" firstLine='שו"ת הרב אפרתי' secondLine={true} thirdLine={true}/> 
 
 Component Props
 logoType: Defines the type of logo to display. This can be "rightEmuna", "onlyText", or "bookLogo".
@@ -13,7 +13,6 @@ firstLine: First line of text (default: 'לַמְּדֵנִי חֻקֶּיךָ' 
 secondLine: Second line of text.
 thirdLine: Third line of text.
 */}
-
 
 import React from "react";
 import Image from 'next/image';
@@ -31,7 +30,16 @@ export default function Logo(props) {
     ...rest
   } = props;
 
+  const direction = <div className={styles.thirdLine}>הנבל ,14 אפרת | טל: <span className={styles.tel}>0504723445</span></div>;
+  const halachaEmunaTahara = "הלכה . אמונה . טהרה";
+  const shut = "שו”ת הרב אפרתי";
+  const lamdeniJukeja = "לַמְּדֵנִי חֻקֶּיךָ";
+
   let content;
+
+  const renderLine = (line, defaultText) => {
+    return line === true ? defaultText : line;
+  };
 
   switch (logoType) {
     case "derechEmuna":
@@ -41,13 +49,9 @@ export default function Logo(props) {
             <Image src={derechEmuna} alt="book-logo" height={imgHeight} {...rest} />
           </div>
           <div className={styles.textContainer}>
-            {firstLine && firstLine === true ? <div className={styles.firstLine}>
-              לַמְּדֵנִי חֻקֶּיךָ</div> : <div className={styles.firstLine}>{firstLine}</div>}
-            {secondLine && secondLine === true ? <div className={styles.secondLine}>הלכה . אמונה . טהרה</div> : <div className={styles.secondLine}>{secondLine}</div>}
-
-            {thirdLine && thirdLine === true ? <div className={styles.thirdLine}>הנבל ,14 אפרת | טל: 0504723445</div> : <div className={styles.thirdLine}>{thirdLine}</div>}
-
-
+            <div className={styles.firstLine}>{renderLine(firstLine, lamdeniJukeja)}</div>
+            <div className={styles.secondLine}>{renderLine(secondLine, halachaEmunaTahara)}</div>
+            <div className={styles.thirdLine}>{renderLine(thirdLine,direction)}</div>
           </div>
         </div>
       );
@@ -56,9 +60,9 @@ export default function Logo(props) {
       content = (
         <div className={styles.onlyTextContainer}>
           <div className={styles.textContainer}>
-            {firstLine && firstLine === true ? <div className={styles.firstLine}>לַמְּדֵנִי חֻקֶּיךָ</div> : <div className={styles.firstLine}>{firstLine}</div>}
-            {secondLine === true ? <div className={styles.secondLine}>שו”ת הרב אפרתי</div> : <div className={styles.secondLine}>{secondLine}</div>}
-            {thirdLine === true ? <div className={styles.thirdLine}>שו”ת הרב אפרתי</div> : <div className={styles.thirdLine}>{thirdLine}</div>}
+            <div className={styles.firstLine}>{renderLine(firstLine, lamdeniJukeja)}</div>
+            <div className={styles.secondLine}>{renderLine(secondLine, shut)}</div>
+            <div className={styles.thirdLine}>{renderLine(thirdLine, shut)}</div>
           </div>
         </div>
       );
@@ -70,12 +74,9 @@ export default function Logo(props) {
             <Image src={book} alt="book-logo" height={imgHeight} {...rest} />
           </div>
           <div className={styles.textContainer}>
-            <div>
-              {firstLine === true ? <div className={styles.firstLine}>לַמְּדֵנִי חֻקֶּיךָ</div> : <div className={styles.firstLine}>{firstLine}</div>}
-              {secondLine == true ? <div className={styles.secondLine}>הלכה . אמונה . טהרה</div> : <div className={styles.secondLine}>{secondLine}</div>}
-              {thirdLine === true ? <div className={styles.thirdLine}>הנבל ,14 אפרת | טל: 0504723445
-              </div> : <div className={styles.thirdLine}>{thirdLine}</div>}
-            </div>
+            <div className={styles.firstLine}>{renderLine(firstLine, lamdeniJukeja)}</div>
+            <div className={styles.secondLine}>{renderLine(secondLine, halachaEmunaTahara)}</div>
+            <div className={styles.thirdLine}>{renderLine(thirdLine,direction)}</div>
           </div>
         </div>
       );
@@ -84,9 +85,5 @@ export default function Logo(props) {
       content = null;
   }
 
-  return (
-    <>
-      {content}
-    </>
-  );
+  return <>{content}</>;
 }

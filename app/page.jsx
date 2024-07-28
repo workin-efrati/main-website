@@ -22,7 +22,6 @@ export default function Home() {
     <main className={styles.main} >
 
       <div className={`${styles.section}`}>
-
         <div className={styles.logoTextContainer}>
           <h1 id="section1">לַמְּדֵנִי חֻקֶּךָ</h1>
         </div>
@@ -30,7 +29,7 @@ export default function Home() {
           <div className={styles.input}><SearchFilter/></div>
         </div>
         <div className={styles.homeNavContainer}>
-          {homeNav.map(nav => <Link key={nav.text} className={styles.nav} href={nav.herf}>{nav.text} </Link>)}
+          {homeNav.map((nav, i) => <Link key={`${nav.text} ${i}`} className={styles.nav} href={nav.herf}>{nav.text} </Link>)}
         </div>
         <div className={styles.bgCover}></div>
         <a className={styles.goToWhatsApp} href="">הצטרף אלינו לקבוצת הוואצפ <FaWhatsapp /></a>

@@ -1,11 +1,15 @@
 "use client"
-import styles from './styles.module.scss'
-import { FaSearch } from "react-icons/fa";
-import { useState, useEffect } from 'react';
 import { useRouter } from 'next/navigation';
-import SearchResults from '../SearchResults';
-// import jsonTest from '../jsonTest/js'
+import { useEffect, useState } from 'react';
+import { FaSearch } from "react-icons/fa";
+import SearchResults from './SearchResults';
+import styles from './styles.module.scss';
+import useAxiosReq from '@/hooks/useAxiosReq'
+
+export const dynanic = 'force-static';
 export default function SearchFilter({ type }) {
+
+  const { data, loading, error } = useAxiosReq({ url: '/category' })
 
   const router = useRouter()
   const [typeInput, setTypeInput] = useState(false)
@@ -14,74 +18,62 @@ export default function SearchFilter({ type }) {
   const [valueSearch, setValueSearch] = useState('')
 
   useEffect(() => {
-    if (typeInput === 'נושאים') {
+    if (typeInput === 'נושאים')
       setIsSearchSubject(true)
-    }
-    else {
+    else
       setIsSearchSubject(false)
-      
-    }
   }, [typeInput]);
 
   let classNameIcon = !isSearch ? 'searchIcon' : 'searchButton';
 
   const handleSearch = e => {
-    if (typeInput === "חיפוש") {
-      setIsSearch(e.target.value)
-    }
-    else if (typeInput === 'נושאים') {
-      setValueSearch(e.target.value)
-    }
+    const value = e.target.value
+    if (typeInput === "חיפוש") setIsSearch(value)
+    else if (typeInput === 'נושאים') setValueSearch(value)
   }
-  const handleClick = ()=>{
-    if(typeInput === 'חיפוש'){
+
+  const handleClick = () => {
+    if (typeInput === 'חיפוש') null
     // router.push(`/result?search=${isSearch}`)
   }
-}
+
+
   return (<>
-    <div className={styles.searchAndResultContainer}>
-
+   {typeInput && <div className={styles.preventInput} onClick={() => setTypeInput(false)} />}
+    <div className={styles.searchAndResultContainer} onClick={(e) => e.preventDefault}>
       <div className={`${styles.container} ${type === "dark" ? styles.containerDark : ""}`}>
-        {!typeInput ?
-
-          <div className={styles.buttons}>
-
+        {(!typeInput) ?
+          (<div className={styles.buttons}>
             <button className={styles.subjectSearch} onClick={() => setTypeInput("נושאים")}>
               סינון לפי נושא
             </button>
-            <div className={`${styles.line} ${type == "dark" ? styles.dark : ""}`}>
-
-            </div>
+            <div className={`${styles.line} ${styles[type || '']}`} />
             <button className={styles.freeSearch} onClick={() => setTypeInput("חיפוש")}>
               טקסט חופשי
             </button>
-          </div> :
-          <div className={styles.search}>
+          </div>) :
+          (<div className={styles.search}>
             <button className={styles.subjectSearch} >
               {typeInput}
             </button>
-            <div className={styles.line} >
-            </div>
-
-
+            <div className={styles.line} />
             <input
               type="text"
               name="search"
               autoFocus
               autoComplete="off"
               onChange={handleSearch}
-              // onBlur={() => { setTypeInput('') }}
               defaultValue={isSearch}
-            ></input>
-          </div>
+            />
+          </div>)
         }
+
         <div className={`${styles[classNameIcon]}`} onClick={handleClick}>
           <FaSearch />
         </div>
-      </div> 
-      {isSearchSubject && <SearchResults valueSearch={valueSearch}/>
-      }
 
+      </div>
+      {isSearchSubject && <SearchResults data={data} loading={loading} valueSearch={valueSearch} />}
     </div>
   </>
   )
