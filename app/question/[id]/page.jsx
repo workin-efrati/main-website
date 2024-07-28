@@ -5,7 +5,7 @@ import { BsTags } from "react-icons/bs";
 import Tag from '@/components/Tag';
 import { FontSizeAdjuster } from '@/components/FontSizeAdjuster';
 import { connect } from '@/server/connect';
-import { readOneQaService, readQaService } from '@/server/services/qa.service';
+import { readOneQaService, readQaService  } from '@/server/services/qa.service';
 
 export const generateStaticParams = async () => {
   await connect();
