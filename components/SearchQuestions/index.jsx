@@ -1,11 +1,14 @@
 "use client";
-import { axiosReq } from "@/helpers/formatDate";
+import { axiosReq } from "@/helpers/axiosReq";
 import { usePathname, useRouter, useSearchParams } from "next/navigation";
 import { Suspense, useCallback, useEffect, useState } from "react";
-import debounce from "./debounce";
-import styles from "./style.module.scss";
 import PaginationComponent from "../PaginationButtons/index.jsx";
 import Question from "../Question/index.jsx";
+import debounce from "@/helpers/debounce.js";
+import styles from "./style.module.scss";
+
+export const dynamic = 'force-dynamic'
+
 
 const SearchQuestions = () => {
   const router = useRouter();
@@ -55,7 +58,7 @@ const SearchQuestions = () => {
       queryFilterType: "$and",
       selector: ["-isActive"],
       modelName: "qa",
-      pages: { pageLocation: pageLocation, pageLength: pageLength },
+      pages: { pageLocation: pageLocation - 1, pageLength: pageLength },
       regFilter: {
         searchType: "$and",
         searchValues: arrToSearch.map((v) => {

@@ -1,53 +1,83 @@
-    .container {
-        // display: flex;
-        background-color: var(--gray);
-        // color: var(--primary-blue);
-        border-radius: 40px;
-        justify-content: space-around;
-        border-radius: 0 0 50px 50px;
-        height: fit-content;
-        padding: 10px;
-        align-items: center;
-        position: absolute;
-        z-index: 1;
-        width: 100%;
-        top: 2rem;
-        height: 60vh;
-        padding: 30px;
+.container {
+    background-color: var(--gray);
+    border-radius: 0 0 50px 50px;
+    height: fit-content;
+    height: 60vh;
+    position: absolute;
+    z-index: 1;
+    width: 100%;
+    top: 2rem;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 2rem 0;
+    font-weight: 600;
 
+    details:not([open]) summary .minus {
+        display: none;
+    }
+
+    details[open] summary .plus {
+        display: none;
+    }
+
+
+    summary {
+        list-style: none;
+    }
+ul{
+    width: 100%;
+    display: flex;
+    justify-content: left;
+    flex-direction: column;
+    align-items: flex-end;
+    li {
+        width: 100%;
+        list-style-type: none;
+        display: flex;
+        flex-direction: column;
         a {
             text-decoration: none;
             color: inherit;
+            user-select: none;
+            padding: .4rem .2rem;
         }
-
-     
-        details:not([open]) summary .minus {
-            display: none;
-          }
-          
-          details[open] summary .plus {
-            display: none;
-          }
-        // details[open] summary .plus{
-        //     display: none;
-        // }
-
-        summary {
-            list-style: none;
+    
+        details{
+            width: 100%;
         }
-
-        li {
-            list-style-type: none
+        summary{
+            width: 100%;
         }
     }
+    svg {
+    font-size: .8rem;
 
-    .title {
-        display: flex;
-        gap: 6px;
-        align-items: center;
+    margin: 0 .2rem ;
     }
+}
+}
 
-    .title:hover {
-        background-color: #a89494a9;
-        cursor: pointer;
-    }
+.title {
+    display: flex;
+    gap: 6px;
+    align-items: center;
+    color: var(--primary-blue);
+    font-size: 1.15rem;
+}
+
+.title:hover {
+    background-color: #a89494a9;
+    cursor: pointer;
+}
+
+.parents {
+    margin-right: 2px;
+    display: flex;
+    align-items: center;
+    gap: 2px;
+    font-size: .7rem;
+}
+.placeHolderIcon{
+    width: 20px;
+}

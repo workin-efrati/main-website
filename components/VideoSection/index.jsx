@@ -7,15 +7,19 @@ import { data } from './data';
 import Image from 'next/image';
 import { useEffect, useState } from "react";
 import Link from "next/link";
+import useAxiosReq from "@/hooks/useAxiosReq";
+
 export default function VideoSection() {
   const [sliderPosition, setSliderPosition] = useState(0)
   const [cantMoveRight, setCantMoveRight] = useState(false)
+  // TODO - handle loading and error
+  const { data = [], error, loading } = useAxiosReq({ url: 'video/random', isLocalServer: true })
 
 
   useEffect(() => {
-    let isLast = (window.innerWidth > 568 && (-1 * data().length) >= sliderPosition - 3) || (window.innerWidth < 568 && (-1 * data().length) >= sliderPosition - 1)
+    let isLast = (window.innerWidth > 568 && (-1 * data.length) >= sliderPosition - 3) || (window.innerWidth < 568 && (-1 * data.length) >= sliderPosition - 1)
     setCantMoveRight(isLast)
-  }, [sliderPosition])
+  }, [sliderPosition, loading])
 
   // const sliderRatio = typeof(window !== "undefined") ? (window.innerWidth > 568 ? 110 : 103) : 110
   let cantMoveLeft = sliderPosition == 0
@@ -24,18 +28,20 @@ export default function VideoSection() {
     if (num == 1 && cantMoveLeft) return
     setSliderPosition(sliderPosition + num)
   }
+
   const style = {
     transform: `translateX(calc(${sliderPosition} * var(--imgWidth)))`
   }
+
   return (
     <div className={styles.VideoSection}>
       <h2>שיעורי וידיאו</h2>
       <div className={styles.videoContainer}>
         <button disabled={cantMoveRight} onClick={() => { clickSliderHandler(-1) }}><MdArrowForwardIos /></button>
         <div className={styles.videoSliderContainer} >
-          {data().map((v, i) => (
-            <Link key={`${v.href} ${i}`} href={v.href} className={styles.video} style={style}>
-              <Image width={100} height={100} src={v.img} />
+          {data.map((v, i) => (
+            <Link key={`${v.href} ${i}`} href={`/videos/${v._id}`} className={styles.video} style={style}>
+              <Image width={100} height={100} src={v.img} alt={v.title || 'img'} />
               <p>{v.title}</p>
             </Link>
           ))}

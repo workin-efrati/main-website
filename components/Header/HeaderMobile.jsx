@@ -66,7 +66,6 @@ export default function HeaderMobile() {
                     <button className={styles.changeLangBtn}><GrLanguage /></button>
                 </div>
             </header>
-            <br className={styles.WWWWWWWWWWWWWWWWREMOVETHISWWWWWWWWWWWWWWWWWWW}/>
         </>
     )
 }

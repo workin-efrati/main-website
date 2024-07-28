@@ -1,0 +1,23 @@
+.container {
+    background-color: var(--gray);
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 20px;
+}
+.item{
+    gap: 6px;
+    width: 80%;
+    height: 20px;
+    animation: colorChange 3s infinite alternate;
+}
+@keyframes colorChange {
+    0% {
+        background-color: rgba(0, 0, 0, 0.13);
+    }
+    100% {
+        background-color: rgba(0, 0, 0, 0.021);
+    }
+  }

@@ -1,6 +1,6 @@
 .linear {
     position: relative;
-    height: 80vh;
+    height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -72,29 +72,10 @@
     object-fit: cover;
 }
 
-// .linear::before {
-//     content: "";
-//     position: absolute;
-//     top: 0;
-//     left: 0;
-//     right: 0;
-//     bottom: 0;
-//     // background-image: url('/images/image.png');
-//     background-size: cover;
-//     background-position: center 20%;
-//     background-repeat: no-repeat;
-//     opacity: 0.8;
-//     z-index: -1;
-// }
+.LinkParent {
+    color: var(--white);
+}
 
-// .linear::after {
-//     content: "";
-//     position: absolute;
-//     top: 0;
-//     left: 0;
-//     right: 0;
-//     bottom: 0;
-//     background: var(--blue-gradient);
-//     opacity: 0.6;
-//     z-index: -1;
-// }
+.LinkParent :hover {
+    color: var(--light-blue);
+}
