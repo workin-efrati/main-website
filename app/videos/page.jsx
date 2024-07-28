@@ -21,7 +21,7 @@ async function page({ searchParams: { search } }) {
                             className={style.img}
                             src={v.img}
                             fill
-                            alt="image"
+                            alt={v.title}
                             sizes={"100%"}
                             priority={1} />
                         <div className={style.title}>{v.title}</div>
