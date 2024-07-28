@@ -3,27 +3,32 @@ import tagsModel from "../models/tags.model";
 
 const populateChildren = async (tag, depth = 0, maxDepth = 4) => {
     if (depth > maxDepth) return tag;
-  
+
     const populatedTag = await tag.populate('children', 'name children');
     if (populatedTag.children && populatedTag.children.length > 0) {
-      for (let child of populatedTag.children) {
-        child = await populateChildren(child, depth + 1, maxDepth);
-      }
+        for (let child of populatedTag.children) {
+            child = await populateChildren(child, depth + 1, maxDepth);
+        }
     }
     return populatedTag;
-  };
+};
 
-  export const getAllTagsService = async (maxDepth = 4) => {
+export const getAllTagsService = async (maxDepth = 4) => {
     try {
-      const tags = await read({}, '_id name children');
-      const populatedTagsPromises = tags.map(tag => populateChildren(tag, 0, maxDepth));
-      const populatedTags = await Promise.all(populatedTagsPromises);
-      return populatedTags;
+        const tags = await read({
+            $or: [
+              { parent: { $exists: false } },
+              { parent: null }
+            ]
+          }, '_id name children');
+        const populatedTagsPromises = tags.map(tag => populateChildren(tag, 0, maxDepth));
+        const populatedTags = await Promise.all(populatedTagsPromises);
+        return populatedTags;
     } catch (error) {
-      console.error("Error fetching tags:", error);
-      throw error;
+        console.error("Error fetching tags:", error);
+        throw error;
     }
-  };
+};
 
 
 
@@ -56,7 +61,7 @@ export const familyOfCategoryService = async (filter) => {
             while (currentParent) {
                 const parentObject = await findById(currentParent);
                 if (!parentObject) break;
-                parents.push({name:parentObject.name,_id:parentObject._id});
+                parents.push({ name: parentObject.name, _id: parentObject._id });
                 currentParent = parentObject.parent;
             }
 
@@ -72,7 +77,7 @@ export const familyOfCategoryService = async (filter) => {
                 const childId = stack.pop();
                 const childObject = await findById(childId);
                 if (childObject) {
-                    children.push({name:childObject.name,_id:childObject._id});
+                    children.push({ name: childObject.name, _id: childObject._id });
                     stack.push(...childObject.children);
                 }
             }
