@@ -6,10 +6,11 @@ import Tag from '@/components/Tag';
 import { FontSizeAdjuster } from '@/components/FontSizeAdjuster';
 import { connect } from '@/server/connect';
 import { readOneQaService, readQaService } from '@/server/services/qa.service';
+
 export const generateStaticParams = async () => {
-  await connect();
-  const res = await readQaService();
-  return res.map((question) => ({ question: question }));
+    await connect();
+    const res = await readQaService();
+    return res.map((question) => ({ params: { id: question._id } }));
 };
 
 const question = {
@@ -38,7 +39,7 @@ export default async function Question({ params: { id } }) {
                     </div>
                     <div className={styles.tags}>
                         <BsTags className={styles.tagIcon} />
-                        {question.tags.map(tag => <Tag key={tag} name={tag} path={tag} />)}
+                        {result?.tags.map(tag => <Tag key={tag._id} name={tag.name} path={`/category/${tag._id}`} />)}
                         <div className={styles.line}></div>
                     </div>
                     <div className={styles.answer}>
