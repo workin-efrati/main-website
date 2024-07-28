@@ -220,3 +220,229 @@ import holidays from '../dateData/holidayNames.json';
   // } catch (error) {
   //   console.error('Error updating parasha tags:', error);
   // }
+
+
+
+  // async function processQuestionsAndTags(dryRun = true) {
+
+//     const cleanContentForSearch = (text) => {
+//         return text
+//             // שלב 2: החלפת כל התווים שאינם אותיות עבריות, גרשיים, מרכאות או רווחים ברווח בודד
+//             .replace(/[^\u0590-\u05FF\s'"]/g, ' ')
+//             // שלב 3: החלפת רצף של רווחים ברווח בודד
+//             .replace(/\s+/g, ' ')
+//             // שלב 4: הסרת רווחים מתחילת וסוף המחרוזת
+//             .trim()
+//             // שלב 5: החלפת גרשיים ומרכאות בגרסאות סטנדרטיות
+//             .replace(/['"]/g, '"')
+//             // שלב 1: הסרת תווים אלכסוניים
+//             .replace(/\\/g, '');
+//     };
+
+//     const cleanTag = (tag) => {
+//         return tag
+//             .replace(/^(פרשת|ספר)\s+/g, '')
+//             .replace(/\b(ו)(\S+)/g, '$2')
+//             .replace(/,/g, '')
+//             .trim();
+//     };
+
+//     const updateTagMap = (tagMap, tag) => {
+//         const cleanedTag = cleanTag(tag);
+
+//         if (cleanedTag) {
+//             if (!tagMap.has(cleanedTag)) {
+//                 tagMap.set(cleanedTag, new Set());
+//             }
+//             tagMap.get(cleanedTag).add(tag._id);
+//         }
+//     };
+
+
+
+
+
+//     try {
+
+//         await connect()
+//         // 1. טעינת כל התגיות
+//         const allTags = await tagsModel.find({ isActive: true });
+
+//         // 2. יצירת מנגנון חיפוש יעיל
+//         const tagMap = new Map();
+//         // אם מעוניינים לפצל תגיות למילים בודדות
+//         // allTags.forEach(tag => {
+//         //   const words = tag.name.toLowerCase().split(/\s+/);
+//         //   words.forEach(word => {
+//         //     if (!tagMap.has(word)) {
+//         //       tagMap.set(word, new Set());
+//         //     }
+//         //     tagMap.get(word).add(tag._id);
+//         //   });
+//         // אחרת
+//         allTags.forEach(tag => {
+
+//             if (!tagMap.has(tag)) {
+//                 tagMap.set(tag, new Set());
+//             }
+
+//             tagMap.get(tag).add(tag._id);
+
+//             // הכנה לעתיד: אם יש מערך של מילים קשורות, נוסיף גם אותן
+//             // if (tag.relatedWords) {
+//             //     tag.relatedWords.forEach(word => {
+//             //         if (!tagMap.has(word)) {
+//             //             tagMap.set(word, new Set());
+//             //         }
+//             //         tagMap.get(word).add(tag._id);
+//             //     });
+//             // }
+//         });
+
+
+//         // 3. עיבוד השאלות והתשובות
+//         const questions = await QAModel.find({ isActive: true });
+
+//         let changesLog = [];
+
+//         for (const question of questions) {
+//             //שרשור כותרת שאלה ותשובה
+//             // מחיקת תווים בעייתים מלבד גרשיים
+//             const contentToSearch = cleanContentForSearch(`${question.title || ''} ${question.question} ${question.answer}`);
+//             // מערך
+//             const words = contentToSearch.split(/\s+/);
+//             // console.log("🚀 ~ words:", words)
+//             // סט למניעת כפילויות
+//             const foundTags = new Set();
+
+//             words.forEach(word => {
+//                 console.log(word)
+//                 if (tagMap.has(word)) {
+
+//                     tagMap.get(word).forEach(tagId => foundTags.add(tagId.toString()));
+//                 }
+//             });
+
+//             // 4. הכנת השינויים המוצעים
+//             const existingTags = new Set(question.tags.map(tag => tag.toString()));
+//             const newTags = Array.from(foundTags).filter(tag => !existingTags.has(tag));
+
+//             if (newTags.length > 0) {
+//                 const proposedChanges = {
+//                     questionId: question._id,
+//                     currentTags: question.tags,
+//                     proposedNewTags: newTags,
+//                     proposedFullTagSet: [...question.tags, ...newTags]
+//                 };
+
+//                 changesLog.push(proposedChanges);
+
+
+//                 if (!dryRun) {
+//                     question.proposedTags = proposedChanges.proposedFullTagSet;
+//                     await question.save();
+//                     console.log(`Updated question ${question._id} with ${newTags.length} new proposed tags`);
+//                 } else {
+//                     console.log(`[DRY RUN] Would update question ${question._id} with ${newTags.length} new tags`);
+//                 }
+//             } else {
+//                 // console.log(`No new tags found for question ${question._id}`);
+//             }
+//         }
+//         console.log(changesLog)
+//         console.log('Finished processing all questions');
+//         return changesLog;
+//     } catch (error) {
+//         console.error('Error processing questions and tags:', error);
+//         return null;
+//     }
+// }
+
+// export default processQuestionsAndTags;
+
+
+async function processQuestionsAndTags(dryRun = true) {
+      const cleanContentForSearch = (text) => {
+          return text
+              .replace(/[^\u0590-\u05FF\s'"]/g, ' ')
+              .replace(/\s+/g, ' ')
+              .trim()
+              .replace(/['"]/g, '"')
+              .replace(/\\/g, '');
+      };
+  
+      const cleanTag = (tag) => {
+          return tag
+              .toLowerCase()
+              .replace(/^(פרשת|ספר)\s+/g, '')
+              .replace(/\b(ו)(\S+)/g, '$2')
+              .replace(/,/g, '')
+              .trim();
+      };
+  
+      try {
+          await connect();
+          const allTags = await tagsModel.find({ isActive: true });
+  
+          // יצירת מפת תגים מנוקים
+          const tagMap = new Map();
+          allTags.forEach(tag => {
+              const cleanedTagName = cleanTag(tag.name);
+              const words = cleanedTagName.split(/\s+/);
+              words.forEach(word => {
+                  if (!tagMap.has(word)) {
+                      tagMap.set(word, new Set());
+                  }
+                  tagMap.get(word).add(tag._id.toString());
+              });
+          });
+  
+          const questions = await QAModel.find({ isActive: true });
+          let changesLog = [];
+  
+          for (const question of questions) {
+              const contentToSearch = cleanContentForSearch(`${question.title || ''} ${question.question} ${question.answer}`);
+              const words = contentToSearch.split(/\s+/);
+              const foundTags = new Set();
+  
+              words.forEach(word => {
+                  const cleanedWord = cleanTag(word);
+                  if (tagMap.has(cleanedWord)) {
+                      tagMap.get(cleanedWord).forEach(tagId => foundTags.add(tagId));
+                  }
+              });
+  
+              const existingTags = new Set(question.tags.map(tag => tag.toString()));
+              const newTags = Array.from(foundTags).filter(tag => !existingTags.has(tag));
+  
+              if (newTags.length > 0) {
+                  const proposedChanges = {
+                      questionId: question._id,
+                      currentTags: question.tags,
+                      proposedNewTags: newTags,
+                      proposedFullTagSet: [...question.tags, ...newTags]
+                  };
+  
+                  changesLog.push(proposedChanges);
+  
+                  if (!dryRun) {
+                      question.proposedTags = proposedChanges.proposedFullTagSet;
+                      await question.save();
+                      console.log(`Updated question ${question._id} with ${newTags.length} new proposed tags`);
+                  } else {
+                      console.log(`[DRY RUN] Would update question ${question._id} with ${newTags.length} new tags`);
+                  }
+              }
+          }
+  
+          console.log('Finished processing all questions');
+          return changesLog;
+      } catch (error) {
+          console.error('Error processing questions and tags:', error);
+          return null;
+      }
+  }
+  
+  export default processQuestionsAndTags;
+  
+  

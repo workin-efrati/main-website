@@ -7,8 +7,10 @@ const QASchema = new mongoose.Schema(
     question: { type: String, required: true },
     answer: { type: String, required: true }, 
     tags: [{ type: mongoose.Schema.Types.ObjectId, ref: "tag" }],
+    holidays: [{ type: mongoose.Schema.Types.ObjectId, ref: "holiday-parasha" }],
     date: { type: Date, required: true, default: Date.now },
     isActive: { type: Boolean, default: true },
+    isSensitive: { type: Boolean, default: false},
   },
   { timestamps: true }
 );

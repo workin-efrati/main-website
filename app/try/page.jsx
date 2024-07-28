@@ -1,5 +1,5 @@
 <<<<<<< HEAD
-import { getCurrentDateInHe, getCurrentParashaFromJSON, getUpcomingHoliday } from "@/helpers/formatDate";
+import { getHebrewDate, getCurrentParashaFromJSON, getUpcomingHoliday } from "@/helpers/formatDate";
 import styles from "./style.module.scss";
 =======
 <<<<<<< HEAD

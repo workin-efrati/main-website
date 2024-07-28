@@ -13,10 +13,10 @@ export const getCurrentParashaFromAPI = async () => {
     const day = date.getDate().toString().padStart(2, '0');
     return `${year}-${month}-${day}`;
   };
- 
+
   const getCurrentDate = () => formatDate(new Date());
   const getNextWeekDate = () => formatDate(new Date(Date.now() + 7 * 24 * 60 * 60 * 1000));
- 
+
   const parshiot = {
     "בראשית": "בראשית",
     "נח": "נח",
@@ -83,7 +83,7 @@ export const getCurrentParashaFromAPI = async () => {
     "האזינו": "האזינו",
     "וזאת הברכה": "וזאת הברכה"
   };
- 
+
   const getParasha = (apiResponse) => {
     if (apiResponse.items && apiResponse.items.length > 0) {
       for (const item of apiResponse.items) {
@@ -99,7 +99,7 @@ export const getCurrentParashaFromAPI = async () => {
   };
 
   try {
-   const range = `https://www.hebcal.com/hebcal?cfg=json&s=on&start=${getCurrentDate()}&end=${getNextWeekDate()}`;
+    const range = `https://www.hebcal.com/hebcal?cfg=json&s=on&start=${getCurrentDate()}&end=${getNextWeekDate()}`;
     const response = await axios.get(range);
     const parasha = getParasha(response.data);
     return parasha.split(' ')[1];
@@ -111,37 +111,37 @@ export const getCurrentParashaFromAPI = async () => {
 
 // JSON
 // קבלת פרשת השבוע מתוך קובץ פנימי
+// שים ❤️ הפונקציה נראית מעט מסובכת וזה בגלל שהדרך הפשוטה נכשלה בין השעות 00:00 ל03:00 בלילה
 export const getCurrentParashaFromJSON = () => {
-   // השגת התאריך הנוכחי
-   const today = new Date();
- 
-   // מציאת מספר הימים עד השבת הקרובה
-   const daysUntilSaturday = (6 - today.getDay() + 7) % 7;
- 
-   // פונקציה להוספת ימים לתאריך
-   const addDays = (date, days) => {
-     const result = new Date(date);
-     result.setDate(result.getDate() + days);
-     return result;
-   };
- 
-   // חישוב התאריך של השבת הקרובה
-   const nextSaturday = addDays(today, daysUntilSaturday);
-   const saturdayDateString = nextSaturday.toISOString().split('T')[0];
- 
-   // בדיקה אם קיימת פרשה לשבת הקרובה
-   if (parshiyotObject[saturdayDateString]) {
-     const parsha = parshiyotObject[saturdayDateString]['inHebrew'];
-     console.log(`פרשת השבוע הקרובה (${saturdayDateString}) היא: ${parsha}`);
-     return parsha;
-   } else {
-     console.log(`לא נמצאה פרשה לשבת הקרובה (${saturdayDateString}).`);
-     return null;
-   }
- };
+  // השגת התאריך הנוכחי באזור זמן ישראל
+  const todayDateStr = new Date().toLocaleString('en-US', { timeZone: 'Asia/Jerusalem' }).split(",")[0];
+  // מציאת מספר הימים עד השבת הקרובה
+  const todayNunber = new Date(todayDateStr).getDay();
+  const daysUntilSaturday = (6 - todayNunber + 7) % 7;
+  // פונקציה להוספת הספרה 0 לפני המספר אם הוא פחות מ-10
+  const padZero = (num) => (num < 10 ? `0${num}` : num);
+  // פירוק התאריך
+  const [month, day, year] = todayDateStr.split('/').map(Number);
+  console.log("🚀 ~ getCurrentParashaFromJSON ~ month, day, year:", month, day, year)
+  // הרכבה מחדש של מבנה תאריך
+  const nextSaturday = new Date(`${year}-${padZero(month)}-${padZero(day)}T00:00:00.001Z`);
+  // הוספת ימים לתאריך וחישוב התאריך של השבת הקרובה
+  nextSaturday.setDate(nextSaturday.getDate() + daysUntilSaturday);
+  // חילוץ התאריך בלבד
+  const nextSaturdayDateString = nextSaturday.toISOString().split('T')[0];
+  // בדיקה אם קיימת פרשה לשבת הקרובה
+  const nextParsha = parshiyotObject[nextSaturdayDateString]?.inHebrew;
+  if (nextParsha) {
+    console.log(`פרשת השבוע הקרובה (${nextSaturdayDateString}) היא: ${nextParsha}`);
+    return nextParsha;
+  } else {
+    console.log(`לא נמצאה פרשה לשבת הקרובה (${nextSaturdayDateString}).`);
+    return null;
+  }
+};
 
 //  קבלת החג/אירוע המשמעותי הקרוב
- export const getUpcomingHolidayFromJSON = () => {
+export const getUpcomingHolidayFromJSON = () => {
   const today = new Date();
   const twoWeeksFromNow = new Date(today.getTime() + 34 * 24 * 60 * 60 * 1000);
   let upcomingHolidayWithTag = null;
@@ -166,35 +166,88 @@ export const getCurrentParashaFromJSON = () => {
   return null;
 }
 
+// API
+ //  - קבלת תאריך עברי נוכחי או לפי תאריך מסויים - במבנה חודש/יום/שנה
+export const getHebrewDate = async (date) => {
+  // על התאריך להיות במבנה כזה "12/17/2024"
+  const requestedDay = date ? new Date(parseDate(date)) : new Date()
+  try {
+    const range = `https://www.hebcal.com/converter?cfg=json&gy=${requestedDay.getFullYear()}&gm=${requestedDay.getMonth() + 1}&gd=${requestedDay.getDate()}&g2h=1`;
+    const response = await axios.get(range);
+    const dateInHe = response.data.hebrew.replace(/[\u0591-\u05C7]/g, '');
+    console.log(dateInHe)
+    return dateInHe;
+  } catch (error) {
+    console.error('Error fetching data:', error);
+    throw error;
+  }
+};
 
-export const getDateInfo = ()=>{
+// מידע רלוונטי עבור היום הנוכחי
+export const getCurrentDateInfo = () => {
   const data = {
-    currentDate: getCurrentDateInHe(),
+    currentDate: getHebrewDate(),
     currentParasha: getCurrentParashaFromJSON(),
     upcomingHoliday: getUpcomingHolidayFromJSON(),
   }
   return data;
+}
 
+// קבלת תאריך עברי נוכחי או לפי תאריך מסויים - במבנה חודש/יום/שנה
+export const getDateInHe = (date) =>{
+  const requestedDay = date ? new Date(date) : new Date();
+  console.log("🚀 ~ getDateInHe ~ today:", requestedDay)
+  const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+  console.log(requestedDay.toLocaleDateString('he-IL', options))
+  return requestedDay.toLocaleDateString('he-IL', options);
 }
 
 
 
 
 
-// API
-// // קבלת תאריך עברי
-export const getCurrentDateInHe = async () => {
-  const date = new Date()
- try {
-  const range = `https://www.hebcal.com/converter?cfg=json&gy=${date.getFullYear()}&gm=${date.getMonth()+1}&gd=${date.getDate()}&g2h=1`;
-   console.log(range);
-   const response = await axios.get(range);
-   const dateInHe = response.data.hebrew.replace(/[\u0591-\u05C7]/g, '');
-   console.log(dateInHe)
-   return dateInHe;
- } catch (error) {
-   console.error('Error fetching data:', error);
-   throw error;
- }
-};
+function parseDate(dateString) {
+  // Define regex to match date formats with different delimiters and orders
+  const regex = /^(\d{1,2})[\/\.\-](\d{1,2})[\/\.\-](\d{2}|\d{4})$/;
+  const match = dateString.match(regex);
 
+  if (!match) {
+      throw new Error("Invalid date format");
+  }
+
+  let day, month, year;
+
+  // Extract the date components
+  let part1 = parseInt(match[1], 10);
+  let part2 = parseInt(match[2], 10);
+  let part3 = parseInt(match[3], 10);
+
+  if (part3 < 100) {
+      // Assuming part3 is year in two-digit format
+      part3 += 2000;
+  }
+
+  // Determine the order of the date components based on common formats
+  if (part1 > 12) {
+      // Assuming part1 is day, part2 is month
+      day = part1;
+      month = part2;
+  } else if (part2 > 12) {
+      // Assuming part2 is day, part1 is month
+      day = part2;
+      month = part1;
+  } else {
+      // Ambiguous case, let's assume part1 is month and part2 is day
+      // This can be adjusted based on the common format you expect more often
+      month = part1;
+      day = part2;
+  }
+
+  year = part3;
+
+  // Ensure month and day are in correct format
+  month = month < 10 ? `0${month}` : month;
+  day = day < 10 ? `0${day}` : day;
+
+  return `${month}/${day}/${year}`;
+}

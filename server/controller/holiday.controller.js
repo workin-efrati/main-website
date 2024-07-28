@@ -8,8 +8,11 @@ export const read = async (filter) => HolidaysModel.find(filter)
 
 export const readOne = (filter) => HolidaysModel.findOne(filter);
 
+
+// פונקציה להבאת3 שאלות עבור פרשת השבוע ו3 עבור החג המתקרב
 export const readHolidayQa = async (filter) => {
     let data =  await HolidaysModel.findOne(filter);
+    if(!data) return null;
     data.questions=data.questions.slice(0, 3);
     await data.populate({ path: 'questions', model: QAModel, select:'title question' });
     return data;
