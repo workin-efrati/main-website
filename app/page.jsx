@@ -22,7 +22,6 @@ export default function Home() {
     <main className={styles.main} >
 
       <div className={`${styles.section}`}>
-
         <div className={styles.logoTextContainer}>
           <h1 id="section1">לַמְּדֵנִי חֻקֶּךָ</h1>
         </div>

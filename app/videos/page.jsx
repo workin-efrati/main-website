@@ -6,16 +6,13 @@ import Image from 'next/image'
 import Link from 'next/link'
 import style from './style.module.scss'
 
-
-
 async function page({ searchParams: { search } }) {
     await connect()
     const data = await readVideos(search)
+
     return (<>
         <div className={style.page}>
-            <div>
-                <SearchVideos />
-            </div>
+            <SearchVideos />
             <div className={style.holdVideos}>
                 {data?.map((v, i) =>
                     <Link key={v._id}
@@ -24,7 +21,7 @@ async function page({ searchParams: { search } }) {
                             className={style.img}
                             src={v.img}
                             fill
-                            alt="image"
+                            alt={v.title}
                             sizes={"100%"}
                             priority={1} />
                         <div className={style.title}>{v.title}</div>

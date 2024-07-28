@@ -1,14 +1,48 @@
-const { readOne, findById, read , specialRead } = require("../controller/tags.controller");
+import { findById, read, readOne, specialRead } from '@/server/controller/tags.controller.js';
+import tagsModel from "../models/tags.model";
+
+const populateChildren = async (tag, depth = 0, maxDepth = 4) => {
+    if (depth > maxDepth) return tag;
+
+    const populatedTag = await tag.populate('children', 'name children');
+    if (populatedTag.children && populatedTag.children.length > 0) {
+        for (let child of populatedTag.children) {
+            child = await populateChildren(child, depth + 1, maxDepth);
+        }
+    }
+    return populatedTag;
+};
+
+export const getAllTagsService = async (maxDepth = 4) => {
+    try {
+        const tags = await read({
+            $or: [
+                { parent: { $exists: false } },
+                { parent: null }
+            ]
+        }, '_id name children');
+        const populatedTagsPromises = tags.map(tag => populateChildren(tag, 0, maxDepth));
+        const populatedTags = await Promise.all(populatedTagsPromises);
+        return populatedTags;
+    } catch (error) {
+        console.error("Error fetching tags:", error);
+        throw error;
+    }
+};
+
+
 
 export const readOneService = (filter) => {
     const categoryObject = readOne(filter);
     return categoryObject;
 }
 
-export const getAllTagsService = async () => {
+
+export const getAllTagsService2 = async () => {
     try {
-        // const allTags = await tagsModel.find();
-        console.log('allTags');
+        const allTags = await tagsModel.find();
+        console.log(allTags);
+        return allTags;
     }
     catch (err) {
         console.log(err);
@@ -44,7 +78,7 @@ export const familyOfCategoryService = async (filter) => {
                 const childObject = await findById(childId);
                 if (childObject) {
                     children.push({ name: childObject.name, _id: childObject._id });
-                    stack.push(...childObject.children);
+                    // stack.push(...childObject.children); // כדי להביא גם את הנכדים - כרגע לא נצרך!!
                 }
             }
 
@@ -54,7 +88,6 @@ export const familyOfCategoryService = async (filter) => {
         const parents = await getParents(categoryObject);
         const children = await getChildren(categoryObject);
 
-        console.log({ parents }, "-----------------------------------");
         return ({
             categoryObject,
             parents,
