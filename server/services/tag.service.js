@@ -1,4 +1,4 @@
-const { readOne ,findById} = require("../controller/tags.controller");
+const { readOne, findById, read , specialRead } = require("../controller/tags.controller");
 
 export const readOneService = (filter) => {
     const categoryObject = readOne(filter);
@@ -27,7 +27,7 @@ export const familyOfCategoryService = async (filter) => {
             while (currentParent) {
                 const parentObject = await findById(currentParent);
                 if (!parentObject) break;
-                parents.push({name:parentObject.name,_id:parentObject._id});
+                parents.push({ name: parentObject.name, _id: parentObject._id });
                 currentParent = parentObject.parent;
             }
 
@@ -43,7 +43,7 @@ export const familyOfCategoryService = async (filter) => {
                 const childId = stack.pop();
                 const childObject = await findById(childId);
                 if (childObject) {
-                    children.push({name:childObject.name,_id:childObject._id});
+                    children.push({ name: childObject.name, _id: childObject._id });
                     stack.push(...childObject.children);
                 }
             }
@@ -65,5 +65,9 @@ export const familyOfCategoryService = async (filter) => {
         throw new Error("Error fetching category family");
     }
 };
+export const readTags = async (filter,populate,select) => {
+    const res = await specialRead(filter,populate,select)
+    return res
+}
 
 
