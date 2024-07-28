@@ -17,10 +17,10 @@ export const getAllTagsService = async (maxDepth = 4) => {
     try {
         const tags = await read({
             $or: [
-              { parent: { $exists: false } },
-              { parent: null }
+                { parent: { $exists: false } },
+                { parent: null }
             ]
-          }, '_id name children');
+        }, '_id name children');
         const populatedTagsPromises = tags.map(tag => populateChildren(tag, 0, maxDepth));
         const populatedTags = await Promise.all(populatedTagsPromises);
         return populatedTags;
@@ -78,7 +78,7 @@ export const familyOfCategoryService = async (filter) => {
                 const childObject = await findById(childId);
                 if (childObject) {
                     children.push({ name: childObject.name, _id: childObject._id });
-                    stack.push(...childObject.children);
+                    // stack.push(...childObject.children); // כדי להביא גם את הנכדים - כרגע לא נצרך!!
                 }
             }
 
@@ -88,7 +88,6 @@ export const familyOfCategoryService = async (filter) => {
         const parents = await getParents(categoryObject);
         const children = await getChildren(categoryObject);
 
-        console.log({ parents }, "-----------------------------------");
         return ({
             categoryObject,
             parents,
