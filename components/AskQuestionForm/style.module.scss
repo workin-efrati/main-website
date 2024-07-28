@@ -1,5 +1,5 @@
 .container {
-    margin-top: 20px;
+    margin: 20px 0;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -7,7 +7,8 @@
     width: 500px;
     flex-shrink: 0;
     padding: 1rem;
-    box-shadow: 1px 25px 24px 12px var(--gray);
+    // box-shadow: 1px 25px 24px 12px var(--gray);
+    box-shadow: var(--box-shadow);
     border-radius: 14px;
     // background: var(--blue-gradient);
 }

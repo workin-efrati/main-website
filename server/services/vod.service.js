@@ -1,4 +1,4 @@
-import { create, read,readOne } from "../controller/vod.controller"
+import { create, read,readOne, readWithOptions } from "../controller/vod.controller"
 
 export const createVideo = async (data) => {
     const res = await create(data)
@@ -12,3 +12,9 @@ export const readOneVideo = async (filter) => {
     const res = await readOne(filter)
     return res
 }
+
+
+export const getRandom = async (limit = 8) => {
+    const questions = await readWithOptions({  }, limit, [], '');
+    return questions;
+ }

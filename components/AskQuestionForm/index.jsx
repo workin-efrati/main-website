@@ -1,16 +1,16 @@
 
-// import { createOrderAction } from "@/server/BL/actions/order.action"
 "use client"
 
-import React, { useCallback, useEffect, useRef, useState } from 'react'
-import { useFormState, useFormStatus } from 'react-dom'
-import styles from "./style.module.scss"
+import { useCallback, useEffect, useRef, useState } from 'react'
+import { useFormState } from 'react-dom'
+import ReCAPTCHA from "react-google-recaptcha"
+import { SiTheconversation } from "react-icons/si"
 import { createQuestionAction } from '../../actions/askQuestionAction'
 import { SubmitButton } from '../SubmitButton/SubmitButton'
-import { SiTheconversation } from "react-icons/si";
 import Text from '../TextComponent'
-import ReCAPTCHA from "react-google-recaptcha";
-const RECAPTCHA_SITE_KEY = process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY;
+import styles from "./style.module.scss"
+
+const RECAPTCHA_SITE_KEY = process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY || 'a';
 
 export default function AskActionForm() {
   const [state, formAction] = useFormState(createQuestionAction)

@@ -1,16 +1,7 @@
-.tagCategoryContainer {
+  .tagCategoryLink {
     display: inline-block;
     margin: 0.5rem;
     transition: transform 0.2s ease-in-out;
-  }
-  
-  .tagCategoryContainer:hover {
-    transform: translateY(-2px);
-  }
-  
-  .tagCategoryLink {
-    display: flex;
-    align-items: center;
     padding: 0.5rem 1rem;
     background-color:var(--white);
     border-radius: 5px;
@@ -18,6 +9,7 @@
     color: var(--light-blue);
     transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
     opacity: 0.8;
+    margin-right: 0.5rem;
   }
   
   .tagCategoryLink:hover {
@@ -26,16 +18,4 @@
     opacity: 0.8;
   }
   
-  .tagCategoryName {
-    margin-right: 0.5rem;
-  }
-  
-  .tagCategoryArrow {
-    font-size: 1.2rem;
-    transition: transform 0.2s ease-in-out;
-  }
-  
-  .tagCategoryLink:hover .tagCategoryArrow {
-    transform: translateX(3px);
-  }
   

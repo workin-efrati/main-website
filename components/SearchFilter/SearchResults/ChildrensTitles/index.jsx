@@ -6,7 +6,7 @@ export const IconsPM = () => (<>
     <FaMinus className={styles.minus} />
     <FaPlus className={styles.plus} />
   </>)
-export default function ChildrensTitles({ childrensData , margin = 4 }) {
+export default function ChildrensTitles({ childrensData , margin = 10 }) {
     
     return (
         <div className={styles.container}>
@@ -18,10 +18,10 @@ export default function ChildrensTitles({ childrensData , margin = 4 }) {
                                         <div className={styles.title} >
                                             <div style={{marginRight:`${margin}%`}}>
 
-                                            {child.childrens.length  ?<IconsPM />:
+                                            {child.children.length  ?<IconsPM />:
                                                 <div className={styles.placeHolderIcon} />}
                                             {
-                                                <Link  href={''}>
+                                                <Link  href={child._id}>
                                                     {child.name}
                                                 </Link>
                                             }
@@ -29,8 +29,8 @@ export default function ChildrensTitles({ childrensData , margin = 4 }) {
                                         </div>
                                 </summary>
                                     <div>
-                                        {child?.childrens?.length > 0 &&
-                                         <ChildrensTitles margin={margin+4} childrensData={child.childrens} />
+                                        {child?.children?.length > 0 &&
+                                         <ChildrensTitles margin={margin+4} childrensData={child.children} />
                                         }
                                     </div>
                             </details>

@@ -3,17 +3,13 @@ import styles from './style.module.scss'
 import Link from 'next/link';
 
 
-const TagCategory = ({ name ,_id }) => {
-    return (
-        <div className={`${styles.tagCategoryContainer}`}>
-      <Link className={`${styles.tagCategoryLink}`} href={`/${_id}`}>
-        <div >
-          <span className={`${styles.tagCategoryName}`}>{name}</span>
-        </div>
+const TagCategory = ({ name, _id }) => {
+  
+  return (
+      <Link className={`${styles.tagCategoryLink}`} href={`/category/${_id}`}>
+          {name}
       </Link>
-    </div>
-
-    );
+  );
 };
 
 export default TagCategory;

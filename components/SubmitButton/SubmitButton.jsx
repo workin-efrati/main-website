@@ -7,7 +7,6 @@ import { useFormStatus } from 'react-dom'
 export function SubmitButton({ text, onPendingText = null, width, disabled }) {
   const { pending } = useFormStatus();
   return (
-    <>
       <Button type="submit"  disabled={pending || disabled} style={{ width: width, background: pending? "var(--light-blue)": "var(--blue-gradient)", color: "black" }} >     
         {pending && !onPendingText ?
          <div className={styles.loading}><div className={styles.spinner}></div></div>
@@ -15,6 +14,5 @@ export function SubmitButton({ text, onPendingText = null, width, disabled }) {
           <Text as="h4" textColor="black" fontStyle="b">{pending ? onPendingText : text}</Text>
           }
       </Button>
-    </>
   )
 }

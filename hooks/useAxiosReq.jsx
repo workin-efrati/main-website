@@ -1,6 +1,7 @@
 "use client"
-import { axiosReq } from '@/helpers/formatDate.js'
+
 import { useEffect, useState } from 'react'
+import { axiosReq } from "@/helpers/axiosReq.js"
 
 export default function useAxiosReq({ method = "GET", url, body, isLocalServer }) {
     const [data, setData] = useState()
@@ -31,3 +32,5 @@ export default function useAxiosReq({ method = "GET", url, body, isLocalServer }
 
     return { data, loading, error, fetchData }
 }
+
+

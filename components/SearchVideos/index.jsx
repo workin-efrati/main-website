@@ -2,20 +2,18 @@
 
 import { useRouter } from "next/navigation"
 import style from './style.module.scss'
+
 function SearchVideos() {
     const router = useRouter()
-    const handleSearch = e =>{
-        if (e.target.value) {
-            router.push(`/all-videos/?search=${e.target.value}`)
-        }
-        else{
-            router.push(`/all-videos`)
-        }
+
+    const handleSearch = e => {
+        router.push(e.target.value ? `/videos/?search=${e.target.value}` : `/videos`)
     }
-    return(<>
-    <div className={style.holdInput}>
-<input onChange={handleSearch} type="text" />
-    </div>
+
+    return (<>
+        <div className={style.holdInput}>
+            <input onChange={handleSearch} type="text" />
+        </div>
     </>)
 }
 export default SearchVideos
