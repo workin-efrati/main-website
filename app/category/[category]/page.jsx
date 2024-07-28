@@ -1,11 +1,11 @@
-import Text from "@/components/TextComponent";
-import styles from "./page.module.scss";
-import Image from "next/image";
-import { connect } from "@/server/connect";
-import { familyOfCategoryService, readOneService } from "@/server/service/tag.service";
-import { formatParams } from "@/helpers/formatParams";
 import TagCategory from "@/components/TagCategory";
+import Text from "@/components/TextComponent";
+import { formatParams } from "@/helpers/formatParams";
+import { connect } from "@/server/connect";
+import { familyOfCategoryService } from "@/server/services/tag.service";
+import Image from "next/image";
 import Link from "next/link";
+import styles from "./page.module.scss";
 
 
 async function getDataCategory(categoryId) {
