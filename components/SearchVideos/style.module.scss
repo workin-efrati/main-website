@@ -15,14 +15,14 @@
     }
     
     input {
-        color: white;
-        background:var( --blue-gradient);
+        color:  var(--light-blue);
+        border:2px solid var(--light-blue);
         width: 100%;
         height: 50px;
         padding: 0 10px;
         font-size: 1.5rem;
         border-radius: 50px;
-        border: none;
+        // border: none;
         outline: none; 
     } & :focus{
     box-shadow: var(--box-shadow);

@@ -5,8 +5,9 @@ import { BsTags } from "react-icons/bs";
 import Tag from "@/components/Tag";
 import { FontSizeAdjuster } from "@/components/FontSizeAdjuster";
 import { connect } from "@/server/connect";
-import { readOneQaService, readQaService } from "@/server/services/qa.service";
+import { readOneQaService, readQaService, relatedQues } from "@/server/services/qa.service";
 import RelatedQuestions from "@/components/RelatedQuestions";
+import Link from "next/link";
 
 export const generateStaticParams = async () => {
   await connect();
@@ -31,6 +32,7 @@ const question = {
 export default async function Question({ params: { id } }) {
   await connect();
   const result = await readOneQaService({ _id: id });
+
   
 
   return (
