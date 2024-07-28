@@ -6,6 +6,7 @@ import Tag from '@/components/Tag';
 import { FontSizeAdjuster } from '@/components/FontSizeAdjuster';
 import { connect } from '@/server/connect';
 import { readOneQaService, readQaService } from '@/server/services/qa.service';
+import RelatedQuestions from '@/components/RelatedQuestions';
 
 export const generateStaticParams = async () => {
     await connect();
@@ -52,7 +53,7 @@ export default async function Question({ params: { id } }) {
 
                 </div>
             </FontSizeAdjuster>
-            <RelatedQuestions id={id}/>
+            <RelatedQuestions q={result} />
         </>
     );
 }

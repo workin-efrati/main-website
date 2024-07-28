@@ -4,14 +4,9 @@ import style from './style.module.scss'
 import { connect } from '@/server/connect'
 import { relatedQues } from '@/server/services/qa.service'
 export default async function RelatedQuestions({ q }) {
-    const c = {
-        _id: "66a11951fa2e12e9e83cce8e",
-        title: "ש",
-        tags: ["66a0bfa67076bd7d8303600c","66a0bfa47076bd7d83035ecc"]
-    }
     await connect()
-    const questions = await relatedQues(c)
-    // console.log(questions);
+    const questions = await relatedQues(q)
+
     return (<>
         <div>
             <div className={style.title}>
