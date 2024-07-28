@@ -1,4 +1,5 @@
 'use client'
+import { FaSearch } from "react-icons/fa";
 
 import { useRouter } from "next/navigation"
 import style from './style.module.scss'
@@ -12,6 +13,7 @@ function SearchVideos() {
 
     return (<>
         <div className={style.holdInput}>
+            <FaSearch className={style.searchIcon}/>
             <input onChange={handleSearch} type="text" />
         </div>
     </>)
