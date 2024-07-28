@@ -1,4 +1,4 @@
-import { findById, read, readOne } from '@/server/controller/tags.controller.js';
+import { findById, read, readOne, specialRead } from '@/server/controller/tags.controller.js';
 import tagsModel from "../models/tags.model";
 
 const populateChildren = async (tag, depth = 0, maxDepth = 4) => {
@@ -98,5 +98,9 @@ export const familyOfCategoryService = async (filter) => {
         throw new Error("Error fetching category family");
     }
 };
+export const readTags = async (filter,populate,select) => {
+    const res = await specialRead(filter,populate,select)
+    return res
+}
 
 

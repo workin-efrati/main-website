@@ -44,7 +44,7 @@
 
 @media (700px > width) {
     .holdVideos {
-        grid-template-columns: repeat(auto-fill, minmax(50px, 70vw));
+        padding: 2rem;
     }
 
     .card {

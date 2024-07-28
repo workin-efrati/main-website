@@ -23,7 +23,7 @@ const question = {
 export default async function Question({ params: { id } }) {
     await connect();
     const result = await readOneQaService({ _id: id });
-    console.log(result)
+
     return (
         <>
             <div className={styles.header}>
@@ -52,6 +52,7 @@ export default async function Question({ params: { id } }) {
 
                 </div>
             </FontSizeAdjuster>
+            <RelatedQuestions id={id}/>
         </>
     );
 }
