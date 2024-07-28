@@ -1,6 +1,6 @@
-import { ShareLinks } from '@/components/ShereLinks';
-import styles from './style.module.scss'
-import Text from '@/components/TextComponent/index.jsx';
+import { ShareLinks } from "@/components/ShereLinks";
+import styles from "./style.module.scss";
+import Text from "@/components/TextComponent/index.jsx";
 import { BsTags } from "react-icons/bs";
 import Tag from '@/components/Tag';
 import { FontSizeAdjuster } from '@/components/FontSizeAdjuster';
@@ -26,8 +26,9 @@ export async function generateMetadata({ params : {id} }) {
 
 
 export default async function Question({ params: { id } }) {
-    await connect();
-    const result = await readOneQaService({ _id: id });
+  await connect();
+  const result = await readOneQaService({ _id: id });
+  
 
     return (
         <>

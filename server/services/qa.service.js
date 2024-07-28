@@ -21,6 +21,9 @@ const read_service = async (filter) => {
 export const relatedQues = async (qCurrent) => {
   let res = []
   let questions = await read_service({ tags: { $in: qCurrent.tags } })
+  questions = questions.filter(q => String(q._id) !== String(qCurrent._id))
+  
+  
   //title אם יש 
   
   if (qCurrent?.title && questions.length) {
@@ -52,7 +55,13 @@ export const relatedQues = async (qCurrent) => {
   }
   //title אם אין 
   else if (!qCurrent.title) {
-    res = questions.slice(0, 3)
+    let random = Math.round(Math.random()*questions.length)
+    while(random >= questions.length -3){
+       random = Math.round(Math.random()*questions.length)
+    }
+    res = questions.slice(random , random + 3)
+    
+    // console.log(res.length);
   }
   // אם אין 3 שאלות
   if (res.length < 3) {
