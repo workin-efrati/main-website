@@ -9,7 +9,7 @@ export const axiosReq = async ({ method = 'POST', body, url, isLocalServer = tru
           data: body || {},
           url,
           headers: {
-             Authorization: localStorage.token || ''
+            //  Authorization: localStorage.token || ''
           }
        })
        console.log('api req result 🐱 \n', { result })

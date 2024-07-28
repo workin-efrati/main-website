@@ -1,0 +1,8 @@
+.pagination {
+  display: flex;
+  flex-direction: row-reverse;
+  button {
+    width: 32px;
+    height: 32px;
+  }
+}
