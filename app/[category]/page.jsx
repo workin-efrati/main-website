@@ -51,10 +51,10 @@ export default async function Page({ params: { category } }) {
     return (
         (categoryData && <div className={`${styles.linear}`}>
             <div className={`${styles.container}`}>
-                <div className={styles.text}> 
+                <div className={styles.text}>
                     {parents.reverse().map(parent => <Link href={parent._id} className={`${styles.LinkParent}`} > {parent.name} <span> {`>`} </span> </Link>)}
                     <Text as="h1" newClass={styles.font} fontStyle={'b'}>{categoryData.name}</Text>
-                    {children.map(child => < TagCategory  name={child.name} _id={child._id} />)}
+                    {children.map(child => < TagCategory name={child.name} _id={child._id} />)}
                 </div>
                 <div className={`${styles.colorOpacity}`} />
                 <Image alt="" src={categoryFake.image} fill className={`${styles.image}`} />
