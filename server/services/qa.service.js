@@ -4,7 +4,7 @@ import { readTags } from '@/server/services/tag.service.js'
 
 export const readOneQaService = async (filter) => await readOne(filter)
 
-export const readQaService = () => []
+export const readQaService = () => async () => await read()
 
 const read_service = async (filter) => {
   return await read(filter)

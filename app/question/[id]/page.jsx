@@ -6,17 +6,22 @@ import Tag from '@/components/Tag';
 import { FontSizeAdjuster } from '@/components/FontSizeAdjuster';
 import { connect } from '@/server/connect';
 import { readOneQaService, readQaService } from '@/server/services/qa.service';
+import RelatedQuestions from '@/components/RelatedQuestions';
 
 export const generateStaticParams = async () => {
-    await connect();
-    const res = await readQaService();
-    return res.map((question) => ({ params: { id: question._id } }));
+        await connect();
+        const res = await readQaService();
+        return res.map((question) => ({ params: { id: question._id.toString() } }));
 };
-
-const question = {
-    title: 'הרתחת מיחם לאחר הפסקת חשמל',
-    tags: ["שבת", "הבערה", "הפסקת חשמל", "שבת", "הבערה", "הפסקת חשמל", "שבת", "הבערה"],
-}
+export async function generateMetadata({ params : {id} }) {
+    await connect()
+    const data = await readOneQaService({ _id: id })
+    const { title } = data
+    return {
+      title:title || `תשובה בנושא ${data.tags[0].name}`,
+      description :'שאלות ותשובות עם הרב אפרתי'
+    }
+  }
 
 
 
