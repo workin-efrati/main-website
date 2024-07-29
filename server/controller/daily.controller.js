@@ -1,10 +1,7 @@
 import DailyModel from "../models/daily.model.js";
 
 // CRUD
-export const createDaily = async(data) => {
-     console.log(data)
-     return await DailyModel.create(data)
-    };
+export const createDaily = (data) => DailyModel.create(data)
 
 export const read = async (filter) => DailyModel.find(filter)
 

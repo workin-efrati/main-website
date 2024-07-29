@@ -1,43 +1,54 @@
-import { readHolidayQa } from "@/server/controller/holiday.controller";
-import { getCurrentDateInfo } from "@/helpers/formatDate";
+import { getCurrentDateInfo, getCurrentDateInIsrael } from "@/helpers/formatDate";
 import { connect as connectToMongo } from "@/server/connect";
-import tagsModel from "../models/tags.model";
-import parashiot from '@/dateData/parashaNames.json';
-import { create } from "../controller/tags.controller";
-import HolidaysModel from "../models/holidays.model";
-import DailyModel from "../models/daily.model";
+import { readHolidayQa } from "@/server/controller/holiday.controller";
 import { createDaily } from "../controller/daily.controller";
-
-// export const readRelevantQaService = async () => {
-//     await connectToMongo()
-//     const data = getCurrentDateInfo()
-//     console.log(data);
-//     const currentParasha = data.currentParasha
-//     const nextHoliday = data.upcomingHoliday
-//     const forParasha = await readHolidayQa({ name: currentParasha || "לא נמצא שם פרשה", isActive: true })
-//     const forHoliday = await readHolidayQa({ name: nextHoliday || "לא נמצא חג", isActive: true })
-//     const relevantQa = { forParasha, forHoliday }
-//     return relevantQa
-
-// }
-
+import DailyModel from "../models/daily.model";
 
 export const readDailyData = async () => {
-    await connectToMongo()
-    const dateData = await getCurrentDateInfo()
-    console.log(await readHolidayQa({ name: dateData.upcomingHoliday || "לא נמצא חג", isActive: true }))
-
-    const data = {
-        date: dateData.currentHeDate,
-        heDate: dateData.currentHeDate,
-        currentParasha: {name: dateData.currentParasha, q: await readHolidayQa({ name: dateData.currentParasha || "לא נמצא שם פרשה", isActive: true }) || []},
-        upcomingHoliday:{name: dateData.upcomingHoliday, q:await readHolidayQa({ name: dateData.upcomingHoliday || "לא נמצא חג", isActive: true }) || []},
+    try{
+        await connectToMongo()
+        const dailyData = await DailyModel.findOne({ date: getCurrentDateInIsrael()})
+        if(dailyData){
+        return dailyData
+        }
+        else{
+        return await createDailyDataService()
+        }
+      }
+        catch(error){
+        console.log(error)
+        return error
     }
-    const {_id}= await createDaily(data)
-    console.log(_id)
-    return data
-
 }
+
+const createDailyDataService = async () => {
+    try{
+        await connectToMongo()
+    const dateInfo = await getCurrentDateInfo()
+    const parashaQ = await readHolidayQa({ name: dateInfo.currentParasha || "לא נמצא שם פרשה", isActive: true }) || []
+    const holidayQ = await readHolidayQa({ name: dateInfo.upcomingHoliday || "לא נמצא חג", isActive: true }) || []
+    const data = {
+        date: dateInfo.currentDate,
+        heDate: dateInfo.currentHeDate,
+        currentParasha: { name: dateInfo.currentParasha, q: parashaQ },
+        upcomingHoliday: { name: dateInfo.upcomingHoliday, q: holidayQ },
+    }
+
+    const dailyData = await createDaily(data)
+    if(dailyData._id){
+        return dailyData
+    }
+    else{
+        return null
+    }
+}
+    catch(error){
+        console.log(error)
+        return error
+    }
+    
+}
+
 
 
 

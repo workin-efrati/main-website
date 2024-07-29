@@ -4,7 +4,7 @@ const QADailySchema = {
   title: { type: String },
   question: { type: String },
   answer: { type: String },
-  img: { type: String },
+  img: [],
   tags: [{ type: mongoose.Schema.Types.ObjectId, ref: "tag" }],
 }
 

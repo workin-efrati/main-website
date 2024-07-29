@@ -9,21 +9,21 @@ import HolidaysModel from "@/server/models/holidays.model";
 import { getHebrewDateFromAPI, getDateInHe } from "@/helpers/formatDate";
 
 
-export const GET = async () => {
-    try {
-        return NextResponse.json(await readRelevantQaService())
-    } catch (error) {
-        console.log({ error: error.message });
-    }
-}
+// export const GET = async () => {
+//     try {
+//         return NextResponse.json(await readRelevantQaService())
+//     } catch (error) {
+//         console.log({ error: error.message });
+//     }
+// }
 
-export const POST = async (req) => {
-    // await fixTags();
-    const iii = await connectQuestionsAndParasha(false)
-    console.log(iii);
-    return NextResponse.json(iii)
+// export const POST = async (req) => {
+//     // await fixTags();
+//     // const iii = await connectQuestionsAndParasha(false)
+//     console.log(iii);
+//     return NextResponse.json(iii)
 
-}
+// }
 
 
 // async function connectQuestionsAndParasha(dryRun = true) {

@@ -24,14 +24,14 @@ export const GET = async () => {
         console.log({ error: error.message });
     }
 }
-export const POST = async () => {
-    try {
-        await markSensitiveQuestions();
-        return NextResponse.json({"HHH": "GDFGDFGDFG"})
-    } catch (error) {
-        console.log({ error: error.message });
-    }
-}
+// export const POST = async () => {
+//     try {
+//         await markSensitiveQuestions();
+//         return NextResponse.json({"HHH": "GDFGDFGDFG"})
+//     } catch (error) {
+//         console.log({ error: error.message });
+//     }
+// }
 
 
 
