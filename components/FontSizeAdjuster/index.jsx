@@ -1,7 +1,7 @@
 'use client'
-import { useEffect, useState } from 'react';
-import styles from './style.module.scss';
+import { useState } from 'react';
 import { FaSearchMinus, FaSearchPlus } from 'react-icons/fa';
+import styles from './style.module.scss';
 
 export const FontSizeAdjuster = ({ children }) => {
     const [fontSize, setFontSize] = useState(16); 

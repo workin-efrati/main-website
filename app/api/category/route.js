@@ -1,4 +1,4 @@
-import { getAllTagsService } from '@/server/service/tag.service'
+import { getAllTagsService } from '@/server/services/tag.service'
 import { NextResponse } from "next/server";
 import {connect} from '@/server/connect'
 

@@ -5,7 +5,7 @@ import Link from 'next/link';
 export default function Header() {
     const navs = [  
         { text: "שאל את הרב", href: "/question/ask", },
-        { text: "שאלות ותשובות", href: "/", },
+        { text: "שאלות ותשובות", href: "/question/result", },
         { text: "דרשות ומאמרים", href: "", },
         { text: "שיעורי וידאו", href: "/videos", },
         { text: "ילדים ונוער", href: "", },
