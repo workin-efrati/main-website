@@ -1,18 +1,26 @@
 'use client'
+import { FaSearch } from "react-icons/fa";
 
 import { useRouter } from "next/navigation"
 import style from './style.module.scss'
+import { useCallback } from "react";
+import debounce from "@/helpers/debounce";
 
 function SearchVideos() {
     const router = useRouter()
 
-    const handleSearch = e => {
-        router.push(e.target.value ? `/videos/?search=${e.target.value}` : `/videos`)
-    }
+    const debouncedChangeHandler = useCallback(
+        debounce((e) => {
+          router.push(e.target.value ? `/videos/?search=${e.target.value}` : `/videos`)
+        }, 1000),
+        [router]
+      );
+
 
     return (<>
         <div className={style.holdInput}>
-            <input onChange={handleSearch} type="text" />
+            <FaSearch className={style.searchIcon}/>
+            <input onChange={debouncedChangeHandler} type="text" />
         </div>
     </>)
 }

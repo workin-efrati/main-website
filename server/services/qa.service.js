@@ -6,8 +6,8 @@ export const readOneQaService = async (filter) => await readOne(filter)
 
 export const readQaService = () => []
 
-const read_service = async (filter) => {
-  return await read(filter)
+const read_service = async (filter,populate) => {
+  return await read(filter,populate)
 }
 // export const readOne = async () => {
 //     return
@@ -20,7 +20,7 @@ const read_service = async (filter) => {
 // }
 export const relatedQues = async (qCurrent) => {
   let res = []
-  let questions = await read_service({ tags: { $in: qCurrent.tags } })
+  let questions = await read_service({ tags: { $in: qCurrent.tags || [] } } , "tags")
   questions = questions.filter(q => String(q._id) !== String(qCurrent._id))
   
   
@@ -65,7 +65,7 @@ export const relatedQues = async (qCurrent) => {
   }
   // אם אין 3 שאלות
   if (res.length < 3) {
-    const tags = await readTags({ _id: { $in: qCurrent.tags } })
+    const tags = await readTags({ _id: { $in: qCurrent.tags } },"children")
     let childrens = []
     tags.map(t => childrens.push(...t.children))
     const q = await read({tags: { $in: childrens } })

@@ -23,6 +23,11 @@ const SearchQuestions = () => {
   const [pageLength, setPageLength] = useState(10);
 
   const params = new URLSearchParams(searchParams);
+
+  console.log(
+  searchBy,
+  pageLocation,
+  pageLength);
   /////////
 
   const debouncedChangeHandler = useCallback(
@@ -36,6 +41,7 @@ const SearchQuestions = () => {
 
   useEffect(() => {
     // if not page length or page location add on first load
+    console.log('start');
     fetchDataFromServer();
     const query = Object.fromEntries(params);
 

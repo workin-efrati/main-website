@@ -8,6 +8,8 @@ import style from './style.module.scss'
 
 async function page({ searchParams: { search } }) {
     await connect()
+    
+
     const data = await readVideos(search)
 
     return (<>
