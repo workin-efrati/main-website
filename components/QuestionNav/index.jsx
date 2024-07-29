@@ -20,7 +20,7 @@ export default function QuestionNav() {
                             <div className={styles.tag}>{q.tag}</div>
                         </div>
                         <div className={styles.titleAndTextContainer}>
-                            <h4>{q.title || data[i]?.title}</h4>
+                            <h4>{q.title || q.tags?.[0]?.name}</h4>
                             <p>{q.question}</p>
                         </div>
                     </Link>
