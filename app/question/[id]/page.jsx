@@ -9,9 +9,9 @@ import { readOneQaService, readQaService } from '@/server/services/qa.service';
 import RelatedQuestions from '@/components/RelatedQuestions';
 
 export const generateStaticParams = async () => {
-        await connect();
-        const res = await readQaService();
-        return res.map((question) => ({ params: { id: question._id.toString() } }));
+        // await connect();
+        // const res = await readQaService();
+        // return res.map((question) => ({ params: { id: question._id.toString() } }));
 };
 export async function generateMetadata({ params : {id} }) {
     await connect()

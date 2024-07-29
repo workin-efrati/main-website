@@ -2,9 +2,9 @@ import { read, readOne } from '@/server/controller/qa.controller.js'
 import { readTags } from '@/server/services/tag.service.js'
 
 
-export const readOneQaService = async (filter) => await readOne(filter)
+export const readOneQaService = async (filter) => await readOne(filter);
 
-export const readQaService = () => async () => await read()
+export const readQaService = () => async () => await read();
 
 const read_service = async (filter) => {
   return await read(filter)
