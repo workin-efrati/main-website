@@ -47,13 +47,11 @@ export default async function Question({ params: { id } }) {
           <div className={styles.question}>
             <div className={styles.questionHeader}>
               <Text as={"h3"} fontStyle={"b"}>
-                {" "}
-                שאלה{" "}
+                {" "} שאלה{" "}
               </Text>
             </div>
-            <Text fontStyle={"b"} className={styles.textContainer}>
-              {" "}
-              {result?.question}{" "}
+            <Text fontStyle={"b"} newClass={styles.textContainer}>
+              {" "} {result?.question}{" "}
             </Text>
           </div>
           <div className={styles.tags}>
@@ -74,7 +72,7 @@ export default async function Question({ params: { id } }) {
                 תשובה{" "}
               </Text>
             </div>
-            <Text fontStyle={"b"} className={styles.textContainer}>
+            <Text fontStyle={"b"} newClass={styles.textContainer}>
               {" "}
               {result?.answer}{" "}
             </Text>
