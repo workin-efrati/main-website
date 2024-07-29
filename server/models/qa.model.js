@@ -1,6 +1,7 @@
 import mongoose from "mongoose";
 
-const QASchema = new mongoose.Schema(
+
+export const QASchema = new mongoose.Schema(
   {
     title: { type: String },
     isTitledApproved: { type: Boolean },
