@@ -1,4 +1,5 @@
 import mongoose from "mongoose";
+import tagsModel from "./tags.model";
 
 const QASchema = new mongoose.Schema(
   {

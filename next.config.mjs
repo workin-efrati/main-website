@@ -7,8 +7,8 @@ const nextConfig = {
       { hostname: 'www.kipa.co.il' },
       { hostname: "i.ytimg.com" }
     ],
-  }
-
+  },
+  staticPageGenerationTimeout: 600
 };
 
 export default nextConfig;

@@ -1,39 +1,35 @@
-import { ShareLinks } from "@/components/ShereLinks";
-import styles from "./style.module.scss";
-import Text from "@/components/TextComponent/index.jsx";
-import { BsTags } from "react-icons/bs";
-import Tag from "@/components/Tag";
 import { FontSizeAdjuster } from "@/components/FontSizeAdjuster";
-import { connect } from "@/server/connect";
-import { readOneQaService, readQaService, relatedQues } from "@/server/services/qa.service";
 import RelatedQuestions from "@/components/RelatedQuestions";
-import Link from "next/link";
+import { ShareLinks } from "@/components/ShereLinks";
+import Tag from "@/components/Tag";
+import Text from "@/components/TextComponent/index.jsx";
+import { connect } from "@/server/connect";
+import { readOneQaWithPopulateService, readQaService } from "@/server/services/qa.service";
+import { BsTags } from "react-icons/bs";
+import styles from "./style.module.scss";
 
 export const generateStaticParams = async () => {
   await connect();
-  const res = await readQaService();
-  return res.map((question) => ({ params: { id: question._id } }));
+  const res = await readQaService({});
+  return res.map((question) => ({ id: question._id.toString() }));
 };
 
-const question = {
-  title: "הרתחת מיחם לאחר הפסקת חשמל",
-  tags: [
-    "שבת",
-    "הבערה",
-    "הפסקת חשמל",
-    "שבת",
-    "הבערה",
-    "הפסקת חשמל",
-    "שבת",
-    "הבערה",
-  ],
-};
+export async function generateMetadata({ params: { id } }) {
+  await connect()
+  const data = await readOneQaWithPopulateService({ _id: id })
+  const { title } = data
+  return {
+    title: title || `תשובה בנושא ${data.tags[0].name}`,
+    description: 'שאלות ותשובות עם הרב אפרתי'
+  }
+}
+
+
 
 export default async function Question({ params: { id } }) {
+  console.log({id});
   await connect();
-  const result = await readOneQaService({ _id: id });
-
-
+  const question = await readOneQaWithPopulateService({ _id: id }) || {};
 
   return (
     <>
@@ -51,12 +47,12 @@ export default async function Question({ params: { id } }) {
               </Text>
             </div>
             <Text fontStyle={"b"} newClass={styles.textContainer}>
-              {" "} {result?.question}{" "}
+              {" "} {question?.question}{" "}
             </Text>
           </div>
           <div className={styles.tags}>
             <BsTags className={styles.tagIcon} />
-            {result?.tags.map((tag) => (
+            {(question?.tags || []).map((tag) => (
               <Tag
                 key={tag._id}
                 name={tag.name}
@@ -68,22 +64,19 @@ export default async function Question({ params: { id } }) {
           <div className={styles.answer}>
             <div className={styles.answerHeader}>
               <Text as={"h3"} fontStyle={"b"}>
-                {" "}
-                תשובה{" "}
+                {" "} תשובה{" "}
               </Text>
             </div>
             <Text fontStyle={"b"} newClass={styles.textContainer}>
-              {" "}
-              {result?.answer}{" "}
+              {" "} {question?.answer}{" "}
             </Text>
           </div>
           <div className={styles.links}>
-            {" "}
-            <ShareLinks />{" "}
+            {" "}<ShareLinks />{" "}
           </div>
         </div>
       </FontSizeAdjuster>
-      <RelatedQuestions {...result} />
+      <RelatedQuestions {...question} />
     </>
   );
 }
