@@ -7,12 +7,6 @@ import Text from '@/components/TextComponent';
 import { connect } from '@/server/connect';
 import { readOneVideo, readVideos } from '@/server/services/vod.service';
 
-// video/1
-// video/2
-// video/3
-
-// TODO - generate static params
-// TODO - generate metadata
 export async function generateStaticParams() {
     await connect()
     const all = await readVideos()
