@@ -7,7 +7,7 @@ export const read = (filter , populate) => QAModel.find(filter).populate(populat
 
 export const readWithOptions = (filter, limit, populate, proj) => QAModel.find(filter).limit(limit).populate(populate).select(proj);
 
-export const readOne = (filter, populate) => QAModel.findOne(filter).populate(populate);
+export const readOne = (filter, populate) => QAModel.findOne(filter).populate(populate).lean();
 
 export const update = (id, newData) => QAModel.findByIdAndUpdate(id, newData);
 
