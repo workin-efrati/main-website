@@ -13,7 +13,7 @@ export const axiosReq = async ({ method = 'POST', body, url, isLocalServer = tru
             //  Authorization: localStorage.token || ''
           }
        })
-       console.log('api req result 🐱 \n', { result })
+       console.log('api req result 🐱 \n', { url, result })
        return result;
  
     } catch (error) {
