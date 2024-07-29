@@ -26,9 +26,9 @@ export default async function Page({ params: { id } }) {
         (categoryObject && <div className={`${styles.linear}`}>
             <div className={`${styles.container}`}>
                 <div className={styles.text}>
-                    {parents.reverse().map(parent => <Link href={parent._id} className={`${styles.LinkParent}`} > <span>{parent.name}</span> <span> {` >`} </span> </Link>)}
+                    {parents.reverse().map(parent => <Link key={parent._id} href={parent._id} className={`${styles.LinkParent}`} > <span>{parent.name}</span> <span> {` >`} </span> </Link>)}
                     <Text as="h1" newClass={styles.font} fontStyle={'b'}>{categoryObject.name}</Text>
-                    {children.map(child => < TagCategory name={child.name} _id={child._id} />)}
+                    {children.map(child => < TagCategory key={child._id} name={child.name} _id={child._id} />)}
                 </div>
                 <div className={`${styles.colorOpacity}`} />
                 <Image alt="category" src={categoryObject.image || '/images/image.png'} fill className={`${styles.image}`} />
