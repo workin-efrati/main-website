@@ -3,6 +3,7 @@ import axios from "axios";
 // בקשת שרת גנרית
 export const axiosReq = async ({ method = 'POST', body, url, isLocalServer = true }) => {
     try {
+       console.log('api req start 🐱 \n', url)
        const { data: result } = await axios({
           baseURL: isLocalServer ? process.env.NEXT_PUBLIC_LOCAL_SERVER : process.env.NEXT_PUBLIC_SERVER,
           method,
@@ -12,7 +13,7 @@ export const axiosReq = async ({ method = 'POST', body, url, isLocalServer = tru
             //  Authorization: localStorage.token || ''
           }
        })
-       console.log('api req result 🐱 \n', { result })
+       console.log('api req result 🐱 \n', { url, result })
        return result;
  
     } catch (error) {

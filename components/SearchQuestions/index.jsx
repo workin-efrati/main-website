@@ -20,9 +20,11 @@ const SearchQuestions = () => {
   const searchParams = useSearchParams();
   const pathName = usePathname();
   const { id: tagsParams = "" } = useParams();
-  console.log(tagsParams);
   /////////
   const [data, setData] = useState([]);
+  const [isThePageTags, setIsThePageTags] = useState(false);
+
+  const [tagsIds, setTagsIds] = useState([]);
   const [dataLength, setDataLength] = useState(0);
   const [searchBy, setSearchBy] = useState(searchParams.get("search") || "");
   const [pageLocation, setPageLocation] = useState(
@@ -33,7 +35,23 @@ const SearchQuestions = () => {
   );
 
   const params = new URLSearchParams(searchParams);
+
   /////////
+  useEffect(() => {
+    if (tagsParams && !isThePageTags) {
+      getAllTagsIds(tagsParams);
+    }
+  }, []);
+
+  const getAllTagsIds = async (id) => {
+    const allTags = await axiosReq({
+      url: `/tags/tagsWithChildren/${id}`,
+      isLocalServer: false,
+      method: "GET",
+    });
+    setTagsIds(allTags);
+    setIsThePageTags(true);
+  };
 
   const debouncedChangeHandler = useCallback(
     debounce((newValue) => {
@@ -45,20 +63,19 @@ const SearchQuestions = () => {
   );
 
   useEffect(() => {
+    if (tagsParams && !isThePageTags) return;
     // if not page length or page location add on first load
     const query = Object.fromEntries(params);
-    console.log(query);
     if (!query.pageLength || !query.pageLocation) {
       params.set("pageLocation", 1);
       params.set("pageLength", 10);
       replace(`${pathName}?${params}`);
     }
     fetchDataFromServer();
-
     return () => {
       debouncedChangeHandler.cancel && debouncedChangeHandler.cancel();
     };
-  }, [pageLocation, searchBy, pageLength]);
+  }, [pageLocation, searchBy, pageLength, isThePageTags]);
 
   const handleChange = (event) => debouncedChangeHandler(event.target.value);
 
@@ -80,6 +97,20 @@ const SearchQuestions = () => {
         }),
       },
     };
+    console.log(tagsIds);
+    // tagsParams && (queryObj.tagsParams = tagsParams);
+    tagsParams &&
+      (queryObj.includeFilter = {
+        searchType: "$or",
+        searchValues: [
+          {
+            field: "tags",
+            type: "_id",
+            values: tagsIds,
+            searchType: "$or",
+          },
+        ],
+      });
 
     const res = await axiosReq({
       method: "POST",
@@ -113,16 +144,20 @@ const SearchQuestions = () => {
         className={styles.questionContainer}
         style={{ display: "flex", flexDirection: "column" }}
       >
-        <Suspense fallback={<>loading...</>}>
-          {data.map((v) => (
-            <Question
-              question={v.question}
-              key={v._id}
-              to={v._id}
-              answer={v.answer}
-            />
-          ))}
-        </Suspense>
+        {data.length > 0
+          ? data.map((v) => (
+              <Question
+                question={v.question}
+                key={v._id}
+                to={v._id}
+                answer={v.answer}
+              />
+            ))
+          : Array.from({ length: pageLength })
+              .fill("9")
+              .map((v) => {
+                return <>{v}</>;
+              })}
       </div>
       <PaginationComponent
         changePages={changePages}
