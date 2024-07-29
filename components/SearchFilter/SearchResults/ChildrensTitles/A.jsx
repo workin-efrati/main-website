@@ -1,7 +1,7 @@
 import { FaMinus, FaPlus } from "react-icons/fa";
 import styles from './styles.module.scss';
 import Link from "next/link";
-import A from "./A";
+import B from "./B";
 
 export const IconsPM = () => (
     <>
@@ -10,7 +10,7 @@ export const IconsPM = () => (
     </>
 );
 
-export default function ChildrensTitles({ childrensData, margin = 10 }) {
+export default function A({ childrensData, margin = 10 }) {
 
 
     return (
@@ -18,12 +18,12 @@ export default function ChildrensTitles({ childrensData, margin = 10 }) {
             {childrensData.map((child, index) => (
                 <li key={child._id || child.id || index}>
                     <details >
-                        <summary className={styles.title} title="choose" style={{ paddingRight: `${margin}%` }}>
+                        <summary className={styles.title} style={{ paddingRight: `${margin}%` }}>
                             {child.children.length ? <IconsPM /> : <div className={styles.placeHolderIcon} />}
                             <Link href={`/category/${child._id}`}> {child.name}</Link>
                         </summary>
                         {child.children.length > 0 && (
-                            <A margin={margin + 4} childrensData={child.children} />
+                            <B margin={margin + 4} childrensData={child.children} />
                         )}
                     </details>
                 </li>

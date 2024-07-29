@@ -46,7 +46,7 @@ export default function SearchResults({ valueSearch, data, loading }) {
     if (valueSearch === '') {
       setTitles(tags)
     }
-    else if(!loading){
+    else if (!loading) {
       const filteredTitles = filterTitles(tags)
       setTitles(filteredTitles);
     }
@@ -60,30 +60,27 @@ export default function SearchResults({ valueSearch, data, loading }) {
 
   return (
     <div className={styles.container}>
-      {loading? <Loading />:
-      <ul>
-        {titles && titles.map((item, index) => {
-          return <li key={item.id || index}>
-            <details >
+      {loading ? <Loading /> :
+        <ul>
+          {titles && titles.map((item, index) => {
+            return <li key={item.id || index}>
+              <details >
 
-              <summary className={styles.title}>
-                {(item.children?.length > 0) ?
-                  <IconsPM /> :
-                  <div className={styles.placeHolderIcon} />}
+                <summary className={styles.title}>
+                  {(item.children?.length > 0) ? <IconsPM /> : <div className={styles.placeHolderIcon} />}
+                  <Link href={item._id}>{item.name}</Link>
+                  {item.parentOrder?.length > 1 && <Parent item={item} />}
+                </summary>
 
-                <Link href={item._id}>{item.name}</Link>
-                {item.parentOrder?.length > 1 && <Parent item={item} />}
-              </summary>
+                {
+                  (item?.children?.length) > 0 &&
+                  <ChildrensTitles childrensData={item.children} />
+                }
 
-              {
-                (item?.children?.length) > 0 &&
-                <ChildrensTitles childrensData={item.children} />
-              }
-
-            </details>
-          </li>
-        })}
-      </ul>}
+              </details>
+            </li>
+          })}
+        </ul>}
     </div>
   )
 }
