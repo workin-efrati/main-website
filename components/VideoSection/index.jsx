@@ -39,7 +39,7 @@ export default function VideoSection() {
         <div className={styles.videoSliderContainer} >
           {data.map((v, i) => (
             <Link key={`${v.href} ${i}`} href={`/videos/${v._id}`} className={styles.video} style={style}>
-              <Image width={100} height={100} src={v.img} alt={v.title || 'img'} />
+              <Image width={300} height={200} src={v.img} alt={v.title || 'img'} />
               <p>{v.title}</p>
             </Link>
           ))}
@@ -47,7 +47,7 @@ export default function VideoSection() {
         <button disabled={cantMoveLeft} onClick={() => { clickSliderHandler(1) }}><MdArrowBackIosNew /></button>
       </div>
       <div className={styles.toAllVideo}><Link href="">לכל השיעורים</Link> </div>
-      <Image width={100} height={100} src={'/images/backgrounds/torahBg.png'} className={styles.bgImg} />
+      <Image width={100} alt="bg" height={100} src={'/images/backgrounds/torahBg.png'} className={styles.bgImg} />
     </div>
   )
 }

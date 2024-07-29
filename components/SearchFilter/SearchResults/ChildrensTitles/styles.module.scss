@@ -1,4 +1,8 @@
 .container {
+    position: relative;
+    z-index: 8;
+
+
     a {
         user-select: none;
         text-decoration: none;
@@ -6,11 +10,11 @@
         font-weight: 300;
     }
 
-    details:not([open])>summary>.title>div>.minus {
+    details:not([open])>summary>.minus {
         display: none;
     }
 
-    details[open]>summary>.title>div>.plus {
+    details[open]>summary>.plus {
         display: none;
     }
 }
@@ -21,7 +25,7 @@
     align-items: center;
     color: var(--primary-blue);
     font-size: 1.1rem;
-    padding: .4rem 0;
+    // padding: .4rem 0;
 }
 
 .title:hover {

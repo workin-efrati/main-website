@@ -5,11 +5,14 @@ import { FaSearch } from "react-icons/fa";
 import SearchResults from './SearchResults';
 import styles from './styles.module.scss';
 import useAxiosReq from '@/hooks/useAxiosReq'
+import useFetchReq from '@/hooks/useFetchReq';
 
 export const dynanic = 'force-static';
 export default function SearchFilter({ type }) {
 
-  const { data, loading, error } = useAxiosReq({ url: '/category' })
+
+  // const { data, loading, error } = useAxiosReq({ url: '/category' })
+  const { data, loading, error } = useFetchReq({ url: '/category' ,optionsNext : { cache: 'force-cache' }})
 
   const router = useRouter()
   const [typeInput, setTypeInput] = useState(false)

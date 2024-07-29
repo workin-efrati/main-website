@@ -20,17 +20,11 @@ const read_service = async (filter, populate) => {
 // }
 export const relatedQues = async (qCurrent) => {
   try {
-
     let res = []
     let questions = await read_service({ tags: { $in: qCurrent.tags || [] } }, "tags")
     questions = questions.filter(q => String(q._id) !== String(qCurrent._id))
-
-
     //title אם יש 
-
     if (qCurrent?.title && questions.length) {
-
-      // questions = questions.filter(q => q.title?false:true)
       function getWords(str) {
         return str.split(/\s+/);
       }
@@ -56,25 +50,21 @@ export const relatedQues = async (qCurrent) => {
       res = countWordAppearancesInStrings(qCurrent.title, questions)
     }
     //title אם אין 
-    else if (!qCurrent.title) {
+    else if (!qCurrent.title && questions.length > 3) {
       let random = Math.round(Math.random() * questions.length)
-      let counts = 1
-      // TODO - fix its brake on question num : 66a11951fa2e12e9e83cce91 
       while (random >= questions.length - 3) {
-        counts++ 
         random = Math.round(Math.random() * questions.length)
-        if (counts > 10) break
       }
       res = questions.slice(random, random + 3)
-
-      // console.log(res.length);
     }
     // אם אין 3 שאלות
     if (res.length < 3) {
-      const tags = await readTags({ _id: { $in: qCurrent.tags } }, "children")
+      const tags = await readTags({ _id: { $in: qCurrent.tags } },"children")
       let childrens = []
-      tags.map(t => childrens.push(...t.children))
-      const q = await read({ tags: { $in: childrens } })
+      tags.map(t => childrens.push(...t.children))   
+      console.log(childrens);
+      const q = await read({ tags: { $in: childrens } },"tags")
+      // console.log(q);
       res = q.slice(0, 3)
     }
     return res
