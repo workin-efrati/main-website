@@ -1,26 +1,36 @@
 "use client";
 import { axiosReq } from "@/helpers/axiosReq";
-import { usePathname, useRouter, useSearchParams } from "next/navigation";
+import {
+  usePathname,
+  useRouter,
+  useSearchParams,
+  useParams,
+} from "next/navigation";
 import { Suspense, useCallback, useEffect, useState } from "react";
 import PaginationComponent from "../PaginationButtons/index.jsx";
 import Question from "../Question/index.jsx";
 import debounce from "@/helpers/debounce.js";
 import styles from "./style.module.scss";
 
-export const dynamic = 'force-dynamic'
-
+export const dynamic = "force-dynamic";
 
 const SearchQuestions = () => {
   const router = useRouter();
   const { replace } = useRouter();
   const searchParams = useSearchParams();
   const pathName = usePathname();
+  const { id: tagsParams = "" } = useParams();
+  console.log(tagsParams);
   /////////
   const [data, setData] = useState([]);
   const [dataLength, setDataLength] = useState(0);
   const [searchBy, setSearchBy] = useState(searchParams.get("search") || "");
-  const [pageLocation, setPageLocation] = useState(1);
-  const [pageLength, setPageLength] = useState(10);
+  const [pageLocation, setPageLocation] = useState(
+    Number(searchParams.get("pageLocation")) || 1
+  );
+  const [pageLength, setPageLength] = useState(
+    Number(searchParams.get("pageLength")) || 10
+  );
 
   const params = new URLSearchParams(searchParams);
   /////////
@@ -36,19 +46,19 @@ const SearchQuestions = () => {
 
   useEffect(() => {
     // if not page length or page location add on first load
-    fetchDataFromServer();
     const query = Object.fromEntries(params);
-
+    console.log(query);
     if (!query.pageLength || !query.pageLocation) {
       params.set("pageLocation", 1);
       params.set("pageLength", 10);
       replace(`${pathName}?${params}`);
     }
+    fetchDataFromServer();
 
     return () => {
       debouncedChangeHandler.cancel && debouncedChangeHandler.cancel();
     };
-  }, [pageLocation, searchBy, pageLocation]);
+  }, [pageLocation, searchBy, pageLength]);
 
   const handleChange = (event) => debouncedChangeHandler(event.target.value);
 
@@ -90,6 +100,11 @@ const SearchQuestions = () => {
     await changePageInServer(newLoc);
     replace(`${pathName}?${params}`);
   };
+  const changePageLength = async (newLength) => {
+    setPageLength(Number(newLength));
+    params.set("pageLength", newLength);
+    replace(`${pathName}?${params}`);
+  };
 
   return (
     <div className={styles.container}>
@@ -112,9 +127,24 @@ const SearchQuestions = () => {
       <PaginationComponent
         changePages={changePages}
         pageLocation={pageLocation}
-        resultsPerPage={10}
+        resultsPerPage={pageLength}
         totalResults={dataLength}
       />
+      <div>
+        <label htmlFor="valueSelect">Select a value: </label>
+        <select
+          id="valueSelect"
+          value={pageLength}
+          onChange={(e) => {
+            changePageLength(e.target.value);
+          }}
+        >
+          <option value={10}>10</option>
+          <option value={25}>25</option>
+          <option value={40}>40</option>
+          <option value={50}>50</option>
+        </select>
+      </div>
     </div>
   );
 };
