@@ -18,9 +18,10 @@ function SearchVideos() {
 
 
     return (<>
-        <div className={style.holdInput}>
-            <FaSearch className={style.searchIcon}/>
-            <input onChange={debouncedChangeHandler} type="text" />
+        <div  className={style.holdInput}>
+            <FaSearch
+             className={style.searchIcon}/>
+            <input className={style.input} placeholder={"חפש כאן..."} onChange={debouncedChangeHandler} type="text" />
         </div>
     </>)
 }

@@ -1,4 +1,4 @@
-import playlistModel from "../models/playlist.model"
+import playlistModel from "../models/playlist.model.js"
 
 export const create = (data) => playlistModel.create(data)
 export const read = (filter) => playlistModel.find(filter)
