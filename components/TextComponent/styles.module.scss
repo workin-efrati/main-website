@@ -1,6 +1,13 @@
+@import "../../app/vars.scss";
+
 .h1 {
-  font-size: 80px;
+  font-size: 4.5rem;
   font-weight: 700;
+
+  @media (width < $lg) {
+    font-size: 2.5rem;
+
+  }
 }
 
 .h2 {
@@ -23,29 +30,33 @@
 .p {
   font-size: 18px;
 }
+
 .span {
   font-size: 23px;
   font-weight: 700;
 }
 
-.bona{
+.bona {
   font-family: var(--font-bona);
 }
 
-.heebo{
+.heebo {
   font-family: var(--font-heebo);
 }
 
-.blue{
+.blue {
   color: var(--primary-blue);
 }
-.white{
+
+.white {
   color: var(--white);
 }
-.gray{
+
+.gray {
   color: var(--gray);
 }
-.lightBlue{
+
+.lightBlue {
   color: var(--light-blue);
 }
 

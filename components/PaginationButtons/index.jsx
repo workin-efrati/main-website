@@ -3,7 +3,6 @@ import styles from "./style.module.scss";
 const PaginationComponent = ({
   totalResults,
   resultsPerPage,
- 
   pageLocation,
   changePages,
 }) => {
@@ -47,13 +46,14 @@ const PaginationComponent = ({
       <button
         onClick={() => changePages(Number(pageLocation - 1))}
         disabled={pageLocation === 1}
+        className={styles.button}
       >
         {`>`}
       </button>
       {pageRange.map((v) => {
         return (
           <button
-            style={pageLocation === v ? { color: "black" } : { color: "red" }}
+            className={pageLocation === v ? styles.active : ''}
             key={v}
             onClick={() => changePages(Number(v))}
           >
@@ -64,6 +64,7 @@ const PaginationComponent = ({
       <button
         onClick={() => changePages(Number(pageLocation + 1))}
         disabled={pageLocation === totalPages}
+        className={styles.button}
       >
         {`<`}
       </button>

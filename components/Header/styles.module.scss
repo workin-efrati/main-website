@@ -47,7 +47,7 @@ header.headerMobile {
 }
 
 div.placeholder{
-    height: 12vh;
+    height: 10vh;
 
     @media (width > $lg) {
         height: 10vh;
@@ -68,7 +68,7 @@ div.placeholder{
         top: 0;
         padding: 0 0.6rem;
         align-items: center ;
-        height: 12vh;
+        height: 10vh;
         display: flex;
         z-index: 10;
         background-color: #ffffff;

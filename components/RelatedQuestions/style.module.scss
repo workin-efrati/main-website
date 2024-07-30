@@ -1,3 +1,5 @@
+@import '../../app/vars.scss';
+
 .title {
     width: 100%;
     height: 80px;
@@ -10,7 +12,7 @@
     background: linear-gradient(to right, #0677ddeb 0%, #045197d6 51%, #034077d9 80%);
     font-family: var(--font-bona);
     font-weight: 700;
-    font-size: 38px;
+    font-size: 2.5rem;
     margin-top: 2rem;
 }
 
@@ -26,20 +28,12 @@
 }
 
 .ques {
-    box-shadow: var(--box-shadow);
-    border-radius: 10px;
     width: 100%;
-    // height: 240px;
     max-width: 1200px;
-    background-color: white;
-    padding: 20px 5px;
     display: flex;
     gap: 20px;
     flex-direction: column;
-    background-color: white;
-    padding: 1rem;
-    
-
+    @extend .cardQuestion;
 }
 
 .titleQues {

@@ -11,6 +11,7 @@ import PaginationComponent from "../PaginationButtons/index.jsx";
 import Question from "../Question/index.jsx";
 import debounce from "@/helpers/debounce.js";
 import styles from "./style.module.scss";
+import { fetchReq } from "@/helpers/fetchReq.js";
 
 export const dynamic = "force-dynamic";
 
@@ -27,12 +28,10 @@ const SearchQuestions = () => {
   const [tagsIds, setTagsIds] = useState([]);
   const [dataLength, setDataLength] = useState(0);
   const [searchBy, setSearchBy] = useState(searchParams.get("search") || "");
-  const [pageLocation, setPageLocation] = useState(
-    Number(searchParams.get("pageLocation")) || 1
-  );
-  const [pageLength, setPageLength] = useState(
-    Number(searchParams.get("pageLength")) || 10
-  );
+  const [pageLocation, setPageLocation] = useState(Number(searchParams.get("pageLocation")) || 1);
+  const [pageLength, setPageLength] = useState(Number(searchParams.get("pageLength")) || 10);
+
+  const [isLoading, setIsLoading] = useState(false)
 
   const params = new URLSearchParams(searchParams);
 
@@ -44,13 +43,24 @@ const SearchQuestions = () => {
   }, []);
 
   const getAllTagsIds = async (id) => {
-    const allTags = await axiosReq({
-      url: `/tags/tagsWithChildren/${id}`,
-      isLocalServer: false,
-      method: "GET",
-    });
-    setTagsIds(allTags);
-    setIsThePageTags(true);
+    setIsLoading(true)
+    try {
+      const allTags = await fetchReq({
+        url: `tags/tagsWithChildren/${id}`,
+        isLocalServer: false,
+        method: "GET",
+        optionsNext: { next: { revalidate: 60 * 60 } }
+
+      });
+      setTagsIds(allTags);
+      setIsThePageTags(true);
+
+    } catch (error) {
+
+    }
+    // finally {
+    //   setIsLoading(true)
+    // }
   };
 
   const debouncedChangeHandler = useCallback(
@@ -80,6 +90,7 @@ const SearchQuestions = () => {
   const handleChange = (event) => debouncedChangeHandler(event.target.value);
 
   const fetchDataFromServer = async () => {
+    setIsLoading(true)
     const arrToSearch = searchBy.trim().split(" ");
     const queryObj = {
       queryFilterType: "$and",
@@ -112,14 +123,24 @@ const SearchQuestions = () => {
         ],
       });
 
-    const res = await axiosReq({
-      method: "POST",
-      url: "/genericQuery",
-      body: queryObj,
-      isLocalServer: false,
-    });
-    setData(res.res);
-    setDataLength(res.totalCount);
+    try {
+
+      const res = await fetchReq({
+        method: "POST",
+        url: "genericQuery",
+        body: queryObj,
+        isLocalServer: false,
+        optionsNext: { next: { revalidate: 60 } },
+
+      });
+      // await new Promise((resolve) => setTimeout(resolve, 5000));
+      setData(res.res);
+      setDataLength(res.totalCount);
+    } catch (error) {
+      // TODO
+    } finally {
+      setIsLoading(false)
+    }
   };
 
   const changePageInServer = async (pageLocation) =>
@@ -140,45 +161,44 @@ const SearchQuestions = () => {
   return (
     <div className={styles.container}>
       <input type="text" onChange={handleChange} defaultValue={searchBy} />
-      <div
-        className={styles.questionContainer}
-        style={{ display: "flex", flexDirection: "column" }}
-      >
-        {data.length > 0
+      <div className={styles.questionContainer}      >
+        {(!isLoading)
           ? data.map((v) => (
-              <Question
-                question={v.question}
-                key={v._id}
-                to={v._id}
-                answer={v.answer}
-              />
-            ))
+            <Question
+              question={v.question}
+              key={v._id}
+              to={v._id}
+              title={v.title}
+              answer={v.answer}
+            />
+          ))
           : Array.from({ length: pageLength })
-              .fill("9")
-              .map((v) => {
-                return <>{v}</>;
-              })}
+            .fill("9")
+            .map((v, i) => {
+              return <div className={styles.questionHolder} key={i}>
+                <div />
+                <div />
+              </div>;
+            })}
       </div>
-      <PaginationComponent
-        changePages={changePages}
-        pageLocation={pageLocation}
-        resultsPerPage={pageLength}
-        totalResults={dataLength}
-      />
-      <div>
-        <label htmlFor="valueSelect">Select a value: </label>
-        <select
-          id="valueSelect"
-          value={pageLength}
-          onChange={(e) => {
-            changePageLength(e.target.value);
-          }}
-        >
-          <option value={10}>10</option>
-          <option value={25}>25</option>
-          <option value={40}>40</option>
-          <option value={50}>50</option>
-        </select>
+
+      <div className={styles.paginationControls}>
+        <PaginationComponent
+          changePages={changePages}
+          pageLocation={pageLocation}
+          resultsPerPage={pageLength}
+          totalResults={dataLength}
+        />
+        <label >כמות תוצאות בדף
+          <select
+            value={pageLength}
+            onChange={(e) => {
+              changePageLength(e.target.value);
+            }}
+          >
+            {[10, 25, 40, 50].map((v, i) => <option key={v} value={v}>{v}</option>)}
+          </select>
+        </label>
       </div>
     </div>
   );

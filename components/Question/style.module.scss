@@ -1,9 +1,10 @@
+@import '../../app/vars.scss';
+
 .question {
-  background-color: gray;
-  border: 1px solid black;
-  display: flex;
-  flex-direction: column;
-  div {
-    display: flex;
+  @extend .cardQuestion;
+
+
+  p{
+    @include questionTxtShort(3 , .9rem);
   }
 }

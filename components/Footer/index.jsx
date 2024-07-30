@@ -41,7 +41,7 @@ export default function Footer() {
         </div>
       </nav>
       <p className={styles.rightsToUs}>
-        2024 תשפ"ד © כל הזכויות שמורות לסקיפ - בית תוכנה חכם
+        2024 תשפ&quot;ד © כל הזכויות שמורות לסקיפ - בית תוכנה חכם
         <br />
         עיצוב ופיתוח : Skip ltd
       </p>

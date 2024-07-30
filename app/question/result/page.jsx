@@ -26,9 +26,7 @@ const Page = () => {
             </div>
 
             <Suspense fallback={<div>Loading...</div>}>
-                <div className={styles.form}>
-                    <SearchQuestions />
-                </div>
+                <SearchQuestions />
             </Suspense>
         </div>
     )

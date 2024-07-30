@@ -1,11 +1,79 @@
+@import '../../app/vars.scss';
+
 .container {
+  width: min(100%, 1100px);
+  margin: 0 auto;
+  padding: 2rem 1rem;
+  display: flex;
+  gap: 2rem;
+  flex-direction: column;
+
+  &>input {
+    width: min(100%, 300px);
+    margin-bottom: 1rem;
+    padding: .4rem 1rem;
+    border-radius: 40px;
+    margin: 0 auto;
+    border: none;
+    outline: none;
+    box-shadow: var(--box-shadow);
+  }
+
   .questionContainer {
-    display: "flex";
-    flex-direction: "column";
-    gap: 4px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    grid-auto-rows: 120px;
+    gap: 1rem;
+    min-height: 50vh
+  }
+
+  .questionHolder {
+    @extend .cardQuestion;
+    height: 120px;
+    display: flex;
+    flex-direction: column;
+    gap: .4rem;
+    @extend .pulse;
+
+    div {
+      background-color: #f0f0f0;
+      border-radius: 1rem;
+
+      &:first-child {
+        flex: 1;
+      }
+
+      &:last-child {
+        flex: 3;
+      }
+
+
+    }
+
+
+
+
+
   }
 
   .paginationControls {
     display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: center;
+
+    label {
+      display: flex;
+      align-items: center;
+      gap: .5rem
+    }
+  }
+
+  @media (width < $md) {
+    .paginationControls {
+      justify-content: center;
+      gap: 1rem;
+      flex-direction: column;
+    }
   }
 }

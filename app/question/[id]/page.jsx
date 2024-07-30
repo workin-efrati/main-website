@@ -33,20 +33,18 @@ export default async function Question({ params: { id } }) {
   return (
     <>
       <div className={styles.header}>
-        <Text as={"h2"} fontStyle={"b"}>
-          {" "}{question.title}{" "}
+        <Text as={"h1"} fontStyle={"b"}>
+          {question.title || question.tags?.[0]?.name}
         </Text>
       </div>
       <FontSizeAdjuster>
         <div className={styles.container}>
           <div className={styles.question}>
             <div className={styles.questionHeader}>
-              <Text as={"h3"} fontStyle={"b"}>
-                {" "} שאלה{" "}
-              </Text>
+              <Text as={"h3"} fontStyle={"b"}>שאלה</Text>
             </div>
             <Text fontStyle={"b"} newClass={styles.textContainer}>
-              {" "} {question?.question}{" "}
+              {question?.question}
             </Text>
           </div>
           <div className={styles.tags}>
@@ -62,16 +60,14 @@ export default async function Question({ params: { id } }) {
           </div>
           <div className={styles.answer}>
             <div className={styles.answerHeader}>
-              <Text as={"h3"} fontStyle={"b"}>
-                {" "} תשובה{" "}
-              </Text>
+              <Text as={"h3"} fontStyle={"b"}>תשובה</Text>
             </div>
             <Text fontStyle={"b"} newClass={styles.textContainer}>
-              {" "} {question?.answer}{" "}
+              {question?.answer}
             </Text>
           </div>
           <div className={styles.links}>
-            {" "}<ShareLinks />{" "}
+            <ShareLinks />
           </div>
         </div>
       </FontSizeAdjuster>

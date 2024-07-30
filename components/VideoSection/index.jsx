@@ -17,7 +17,7 @@ export default function VideoSection() {
   useEffect(() => {
     let isLast = (window.innerWidth > 568 && (-1 * data.length) >= sliderPosition - 3) || (window.innerWidth < 568 && (-1 * data.length) >= sliderPosition - 1)
     setCantMoveRight(isLast)
-  }, [sliderPosition, loading])
+  }, [sliderPosition, loading, data.length])
 
   // const sliderRatio = typeof(window !== "undefined") ? (window.innerWidth > 568 ? 110 : 103) : 110
   let cantMoveLeft = sliderPosition == 0
