@@ -1,4 +1,4 @@
-import { read, readOne } from '@/server/controller/qa.controller.js'
+import { read, readOne, readWithOptions } from '@/server/controller/qa.controller.js'
 import { readTags } from '@/server/services/tag.service.js'
 
 
@@ -21,7 +21,7 @@ const read_service = async (filter, populate) => {
 export const relatedQues = async (qCurrent) => {
   try {
     let res = []
-    let questions = await read_service({ tags: { $in: qCurrent.tags || [] } }, "tags")
+    let questions = await readWithOptions({ tags: { $in: qCurrent.tags || [] } }, null, { path: 'tags', select: 'name' }, 'question answer tags img isSensitive')
     questions = questions.filter(q => String(q._id) !== String(qCurrent._id))
     //title אם יש 
     if (qCurrent?.title && questions.length) {
@@ -59,11 +59,11 @@ export const relatedQues = async (qCurrent) => {
     }
     // אם אין 3 שאלות
     if (res.length < 3) {
-      const tags = await readTags({ _id: { $in: qCurrent.tags } },"children")
+      const tags = await readTags({ _id: { $in: qCurrent.tags } }, "children")
       let childrens = []
-      tags.map(t => childrens.push(...t.children))   
+      tags.map(t => childrens.push(...t.children))
       console.log(childrens);
-      const q = await read({ tags: { $in: childrens } },"tags")
+      const q = await read({ tags: { $in: childrens } }, "tags")
       // console.log(q);
       res = q.slice(0, 3)
     }

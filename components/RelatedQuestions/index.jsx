@@ -1,6 +1,7 @@
 import { relatedQues } from "@/server/services/qa.service";
 import Link from "next/link";
 import styles from "./style.module.scss";
+import { create } from "@/server/controller/playlist.controller";
 
 export default async function RelatedQuestions({ ...q }) {
   const questions = await relatedQues(q) || [];
