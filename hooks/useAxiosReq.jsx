@@ -4,8 +4,6 @@ import { useEffect, useState } from 'react'
 import { axiosReq } from "@/helpers/axiosReq.js"
 
 export default function useAxiosReq({ method = "GET", url, body, isLocalServer }) {
-    console.log( url)
-    
     const [data, setData] = useState()
     // טעינה בעת המתנה למידע
     const [loading, setLoading] = useState(false)
