@@ -5,5 +5,5 @@ const playlistSchema = new mongoose.Schema({
     description: { type: String },
     list: [{ type: mongoose.Schema.Types.ObjectId, ref: "vod" }],
 })
-const playlistModel = mongoose.models["tag"] || mongoose.model("playlist", playlistSchema)
+const playlistModel = mongoose.models["playlist"] || mongoose.model("playlist", playlistSchema)
 export default playlistModel

@@ -27,7 +27,6 @@ export async function generateMetadata({ params: { id } }) {
 
 
 export default async function Question({ params: { id } }) {
-  console.log({id});
   await connect();
   const question = await readOneQaWithPopulateService({ _id: id }) || {};
 

@@ -7,7 +7,9 @@ import styles from "./page.module.scss"
 import Link from "next/link";
 import SearchFilter from "@/components/SearchFilter";
 import { connect } from "@/server/connect";
+
 export default function Home() {
+  // TODO - add links
   const homeNav = [
     { text: "שו”ת בהלכה", herf: "", },
     { text: "שו”ת אמונה", herf: "", },
@@ -20,7 +22,6 @@ export default function Home() {
 
   return (
     <main className={styles.main} >
-
       <div className={`${styles.section}`}>
         <div className={styles.logoTextContainer}>
           <h1 id="section1">לַמְּדֵנִי חֻקֶּךָ</h1>
