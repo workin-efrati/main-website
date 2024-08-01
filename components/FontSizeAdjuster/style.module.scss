@@ -2,6 +2,7 @@
 
 .textContainer {
     font-size: var(--font-size);
+ 
   }
 
 .icon {
@@ -22,15 +23,14 @@
   
   .icon.plus {
     left: 60px;
-    top: 50px; /* Adjust as needed */
+    top: 2rem; /* Adjust as needed */
 }
 
 .icon.minus {
     left: 10px; /* Adjust as needed */
-    top: 50px; /* Adjust as needed */
+    top: 2rem; /* Adjust as needed */
   }
   
   .container {
     position: relative;
-    padding-top: 40px; /* Adjust as needed to avoid overlap with icons */
   }

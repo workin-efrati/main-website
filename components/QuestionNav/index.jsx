@@ -4,10 +4,11 @@ import data from "./qData.json"
 import Image from 'next/image';
 import Link from 'next/link';
 import useAxiosReq from '@/hooks/useAxiosReq';
+import useFetchReq from '@/hooks/useFetchReq';
 
 export default function QuestionNav() {
     // TODO - handle loading and error
-    const { data: arr = [], error, loading } = useAxiosReq({ url: 'question/random', isLocalServer: true })
+    const { data: arr = [], error, loading } = useFetchReq({ url: 'question/random', isLocalServer: true, optionsNext: { next: { revalidate: 60 * 60 } } })
 
     return (
         <div className={styles.QuestionNav}>

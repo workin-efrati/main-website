@@ -5,9 +5,10 @@ import { create } from "@/server/controller/playlist.controller";
 
 export default async function RelatedQuestions({ ...q }) {
   const questions = await relatedQues(q) || [];
+  console.log({questions});
 
   return (
-    <>
+    <div className={styles.container}>
       <div className={styles.title}>שאלות קשורות</div>
       <div className={styles.holdQues}>
         {questions.map((q, i) => {
@@ -19,6 +20,6 @@ export default async function RelatedQuestions({ ...q }) {
           );
         })}
       </div>
-    </>
+    </div>
   );
 }

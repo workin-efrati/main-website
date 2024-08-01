@@ -3,7 +3,7 @@ import { useState } from 'react';
 import { FaSearchMinus, FaSearchPlus } from 'react-icons/fa';
 import styles from './style.module.scss';
 
-export const FontSizeAdjuster = ({ children }) => {
+export const FontSizeAdjuster = ({ children, className }) => {
     const [fontSize, setFontSize] = useState(16); 
 
     const increaseFontSize = () => setFontSize((prevSize) => (prevSize < 45 ? prevSize + 2 : prevSize)); 
@@ -18,7 +18,7 @@ export const FontSizeAdjuster = ({ children }) => {
             <div className={`${styles.icon} ${styles.plus}`} onClick={increaseFontSize} >
                 <FaSearchPlus />
             </div>
-            <div className={styles.textContainer}>
+            <div className={`${styles.textContainer} ${className}`}>
                 {children}
             </div>
         </div>

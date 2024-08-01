@@ -5,15 +5,19 @@
     height: 80px;
     display: flex;
     justify-content: center;
-    color: white;
     align-items: center;
-    background: -moz-linear-gradient(left, #0677DD 0%, #045197 51%, #034077 80%);
-    background: -webkit-linear-gradient(left, #0677DD 0%, #045197 51%, #034077 80%);
-    background: linear-gradient(to right, #0677ddeb 0%, #045197d6 51%, #034077d9 80%);
     font-family: var(--font-bona);
     font-weight: 700;
     font-size: 2.5rem;
-    margin-top: 2rem;
+    color: var(--light-blue);
+    
+    @media (width < 900px ) {
+        margin-top: 2rem;
+        background: -moz-linear-gradient(left, #0677DD 0%, #045197 51%, #034077 80%);
+        background: -webkit-linear-gradient(left, #0677DD 0%, #045197 51%, #034077 80%);
+        background: linear-gradient(to right, #0677ddeb 0%, #045197d6 51%, #034077d9 80%);
+        color: white;
+    }
 }
 
 .holdQues {
@@ -21,9 +25,9 @@
     display: flex;
     // align-items: center;
     gap: 20px;
-    flex-direction: row;
+    flex-direction: column;
     font-family: var(--font-bona);
-    width: min(100%, 900px);
+    // width: min(100%, 900px);
     margin: 0 auto;
 }
 
@@ -54,7 +58,7 @@
     display: -webkit-box;
     -webkit-line-clamp: 4;
     -webkit-box-orient: vertical;
-    color: var(--light-blue);
+    color: var(--txt-color);
     font-family: var(--font-heebo);
 }
 

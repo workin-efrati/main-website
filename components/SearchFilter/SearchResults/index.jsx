@@ -68,7 +68,7 @@ export default function SearchResults({ valueSearch, data, loading }) {
 
                 <summary className={styles.title}>
                   {(item.children?.length > 0) ? <IconsPM /> : <div className={styles.placeHolderIcon} />}
-                  <Link href={item._id}>{item.name}</Link>
+                  <Link href={`/category/${item._id}`}>{item.name}</Link>
                   {item.parentOrder?.length > 1 && <Parent item={item} />}
                 </summary>
 
