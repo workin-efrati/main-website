@@ -6,7 +6,7 @@ import useAxiosReq from '@/hooks/useAxiosReq';
 export default function EventNav({ }) {
   // TODO - handle loading and error
   const { data, error, loading } = useAxiosReq({ url: 'question/daily', isLocalServer: true })
-  console.log(data)
+  const nextHoliday = data?.upcomingHoliday?.[0]
   if (loading) return <div>Loading...</div>
   if (error) return <div>Error: {error.message}</div>
 
@@ -25,12 +25,12 @@ export default function EventNav({ }) {
     <>
       {!loading ?
         <div className={styles.EventNav}>
-          <h2>{`${data?.upcomingHoliday[0]?.name}`}</h2>
+          <h2>{`${nextHoliday?.name || ''}`}</h2>
           {/* <div className={styles.container}>
         {data().articles.map((a, i) => <ArticleContainer key={i} {...a} />)}
       </div> */}
           <div className={styles.container}>
-            {data?.upcomingHoliday[0]?.q?.map((a, i) => <ArticleContainer key={i} {...a} />)}
+            {nextHoliday?.q?.map?.((a, i) => <ArticleContainer key={i} {...a} />)}
           </div>
         </div> :
         <div>Loading...</div>}

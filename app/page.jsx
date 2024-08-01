@@ -8,7 +8,8 @@ import Link from "next/link";
 import SearchFilter from "@/components/SearchFilter";
 import { connect } from "@/server/connect";
 
-export default function Home() {
+export default async function Home() {
+  await connect()
   // TODO - add links
   const homeNav = [
     { text: "שו”ת בהלכה", herf: "", },
@@ -38,6 +39,7 @@ export default function Home() {
       <div id='section2' className={`${styles.section2}`}>
           <QuestionNav />
         <div className={styles.section2Container}>
+          
             <EventNav />
             {/* <EventNav /> */}
         </div>
