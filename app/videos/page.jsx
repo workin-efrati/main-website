@@ -4,17 +4,18 @@ import { readVideos } from "@/server/services/vod.service";
 import Image from "next/image";
 import Link from "next/link";
 import style from "./style.module.scss";
-import { createPlaylist } from "@/server/services/playlist.service";
-
-async function page({ searchParams: { search } }) {
+import {  clearYoutube, createPlaylist,editPlaylist, readPlaylist} from "@/server/services/playlist.service";
+import FilterVideos from "@/components/FilterVideos";
+async function page({ searchParams: { search ,filter }}) {
   await connect();
-  const data = await readVideos(search);
+  const data = await readPlaylist({ title: filter },search, "list");
   return (
     <>
       <div className={style.page}>
-        <SearchVideos />
+        <SearchVideos filter={filter} />
+        <FilterVideos search={search}/>
         <div className={style.holdVideos}>
-          {data?.map((v, i) => (
+          {data?.list?.map((v, i) => (
             <Link key={v._id} className={style.card} href={`/videos/${v._id}`}>
               <Image
                 className={style.img}

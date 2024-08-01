@@ -7,6 +7,8 @@ import Text from '@/components/TextComponent';
 import { connect } from '@/server/connect';
 import { readOneVideo, readVideos } from '@/server/services/vod.service';
 import Link from 'next/link';
+import CarouselVideos from '@/components/CarouselVideos';
+import { readPlaylistByIdVideo } from '@/server/services/playlist.service';
 
 export async function generateStaticParams() {
     await connect()
@@ -27,16 +29,17 @@ export async function generateMetadata({ params : {id} }) {
 const Video = async ({ params: { id } }) => {
     await connect()
     const data = await readOneVideo({ _id: id })
+    const playlist = await readPlaylistByIdVideo(id)
     const { title, description, link, img } = data
 
     return (
         <div className={styles.container}>
             <div className={styles.title}>
-                <Image src={img} alt="dssdf"
+                {/* <Image src={img} alt="dssdf"
                     fill
                     sizes="100vw"
                     className={styles.backImg}
-                />
+                /> */}
                 <Text newClass={styles.j} as="h2" textColor="white" fontStyle="b">{title}</Text>
             </div>
             <div className={styles.iframe}>
@@ -53,6 +56,7 @@ const Video = async ({ params: { id } }) => {
             </div>
             <ButtonFullScreen />
             <Link className={styles.btnBackToVideos} href={'/videos'}>חזור לתפריט</Link>
+            <CarouselVideos videos={playlist?.list}/>
         </div>
     )
 }
