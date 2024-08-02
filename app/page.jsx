@@ -7,45 +7,55 @@ import styles from "./page.module.scss"
 import Link from "next/link";
 import SearchFilter from "@/components/SearchFilter";
 import { connect } from "@/server/connect";
+import Image from "next/image";
+import { getTagsWithNoParent } from "@/server/services/tag.service";
 
 export default async function Home() {
   await connect()
+  const tags = (await getTagsWithNoParent() || [])
+  console.table( tags );
   // TODO - add links
-  const homeNav = [
-    { text: "שו”ת בהלכה", herf: "", },
-    { text: "שו”ת אמונה", herf: "", },
-    { text: "שו”ת זוגיות", herf: "", },
-    { text: "שו”ת חינוך", herf: "", },
-    { text: "פרשות שבוע", herf: "", },
-    { text: "שו”ת בהלכה", herf: "", },
-
-  ]
+  // const homeNav = [
+  //   { text: "שו”ת בהלכה", herf: "", },
+  //   { text: "שו”ת אמונה", herf: "", },
+  //   { text: "שו”ת זוגיות", herf: "", },
+  //   { text: "שו”ת חינוך", herf: "", },
+  //   { text: "פרשות שבוע", herf: "", },
+  //   { text: "שו”ת בהלכה", herf: "", },
+  // ]
 
   return (
     <main className={styles.main} >
-      <div className={`${styles.section}`}>
+      <section className={`${styles.section}`}>
+        <Image src={'/images/backgrounds/main-background.png'} fill alt='hero' />
         <div className={styles.logoTextContainer}>
           <h1 id="section1">לַמְּדֵנִי חֻקֶּךָ</h1>
         </div>
         <div className={styles.inputContainer}>
-          <div className={styles.input}><SearchFilter/></div>
+          <div className={styles.input}><SearchFilter /></div>
         </div>
-        <div className={styles.homeNavContainer}>
+        {/* <div className={styles.homeNavContainer}>
           {homeNav.map((nav, i) => <Link key={`${nav.text} ${i}`} className={styles.nav} href={nav.herf}>{nav.text} </Link>)}
-        </div>
+        </div> */}
         <div className={styles.bgCover}></div>
         <a className={styles.goToWhatsApp} href="">הצטרף אלינו לקבוצת הוואצפ <FaWhatsapp /></a>
-      </div>
-      <div id='section2' className={`${styles.section2}`}>
-          <QuestionNav />
+      </section>
+
+      <section className={styles.tags}>
+        {tags.map(t => <Link key={t._id} href={`/category/${t._id}`}>
+          {t.name}
+        </Link>)}
+      </section>
+
+      <section id='section2' className={`${styles.section2}`}>
+        <QuestionNav />
         <div className={styles.section2Container}>
-          
-            <EventNav />
-            {/* <EventNav /> */}
+          <EventNav />
+          {/* <EventNav /> */}
         </div>
-      </div>
+      </section>
       <VideoSection />
-      <DailyHalacha/>
+      <DailyHalacha />
     </main>
 
   );

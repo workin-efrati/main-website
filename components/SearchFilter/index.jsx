@@ -12,7 +12,7 @@ export default function SearchFilter({ type }) {
 
 
   // const { data, loading, error } = useAxiosReq({ url: '/category' })
-  const { data, loading, error } = useFetchReq({ url: '/category' ,optionsNext : { cache: 'force-cache' }})
+  const { data, loading, error } = useFetchReq({ url: 'category' ,optionsNext : { cache: 'force-cache' }})
 
   const router = useRouter()
   const [typeInput, setTypeInput] = useState(false)

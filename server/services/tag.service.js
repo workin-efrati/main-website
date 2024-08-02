@@ -1,4 +1,4 @@
-import { findById, read, readOne, specialRead } from '@/server/controller/tags.controller.js';
+import { read, readOne, specialRead } from '@/server/controller/tags.controller.js';
 import tagsModel from "../models/tags.model";
 
 const populateChildren = async (tag, depth = 0, maxDepth = 4) => {
@@ -32,12 +32,6 @@ export const getAllTagsService = async (maxDepth = 4) => {
 
 
 
-export const readOneService = (filter) => {
-    const categoryObject = readOne(filter);
-    return categoryObject;
-}
-
-
 export const getAllTagsService2 = async () => {
     try {
         const allTags = await tagsModel.find();
@@ -48,9 +42,34 @@ export const getAllTagsService2 = async () => {
         console.log(err);
     }
 }
+
+export const readTags = async (filter, populate, select) => {
+    const res = await specialRead(filter, populate, select)
+    return res
+}
+
+
+
+export const readOneService = (filter) => {
+    const categoryObject = readOne(filter);
+    return categoryObject;
+};
+
+export const getTagsWithNoParent = async () => {
+    const tags = await read({
+        isActive: true,
+        $or: [
+            { parent: { $exists: false } },
+            { parent: null }
+        ]
+    });
+    return tags
+}
+
+
 export const familyOfCategoryService = async (filter) => {
     try {
-        const categoryObject = await readOne(filter);
+        const categoryObject = await tagsModel.findOne(filter);
         if (!categoryObject) throw new Error("Category not found");
 
         // Function to get all parents
@@ -59,9 +78,9 @@ export const familyOfCategoryService = async (filter) => {
             let currentParent = tag.parent;
 
             while (currentParent) {
-                const parentObject = await findById(currentParent);
+                const parentObject = await tagsModel.findById(currentParent);
                 if (!parentObject) break;
-                parents.push({ name: parentObject.name, _id: parentObject._id });
+                parents.push(parentObject.name);
                 currentParent = parentObject.parent;
             }
 
@@ -75,10 +94,10 @@ export const familyOfCategoryService = async (filter) => {
 
             while (stack.length) {
                 const childId = stack.pop();
-                const childObject = await findById(childId);
+                const childObject = await tagsModel.findById(childId);
                 if (childObject) {
-                    children.push({ name: childObject.name, _id: childObject._id });
-                    // stack.push(...childObject.children); // כדי להביא גם את הנכדים - כרגע לא נצרך!!
+                    children.push(childObject.name);
+                    stack.push(...childObject.children);
                 }
             }
 
@@ -88,19 +107,66 @@ export const familyOfCategoryService = async (filter) => {
         const parents = await getParents(categoryObject);
         const children = await getChildren(categoryObject);
 
-        return ({
+        console.log({ parents }, "-----------------------------------");
+        return {
             categoryObject,
             parents,
             children,
-        });
+        };
     } catch (error) {
         console.error(error);
         throw new Error("Error fetching category family");
     }
 };
-export const readTags = async (filter,populate,select) => {
-    const res = await specialRead(filter,populate,select)
-    return res
-}
 
 
+// export const familyOfCategoryService = async (filter) => {
+//     try {
+//         const categoryObject = await readOne(filter);
+//         if (!categoryObject) throw new Error("Category not found");
+
+//         // Function to get all parents
+//         const getParents = async (tag) => {
+//             const parents = [];
+//             let currentParent = tag.parent;
+
+//             while (currentParent) {
+//                 const parentObject = await findById(currentParent);
+//                 if (!parentObject) break;
+//                 parents.push({ name: parentObject.name, _id: parentObject._id });
+//                 currentParent = parentObject.parent;
+//             }
+
+//             return parents;
+//         };
+
+//         // Function to get all children and grandchildren recursively
+//         const getChildren = async (tag) => {
+//             const children = [];
+//             const stack = [...tag.children];
+
+//             while (stack.length) {
+//                 const childId = stack.pop();
+//                 const childObject = await findById(childId);
+//                 if (childObject) {
+//                     children.push({ name: childObject.name, _id: childObject._id });
+//                     // stack.push(...childObject.children); // כדי להביא גם את הנכדים - כרגע לא נצרך!!
+//                 }
+//             }
+
+//             return children;
+//         };
+
+//         const parents = await getParents(categoryObject);
+//         const children = await getChildren(categoryObject);
+
+//         return ({
+//             categoryObject,
+//             parents,
+//             children,
+//         });
+//     } catch (error) {
+//         console.error(error);
+//         throw new Error("Error fetching category family");
+//     }
+// };

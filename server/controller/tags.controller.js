@@ -3,7 +3,7 @@ import tagsModel from "../models/tags.model.js";
 // CRUD
 export const create = (data) => tagsModel.create(data);
 
-export const read = (filter) => tagsModel.find(filter);
+export const read = (filter) => tagsModel.find(filter).lean();
 export const specialRead = (filter,populate,select) => tagsModel.find(filter).populate(populate).select(select)
 
 

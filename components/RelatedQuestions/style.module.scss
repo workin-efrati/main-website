@@ -62,9 +62,22 @@
     font-family: var(--font-heebo);
 }
 
+.line{
+    width: 70%;
+    height: 1.5px;
+    background: var(--blue-gradient);
+    margin: 0 auto;
+}
+
+
 @media (width < 900px) {
     .holdQues {
         flex-direction: column;
         align-items: center;
     }
+    
+    .line{
+        display: none;
+    }
 }
+

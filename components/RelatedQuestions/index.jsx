@@ -2,6 +2,7 @@ import { relatedQues } from "@/server/services/qa.service";
 import Link from "next/link";
 import styles from "./style.module.scss";
 import { create } from "@/server/controller/playlist.controller";
+import Text from "../TextComponent";
 
 export default async function RelatedQuestions({ ...q }) {
   const questions = await relatedQues(q) || [];
@@ -9,7 +10,8 @@ export default async function RelatedQuestions({ ...q }) {
 
   return (
     <div className={styles.container}>
-      <div className={styles.title}>שאלות קשורות</div>
+      <Text as='h3' newClass={styles.title}>שאלות קשורות</Text>
+      <div className={styles.line} />
       <div className={styles.holdQues}>
         {questions.map((q, i) => {
           return (

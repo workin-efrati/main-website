@@ -29,7 +29,7 @@ export async function generateMetadata({ params: { id } }) {
 export default async function Question({ params: { id } }) {
   await connect();
   const question = await readOneQaWithPopulateService({ _id: id }) || {};
-  await new Promise(resolve => setTimeout(resolve, 1000 * 10))
+  // await new Promise(resolve => setTimeout(resolve, 3000 * 10))
 
   return (
     <>
@@ -38,7 +38,8 @@ export default async function Question({ params: { id } }) {
           {question.title || question.tags?.[0]?.name}
         </Text>
       </div>
-      <FontSizeAdjuster className={styles.grid}>
+      <main className={styles.grid}>
+      <FontSizeAdjuster >
         <div className={styles.container}>
           <div className={styles.question}>
             <div className={styles.questionHeader}>
@@ -57,7 +58,7 @@ export default async function Question({ params: { id } }) {
                 path={`/category/${tag._id.toString()}`}
               />
             ))}
-            <div className={styles.line}></div>
+            <div className={styles.line}/>
           </div>
           <div className={styles.answer}>
             <div className={styles.answerHeader}>
@@ -71,8 +72,11 @@ export default async function Question({ params: { id } }) {
             <ShareLinks />
           </div>
         </div>
-        <RelatedQuestions {...question} />
       </FontSizeAdjuster>
+        <article>
+          <RelatedQuestions {...question} />
+        </article>
+      </main>
     </>
   );
 }
