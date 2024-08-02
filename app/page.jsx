@@ -13,7 +13,6 @@ import { getTagsWithNoParent } from "@/server/services/tag.service";
 export default async function Home() {
   await connect()
   const tags = (await getTagsWithNoParent() || [])
-  console.table( tags );
   // TODO - add links
   // const homeNav = [
   //   { text: "שו”ת בהלכה", herf: "", },
@@ -42,9 +41,10 @@ export default async function Home() {
       </section>
 
       <section className={styles.tags}>
-        {tags.map(t => <Link key={t._id} href={`/category/${t._id}`}>
-          {t.name}
-        </Link>)}
+          {tags.map(t => <Link key={t._id} href={`/category/${t._id}`}>
+            <Image src={t?.topicImages?.[0] || '/images/boy.png'} alt={t.name} width={100} height={100} />
+            <p> {t.name}</p>
+          </Link>)}
       </section>
 
       <section id='section2' className={`${styles.section2}`}>

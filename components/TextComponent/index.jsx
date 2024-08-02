@@ -8,7 +8,7 @@ const Text = ({ as: Component = 'p', newClass = '', fontStyle, textColor, childr
   const classFont = fontStyle === 'b' ? styles.bona : fontStyle === 'h' ? styles.heebo : ''
   const className = `${styles[Component]} ${newClass} ${classFont} ${textColor ? styles[textColor] : ''}`
   return (
-    <Component className={className}{...props}    >
+    <Component className={className} {...props}    >
       {children}
     </Component>
   );

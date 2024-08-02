@@ -12,6 +12,7 @@ import Image from 'next/image';
 import { navData } from './mobileNavData';
 import Link from 'next/link';
 import SearchFilter from '../SearchFilter';
+
 export default function HeaderMobile() {
     const [menu, setMenu] = useState(false)
 
