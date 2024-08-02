@@ -5,7 +5,8 @@ const nextConfig = {
     remotePatterns: [
       { hostname: 's3-alpha-sig.figma.com' },
       { hostname: 'www.kipa.co.il' },
-      { hostname: "i.ytimg.com" }
+      { hostname: "i.ytimg.com" },
+      { hostname: "mobile.srugim.co.il" },
     ],
   },
   staticPageGenerationTimeout: 600

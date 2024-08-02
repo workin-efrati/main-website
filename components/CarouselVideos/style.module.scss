@@ -1,19 +1,10 @@
 .holdVideos {
     width: 100%;
     display: flex;
-    background-color: rgb(252, 213, 213);
     overflow-x: auto;
-    // align-items: center;
-    // justify-content: center;
-    // padding: 10px;
 }
 
 .image {
-    // flex-shrink: 0;
-    // border-radius: 10px;
-    // height: 70%;
-    // width: 100%;
-    // aspect-ratio: 4/3;
     height: 70%;
     object-fit: cover;
     width: 100%;
@@ -30,7 +21,6 @@
 .holdCard {
     padding: 10px;
     flex-shrink: 0;
-
     a {
         padding: 10px;
         display: block;
@@ -38,6 +28,10 @@
         border-radius: 10px;
         height: 300px;
         width: 400px;
+        &:hover{
+            box-shadow: var(--box-shadow);
+            scale: 1.05;
+        }
     }
 }
 

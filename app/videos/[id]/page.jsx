@@ -6,6 +6,9 @@ import Image from 'next/image';
 import Text from '@/components/TextComponent';
 import { connect } from '@/server/connect';
 import { readOneVideo, readVideos } from '@/server/services/vod.service';
+import Link from 'next/link';
+import CarouselVideos from '@/components/CarouselVideos';
+import { readPlaylistByIdVideo } from '@/server/services/playlist.service';
 
 export async function generateStaticParams() {
     await connect()
@@ -26,31 +29,34 @@ export async function generateMetadata({ params : {id} }) {
 const Video = async ({ params: { id } }) => {
     await connect()
     const data = await readOneVideo({ _id: id })
+    const playlist = await readPlaylistByIdVideo(id)
     const { title, description, link, img } = data
 
     return (
         <div className={styles.container}>
             <div className={styles.title}>
-                <Image src={img} alt="dssdf"
+                {/* <Image src={img} alt="dssdf"
                     fill
                     sizes="100vw"
                     className={styles.backImg}
-                />
-                <Text newClass={styles.j} as="h1" textColor="white" fontStyle="b">{title}</Text>
+                /> */}
+                <Text newClass={styles.j} as="h2" textColor="white" fontStyle="b">{title}</Text>
             </div>
             <div className={styles.iframe}>
-                <iframe width="100%"
+                <iframe width="100%" 
                     height="100%"
                     src={`https://www.youtube.com/embed/${link.replace("/watch?v=", '')}`}
                     title={description}
                     frameBorder="0"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                     referrerPolicy="strict-origin-when-cross-origin"
-                    allowFullScreen>
-
+                    allowFullScreen
+                    >
                 </iframe>
             </div>
             <ButtonFullScreen />
+            <Link className={styles.btnBackToVideos} href={'/videos'}>חזור לתפריט</Link>
+            <CarouselVideos videos={playlist?.list}/>
         </div>
     )
 }
