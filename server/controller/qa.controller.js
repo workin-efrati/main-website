@@ -12,3 +12,14 @@ export const readOne = (filter, populate) => QAModel.findOne(filter).populate(po
 export const update = (id, newData) => QAModel.findByIdAndUpdate(id, newData);
 
 export const del = (id) => QAModel.findByIdAndUpdate(id, { isActive: false });
+
+export const getRandom = async (limit = 3, filter = { isActive: true }, populate = '') => {
+   const ques = await QAModel.aggregate([
+      { $match: filter },
+      { $sample: { size: limit } }
+   ])
+   if (populate) return await QAModel.populate(ques, populate);
+   else return ques
+};
+
+

@@ -66,7 +66,9 @@ const SearchQuestions = () => {
   const debouncedChangeHandler = useCallback(
     debounce((newValue) => {
       params.set("search", newValue.trim());
+      params.set("pageLocation", 1);
       setSearchBy(newValue);
+      setPageLocation(1);
       replace(`${pathName}?${params}`);
     }, 1000),
     [router, pathName, pageLocation, pageLength, searchBy, params]
@@ -87,7 +89,10 @@ const SearchQuestions = () => {
     };
   }, [pageLocation, searchBy, pageLength, isThePageTags]);
 
-  const handleChange = (event) => debouncedChangeHandler(event.target.value);
+  const handleChange = (event) => {
+    debouncedChangeHandler(event.target.value)
+    
+  };
 
   const fetchDataFromServer = async () => {
     setIsLoading(true)
@@ -161,6 +166,10 @@ const SearchQuestions = () => {
   return (
     <div className={styles.container}>
       <input type="text" onChange={handleChange} defaultValue={searchBy} />
+      <p className={`${styles.resultsCount} ${isLoading ? styles.loading : ""}`}>
+        {(pageLocation - 1) * pageLength} - { ((pageLocation - 1) * pageLength) + pageLength} רשומות
+        מתוך {dataLength}
+      </p>
       <div className={styles.questionContainer}      >
         {(!isLoading)
           ? data.map((v) => (

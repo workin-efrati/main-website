@@ -1,8 +1,10 @@
-import { readWithOptions } from "../controller/qa.controller";
+import { getRandom, readWithOptions } from "../controller/qa.controller";
 
 
-export const getRandom3 = async (limit = 3) => {
-   const questions = await readWithOptions({ isActive: true }, limit, ['tags'], '');
+export const getRandomQuestions = async (limit = 3) => {
+   const questions = await getRandom(limit, {
+      isActive: true,
+      $or: [{ isSensitive: false }, { isSensitive: { $exists: false } }]
+   }, 'tags');
    return questions;
-
 }

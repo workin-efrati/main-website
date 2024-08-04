@@ -6,6 +6,8 @@
   gap: 20px;
   max-width: 1300px;
   margin: 0 auto;
+  transition: all 0.2s ease-in-out;
+
   & :not(:hover) {
    transition: all ease-in-out 0.2s;
   }
@@ -14,14 +16,16 @@
     scale: 1.05;
     transition: all 0.2s ease-in-out;
 }
-.holdVideos:hover > :not(:hover){
+
+.holdVideos:has( a:hover) > a:not(:hover){
     filter:grayscale(100%);
     // filter:blur(5px);
 }
 
 .card {
   box-shadow: var(--box-shadow);
-  height: 160px;
+  // height: 160px;
+  aspect-ratio: 16 / 9;
   border-radius: 10px;
   overflow: hidden;
   position: relative;

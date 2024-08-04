@@ -1,18 +1,18 @@
 'use client'
-import styles from './style.module.scss'
-import { useParams, usePathname, useRouter } from "next/navigation";
-import React, { useEffect } from "react";
-export default function FilterVideos({search}) {
+import { useRouter } from "next/navigation";
+import { useEffect } from "react";
+import styles from './style.module.scss';
+export default function FilterVideos({ search }) {
   const router = useRouter()
-  useEffect(()=>{
+  useEffect(() => {
     router.push(`/videos`)
-  },[])
-   const handleFilter = (e)=>{
+  }, [])
+  const handleFilter = (e) => {
     if (!search) search = ""
-router.push(`/videos/?filter=${e.target.value}&search=${search}`)
-   }
+    router.push(`/videos/?filter=${e.target.value}&search=${search}`)
+  }
   return (
-    <div>
+    <div className={styles.holder}>
       <select className={styles.select} name="" id="" onChange={handleFilter}>
         <option value="כל השיעורים">הכל</option>
         <option value="פרשת שבוע">פרשת שבוע</option>

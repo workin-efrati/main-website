@@ -1,12 +1,17 @@
 import { connect } from "@/server/connect";
-import { getRandom3 } from "@/server/services/question.service";
+import { getRandomQuestions } from "@/server/services/question.service";
 import { NextResponse } from "next/server";
 
 export const GET = async (req) => {
    try {
-      await connect();
-       const tags = await getRandom3()
-       return NextResponse.json(tags);
+       await connect();
+       
+       const url = new URL(req.url);
+       const searchParams = new URLSearchParams(url.search);
+       const numberOfQuestions = parseInt(searchParams.get('limit')) || 3;
+
+       const questions = await getRandomQuestions(numberOfQuestions)
+       return NextResponse.json(questions);
    }
    catch (error) {
        console.error("Error fetching questions: ", error);

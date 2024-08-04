@@ -49,11 +49,6 @@
 
 
     }
-
-
-
-
-
   }
 
   .paginationControls {
@@ -75,5 +70,21 @@
       gap: 1rem;
       flex-direction: column;
     }
+  }
+}
+
+
+.resultsCount {
+  color: var(--txt-color);
+  font-weight: 700;
+  font-size: 1.2rem;
+
+
+  &.loading {
+    background-color: var(--txt-color);
+    height: 1.9rem;
+    @extend .pulse;
+    border-radius: .8rem;
+    width: 200px;
   }
 }

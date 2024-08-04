@@ -1,4 +1,13 @@
+.holder{
+    padding: 0 1rem;
+}
+
 .select{
-    color:var(--gray) ;
-    background-color:var(--primary-blue) ;
+    color: var(--txt-color) ;
+    // background-color:var(--primary-blue) ;
+    padding: .3rem .5rem;
+    outline: none;
+    box-shadow: var(--box-shadow);
+    border-radius: 5px;
+    border: 2px solid var(--gray);
 }

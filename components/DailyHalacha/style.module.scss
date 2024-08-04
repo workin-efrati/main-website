@@ -1,46 +1,76 @@
-.DailyHalacha{
+@import '../../app/vars.scss';
+
+.DailyHalacha {
     padding: 3rem 0;
     width: 100%;
     display: flex;
     flex-direction: column;
     gap: .4rem;
-    h2 , h3 , h4 , p{
+
+    h2,
+    h3,
+    h4,
+    p {
         width: 100%;
         font-family: var(--font-bona);
         color: #034077;
     }
-    h2{
+
+    h2 {
         text-align: center;
         font-size: 1.5em;
-        
+
     }
-    h3{
+
+    h3 {
         text-align: center;
         font-size: 1.4em;
 
     }
-    .containerQAndA{
+
+    .containerQAndA {
         width: 100%;
         display: flex;
         justify-content: space-evenly;
         flex-wrap: wrap;
         padding: .6rem;
-        h4{
+
+        h4 {
             padding: 6px 0;
             font-size: 1.2em;
         }
-        .sectionContainer{
+
+        .sectionContainer {
             width: 100%;
             max-width: 500px;
             padding: .6rem;
-            p{
-                white-space: pre-line; 
+
+            p {
+                white-space: pre-line;
                 font-size: 1rem;
                 line-height: 1.5;
                 font-family: var(--font-bona);
                 color: #034077;
-                
+
             }
         }
     }
+}
+
+p.loading {
+    background-color: var(--txt-color);
+    height: 300px;
+    border-radius: 1rem;
+}
+
+h3.loading {
+    height: 1.4rem;
+    width: 300px;
+    border-radius: 1rem;
+    background-color: var(--primary-blue);
+    margin: 0 auto;
+}
+
+.loading {
+    @extend .pulse
 }
