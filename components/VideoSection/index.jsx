@@ -1,18 +1,20 @@
 "use client"
 
-import useAxiosReq from "@/hooks/useAxiosReq";
+import useFetchReq from "@/hooks/useFetchReq";
 import Image from 'next/image';
 import Link from "next/link";
 import { useEffect, useState } from "react";
 import { MdArrowBackIosNew, MdArrowForwardIos } from "react-icons/md";
 import styles from './style.module.scss';
-import useFetchReq from "@/hooks/useFetchReq";
 
 export default function VideoSection() {
   const [sliderPosition, setSliderPosition] = useState(0)
   const [cantMoveRight, setCantMoveRight] = useState(false)
   // TODO - handle loading and error
-  const { data = [], error, loading } = useFetchReq({ url: 'video/random', isLocalServer: true, optionsNext: { next: { revalidate: 60 * 60 } } })
+  const { data = [], error, loading } = useFetchReq({
+    url: 'video/random', isLocalServer: true,
+    optionsNext: { next: { revalidate: 60 * 60 } }
+  })
 
 
   useEffect(() => {

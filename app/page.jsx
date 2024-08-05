@@ -28,6 +28,7 @@ export default async function Home() {
       <section className={`${styles.section}`}>
         <Image src={'/images/backgrounds/main-background.png'} fill alt='hero' />
         <div className={styles.logoTextContainer}>
+          <p>בְּלִבִּי צָפַנְתִּי אִמְרָתֶךָ לְמַעַן לֹא אֶחֱטָא לָךְ בָּרוּךְ אַתָּה ד'</p>
           <h1 id="section1">לַמְּדֵנִי חֻקֶּךָ</h1>
         </div>
         <div className={styles.inputContainer}>

@@ -20,10 +20,10 @@ export default function HeaderMobile() {
     return (
         <>
             <header id='header' className={styles.headerMobile}>
-                <div className={styles.imgAndTitleContainer}>
+                <Link href={"/"} className={styles.imgAndTitleContainer}>
                     <Image width={100} height={100} src={logo} alt="logo" />
-                    <h1>לַמְּדֵנִי חֻקֶּךָ</h1>
-                </div>
+                    <h2>לַמְּדֵנִי חֻקֶּךָ</h2>
+                </Link>
                 <button className={styles.openMenu} onClick={() => { setMenu(true) }}><MdMenu /></button>
                 <div className={menu ? styles.menuCoverOpen : styles.menuCoverClose}>
                     <button className={styles.btnCloseMenu} onClick={() => { setMenu(false) }}><IoClose /></button>

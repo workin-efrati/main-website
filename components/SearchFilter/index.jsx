@@ -12,7 +12,7 @@ export default function SearchFilter({ type }) {
 
 
   // const { data, loading, error } = useAxiosReq({ url: '/category' })
-  const { data, loading, error } = useFetchReq({ url: 'category' ,optionsNext : { cache: 'force-cache' }})
+  const { data, loading, error } = useFetchReq({ url: 'category', optionsNext: { cache: 'force-cache' } })
 
   const router = useRouter()
   const [typeInput, setTypeInput] = useState(false)
@@ -21,10 +21,7 @@ export default function SearchFilter({ type }) {
   const [valueSearch, setValueSearch] = useState('')
 
   useEffect(() => {
-    if (typeInput === 'נושאים')
-      setIsSearchSubject(true)
-    else
-      setIsSearchSubject(false)
+    setIsSearchSubject(typeInput === 'נושאים')
   }, [typeInput]);
 
   let classNameIcon = !isSearch ? 'searchIcon' : 'searchButton';
@@ -35,28 +32,30 @@ export default function SearchFilter({ type }) {
     else if (typeInput === 'נושאים') setValueSearch(value)
   }
 
-  const handleClick = () => {
-    if (typeInput === 'חיפוש') null
-    // router.push(`/result?search=${isSearch}`)
+  const handleSubmit = (e) => {
+    e.preventDefault()
+    console.log('search');
+    if (typeInput === 'חיפוש')
+      router.push(`/question/result?search=${isSearch}`)
   }
 
 
   return (<>
-   {typeInput && <div className={styles.preventInput} onClick={() => setTypeInput(false)} />}
+    {typeInput && <div className={styles.preventInput} onClick={() => setTypeInput(false)} />}
     <div className={styles.searchAndResultContainer} onClick={(e) => e.preventDefault}>
-      <div className={`${styles.container} ${type === "dark" ? styles.containerDark : ""}`}>
+      <form onSubmit={handleSubmit} className={`${styles.container} ${type === "dark" ? styles.containerDark : ""}`}>
         {(!typeInput) ?
           (<div className={styles.buttons}>
-            <button className={styles.subjectSearch} onClick={() => setTypeInput("נושאים")}>
+            <button type='button' className={styles.subjectSearch} onClick={() => setTypeInput("נושאים")}>
               סינון לפי נושא
             </button>
             <div className={`${styles.line} ${styles[type || '']}`} />
-            <button className={styles.freeSearch} onClick={() => setTypeInput("חיפוש")}>
+            <button type='button' className={styles.freeSearch} onClick={() => setTypeInput("חיפוש")}>
               טקסט חופשי
             </button>
           </div>) :
           (<div className={styles.search}>
-            <button className={styles.subjectSearch} >
+            <button type='button' className={styles.subjectSearch} >
               {typeInput}
             </button>
             <div className={styles.line} />
@@ -71,11 +70,9 @@ export default function SearchFilter({ type }) {
           </div>)
         }
 
-        <div className={`${styles[classNameIcon]}`} onClick={handleClick}>
-          <FaSearch />
-        </div>
+        <button type='submit' className={`${styles[classNameIcon]}`} ><FaSearch /></button>
 
-      </div>
+      </form>
       {isSearchSubject && <SearchResults data={data} loading={loading} valueSearch={valueSearch} />}
     </div>
   </>

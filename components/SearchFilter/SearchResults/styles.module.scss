@@ -96,10 +96,18 @@
 
 .container::-webkit-scrollbar-track {
     margin: 35px 0;
-     border-radius: 10px; 
+    border-radius: 10px;
 }
 
-  .container::-webkit-scrollbar-thumb {
+.container::-webkit-scrollbar-thumb {
     // background: #a8949456;
-    border-radius: 10px; 
+    border-radius: 10px;
+}
+
+.searchResult {
+    summary {
+        &>div:first-child {
+            display: none;
+        }
+    }
 }
