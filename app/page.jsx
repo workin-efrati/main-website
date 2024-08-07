@@ -1,14 +1,14 @@
-import QuestionNav from "@/components/QuestionNav";
-import { FaWhatsapp } from "react-icons/fa";
-import EventNav from "@/components/EventNav";
-import VideoSection from "@/components/VideoSection";
 import DailyHalacha from "@/components/DailyHalacha";
-import styles from "./page.module.scss"
-import Link from "next/link";
+import EventNav from "@/components/EventNav";
+import QuestionNav from "@/components/QuestionNav";
 import SearchFilter from "@/components/SearchFilter";
+import VideoSection from "@/components/VideoSection";
 import { connect } from "@/server/connect";
-import Image from "next/image";
 import { getTagsWithNoParent } from "@/server/services/tag.service";
+import Image from "next/image";
+import Link from "next/link";
+import { FaWhatsapp } from "react-icons/fa";
+import styles from "./page.module.scss";
 
 export default async function Home() {
   await connect()
@@ -42,10 +42,10 @@ export default async function Home() {
       </section>
 
       <section className={styles.tags}>
-          {tags.map(t => <Link key={t._id} href={`/category/${t._id}`}>
-            <Image src={t?.topicImages?.[0] || '/images/boy.png'} alt={t.name} width={100} height={100} />
-            <p> {t.name}</p>
-          </Link>)}
+        {tags.map(t => <Link key={t._id} href={`/category/${t._id}`}>
+          <Image src={t?.topicImages?.[0] || '/images/boy.png'} alt={t.name} width={100} height={100} />
+          <p> {t.name}</p>
+        </Link>)}
       </section>
 
       <section id='section2' className={`${styles.section2}`}>

@@ -53,6 +53,15 @@
     z-index: 3;
 }
 
+.tagsContainer{
+    display: flex;
+    flex-wrap: wrap;
+    gap: .5rem;
+    justify-content: space-between;
+    justify-content: center;
+    margin-top: 1rem;
+}
+
 .colorOpacity {
     position: absolute;
     top: 0;

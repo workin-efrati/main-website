@@ -1,21 +1,15 @@
   .tagCategoryLink {
-    display: inline-block;
-    margin: 0.5rem;
     transition: transform 0.2s ease-in-out;
-    padding: 0.5rem 1rem;
-    background-color:var(--white);
+    padding: 0.4rem 0.8rem;
+    background-color: var(--white);
     border-radius: 5px;
     text-decoration: none;
     color: var(--light-blue);
-    transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+    transition: all 0.1s ease-in-out;
     opacity: 0.8;
-    margin-right: 0.5rem;
   }
-  
+
   .tagCategoryLink:hover {
     background-color: var(--light-blue);
-    color:var(--white);
-    opacity: 0.8;
+    color: var(--white);
   }
-  
-  

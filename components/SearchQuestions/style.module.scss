@@ -11,12 +11,13 @@
   &>input {
     width: min(100%, 300px);
     margin-bottom: 1rem;
-    padding: .4rem 1rem;
+    padding: .6rem 1rem;
     border-radius: 40px;
     margin: 0 auto;
     border: none;
     outline: none;
     box-shadow: var(--box-shadow);
+    border: 2px solid rgb(208, 208, 208);
   }
 
   .questionContainer {

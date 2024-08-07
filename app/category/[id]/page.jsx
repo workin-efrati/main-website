@@ -2,11 +2,8 @@ import Text from "@/components/TextComponent";
 import styles from "./style.module.scss";
 import Image from "next/image";
 import { connect } from "@/server/connect";
-import {
-  familyOfCategoryService,
-  readOneService,
-} from "@/server/services/tag.service";
-import TagCategory from "@/components/TagCategory";
+import {  familyOfCategoryService,  readOneService} from "@/server/services/tag.service";
+import TagCategory from "@/components/TagCategory/index";
 import Link from "next/link";
 import SearchQuestions from "@/components/SearchQuestions";
 
@@ -44,13 +41,15 @@ export default async function Page({ params: { id } }) {
               <Text as="h1" newClass={styles.font} fontStyle={"b"}>
                 {categoryObject.name}
               </Text>
+              <div className={`${styles.tagsContainer}`}>
               {children.map((child) => (
                 <TagCategory
-                  key={child._id}
-                  name={child.name}
-                  _id={child._id}
+                key={child._id}
+                name={child.name}
+                _id={child._id}
                 />
               ))}
+              </div>
             </div>
             <div className={`${styles.colorOpacity}`} />
             <Image
