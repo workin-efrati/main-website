@@ -24,7 +24,7 @@ const Parent = ({ item }) => (<div className={styles.parents} >
 
 export default function SearchResults({ valueSearch, data, loading }) {
   const [titles, setTitles] = useState([])
-  console.log(titles);
+  // console.log(titles);
 
   // const filterTitles = (res) => {
   //   const filteredTitles = [];
