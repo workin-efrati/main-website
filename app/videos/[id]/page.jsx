@@ -7,8 +7,8 @@ import Text from '@/components/TextComponent';
 import { connect } from '@/server/connect';
 import { readOneVideo, readVideos } from '@/server/services/vod.service';
 import Link from 'next/link';
-import CarouselVideos from '@/components/CarouselVideos';
 import { readPlaylistByIdVideo } from '@/server/services/playlist.service';
+import CarouselVideos from '@/components/CarouselVideos';
 
 export async function generateStaticParams() {
     await connect()
@@ -31,7 +31,6 @@ const Video = async ({ params: { id } }) => {
     const data = await readOneVideo({ _id: id })
     const playlist = await readPlaylistByIdVideo(id)
     const { title, description, link, img } = data
-
     return (
         <div className={styles.container}>
             <div className={styles.title}>

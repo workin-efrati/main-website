@@ -1,0 +1,35 @@
+.right {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: red;
+  height: 90%;
+  z-index: 2;
+}
+
+.left {
+  height: 90%;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  z-index: 2;
+}
+.holdVideos {
+  display: flex;
+  overflow-x: hidden;
+  background-color: rgb(255, 193, 193);
+}
+.move{
+    display: flex;
+    transition: all .2s ease-in-out;
+    @media (width < 568px) {
+        transform: translate(0) !important;
+    }
+}
+@media (width < 568px) {
+.left,.right{
+    display: none;
+}
+}
