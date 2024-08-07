@@ -51,6 +51,7 @@
   padding: 3px 6px;
 }
 
+
 @media (700px > width) {
   .holdVideos {
     padding: 2rem;
@@ -59,4 +60,21 @@
   .card {
     height: 190px;
   }
+}
+.loadingCard{
+  margin: auto;
+  width: 250px;
+  height: 160px;
+  background-color: rgb(165, 165, 165);
+  border-radius: 10px;
+  animation: blink 3s infinite linear;
+  @media (580px > width) {
+    width: 90%;
+    height: 190px;
+  }
+}
+@keyframes blink {
+  0%{opacity: 1;}
+  50%{opacity: 0.2;}
+  100%{opacity: 1;}
 }
