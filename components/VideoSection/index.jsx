@@ -49,7 +49,7 @@ export default function VideoSection() {
         </div>
         <button disabled={cantMoveLeft} onClick={() => { clickSliderHandler(1) }}><MdArrowBackIosNew /></button>
       </div>
-      <div className={styles.toAllVideo}><Link href="">לכל השיעורים</Link> </div>
+      <div className={styles.toAllVideo}><Link href="/videos">לכל השיעורים</Link> </div>
       <Image width={100} alt="bg" height={100} src={'/images/backgrounds/torahBg.png'} className={styles.bgImg} />
     </div>
   )

@@ -10,10 +10,11 @@ function SearchVideos({ filter }) {
   const router = useRouter()
   const debouncedChangeHandler = useCallback(
     debounce((e) => {
-      if (!filter) filter = "כל השיעורים"
-      router.push(e.target.value ? `/videos/?search=${e.target.value}&filter=${filter}` : `/videos/?filter=${filter}`)
+      // if (!filter) filter = "כל השיעורים"
+      // router.push(e.target.value ? `/videos/?search=${e.target.value}&filter=${filter}` : `/videos/?filter=${filter}`)
+      router.push(e.target.value ? `/try/shahar/?search=${e.target.value}` : `/try/shahar`)
     }, 1000),
-    [router, filter]
+    [router]
   );
   
   return (<>
