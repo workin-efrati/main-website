@@ -31,7 +31,7 @@ async function page({ searchParams: { search, filter } }) {
             ))}
           </div>
           <label>
-            ראה עוד
+            {subject?.list?.length > 4 ? <><p className={style.more}>ראה עוד</p><p className={style.less}>ראה פחות</p></> : ''}
             <input type="checkbox" hidden />
           </label>
         </div>

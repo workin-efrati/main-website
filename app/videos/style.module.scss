@@ -3,26 +3,44 @@
   flex-direction: column;
   gap: 2rem;
   padding: 1rem;
-  margin: 0 4rem;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
 
- label {
-  direction: ltr;
- }
+  label {
+    direction: ltr;
+  }
+}
+
+.more {
+  display: flex;
+}
+
+.less {
+  display: none;
 }
 
 .subject {
   display: flex;
   flex-direction: column;
   gap: 1rem;
+  width: 90%;
 
-  .card:nth-child(n+5){
+  .card:nth-child(n+5) {
     display: none;
   }
 
-  &:has(input:checked){
-    .card:nth-child(n+5){
+  &:has(input:checked) {
+    .card:nth-child(n+5) {
       display: flex;
     }
+    
+          .more{
+            display: none;
+          }
+          .less {
+            display: flex;
+          }
   }
 }
 
@@ -35,27 +53,19 @@
   transition: all 0.2s ease-in-out;
 
   & :not(:hover) {
-   transition: all ease-in-out 0.2s;
-  }
-
-  details > summary {
-    list-style-type: none;
-    cursor: pointer;
-  }
-
-  details[open] > summary {
-    display: none;
+    transition: all ease-in-out 0.2s;
   }
 }
-.holdVideos > a:hover{
-    scale: 1.05;
-    transition: all 0.2s ease-in-out;
+
+.holdVideos>a:hover {
+  scale: 1.05;
+  transition: all 0.2s ease-in-out;
 }
 
-.holdVideos:has( a:hover) > a:not(:hover){
-    filter:grayscale(100%);
-    opacity: 0.7;
-    // filter:blur(5px);
+.holdVideos:has(a:hover)>a:not(:hover) {
+  filter: grayscale(100%);
+  opacity: 0.7;
+  // filter:blur(5px);
 }
 
 .card {
@@ -103,20 +113,31 @@
     height: 190px;
   }
 }
-.loadingCard{
+
+.loadingCard {
   margin: auto;
   width: 250px;
   height: 160px;
   background-color: rgb(165, 165, 165);
   border-radius: 10px;
   animation: blink 3s infinite linear;
+
   @media (580px > width) {
     width: 90%;
     height: 190px;
   }
 }
+
 @keyframes blink {
-  0%{opacity: 1;}
-  50%{opacity: 0.2;}
-  100%{opacity: 1;}
+  0% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0.2;
+  }
+
+  100% {
+    opacity: 1;
+  }
 }
