@@ -18,6 +18,16 @@ export const readPlaylist = async (filter, search, populate) => {
     }
     return res
 }
+
+export const readAllPlaylist = async (search, populate) => {
+    const filter = { title: { $not: { $eq: "כל השיעורים" } } }
+    let res = await read(filter, populate)
+    if (search) {
+        res.map(playList => playList.list = playList?.list?.filter(v => v.title.includes(search)))
+    }
+    return res
+}
+
 export const readPlaylistByIdVideo = async (idVideo) => {
     const res = await readOne({ $and: [{ list: { $in: [idVideo] } }, { title: { $ne: "כל השיעורים" } }] }, "list")
     res.list = res?.list?.filter(v => String(v._id) !== idVideo)
