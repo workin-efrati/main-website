@@ -34,13 +34,14 @@
     .card:nth-child(n+5) {
       display: flex;
     }
-    
-          .more{
-            display: none;
-          }
-          .less {
-            display: flex;
-          }
+
+    .more {
+      display: none;
+    }
+
+    .less {
+      display: flex;
+    }
   }
 }
 
