@@ -5,48 +5,50 @@ import { createDaily } from "../controller/daily.controller";
 import DailyModel from "../models/daily.model";
 
 export const readDailyData = async () => {
-    try{
+    try {
         await connectToMongo()
-        const dailyData = await DailyModel.findOne({ date: getCurrentDateInIsrael()})
-        if(dailyData){
-        return dailyData
+        const dailyData = await DailyModel.findOne({ date: getCurrentDateInIsrael() })
+        if (dailyData) {
+            return dailyData
         }
-        else{
-        return await createDailyDataService()
+        else {
+            // TODO - create error
+            // return await createDailyDataService()
+            return { data: [] }
         }
-      }
-        catch(error){
+    }
+    catch (error) {
         console.log(error)
         return error
     }
 }
 
 const createDailyDataService = async () => {
-    try{
+    try {
         await connectToMongo()
-    const dateInfo = await getCurrentDateInfo()
-    const parashaQ = await readHolidayQa({ name: dateInfo.currentParasha || "לא נמצא שם פרשה", isActive: true }) || []
-    const holidayQ = await readHolidayQa({ name: dateInfo.upcomingHoliday || "לא נמצא חג", isActive: true }) || []
-    const data = {
-        date: dateInfo.currentDate,
-        heDate: dateInfo.currentHeDate,
-        currentParasha: { name: dateInfo.currentParasha, q: parashaQ },
-        upcomingHoliday: { name: dateInfo.upcomingHoliday, q: holidayQ },
-    }
+        const dateInfo = await getCurrentDateInfo()
+        const parashaQ = await readHolidayQa({ name: dateInfo.currentParasha || "לא נמצא שם פרשה", isActive: true }) || []
+        const holidayQ = await readHolidayQa({ name: dateInfo.upcomingHoliday || "לא נמצא חג", isActive: true }) || []
+        const data = {
+            date: dateInfo.currentDate,
+            heDate: dateInfo.currentHeDate,
+            currentParasha: { name: dateInfo.currentParasha, q: parashaQ },
+            upcomingHoliday: { name: dateInfo.upcomingHoliday, q: holidayQ },
+        }
 
-    const dailyData = await createDaily(data)
-    if(dailyData._id){
-        return dailyData
+        const dailyData = await createDaily(data)
+        if (dailyData._id) {
+            return dailyData
+        }
+        else {
+            return null
+        }
     }
-    else{
-        return null
-    }
-}
-    catch(error){
+    catch (error) {
         console.log(error)
         return error
     }
-    
+
 }
 
 

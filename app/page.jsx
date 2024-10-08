@@ -43,7 +43,7 @@ export default async function Home() {
 
       <section className={styles.tags}>
         {tags.map(t => <Link key={t._id} href={`/category/${t._id}`}>
-          <Image src={t?.topicImages?.[0] || '/images/boy.png'} alt={t.name} width={100} height={100} />
+          <Image src={t.coverImage || t?.topicImages?.[0] || '/images/boy.png'} alt={t.name} width={100} height={100} />
           <p> {t.name}</p>
         </Link>)}
       </section>

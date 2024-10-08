@@ -85,7 +85,7 @@ export const getHebrewDateFromAPI = async (date) => {
     console.log(dateInHe)
     return dateInHe;
   } catch (error) {
-    console.error('Error fetching data:', error);
+    console.error('Error fetching data:', error.message);
     throw error;
   }
 };
@@ -275,7 +275,7 @@ export const getCurrentParashaFromAPI = async () => {
     const parasha = getParasha(response.data);
     return parasha.split(' ')[1];
   } catch (error) {
-    console.error('Error fetching data:', error);
+    console.error('Error fetching data:', error.message);
     throw error;
   }
 };

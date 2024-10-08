@@ -69,7 +69,7 @@ import holidays from '../dateData/holidayNames.json';
 //             console.log('Finished processing all questions');
 //             return changesLog;
 //         } catch (error) {
-//             console.error('Error processing questions and tags:', error);
+//             console.error('Error processing questions and tags:', error.message);
 //             return null;
 //         }
 //     }
@@ -151,7 +151,7 @@ import holidays from '../dateData/holidayNames.json';
   
 //       console.log('כל החגים הוכנסו בהצלחה');
 //     } catch (error) {
-//       console.error('שגיאה בהכנסת החגים:', error);
+//       console.error('שגיאה בהכנסת החגים:', error.message);
 //     } finally {
 //       // ניתוק מהמסד נתונים
 //       // await mongoose.disconnect();
@@ -213,7 +213,7 @@ import holidays from '../dateData/holidayNames.json';
 //       console.log('כל הפרשות הוכנסו בהצלחה');
 //       return NextResponse.json(await readRelevantQaService())
 //     } catch (error) {
-//       console.error('שגיאה בהכנסת הפרשות:', error);
+//       console.error('שגיאה בהכנסת הפרשות:', error.message);
 //     } finally {
 //       // ניתוק מהמסד נתונים
 //     //   await mongoose.disconnect();
@@ -290,7 +290,7 @@ import holidays from '../dateData/holidayNames.json';
 
   //   console.log('Finished updating parasha tags');
   // } catch (error) {
-  //   console.error('Error updating parasha tags:', error);
+  //   console.error('Error updating parasha tags:', error.message);
   // }
 
 
@@ -425,7 +425,7 @@ import holidays from '../dateData/holidayNames.json';
 //         console.log('Finished processing all questions');
 //         return changesLog;
 //     } catch (error) {
-//         console.error('Error processing questions and tags:', error);
+//         console.error('Error processing questions and tags:', error.message);
 //         return null;
 //     }
 // }
@@ -510,7 +510,7 @@ async function processQuestionsAndTags(dryRun = true) {
           console.log('Finished processing all questions');
           return changesLog;
       } catch (error) {
-          console.error('Error processing questions and tags:', error);
+          console.error('Error processing questions and tags:', error.message);
           return null;
       }
   }

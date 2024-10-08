@@ -73,7 +73,7 @@ export default function SearchFilter({ type }) {
         <button type='submit' className={`${styles[classNameIcon]}`} ><FaSearch /></button>
 
       </form>
-      {isSearchSubject && <SearchResults data={data} loading={loading} valueSearch={valueSearch} />}
+      {isSearchSubject && <SearchResults data={data || []} loading={loading} valueSearch={valueSearch} />}
     </div>
   </>
   )

@@ -54,7 +54,7 @@ export default async function Page({ params: { id } }) {
             <div className={`${styles.colorOpacity}`} />
             <Image
               alt="category"
-              src={categoryObject.image || "/images/image.png"}
+              src={categoryObject.coverImage || categoryObject?.topicImages?.[0] ||"/images/image.png"}
               fill
               className={`${styles.image}`}
             />

@@ -4,8 +4,10 @@ import tagsModel from "../models/tags.model.js";
 export const create = (data) => tagsModel.create(data);
 
 export const read = (filter) => tagsModel.find(filter).lean();
-export const specialRead = (filter,populate,select) => tagsModel.find(filter).populate(populate).select(select)
 
+export const readNoLean = (filter) => tagsModel.find(filter);
+
+export const specialRead = (filter,populate,select) => tagsModel.find(filter).populate(populate).select(select)
 
 export const readOne = (filter) => tagsModel.findOne(filter);
 

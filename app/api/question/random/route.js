@@ -14,7 +14,7 @@ export const GET = async (req) => {
        return NextResponse.json(questions);
    }
    catch (error) {
-       console.error("Error fetching questions: ", error);
+       console.error("Error fetching questions: ", error.message);
        return new Response(JSON.stringify({error: error.msg || 'something went wrong...'}), { status: 500 }); 
    }
 }

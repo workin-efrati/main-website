@@ -1,17 +1,14 @@
 import { getAllTagsService } from '@/server/services/tag.service'
 import { NextResponse } from "next/server";
-import {connect} from '@/server/connect'
+import { connect } from '@/server/connect'
 
 export const GET = async (req) => {
     try {
-       await connect();
+        await connect();
         const tags = await getAllTagsService()
         return NextResponse.json(tags);
-    }
-    catch (error) {
-        console.error("Error fetching tags: ", error);
+    } catch (error) {
+        console.error("Error fetching tags: ", error.message);
         return NextResponse.json(error);
-
     }
-
 }

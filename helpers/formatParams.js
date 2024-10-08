@@ -6,7 +6,7 @@ function decodeHebrewUrl(encodedString) {
 
         return decodedString;
     } catch (error) {
-        console.error("Error decoding string:", error);
+        console.error("Error decoding string:", error.message);
         return encodedString; // Return original string if decoding fails
     }
 }

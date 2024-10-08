@@ -28,7 +28,7 @@ export const ShareLinks = ({ message = 'מצאתי חידוש מגניב!!!!', u
         url: currentUrl,
       })
         .then(() => console.log('Successful share'))
-        .catch((error) => console.log('Error sharing:', error));
+        .catch((error) => console.log('Error sharing:', error.message));
     } else {
       console.log('Web Share API is not supported in your browser.');
     }

@@ -54,7 +54,7 @@ export const POST = async () => {
       // console.log(`Reset ${resetResult.modifiedCount} questions to not be sensitive`);
      return result
     } catch (error) {
-      console.error('Error processing questions:', error);
+      console.error('Error processing questions:', error.message);
       return error.message;
     }
   }
@@ -178,7 +178,7 @@ const sensitiveWords = [
   
 //       // console.log(`Reset ${resetResult.modifiedCount} questions to not be sensitive`);
 //     } catch (error) {
-//       console.error('Error processing questions:', error);
+//       console.error('Error processing questions:', error.message);
 //     }
 //   }
 
@@ -217,7 +217,7 @@ const sensitiveWords = [
   
 //       console.log('Finished processing all questions');
 //     } catch (error) {
-//       console.error('Error processing questions:', error);
+//       console.error('Error processing questions:', error.message);
 //     }
 //   }
   
