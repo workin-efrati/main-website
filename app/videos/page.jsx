@@ -13,8 +13,10 @@ async function page({ searchParams: { search, filter } }) {
       <SearchVideos filter={filter} />
 
       <div className={style.subjects}>
-        {data?.map(subject => <div className={style.subject}>
-          {subject?.list?.length ? <h2 id={subject.title}>{subject.title}</h2> : <></>}
+        {data?.map(subject =>
+          subject?.list?.length ?
+          <div className={style.subject}>
+          {<h2 id={subject.title}>{subject.title}</h2>}
           <div className={style.holdVideos}>
             {subject?.list?.map((v, i) => (
               <Link key={v._id} className={style.card} href={`/videos/${v._id}`}>
@@ -30,11 +32,12 @@ async function page({ searchParams: { search, filter } }) {
               </Link>
             ))}
           </div>
-          <label>
-            ראה עוד
-            <input type="checkbox" hidden />
-          </label>
+            <label>
+              {subject?.list?.length > 4 ? <><p className={style.more}>ראה עוד</p><p className={style.less}>ראה פחות</p></> : ''}
+              <input type="checkbox" hidden />
+            </label>
         </div>
+        : ''
         )}
       </div>
     </div>

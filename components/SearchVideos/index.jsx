@@ -12,7 +12,7 @@ function SearchVideos({ filter }) {
     debounce((e) => {
       // if (!filter) filter = "כל השיעורים"
       // router.push(e.target.value ? `/videos/?search=${e.target.value}&filter=${filter}` : `/videos/?filter=${filter}`)
-      router.push(e.target.value ? `/try/shahar/?search=${e.target.value}` : `/try/shahar`)
+      router.push(e.target.value ? `/videos/?search=${e.target.value}` : `/videos`)
     }, 1000),
     [router]
   );
